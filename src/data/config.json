@@ -1,0 +1,31 @@
+{
+  "site": {
+    "title": "My Awesome Agency",
+    "description": "We build great software."
+  },
+  "theme": {
+    "primaryColor": "blue",
+    "font": "sans"
+  },
+  "hero": {
+    "show": true,
+    "headline": "Transform Your Business",
+    "subheadline": "We help you scale with AI and Automation.",
+    "ctaText": "Get Started",
+    "ctaLink": "/contact",
+    "image": "/hero-placeholder.jpg"
+  },
+  "features": {
+    "show": true,
+    "title": "Why Choose Us?",
+    "items": [
+      { "title": "Fast", "desc": "We deliver in days, not weeks." },
+      { "title": "Secure", "desc": "Bank-grade encryption." },
+      { "title": "Scalable", "desc": "Grow without limits." }
+    ]
+  },
+  "contact": {
+    "email": "hello@example.com",
+    "twitter": "https://twitter.com/webonai"
+  }
+}
