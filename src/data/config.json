@@ -1,31 +1,54 @@
 {
-  "site": {
-    "title": "My Awesome Agency",
-    "description": "We build great software."
+  "meta": {
+    "siteName": "My Awesome Brand",
+    "description": "The best brand in the world.",
+    "favicon": "/uploads/favicon.ico"
   },
   "theme": {
-    "primaryColor": "blue",
-    "font": "sans"
+    "mode": "light",
+    "primaryColor": "#4f46e5",
+    "secondaryColor": "#1e293b",
+    "accentColor": "#10b981",
+    "neutralColor": "#f3f4f6",
+    "fontHeading": "Inter",
+    "fontBody": "Roboto",
+    "borderRadius": 4
   },
-  "hero": {
-    "show": true,
-    "headline": "Transform Your Business",
-    "subheadline": "We help you scale with AI and Automation.",
-    "ctaText": "Get Started",
-    "ctaLink": "/contact",
-    "image": "/hero-placeholder.jpg"
-  },
-  "features": {
-    "show": true,
-    "title": "Why Choose Us?",
-    "items": [
-      { "title": "Fast", "desc": "We deliver in days, not weeks." },
-      { "title": "Secure", "desc": "Bank-grade encryption." },
-      { "title": "Scalable", "desc": "Grow without limits." }
+  "layout": {
+    "structure": [
+      "hero",
+      "features",
+      "testimonials",
+      "faq",
+      "cta"
     ]
   },
-  "contact": {
-    "email": "hello@example.com",
-    "twitter": "https://twitter.com/webonai"
+  "sections": {
+    "hero": {
+      "variant": "center",
+      "headline": "Build Faster with Webonai",
+      "subtext": "The ultimate platform for static sites.",
+      "buttonText": "Get Started",
+      "buttonLink": "/signup"
+    },
+    "features": {
+      "title": "Why Us?",
+      "items": [
+        { "icon": "zap", "title": "Fast", "text": "Blazing fast speed." },
+        { "icon": "shield", "title": "Secure", "text": "Top tier security." }
+      ]
+    },
+    "testimonials": {
+      "title": "Loved by Thousands",
+      "reviews": [
+        { "name": "Alice", "role": "CEO", "quote": "Amazing tool!" }
+      ]
+    },
+    "faq": {
+      "title": "Common Questions",
+      "questions": [
+        { "q": "Is it free?", "a": "Yes, for now." }
+      ]
+    }
   }
 }
