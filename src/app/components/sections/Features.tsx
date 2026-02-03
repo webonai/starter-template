@@ -20,7 +20,7 @@ export default function FeaturesSection({ data }: FeaturesProps) {
     <section className="bg-gray-50 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className={`text-base font-semibold leading-7 text-primary-600`}>
+          <h2 className={`text-base font-semibold leading-7 text-primary`}>
             Everything you need
           </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -33,7 +33,7 @@ export default function FeaturesSection({ data }: FeaturesProps) {
             {items.map((feature, index) => (
               <div key={index} className="relative pl-16">
                 <dt className="text-base font-semibold leading-7 text-gray-900">
-                  <div className={`absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-600`}>
+                  <div className={`absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary`}>
                     <CheckCircleIcon className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>
                   {feature.title}

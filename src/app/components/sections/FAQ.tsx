@@ -1,22 +1,19 @@
-import config from '@/data/config.json';
-
 type FaqProps = {
     data: { 
         title: string,
-        questions: [{
+        questions: {
             q: string;
             a: string;
-        }]
+        }[]
     }
 }
 
 export default function FAQ({ data }: FaqProps) {
-    const primaryColor = config.theme.primaryColor;
     return (
         <section className="bg-gray-50 py-24 sm:py-32">     
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:text-center">
-                    <h2 className={`text-base font-semibold leading-7 text-${primaryColor}-600`}>
+                    <h2 className={`text-base font-semibold leading-7 text-primary`}>
                         Frequently Asked Questions
                     </h2>
                     <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

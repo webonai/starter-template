@@ -1,38 +1,23 @@
-import config from '@/data/config.json';
-// Import your section components (we'll assume you created them)
-import HeroSection from './components/sections/Hero';
-import FeaturesSection from './components/sections/Features';
-import TestimonialsSection from './components/sections/Testimonials';
-import FAQSection from './components/sections/FAQ';
+'use client'; // Needs to be client to receive updates
 
-// Map string names to actual React Components
-const SECTION_COMPONENTS: Record<string, any> = {
-  hero: HeroSection,
-  features: FeaturesSection,
-  testimonials: TestimonialsSection,
-  faq: FAQSection,
-};
+import { useConfig } from '@/context/ConfigContext';
+import Hero from './components/sections/Hero';
+import Features from './components/sections/Features';
+import Testimonials from './components/sections/Testimonials';
+import FAQ from './components/sections/FAQ';
 
 export default function Home() {
+  const config = useConfig(); // <--- Reads from Live Context
+
   return (
     <main>
-      {/* Loop through the "structure" array and render the matching component */}
-      {config.layout.structure.map((sectionName, index) => {
-        const Component = SECTION_COMPONENTS[sectionName];
-        
-        // Safety check: Does the component exist?
-        if (!Component) return null;
-
-        // Pass the specific data for this section
-        const sectionData = config.sections[sectionName as keyof typeof config.sections];
-
-        return (
-          <Component 
-            key={`${sectionName}-${index}`} 
-            data={sectionData} 
-          />
-        );
-      })}
+      {/* Pass the LIVE data to your existing Hero component */}
+      {/* If config updates, this re-renders, and Hero gets new props instantly */}
+      <Hero data={config.sections.hero} />
+      
+      <Features data={config.sections.features} />
+      <Testimonials data={config.sections.testimonials} />
+      <FAQ data={config.sections.faq} />
     </main>
   );
 }

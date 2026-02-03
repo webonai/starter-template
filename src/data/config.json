@@ -14,6 +14,13 @@
     "fontBody": "Roboto",
     "borderRadius": 4
   },
+  "logo": {
+    "type": "image",
+    "imageUrl": "/uploads/logo.png",
+    "altText": "My Awesome Brand Logo",
+    "width": 120,
+    "height": 40
+  },
   "layout": {
     "structure": [
       "hero",
@@ -25,11 +32,13 @@
   },
   "sections": {
     "hero": {
-      "variant": "center",
       "headline": "Build Faster with Webonai",
       "subtext": "The ultimate platform for static sites.",
       "buttonText": "Get Started",
-      "buttonLink": "/signup"
+      "buttonColor": "primary",
+      "buttonLink": "/signup",
+      "image": "/uploads/hero-image.png",
+      "variant": "center"
     },
     "features": {
       "title": "Why Us?",
