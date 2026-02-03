@@ -4,7 +4,14 @@ import { useConfig } from '@/context/ConfigContext';
 
 export default function ThemeWrapper({ children }: { children: React.ReactNode }) {
   const config = useConfig();
-  const theme = config.theme;
+  
+  // 1. SAFETY CHECK: If config is missing, just render children without styles
+  // This prevents the "White Screen of Death" during loading
+  if (!config || !config.theme) {
+     return <>{children}</>;
+  }
+
+  const theme = config.theme; 
 
   const getFontVar = (fontName: string) => {
     switch (fontName) {
@@ -17,22 +24,21 @@ export default function ThemeWrapper({ children }: { children: React.ReactNode }
   return (
     <div
       style={{
-        // --- 1. CONFIG DRIVEN VALUES ---
-        '--primary': theme.primary,
-        '--secondary': theme.secondary,
-        '--accent': theme.accent,
-        '--neutral': theme.neutral,
-        '--radius': theme.radius, // e.g. "0.5rem"
+        // --- 1. CONFIG DRIVEN VALUES (With Optional Chaining ?.) ---
+        '--primary': theme.primary || '#000000',     // Fallback to black
+        '--secondary': theme.secondary || '#000000',
+        '--accent': theme.accent || '#000000',
+        '--neutral': theme.neutral || '#f3f4f6',
+        '--radius': theme.radius || '4px',
         '--font-heading': getFontVar(theme.fontHeading),
         '--font-body': getFontVar(theme.fontBody),
 
-        // --- 2. SHADCN DEFAULTS (Hardcoded Fallbacks for now) ---
-        // You can eventually move these into config.json if you want users to edit them
-        '--background': '#f3f3f3',
+        // --- 2. SHADCN DEFAULTS ---
+        '--background': '#ffffff',
         '--foreground': '#020817',
-        '--muted': '#b1b1b1',
+        '--muted': '#f1f5f9',
         '--muted-foreground': '#64748b',
-        '--card': '#d5d2d2',
+        '--card': '#ffffff',
         '--card-foreground': '#020817',
         '--popover': '#ffffff',
         '--popover-foreground': '#020817',
@@ -43,7 +49,7 @@ export default function ThemeWrapper({ children }: { children: React.ReactNode }
         '--accent-foreground': '#1e293b',
         '--destructive': '#ef4444',
         '--destructive-foreground': '#f8fafc',
-        '--ring': theme.primary, // Ring usually matches primary
+        '--ring': theme.primary || '#000000',
       } as React.CSSProperties}
       className="min-h-screen bg-background font-body text-foreground"
     >
