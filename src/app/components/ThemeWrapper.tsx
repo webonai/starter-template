@@ -4,14 +4,15 @@ import { useConfig } from '@/context/ConfigContext';
 
 export default function ThemeWrapper({ children }: { children: React.ReactNode }) {
   const config = useConfig();
+  const safeConfig = config as any;
   
   // 1. SAFETY CHECK: If config is missing, just render children without styles
   // This prevents the "White Screen of Death" during loading
-  if (!config || !config.theme) {
+  if (!safeConfig || !safeConfig.theme) {
      return <>{children}</>;
   }
 
-  const theme = config.theme; 
+  const theme = safeConfig.theme; 
 
   const getFontVar = (fontName: string) => {
     switch (fontName) {
@@ -30,8 +31,8 @@ export default function ThemeWrapper({ children }: { children: React.ReactNode }
         '--accent': theme.accent || '#000000',
         '--neutral': theme.neutral || '#f3f4f6',
         '--radius': theme.radius || '4px',
-        '--font-heading': getFontVar(theme.fontHeading),
-        '--font-body': getFontVar(theme.fontBody),
+        '--font-heading': getFontVar(theme.fontHeading || 'Inter'),
+        '--font-body': getFontVar(theme.fontBody || 'Inter'),
 
         // --- 2. SHADCN DEFAULTS ---
         '--background': '#ffffff',
