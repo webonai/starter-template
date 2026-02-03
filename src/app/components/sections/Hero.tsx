@@ -1,66 +1,36 @@
 import { UniversalElement } from '../ui/UniversalElement';
 import { ElementConfig } from '@/types/schema';
 
+// 1. Define the Expected Shape (Must match config.json!)
 type HeroData = {
   container: ElementConfig;
   innerWrapper: ElementConfig;
   headline: ElementConfig;
   subtext: ElementConfig;
-  buttonGroup: ElementConfig;
-  primaryButton: ElementConfig;
-  secondaryLink: ElementConfig;
+  primaryButton: ElementConfig; // Ensure this matches config!
+  // secondaryLink: ElementConfig; // Only include if it exists in config
 };
 
 export default function Hero({ data }: { data: HeroData }) {
-  // We use data-path prefix based on parent knowledge
+  if (!data) return null; // Safety check for the whole section
+
   const basePath = "sections.hero"; 
 
   return (
-    // 1. The Outer Section Container
-    <UniversalElement 
-      as="section" 
-      data={data.container} 
-      dataPath={`${basePath}.container`}
-    >
-      {/* 2. The Inner Wrapper (Container) */}
-      <UniversalElement 
-        as="div" 
-        data={data.innerWrapper} 
-        dataPath={`${basePath}.innerWrapper`}
-      >
+    <UniversalElement as="section" data={data.container} dataPath={`${basePath}.container`}>
+      <UniversalElement as="div" data={data.innerWrapper} dataPath={`${basePath}.innerWrapper`}>
         
-        {/* 3. Headline (H1) */}
-        <UniversalElement 
-          as="h1" 
-          data={data.headline} 
-          dataPath={`${basePath}.headline`} 
-        />
-
-        {/* 4. Subtext (P) */}
-        <UniversalElement 
-          as="p" 
-          data={data.subtext} 
-          dataPath={`${basePath}.subtext`} 
-        />
-
-        {/* 5. Button Group (Div) */}
-        <UniversalElement 
-          as="div" 
-          data={data.buttonGroup} 
-          dataPath={`${basePath}.buttonGroup`}
-        >
-          {/* 6. Primary Button */}
+        <UniversalElement as="h1" data={data.headline} dataPath={`${basePath}.headline`} />
+        
+        <UniversalElement as="p" data={data.subtext} dataPath={`${basePath}.subtext`} />
+        
+        {/* Check if primaryButton exists in config before rendering */}
+        {data.primaryButton && (
           <UniversalElement 
-            data={data.primaryButton} 
-            dataPath={`${basePath}.primaryButton`} 
+             data={data.primaryButton} 
+             dataPath={`${basePath}.primaryButton`} 
           />
-
-          {/* 7. Secondary Link */}
-          <UniversalElement 
-            data={data.secondaryLink} 
-            dataPath={`${basePath}.secondaryLink`} 
-          />
-        </UniversalElement>
+        )}
 
       </UniversalElement>
     </UniversalElement>

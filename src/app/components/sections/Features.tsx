@@ -21,6 +21,8 @@ type FeaturesProps = {
 };
 
 export default function Features({ data }: FeaturesProps) {
+  if (!data) return null;
+  
   const basePath = "sections.features";
 
   return (

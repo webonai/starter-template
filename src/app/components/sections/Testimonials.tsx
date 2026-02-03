@@ -21,6 +21,8 @@ type TestimonialsProps = {
 };
 
 export default function Testimonials({ data }: TestimonialsProps) {
+   if (!data) return null;
+
   const basePath = "sections.testimonials";
 
   return (
