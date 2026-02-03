@@ -1,4 +1,4 @@
-'use client'; // Needs to be client to receive updates
+'use client';
 
 import { useConfig } from '@/context/ConfigContext';
 import Hero from './components/sections/Hero';
@@ -6,18 +6,40 @@ import Features from './components/sections/Features';
 import Testimonials from './components/sections/Testimonials';
 import FAQ from './components/sections/FAQ';
 
+// 1. Map string names to actual Components
+const SECTION_COMPONENTS: Record<string, React.FC<{ data: any }>> = {
+  hero: Hero,
+  features: Features,
+  testimonials: Testimonials,
+  faq: FAQ,
+  // cta: CTA, // Uncomment when you build CTA
+};
+
 export default function Home() {
-  const config = useConfig(); // <--- Reads from Live Context
+  const config = useConfig();
+
+  // 2. Fallback if layout is missing (prevents crash)
+  const sectionOrder = config.layout?.order || ['hero', 'features', 'testimonials', 'faq'];
 
   return (
     <main>
-      {/* Pass the LIVE data to your existing Hero component */}
-      {/* If config updates, this re-renders, and Hero gets new props instantly */}
-      <Hero data={config.sections.hero} />
-      
-      <Features data={config.sections.features} />
-      <Testimonials data={config.sections.testimonials} />
-      <FAQ data={config.sections.faq} />
+      {sectionOrder.map((sectionKey) => {
+        // A. Find the component (e.g., "hero" -> Hero Component)
+        const Component = SECTION_COMPONENTS[sectionKey];
+        
+        // B. Find the data (e.g., config.sections.hero)
+        const sectionData = config.sections[sectionKey as keyof typeof config.sections];
+
+        // Safety Check: If component or data is missing, skip it
+        if (!Component || !sectionData) return null;
+
+        return (
+          <Component 
+            key={sectionKey} 
+            data={sectionData} 
+          />
+        );
+      })}
     </main>
   );
 }

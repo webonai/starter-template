@@ -1,51 +1,55 @@
-import { CheckCircleIcon } from '@heroicons/react/20/solid'; // Run: npm install @heroicons/react
+import { UniversalElement } from '../ui/UniversalElement';
+import { ElementConfig } from '@/types/schema';
 
 type FeatureItem = {
-  title: string;
-  text: string;
-  icon?: string;
+  container: ElementConfig;
+  icon?: ElementConfig;
+  title: ElementConfig;
+  text: ElementConfig;
 };
 
 type FeaturesProps = {
   data: {
-    title: string;
+    container: ElementConfig;
+    innerWrapper: ElementConfig;
+    header: ElementConfig;
+    headline: ElementConfig;
+    subtext: ElementConfig;
+    grid: ElementConfig;
     items: FeatureItem[];
   };
 };
 
-export default function FeaturesSection({ data }: FeaturesProps) {
-  const { title, items } = data;
+export default function Features({ data }: FeaturesProps) {
+  const basePath = "sections.features";
 
   return (
-    <section className="bg-gray-50 py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className={`text-base font-semibold leading-7 text-primary`}>
-            Everything you need
-          </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            {title}
-          </p>
-        </div>
+    <UniversalElement as="section" data={data.container} dataPath={`${basePath}.container`}>
+      <UniversalElement as="div" data={data.innerWrapper} dataPath={`${basePath}.innerWrapper`}>
         
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-            {items.map((feature, index) => (
-              <div key={index} className="relative pl-16">
-                <dt className="text-base font-semibold leading-7 text-gray-900">
-                  <div className={`absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary`}>
-                    <CheckCircleIcon className="h-6 w-6 text-white" aria-hidden="true" />
-                  </div>
-                  {feature.title}
-                </dt>
-                <dd className="mt-2 text-base leading-7 text-gray-600">
-                  {feature.text}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </div>
-    </section>
+        <UniversalElement as="div" data={data.header} dataPath={`${basePath}.header`}>
+          <UniversalElement as="h2" data={data.headline} dataPath={`${basePath}.headline`} />
+          <UniversalElement as="p" data={data.subtext} dataPath={`${basePath}.subtext`} />
+        </UniversalElement>
+
+        <UniversalElement as="dl" data={data.grid} dataPath={`${basePath}.grid`}>
+          {data.items.map((item, index) => (
+            <UniversalElement 
+              key={index} 
+              as="div" 
+              data={item.container} 
+              dataPath={`${basePath}.items.${index}.container`}
+            >
+              {item.icon && (
+                <UniversalElement data={item.icon} dataPath={`${basePath}.items.${index}.icon`} />
+              )}
+              <UniversalElement as="dt" data={item.title} dataPath={`${basePath}.items.${index}.title`} />
+              <UniversalElement as="dd" data={item.text} dataPath={`${basePath}.items.${index}.text`} />
+            </UniversalElement>
+          ))}
+        </UniversalElement>
+
+      </UniversalElement>
+    </UniversalElement>
   );
 }

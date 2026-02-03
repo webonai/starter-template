@@ -6,23 +6,28 @@
   },
   "theme": {
     "mode": "light",
-    "primaryColor": "#4f46e5",
-    "secondaryColor": "#1e293b",
-    "accentColor": "#10b981",
-    "neutralColor": "#f3f4f6",
+    "primary": "#4f46e5",
+    "secondary": "#1e293b",
+    "accent": "#10b981",
+    "neutral": "#f3f4f6",
     "fontHeading": "Inter",
     "fontBody": "Roboto",
-    "borderRadius": 4
+    "radius": "4px"
   },
   "logo": {
     "type": "image",
-    "imageUrl": "/uploads/logo.png",
-    "altText": "My Awesome Brand Logo",
-    "width": 120,
-    "height": 40
+    "src": "/uploads/logo.png",
+    "alt": "My Awesome Brand Logo",
+    "width": "120",
+    "height": "40",
+    "styles": {
+      "display": "block",
+      "width": "120px",
+      "height": "auto"
+    }
   },
   "layout": {
-    "structure": [
+    "order": [
       "hero",
       "features",
       "testimonials",
@@ -32,29 +37,116 @@
   },
   "sections": {
     "hero": {
-      "headline": "Build Faster with Webonai",
-      "subtext": "The ultimate platform for static sites.",
-      "buttonText": "Get Started",
-      "buttonColor": "primary",
-      "buttonLink": "/signup",
-      "image": "/uploads/hero-image.png",
-      "variant": "center"
+      "container": {
+        "styles": {
+          "backgroundColor": "#ffffff",
+          "padding": "py-24 sm:py-32",
+          "textAlign": "text-center",
+          "display": "relative overflow-hidden"
+        }
+      },
+      "headline": {
+        "text": "Build Faster with Webonai",
+        "styles": {
+          "fontSize": "text-5xl sm:text-6xl",
+          "fontWeight": "font-bold",
+          "color": "#111827",
+          "marginBottom": "mb-6",
+          "fontFamily": "font-heading"
+        }
+      },
+      "subtext": {
+        "text": "The ultimate platform for static sites.",
+        "styles": {
+          "fontSize": "text-xl",
+          "color": "#4b5563",
+          "marginBottom": "mb-10",
+          "width": "max-w-2xl mx-auto"
+        }
+      },
+      "primaryButton": {
+        "text": "Get Started",
+        "href": "/signup",
+        "styles": {
+          "backgroundColor": "var(--primary)",
+          "color": "#ffffff",
+          "padding": "px-8 py-3",
+          "borderRadius": "var(--radius)",
+          "fontWeight": "font-bold",
+          "display": "inline-block",
+          "shadow": "shadow-lg"
+        }
+      },
+      "heroImage": {
+        "src": "/uploads/hero-image.png",
+        "alt": "Dashboard Preview",
+        "styles": {
+          "marginTop": "mt-16",
+          "borderRadius": "rounded-xl",
+          "shadow": "shadow-2xl",
+          "border": "border border-gray-200"
+        }
+      }
     },
     "features": {
-      "title": "Why Us?",
+      "container": {
+        "styles": {
+          "backgroundColor": "var(--neutral)",
+          "padding": "py-24"
+        }
+      },
+      "header": {
+        "text": "Why Us?",
+        "styles": {
+          "fontSize": "text-3xl",
+          "fontWeight": "font-bold",
+          "textAlign": "text-center",
+          "color": "var(--secondary)",
+          "marginBottom": "mb-16"
+        }
+      },
       "items": [
         { "icon": "zap", "title": "Fast", "text": "Blazing fast speed." },
         { "icon": "shield", "title": "Secure", "text": "Top tier security." }
       ]
     },
     "testimonials": {
-      "title": "Loved by Thousands",
+      "container": {
+        "styles": {
+          "backgroundColor": "#ffffff",
+          "padding": "py-24"
+        }
+      },
+      "header": {
+        "text": "Loved by Thousands",
+        "styles": {
+          "fontSize": "text-3xl",
+          "fontWeight": "font-bold",
+          "textAlign": "text-center",
+          "marginBottom": "mb-12"
+        }
+      },
       "reviews": [
         { "name": "Alice", "role": "CEO", "quote": "Amazing tool!" }
       ]
     },
     "faq": {
-      "title": "Common Questions",
+      "container": {
+        "styles": {
+          "backgroundColor": "#ffffff",
+          "padding": "py-24",
+          "borderTop": "border-t border-gray-100"
+        }
+      },
+      "header": {
+        "text": "Common Questions",
+        "styles": {
+          "fontSize": "text-3xl",
+          "fontWeight": "font-bold",
+          "textAlign": "text-center",
+          "marginBottom": "mb-12"
+        }
+      },
       "questions": [
         { "q": "Is it free?", "a": "Yes, for now." }
       ]

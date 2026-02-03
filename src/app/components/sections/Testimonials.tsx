@@ -1,47 +1,55 @@
+import { UniversalElement } from '../ui/UniversalElement';
+import { ElementConfig } from '@/types/schema';
+
+type ReviewItem = {
+  container: ElementConfig;
+  quote: ElementConfig;
+  author: ElementConfig;
+  role: ElementConfig;
+};
+
 type TestimonialsProps = {
   data: {
-    title: string;
-    reviews: {
-        name: string;
-        role: string;
-        quote: string;
-    }[];
+    container: ElementConfig;
+    innerWrapper: ElementConfig;
+    header: ElementConfig;
+    headline: ElementConfig;
+    subtext: ElementConfig;
+    grid: ElementConfig;
+    items: ReviewItem[];
   };
 };
 
 export default function Testimonials({ data }: TestimonialsProps) {
-  return (
-    <section className="bg-gray-50 py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl lg:text-center">
-                <h2 className={`text-base font-semibold leading-7 text-primary`}>
-                    What Our Customers Say
-                </h2>
-                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                    {data.title}
-                </p>
-            </div>
-            <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-                <div className="space-y-16">
-                    {data.reviews.map((testimonial, index) => (   
-                        <blockquote key={index} className="relative">
-                            <div className="text-lg leading-8 text-gray-600">
-                                “{testimonial.quote}”
-                            </div>
+  const basePath = "sections.testimonials";
 
-                            <footer className="mt-6">
-                                <div className="text-base font-semibold text-gray-900">
-                                    {testimonial.name}        
-                                </div>
-                                <div className="text-sm text-gray-600">
-                                    {testimonial.role}
-                                </div>
-                            </footer>
-                        </blockquote>
-                    ))}
-                </div>
-            </div>
-        </div>
-    </section>
+  return (
+    <UniversalElement as="section" data={data.container} dataPath={`${basePath}.container`}>
+      <UniversalElement as="div" data={data.innerWrapper} dataPath={`${basePath}.innerWrapper`}>
+        
+        <UniversalElement as="div" data={data.header} dataPath={`${basePath}.header`}>
+          <UniversalElement as="h2" data={data.headline} dataPath={`${basePath}.headline`} />
+          <UniversalElement as="p" data={data.subtext} dataPath={`${basePath}.subtext`} />
+        </UniversalElement>
+
+        <UniversalElement as="div" data={data.grid} dataPath={`${basePath}.grid`}>
+          {data.items.map((item, index) => (
+            <UniversalElement 
+              key={index} 
+              as="blockquote" 
+              data={item.container} 
+              dataPath={`${basePath}.items.${index}.container`}
+            >
+              <UniversalElement as="p" data={item.quote} dataPath={`${basePath}.items.${index}.quote`} />
+              <footer className="mt-6">
+                <UniversalElement as="div" data={item.author} dataPath={`${basePath}.items.${index}.author`} />
+                <UniversalElement as="div" data={item.role} dataPath={`${basePath}.items.${index}.role`} />
+              </footer>
+            </UniversalElement>
+          ))}
+        </UniversalElement>
+
+      </UniversalElement>
+    </UniversalElement>
   );
 }

@@ -9,31 +9,51 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "var(--primary)", 
-        secondary: "var(--secondary)",
-        accent: "var(--accent)",
-        "accent-foreground": "var(--accent-foreground)",
-        destructive: "var(--destructive)",
-        "destructive-foreground": "var(--destructive-foreground)",
-        muted: "var(--muted)",
-        "muted-foreground": "var(--muted-foreground)",
+        // --- YOUR SHADCN COLORS ---
         border: "var(--border)",
         input: "var(--input)",
         ring: "var(--ring)",
         background: "var(--background)",
-        "background-foreground": "var(--background-foreground)",
-        card: "var(--card)",
-        "card-foreground": "var(--card-foreground)",
-        popover: "var(--popover)",
-        "popover-foreground": "var(--popover-foreground)",
-        "primary-foreground": "var(--primary-foreground)",
-        "secondary-foreground": "var(--secondary-foreground)",
+        foreground: "var(--foreground)", // Added standard 'foreground' (text color)
+        
+        primary: {
+          DEFAULT: "var(--primary)",
+          foreground: "var(--primary-foreground)",
+        },
+        secondary: {
+          DEFAULT: "var(--secondary)",
+          foreground: "var(--secondary-foreground)",
+        },
+        destructive: {
+          DEFAULT: "var(--destructive)",
+          foreground: "var(--destructive-foreground)",
+        },
+        muted: {
+          DEFAULT: "var(--muted)",
+          foreground: "var(--muted-foreground)",
+        },
+        accent: {
+          DEFAULT: "var(--accent)",
+          foreground: "var(--accent-foreground)",
+        },
+        popover: {
+          DEFAULT: "var(--popover)",
+          foreground: "var(--popover-foreground)",
+        },
+        card: {
+          DEFAULT: "var(--card)",
+          foreground: "var(--card-foreground)",
+        },
+
+        // --- NEW ADDITION FOR WEBONAI CONFIG ---
+        neutral: "var(--neutral)", // Matches config.theme.neutral
       },
+      
       fontFamily: {
-        // Tailwind will generate "font-heading" and "font-body" classes
         heading: ["var(--font-heading)", "sans-serif"],
         body: ["var(--font-body)", "sans-serif"],
       },
+      
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

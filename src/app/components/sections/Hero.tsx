@@ -1,40 +1,68 @@
-import Link from 'next/link';
-type HeroProps = {
-  data: {
-    headline: string;
-    subtext: string;
-    buttonText: string;
-    buttonLink: string;
-    image?: string;
-    variant?: string;
-  };
+import { UniversalElement } from '../ui/UniversalElement';
+import { ElementConfig } from '@/types/schema';
+
+type HeroData = {
+  container: ElementConfig;
+  innerWrapper: ElementConfig;
+  headline: ElementConfig;
+  subtext: ElementConfig;
+  buttonGroup: ElementConfig;
+  primaryButton: ElementConfig;
+  secondaryLink: ElementConfig;
 };
 
-export default function Hero({ data }: HeroProps) {
-  const { headline, subtext, buttonText, buttonLink } = data;
-  
+export default function Hero({ data }: { data: HeroData }) {
+  // We use data-path prefix based on parent knowledge
+  const basePath = "sections.hero"; 
 
   return (
-    <section className="relative overflow-hidden bg-white py-20 sm:py-32">
-      <div className="container mx-auto px-4 text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-          {headline}
-        </h1>
-        <p className="mt-6 text-lg leading-8 text-gray-600">
-          {subtext}
-        </p>
-        <div className="mt-10 flex items-center justify-center gap-x-6">
-          <Link
-            href={buttonLink}
-            className={`rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary`}
-          >
-            {buttonText}
-          </Link>
-          <Link href="/about" className="text-sm font-semibold leading-6 text-gray-900">
-            Learn more <span aria-hidden="true">→</span>
-          </Link>
-        </div>
-      </div>
-    </section>
+    // 1. The Outer Section Container
+    <UniversalElement 
+      as="section" 
+      data={data.container} 
+      dataPath={`${basePath}.container`}
+    >
+      {/* 2. The Inner Wrapper (Container) */}
+      <UniversalElement 
+        as="div" 
+        data={data.innerWrapper} 
+        dataPath={`${basePath}.innerWrapper`}
+      >
+        
+        {/* 3. Headline (H1) */}
+        <UniversalElement 
+          as="h1" 
+          data={data.headline} 
+          dataPath={`${basePath}.headline`} 
+        />
+
+        {/* 4. Subtext (P) */}
+        <UniversalElement 
+          as="p" 
+          data={data.subtext} 
+          dataPath={`${basePath}.subtext`} 
+        />
+
+        {/* 5. Button Group (Div) */}
+        <UniversalElement 
+          as="div" 
+          data={data.buttonGroup} 
+          dataPath={`${basePath}.buttonGroup`}
+        >
+          {/* 6. Primary Button */}
+          <UniversalElement 
+            data={data.primaryButton} 
+            dataPath={`${basePath}.primaryButton`} 
+          />
+
+          {/* 7. Secondary Link */}
+          <UniversalElement 
+            data={data.secondaryLink} 
+            dataPath={`${basePath}.secondaryLink`} 
+          />
+        </UniversalElement>
+
+      </UniversalElement>
+    </UniversalElement>
   );
 }
