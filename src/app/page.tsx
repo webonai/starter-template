@@ -16,12 +16,13 @@ const SECTION_COMPONENTS: Record<string, any> = {
 
 export default function Home() {
   const config = useConfig();
+  const safeConfig = config as any;
 
   // ---------------------------------------------------------
   // 1. SAFETY CHECK: STOP THE CRASH
   // ---------------------------------------------------------
   // If config is null, or if 'sections' hasn't loaded yet, stop here.
-  if (!config || !config.sections) {
+  if (!safeConfig || !safeConfig.sections) {
     return (
       <div className="flex h-screen items-center justify-center">
         <div className="h-8 w-8 animate-spin rounded-full border-4 border-gray-300 border-t-blue-600"></div>
@@ -30,17 +31,17 @@ export default function Home() {
   }
 
   // 2. Fallback if layout order is missing
-  const sectionOrder = config.layout?.order || Object.keys(config.sections);
+  const sectionOrder = safeConfig.layout?.order || Object.keys(safeConfig.sections);
 
   return (
     <main>
-      {sectionOrder.map((sectionKey) => {
+      {sectionOrder.map((sectionKey: string) => {
         // A. Find the component
         const Component = SECTION_COMPONENTS[sectionKey];
         
         // B. Find the data (Safe now because we checked config.sections above)
         // We cast to 'any' here to avoid TypeScript being too strict about dynamic keys
-        const sectionData = (config.sections as any)[sectionKey];
+        const sectionData = safeConfig.sections[sectionKey];
 
         // Safety Check: If component or data is missing, skip it
         if (!Component || !sectionData) return null;
