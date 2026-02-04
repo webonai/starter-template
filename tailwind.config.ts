@@ -48,7 +48,6 @@ const config: Config = {
         // --- NEW ADDITION FOR WEBONAI CONFIG ---
         neutral: "var(--neutral)", // Matches config.theme.neutral
       },
-      
       fontFamily: {
         heading: ["var(--font-heading)", "sans-serif"],
         body: ["var(--font-body)", "sans-serif"],
@@ -61,6 +60,16 @@ const config: Config = {
       },
     },
   },
+  safelist: [
+    // Alignment
+    'text-left', 'text-center', 'text-right', 'text-justify',
+    // Sizing
+    'text-sm', 'text-base', 'text-lg', 'text-xl', 'text-2xl', 'text-3xl', 'text-4xl', 'text-5xl', 'text-6xl',
+    // Weights
+    'font-light', 'font-normal', 'font-medium', 'font-semibold', 'font-bold', 'font-extrabold',
+    // Spacing (optional, if you want users to change padding)
+    { pattern: /^(p|m)(t|b|l|r|x|y)?-(0|1|2|4|6|8|12|16|20|24|32)$/ }
+  ],
   plugins: [],
 };
 export default config;

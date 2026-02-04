@@ -1,57 +1,48 @@
-import { UniversalElement } from '../ui/UniversalElement';
 import { ElementConfig } from '@/types/schema';
+import { editable } from '@/lib/editable';
 
-type FeatureItem = {
-  container: ElementConfig;
-  icon?: ElementConfig;
-  title: ElementConfig;
-  text: ElementConfig;
-};
+type FaqProps = {
+    data: { 
+        container: ElementConfig;
+        header: ElementConfig;
+        questions: {
+            q: string;
+            a: string;
+        }[]
+    }
+}
 
-type FeaturesProps = {
-  data: {
-    container: ElementConfig;
-    innerWrapper: ElementConfig;
-    header: ElementConfig;
-    headline: ElementConfig;
-    subtext: ElementConfig;
-    grid: ElementConfig;
-    items: FeatureItem[];
-  };
-};
+export default function FAQ({ data }: FaqProps) {
+    if (!data) return null;
+    
+    const basePath = "sections.faq";
 
-export default function Features({ data }: FeaturesProps) {
-  if (!data) return null;
-  
-  const basePath = "sections.features";
-
-  return (
-    <UniversalElement as="section" data={data.container} dataPath={`${basePath}.container`}>
-      <UniversalElement as="div" data={data.innerWrapper} dataPath={`${basePath}.innerWrapper`}>
-        
-        <UniversalElement as="div" data={data.header} dataPath={`${basePath}.header`}>
-          <UniversalElement as="h2" data={data.headline} dataPath={`${basePath}.headline`} />
-          <UniversalElement as="p" data={data.subtext} dataPath={`${basePath}.subtext`} />
-        </UniversalElement>
-
-        <UniversalElement as="dl" data={data.grid} dataPath={`${basePath}.grid`}>
-          {data.items.map((item, index) => (
-            <UniversalElement 
-              key={index} 
-              as="div" 
-              data={item.container} 
-              dataPath={`${basePath}.items.${index}.container`}
-            >
-              {item.icon && (
-                <UniversalElement data={item.icon} dataPath={`${basePath}.items.${index}.icon`} />
-              )}
-              <UniversalElement as="dt" data={item.title} dataPath={`${basePath}.items.${index}.title`} />
-              <UniversalElement as="dd" data={item.text} dataPath={`${basePath}.items.${index}.text`} />
-            </UniversalElement>
-          ))}
-        </UniversalElement>
-
-      </UniversalElement>
-    </UniversalElement>
-  );
+    return (
+        <section {...editable(data.container, `${basePath}.container`, "section", "bg-gray-50 py-24 sm:py-32")}>
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div {...editable(data.header, `${basePath}.header`, "container", "mx-auto max-w-2xl lg:text-center")}>
+                    <h2 className="text-base font-semibold leading-7 text-primary">
+                        Frequently Asked Questions
+                    </h2>
+                    <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                        {data.header?.text || "Common Questions"}
+                    </p>    
+                </div>  
+                <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+                    <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+                        {data.questions.map((faq, index) => (
+                            <div key={index} className="mb-8">
+                                <dt className="text-base font-semibold leading-7 text-gray-900">
+                                    {faq.q}
+                                </dt>
+                                <dd className="mt-2 text-base leading-7 text-gray-600">
+                                    {faq.a}
+                                </dd>
+                            </div>
+                        ))}
+                    </dl>
+                </div>
+            </div>  
+        </section>
+    );
 }

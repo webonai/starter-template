@@ -23,7 +23,7 @@ export interface SiteConfig {
   layout: {
     order: string[];
   };
-  sections: Record<string, unknown>;
+  sections: Record<string, any>; // Changed to any to allow flexible section types
   logo?: {
     src?: string;
     text?: string;

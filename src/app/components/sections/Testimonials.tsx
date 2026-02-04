@@ -1,5 +1,5 @@
-import { UniversalElement } from '../ui/UniversalElement';
 import { ElementConfig } from '@/types/schema';
+import { editable } from '@/lib/editable';
 
 // Define the shape of a single review item
 type ReviewItem = {
@@ -32,33 +32,41 @@ export default function Testimonials({ data }: TestimonialsProps) {
   const reviews = data.items || [];
 
   return (
-    <UniversalElement as="section" data={data.container} dataPath={`${basePath}.container`}>
-      <UniversalElement as="div" data={data.innerWrapper} dataPath={`${basePath}.innerWrapper`}>
+    <section {...editable(data.container, `${basePath}.container`, "section")}>
+      <div {...editable(data.innerWrapper, `${basePath}.innerWrapper`, "container")}>
         
         {/* Header Area */}
-        <UniversalElement as="div" data={data.header} dataPath={`${basePath}.header`}>
-          <UniversalElement as="h2" data={data.headline} dataPath={`${basePath}.headline`} />
-          <UniversalElement as="p" data={data.subtext} dataPath={`${basePath}.subtext`} />
-        </UniversalElement>
+        <div {...editable(data.header, `${basePath}.header`, "container")}>
+          <h2 {...editable(data.headline, `${basePath}.headline`, "headline")}>
+            {data.headline?.text}
+          </h2>
+          <p {...editable(data.subtext, `${basePath}.subtext`, "text")}>
+            {data.subtext?.text}
+          </p>
+        </div>
 
         {/* Grid Area */}
-        <UniversalElement as="div" data={data.grid} dataPath={`${basePath}.grid`}>
+        <div {...editable(data.grid, `${basePath}.grid`, "container")}>
           
           {/* 3. SAFETY MAP: Only map if we have reviews */}
           {reviews.length > 0 ? (
             reviews.map((item, index) => (
-              <UniversalElement 
+              <blockquote 
                 key={index} 
-                as="blockquote" 
-                data={item.container} 
-                dataPath={`${basePath}.items.${index}.container`}
+                {...editable(item.container, `${basePath}.items.${index}.container`, "container")}
               >
-                <UniversalElement as="p" data={item.quote} dataPath={`${basePath}.items.${index}.quote`} />
+                <p {...editable(item.quote, `${basePath}.items.${index}.quote`, "text")}>
+                  {item.quote?.text}
+                </p>
                 <footer className="mt-6">
-                  <UniversalElement as="div" data={item.author} dataPath={`${basePath}.items.${index}.author`} />
-                  <UniversalElement as="div" data={item.role} dataPath={`${basePath}.items.${index}.role`} />
+                  <div {...editable(item.author, `${basePath}.items.${index}.author`, "text")}>
+                    {item.author?.text}
+                  </div>
+                  <div {...editable(item.role, `${basePath}.items.${index}.role`, "text")}>
+                    {item.role?.text}
+                  </div>
                 </footer>
-              </UniversalElement>
+              </blockquote>
             ))
           ) : (
              // Optional: Show a placeholder if no reviews exist (helps debugging)
@@ -67,9 +75,9 @@ export default function Testimonials({ data }: TestimonialsProps) {
              </div>
           )}
 
-        </UniversalElement>
+        </div>
 
-      </UniversalElement>
-    </UniversalElement>
+      </div>
+    </section>
   );
 }

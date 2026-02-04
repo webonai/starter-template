@@ -5,12 +5,14 @@ import Hero from './components/sections/Hero';
 import Features from './components/sections/Features';
 import Testimonials from './components/sections/Testimonials';
 import FAQ from './components/sections/FAQ';
+import Blog from './components/sections/Blog';
 
 // 1. Map string names to actual Components
 const SECTION_COMPONENTS: Record<string, any> = {
   hero: Hero,
   features: Features,
   testimonials: Testimonials,
+  blog: Blog,
   faq: FAQ,
 };
 

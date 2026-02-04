@@ -10,21 +10,7 @@
     "secondary": "#1e293b",
     "accent": "#10b981",
     "neutral": "#f3f4f6",
-    "fontHeading": "Inter",
-    "fontBody": "Roboto",
-    "radius": "4px"
-  },
-  "logo": {
-    "type": "image",
-    "src": "/uploads/logo.png",
-    "alt": "My Awesome Brand Logo",
-    "width": "120",
-    "height": "40",
-    "styles": {
-      "display": "block",
-      "width": "120px",
-      "height": "auto"
-    }
+    "radius": "0.5rem"
   },
   "layout": {
     "order": [
@@ -38,76 +24,55 @@
   "sections": {
     "hero": {
       "container": {
+        "className": "relative overflow-hidden py-24 sm:py-32 text-center",
         "styles": {
-          "backgroundColor": "#ffffff",
-          "padding": "py-24 sm:py-32",
-          "textAlign": "text-center",
-          "display": "relative overflow-hidden"
+          "backgroundColor": "#ffffff"
         }
       },
       "innerWrapper": {
-        "styles": {
-          "width": "container mx-auto px-6"
-        }
+        "className": "container mx-auto px-6"
       },
       "headline": {
         "text": "Build Faster with Webonai",
+        "className": "text-5xl sm:text-6xl font-bold mb-6 font-heading",
         "styles": {
-          "fontSize": "text-5xl sm:text-6xl",
-          "fontWeight": "font-bold",
-          "color": "#111827",
-          "marginBottom": "mb-6",
-          "fontFamily": "font-heading"
+          "color": "#111827"
         }
       },
       "subtext": {
         "text": "The ultimate platform for static sites. Customizable, fast, and secure.",
+        "className": "text-xl mb-10 max-w-2xl mx-auto",
         "styles": {
-          "fontSize": "text-xl",
-          "color": "#4b5563",
-          "marginBottom": "mb-10",
-          "width": "max-w-2xl mx-auto"
+          "color": "#4b5563"
         }
       },
       "primaryButton": {
         "text": "Get Started",
         "href": "/signup",
+        "className": "inline-block px-8 py-3 rounded-md font-bold shadow-lg transition-transform hover:scale-105 bg-indigo-600 text-white",
         "styles": {
-          "backgroundColor": "var(--primary)",
-          "color": "#ffffff",
-          "padding": "px-8 py-3",
-          "borderRadius": "var(--radius)",
-          "fontWeight": "font-bold",
-          "display": "inline-block",
-          "shadow": "shadow-lg"
+          "backgroundColor": "#4f46e5",
+          "color": "#ffffff"
         }
       },
       "heroImage": {
         "src": "/uploads/hero-image.png",
         "alt": "Dashboard Preview",
-        "styles": {
-          "marginTop": "mt-16",
-          "borderRadius": "rounded-xl",
-          "shadow": "shadow-2xl",
-          "border": "border border-gray-200"
-        }
+        "className": "mt-16 rounded-xl shadow-2xl border border-gray-200"
       }
     },
     "features": {
       "container": {
+        "className": "py-24",
         "styles": {
-          "backgroundColor": "var(--neutral)",
-          "padding": "py-24"
+          "backgroundColor": "#f3f4f6"
         }
       },
       "header": {
         "text": "Why Us?",
+        "className": "text-3xl font-bold text-center mb-16",
         "styles": {
-          "fontSize": "text-3xl",
-          "fontWeight": "font-bold",
-          "textAlign": "text-center",
-          "color": "var(--secondary)",
-          "marginBottom": "mb-16"
+          "color": "#1e293b"
         }
       },
       "items": [
@@ -115,160 +80,138 @@
           "icon": "zap",
           "title": "Fast Performance",
           "text": "Blazing fast load times.",
-          "styles": {
-            "backgroundColor": "#ffffff",
-            "padding": "p-6",
-            "borderRadius": "rounded-xl"
-          }
+          "className": "p-6 rounded-xl bg-white shadow-sm"
         },
         {
           "icon": "shield",
           "title": "Secure",
           "text": "Top tier security out of the box.",
-          "styles": {
-            "backgroundColor": "#ffffff",
-            "padding": "p-6",
-            "borderRadius": "rounded-xl"
-          }
+          "className": "p-6 rounded-xl bg-white shadow-sm"
         },
         {
           "icon": "mouse-pointer",
           "title": "Easy Editing",
           "text": "Drag and drop interface.",
-          "styles": {
-            "backgroundColor": "#ffffff",
-            "padding": "p-6",
-            "borderRadius": "rounded-xl"
-          }
+          "className": "p-6 rounded-xl bg-white shadow-sm"
         }
       ]
     },
     "testimonials": {
       "container": {
+        "className": "py-24 sm:py-32",
         "styles": {
-          "backgroundColor": "#ffffff",
-          "padding": "py-24 sm:py-32"
-        }
-      },
-      "innerWrapper": {
-        "styles": {
-          "width": "container mx-auto px-6"
+          "backgroundColor": "#ffffff"
         }
       },
       "header": {
-        "styles": {
-          "textAlign": "text-center",
-          "maxWidth": "max-w-2xl mx-auto",
-          "marginBottom": "mb-16"
-        }
+        "className": "text-center max-w-2xl mx-auto mb-16"
       },
       "headline": {
         "text": "Loved by Thousands",
+        "className": "text-3xl sm:text-4xl font-bold mb-4 font-heading",
         "styles": {
-          "fontSize": "text-3xl sm:text-4xl",
-          "fontWeight": "font-bold",
-          "color": "#111827",
-          "marginBottom": "mb-4",
-          "fontFamily": "font-heading"
+          "color": "#111827"
         }
       },
       "subtext": {
         "text": "See what our customers have to say about their experience.",
+        "className": "text-lg",
         "styles": {
-          "fontSize": "text-lg",
           "color": "#4b5563"
         }
       },
       "grid": {
-        "styles": {
-          "display": "grid",
-          "gridTemplateColumns": "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
-          "gap": "gap-8"
-        }
+        "className": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
       },
       "items": [
         {
           "container": {
+            "className": "p-8 rounded-2xl shadow-sm",
             "styles": {
-              "backgroundColor": "#f9fafb",
-              "padding": "p-8",
-              "borderRadius": "rounded-2xl",
-              "shadow": "shadow-sm"
+              "backgroundColor": "#f9fafb"
             }
           },
           "quote": {
-            "text": "This platform completely transformed how we build websites. The speed is unmatched.",
+            "text": "This platform completely transformed how we build websites.",
+            "className": "text-base italic",
             "styles": {
-              "fontSize": "text-base",
-              "color": "#374151",
-              "fontStyle": "italic"
+              "color": "#374151"
             }
           },
           "author": {
             "text": "Alex Smith",
+            "className": "font-bold mt-4",
             "styles": {
-              "fontWeight": "font-bold",
               "color": "#111827"
             }
           },
           "role": {
             "text": "CEO at TechCorp",
+            "className": "text-sm",
             "styles": {
-              "fontSize": "text-sm",
-              "color": "#6b7280"
-            }
-          }
-        },
-        {
-          "container": {
-            "styles": {
-              "backgroundColor": "#f9fafb",
-              "padding": "p-8",
-              "borderRadius": "rounded-2xl",
-              "shadow": "shadow-sm"
-            }
-          },
-          "quote": {
-            "text": "I can't believe how easy it is to customize everything without touching code.",
-            "styles": {
-              "fontSize": "text-base",
-              "color": "#374151",
-              "fontStyle": "italic"
-            }
-          },
-          "author": {
-            "text": "Sarah Jones",
-            "styles": {
-              "fontWeight": "font-bold",
-              "color": "#111827"
-            }
-          },
-          "role": {
-            "text": "Marketing Director",
-            "styles": {
-              "fontSize": "text-sm",
               "color": "#6b7280"
             }
           }
         }
       ]
     },
+    "blog": {
+      "container": {
+        "className": "py-24 sm:py-32",
+        "styles": {
+          "backgroundColor": "#ffffff"
+        }
+      },
+      "header": {
+        "text": "Latest from the Blog",
+        "className": "text-3xl font-bold tracking-tight text-center mb-16 sm:text-4xl",
+        "styles": {
+          "color": "#111827"
+        }
+      },
+      "posts": [
+        {
+          "title": "Boost your conversion rate",
+          "excerpt": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid porro sed dolores et.",
+          "date": "Mar 16, 2024",
+          "author": "Michael Foster",
+          "category": "Marketing",
+          "image": "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&auto=format&fit=crop&w=3603&q=80",
+          "href": "/blog/boost-conversion",
+          "className": "flex flex-col items-start justify-between"
+        },
+        {
+          "title": "How to use search engine optimization to drive sales",
+          "excerpt": "Optio cumque autem voluntas. Dolor est. Hic vel totam vitae illo. Non aliquid porro sed dolores et.",
+          "date": "Mar 10, 2024",
+          "author": "Lindsay Walton",
+          "category": "SEO",
+          "image": "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-4.0.3&auto=format&fit=crop&w=3270&q=80",
+          "href": "/blog/seo-sales",
+          "className": "flex flex-col items-start justify-between"
+        },
+        {
+          "title": "Improve your customer experience",
+          "excerpt": "Cupiditate maiores ullam eveniet adipisci in doloribus nulla minus. Voluptas iusto libero adipisci rem et corporis.",
+          "date": "Feb 12, 2024",
+          "author": "Tom Cook",
+          "category": "Business",
+          "image": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-4.0.3&auto=format&fit=crop&w=3270&q=80",
+          "href": "/blog/customer-experience",
+          "className": "flex flex-col items-start justify-between"
+        }
+      ]
+    },
     "faq": {
       "container": {
+        "className": "py-24 border-t border-gray-100",
         "styles": {
-          "backgroundColor": "#ffffff",
-          "padding": "py-24",
-          "borderTop": "border-t border-gray-100"
+          "backgroundColor": "#ffffff"
         }
       },
       "header": {
         "text": "Common Questions",
-        "styles": {
-          "fontSize": "text-3xl",
-          "fontWeight": "font-bold",
-          "textAlign": "text-center",
-          "marginBottom": "mb-12"
-        }
+        "className": "text-3xl font-bold text-center mb-12"
       },
       "questions": [
         {
@@ -283,30 +226,25 @@
     },
     "cta": {
       "container": {
+        "className": "py-20 text-center",
         "styles": {
-          "backgroundColor": "var(--primary)",
-          "padding": "py-20",
-          "textAlign": "text-center"
+          "backgroundColor": "#4f46e5"
         }
       },
       "headline": {
         "text": "Ready to launch?",
+        "className": "text-4xl font-bold mb-8",
         "styles": {
-          "fontSize": "text-4xl",
-          "fontWeight": "font-bold",
-          "color": "#ffffff",
-          "marginBottom": "mb-8"
+          "color": "#ffffff"
         }
       },
       "button": {
         "text": "Start Now",
         "href": "/signup",
+        "className": "inline-block px-8 py-3 rounded-full font-bold bg-white text-indigo-600 transition hover:bg-gray-100",
         "styles": {
           "backgroundColor": "#ffffff",
-          "color": "var(--primary)",
-          "padding": "px-8 py-3",
-          "borderRadius": "rounded-full",
-          "fontWeight": "font-bold"
+          "color": "#4f46e5"
         }
       }
     }

@@ -1,5 +1,5 @@
-import { UniversalElement } from '../ui/UniversalElement';
 import { ElementConfig } from '@/types/schema';
+import { editable } from '@/lib/editable';
 
 // 1. Define the Expected Shape (Must match config.json!)
 type HeroData = {
@@ -12,27 +12,18 @@ type HeroData = {
 };
 
 export default function Hero({ data }: { data: HeroData }) {
-  if (!data) return null; // Safety check for the whole section
-
-  const basePath = "sections.hero"; 
-
   return (
-    <UniversalElement as="section" data={data.container} dataPath={`${basePath}.container`}>
-      <UniversalElement as="div" data={data.innerWrapper} dataPath={`${basePath}.innerWrapper`}>
-        
-        <UniversalElement as="h1" data={data.headline} dataPath={`${basePath}.headline`} />
-        
-        <UniversalElement as="p" data={data.subtext} dataPath={`${basePath}.subtext`} />
-        
-        {/* Check if primaryButton exists in config before rendering */}
-        {data.primaryButton && (
-          <UniversalElement 
-             data={data.primaryButton} 
-             dataPath={`${basePath}.primaryButton`} 
-          />
-        )}
+    <section {...editable(data.container, "sections.hero.container", "section", "py-24 relative")}>
+      
+      <h1 {...editable(
+        data.headline, 
+        "sections.hero.headline", 
+        "headline", 
+        "text-4xl font-bold tracking-tight text-gray-900"
+      )}>
+        {data.headline?.text}
+      </h1>
 
-      </UniversalElement>
-    </UniversalElement>
+    </section>
   );
 }
