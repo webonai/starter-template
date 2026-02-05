@@ -1,5 +1,6 @@
 import { ElementConfig } from '@/types/schema';
 import { editable } from '@/lib/editable';
+import { QuoteIcon } from 'lucide-react';
 
 // Define the shape of a single review item
 type ReviewItem = {
@@ -23,60 +24,45 @@ type TestimonialsProps = {
 };
 
 export default function Testimonials({ data }: TestimonialsProps) {
-  // 1. SAFETY CHECK: If the whole section data is missing, stop.
   if (!data) return null;
-
-  const basePath = "sections.testimonials";
-
-  // 2. DEFINE ITEMS SAFELY: Fallback to empty array if missing
-  const reviews = data.items || [];
+  const items = data.items || [];
 
   return (
-    <section {...editable(data.container, `${basePath}.container`, "section")}>
-      <div {...editable(data.innerWrapper, `${basePath}.innerWrapper`, "container")}>
+    <section {...editable(data.container, "sections.testimonials.container", "section", "py-24 sm:py-32 bg-white")}>
+      <div className="container mx-auto px-6 lg:px-8">
         
-        {/* Header Area */}
-        <div {...editable(data.header, `${basePath}.header`, "container")}>
-          <h2 {...editable(data.headline, `${basePath}.headline`, "headline")}>
+        <div className="mx-auto max-w-xl text-center mb-16">
+          <h2 {...editable(data.headline, "sections.testimonials.headline", "headline", "text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl")}>
             {data.headline?.text}
           </h2>
-          <p {...editable(data.subtext, `${basePath}.subtext`, "text")}>
+          <p {...editable(data.subtext, "sections.testimonials.subtext", "text", "mt-4 text-lg leading-8 text-gray-600")}>
             {data.subtext?.text}
           </p>
         </div>
 
-        {/* Grid Area */}
-        <div {...editable(data.grid, `${basePath}.grid`, "container")}>
-          
-          {/* 3. SAFETY MAP: Only map if we have reviews */}
-          {reviews.length > 0 ? (
-            reviews.map((item, index) => (
-              <blockquote 
-                key={index} 
-                {...editable(item.container, `${basePath}.items.${index}.container`, "container")}
-              >
-                <p {...editable(item.quote, `${basePath}.items.${index}.quote`, "text")}>
-                  {item.quote?.text}
-                </p>
-                <footer className="mt-6">
-                  <div {...editable(item.author, `${basePath}.items.${index}.author`, "text")}>
-                    {item.author?.text}
-                  </div>
-                  <div {...editable(item.role, `${basePath}.items.${index}.role`, "text")}>
-                    {item.role?.text}
-                  </div>
-                </footer>
-              </blockquote>
-            ))
-          ) : (
-             // Optional: Show a placeholder if no reviews exist (helps debugging)
-             <div className="p-4 text-center text-gray-400 border border-dashed rounded">
-               No testimonials found in config.
-             </div>
-          )}
-
+        <div {...editable(data.grid, "sections.testimonials.grid", "container", "mx-auto grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3")}>
+          {items.map((testimonial: ReviewItem, index: number) => (
+            <div 
+              key={index} 
+              {...editable(testimonial.container, `sections.testimonials.items.${index}.container`, "container", "flex flex-col justify-between bg-white p-8 shadow-sm ring-1 ring-gray-900/5 rounded-2xl")}
+            >
+              <div {...editable(testimonial.quote, `sections.testimonials.items.${index}.quote`, "text", "text-gray-900")}>
+                <p>{testimonial.quote?.text}</p>
+              </div>
+              
+              <div className="mt-6 flex items-center gap-x-4">
+                 <div className="text-sm leading-6">
+                    <div {...editable(testimonial.author, `sections.testimonials.items.${index}.author`, "text", "font-semibold text-gray-900")}>
+                      {testimonial.author?.text}
+                    </div>
+                    <div {...editable(testimonial.role, `sections.testimonials.items.${index}.role`, "text", "text-gray-600")}>
+                      {testimonial.role?.text}
+                    </div>
+                 </div>
+              </div>
+            </div>
+          ))}
         </div>
-
       </div>
     </section>
   );

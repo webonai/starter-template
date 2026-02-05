@@ -34,6 +34,7 @@ export type ElementConfig = {
   alt?: string;     // For images
   href?: string;    // For links/buttons
   icon?: string;    // For icon names
+  className?: string; // Tailwind classes
   
   // The Universal Styles
   styles?: UniversalStyles;

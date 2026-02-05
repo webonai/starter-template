@@ -14,14 +14,56 @@
   },
   "layout": {
     "order": [
+      "header",
       "hero",
       "features",
       "testimonials",
+      "blog",
+      "cta",
       "faq",
-      "cta"
+      "footer"
     ]
   },
   "sections": {
+    "header": {
+      "container": {
+        "className": "py-6 px-6 sm:px-12 flex justify-between items-center",
+        "styles": {
+          "backgroundColor": "#111827"
+        }
+      },
+      "logo": {
+        "src": "/uploads/logo.png",
+        "alt": "My Awesome Brand Logo",
+        "className": "h-8",
+        "href": "/",
+        "styles": {
+          "width": "100px"
+        }
+      },
+      "nav": {
+        "links": [
+          { "text": "Home", "href": "/" },
+          { "text": "Features", "href": "/features" },
+          { "text": "Pricing", "href": "/pricing" },
+          { "text": "Blog", "href": "/blog" },
+          { "text": "Contact", "href": "/contact" }
+        ],
+        "className": "space-x-8",
+        "styles": {
+          "color": "#4f46e5"
+        }
+      },
+      "ctaButton": {
+        "text": "Sign Up",
+        "href": "/signup",
+        "className": "px-4 py-2 rounded-md bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition",
+        "styles": {
+          "backgroundColor": "#4f46e5",
+          "color": "#ffffff"
+        }
+      }
+    },
     "hero": {
       "container": {
         "className": "relative overflow-hidden py-24 sm:py-32 text-center",
@@ -56,7 +98,7 @@
         }
       },
       "heroImage": {
-        "src": "/uploads/hero-image.png",
+        "src": "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&auto=format&fit=crop&w=3603&q=80",
         "alt": "Dashboard Preview",
         "className": "mt-16 rounded-xl shadow-2xl border border-gray-200"
       }
@@ -69,30 +111,112 @@
         }
       },
       "header": {
+        "className": "text-center max-w-2xl mx-auto mb-16"
+      },
+      "headline": {
         "text": "Why Us?",
         "className": "text-3xl font-bold text-center mb-16",
         "styles": {
           "color": "#1e293b"
         }
       },
+      "subtext": {
+        "text": "See what our customers have to say about their experience.",
+        "className": "text-lg",
+        "styles": {
+          "color": "#4b5563"
+        }
+      },
       "items": [
         {
-          "icon": "zap",
-          "title": "Fast Performance",
-          "text": "Blazing fast load times.",
-          "className": "p-6 rounded-xl bg-white shadow-sm"
+          "container": {
+            "className": "p-8 rounded-2xl shadow-sm",
+            "styles": {
+              "backgroundColor": "#f9fafb"
+            }
+          },
+          "icon": {
+            "src": "/uploads/fast.svg",
+            "alt": "Fast Performance Icon",
+            "className": "h-12 w-12 mb-4",
+            "styles": {
+              "color": "#4f46e5"
+            }
+          },
+          "title": {
+            "text": "Fast Performance",
+            "className": "text-xl font-bold mb-2",
+            "styles": {
+              "color": "#111827"
+            }
+          },
+          "description": {
+            "text": "Our static sites load in milliseconds, ensuring a smooth user experience.",
+            "className": "text-base",
+            "styles": {
+              "color": "#374151"
+            }
+          }
         },
         {
-          "icon": "shield",
-          "title": "Secure",
-          "text": "Top tier security out of the box.",
-          "className": "p-6 rounded-xl bg-white shadow-sm"
+          "container": {
+            "className": "p-8 rounded-2xl shadow-sm",
+            "styles": {
+              "backgroundColor": "#f9fafb"
+            }
+          },
+          "icon": {
+            "src": "/uploads/secure.svg",
+            "alt": "Secure Payment Icon",
+            "className": "h-12 w-12 mb-4",
+            "styles": {
+              "color": "#4f46e5"
+            }
+          },
+          "title": {
+            "text": "Secure Payments",
+            "className": "text-xl font-bold mb-2",
+            "styles": {
+              "color": "#111827"
+            }
+          },
+          "description": {
+            "text": "We use industry- leading security measures to protect your data and transactions.",
+            "className": "text-base", 
+            "styles": {
+              "color": "#374151"
+            }
+          }
         },
         {
-          "icon": "mouse-pointer",
-          "title": "Easy Editing",
-          "text": "Drag and drop interface.",
-          "className": "p-6 rounded-xl bg-white shadow-sm"
+          "container": {
+            "className": "p-8 rounded-2xl shadow-sm",
+            "styles": {
+              "backgroundColor": "#f9fafb"
+            }
+          },
+          "icon": {
+            "src": "/uploads/easy-to-use.svg",
+            "alt": "Easy to Use Icon",
+            "className": "h-12 w-12 mb-4",
+            "styles": {
+              "color": "#4f46e5"
+            }
+          },
+          "title": {
+            "text": "Easy to Use",
+            "className": "text-xl font-bold mb-2",
+            "styles": {
+              "color": "#111827"
+            }
+          },
+          "description": {
+            "text": "Our intuitive platform makes it simple to create and manage your static sites.",
+            "className": "text-base",
+            "styles": {
+              "color": "#374151"
+            }
+          }
         }
       ]
     },
@@ -147,6 +271,64 @@
           },
           "role": {
             "text": "CEO at TechCorp",
+            "className": "text-sm",
+            "styles": {
+              "color": "#6b7280"
+            }
+          }
+        },
+        {
+          "container": {
+            "className": "p-8 rounded-2xl shadow-sm",
+            "styles": {
+              "backgroundColor": "#f9fafb"
+            }
+          },
+          "quote": {
+            "text": "Webonai made it incredibly easy to launch our landing page in minutes.",
+            "className": "text-base italic",
+            "styles": {
+              "color": "#374151"
+            }
+          },
+          "author": {
+            "text": "Sarah Jones",
+            "className": "font-bold mt-4",
+            "styles": {
+              "color": "#111827"
+            }
+          },
+          "role": {
+            "text": "Marketing Director",
+            "className": "text-sm",
+            "styles": {
+              "color": "#6b7280"
+            }
+          }
+        },
+        {
+          "container": {
+            "className": "p-8 rounded-2xl shadow-sm",
+            "styles": {
+              "backgroundColor": "#f9fafb"
+            }
+          },
+          "quote": {
+            "text": "The performance and SEO benefits were immediate. Highly recommended!",
+            "className": "text-base italic",
+            "styles": {
+              "color": "#374151"
+            }
+          },
+          "author": {
+            "text": "David Lee",
+            "className": "font-bold mt-4",
+            "styles": {
+              "color": "#111827"
+            }
+          },
+          "role": {
+            "text": "Founder at StartupX",
             "className": "text-sm",
             "styles": {
               "color": "#6b7280"
@@ -210,7 +392,7 @@
         }
       },
       "header": {
-        "text": "Common Questions",
+        "text": "Frequently Asked Questions",
         "className": "text-3xl font-bold text-center mb-12"
       },
       "questions": [
@@ -220,6 +402,14 @@
         },
         {
           "q": "Can I use my own domain?",
+          "a": "Absolutely."
+        },
+        {
+          "q": "What is the uptime guarantee?",
+          "a": "Absolutely."
+        },
+        {
+          "q": "Do you offer customer support?",
           "a": "Absolutely."
         }
       ]
@@ -246,6 +436,48 @@
           "backgroundColor": "#ffffff",
           "color": "#4f46e5"
         }
+      }
+    },
+    "footer": {
+      "container": {
+        "className": "py-12",
+        "styles": {
+          "backgroundColor": "#0b213b"
+        }
+      },
+      "text": "Footer Section",
+      "grid": {
+        "className": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+      },
+      "items": [
+        {
+          "title": "Product",
+          "links": [
+            { "text": "Features", "href": "/features" },
+            { "text": "Pricing", "href": "/pricing" },
+            { "text": "Blog", "href": "/blog" }
+          ]
+        },
+        {
+          "title": "Company",
+          "links": [
+            { "text": "About Us", "href": "/about" },
+            { "text": "Careers", "href": "/careers" },
+            { "text": "Contact", "href": "/contact" }
+          ]
+        },
+        {
+          "title": "Support",
+          "links": [
+            { "text": "Help Center", "href": "/help" },
+            { "text": "Terms of Service", "href": "/terms" },
+            { "text": "Privacy Policy", "href": "/privacy" }
+          ]
+        }
+      ],
+      "copyright": {
+        "text": "© 2023 Webonai. All rights reserved.",
+        "className": "text-center text-sm text-gray-500 mt-8"
       }
     }
   }

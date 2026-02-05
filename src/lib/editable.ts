@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "./utils";
 
 /**
  * Merges config data into props for an editable element.

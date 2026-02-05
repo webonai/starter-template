@@ -1,48 +1,76 @@
 import { ElementConfig } from '@/types/schema';
 import { editable } from '@/lib/editable';
+import { MousePointer2, Shield, Star, Zap } from 'lucide-react';
 
-type FaqProps = {
-    data: { 
-        container: ElementConfig;
-        header: ElementConfig;
-        questions: {
-            q: string;
-            a: string;
-        }[]
-    }
-}
+// Update types to match the flat structure in config.json
+type FeatureItem = {
+  container: ElementConfig;
+  icon?: ElementConfig['icon']; // icon is optional
+  title: ElementConfig;
+  description: ElementConfig;
+};
 
-export default function FAQ({ data }: FaqProps) {
-    if (!data) return null;
-    
-    const basePath = "sections.faq";
+type FeaturesProps = {
+  data: {
+    container: ElementConfig;
+    header: ElementConfig;
+    headline: ElementConfig;
+    subtext: ElementConfig;
+    items: FeatureItem[];
+  };
+};
 
-    return (
-        <section {...editable(data.container, `${basePath}.container`, "section", "bg-gray-50 py-24 sm:py-32")}>
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <div {...editable(data.header, `${basePath}.header`, "container", "mx-auto max-w-2xl lg:text-center")}>
-                    <h2 className="text-base font-semibold leading-7 text-primary">
-                        Frequently Asked Questions
-                    </h2>
-                    <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                        {data.header?.text || "Common Questions"}
-                    </p>    
-                </div>  
-                <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-                    <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-                        {data.questions.map((faq, index) => (
-                            <div key={index} className="mb-8">
-                                <dt className="text-base font-semibold leading-7 text-gray-900">
-                                    {faq.q}
-                                </dt>
-                                <dd className="mt-2 text-base leading-7 text-gray-600">
-                                    {faq.a}
-                                </dd>
-                            </div>
-                        ))}
-                    </dl>
+const ICON_MAP: Record<string, React.ComponentType> = {
+  zap: Zap,
+  shield: Shield,
+  'mouse-pointer': MousePointer2,
+  star: Star
+};
+
+export default function Features({ data }: FeaturesProps) {
+  if (!data) return null;
+  const items = data.items || [];
+
+  return (
+    <section {...editable(data.container, "sections.features.container", "section", "py-24 bg-gray-50")}>
+      <div className="container mx-auto px-6 lg:px-8">
+        
+        {/* HEADER */}
+        <div className="mx-auto max-w-2xl text-center mb-16">
+          <h2 {...editable(data.header, "sections.features.header", "headline", "text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl")}>
+            {data.header?.text}
+          </h2>
+          <h3 {...editable(data.subtext, "sections.features.subtext", "text", "text-lg text-gray-600")}>
+            {data.subtext?.text}
+          </h3>
+        </div>
+
+        {/* THE GRID LOOP */}
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+          {items.map((feature: FeatureItem, index: number) => {
+            const Icon = ICON_MAP[feature.icon || 'star'] || Star;
+            
+            return (
+              <div 
+                key={index} 
+                {...editable(feature.container, `sections.features.items[${index}].container`, "container", "flex flex-col items-start")}
+              >
+                <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                  <div {...editable(feature.icon, `sections.features.items[${index}].icon`, "icon", "h-6 w-6 text-white")}>
+                    </div>
                 </div>
-            </div>  
-        </section>
-    );
+                <h3 {...editable(feature.title, `sections.features.items[${index}].title`, "text", "text-lg font-semibold leading-8 text-gray-900")}>
+                  {feature.title?.text}
+                </h3>
+                
+                <p {...editable(feature.description, `sections.features.items[${index}].description`, "text", "mt-1 flex-auto text-base leading-7 text-gray-600")}>
+                  {feature.description?.text}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 }

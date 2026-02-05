@@ -1,19 +1,21 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
 import { ElementConfig } from '@/types/schema';
 import { editable } from '@/lib/editable';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Define the shape of the post data from our API
 type PostData = {
   slug: string;
   title: string;
+  excerpt: string;
+  href: string;
   date: string;
   author: string;
   category: string;
   tags: string[];
-  coverImage: string;
+  image: string;
   content: string;
 };
 
@@ -30,73 +32,70 @@ type BlogProps = {
     cardCategory: ElementConfig;
     cardTitle: ElementConfig;
     cardDate: ElementConfig;
+    posts: PostData[];
   };
 };
 
+
 export default function Blog({ data }: BlogProps) {
-  const [posts, setPosts] = useState<PostData[]>([]);
-  const basePath = "sections.blog";
-
-  useEffect(() => {
-    // Fetch posts from our API route
-    fetch('/api/posts')
-      .then((res) => res.json())
-      .then((data) => setPosts(data))
-      .catch((err) => console.error("Failed to fetch posts:", err));
-  }, []);
-
   if (!data) return null;
 
   return (
-    <section {...editable(data.container, `${basePath}.container`, "section")}>
-      
-      {/* Header */}
-      <div {...editable(data.header, `${basePath}.header`, "container")}>
-        <h2 {...editable(data.headline, `${basePath}.headline`, "headline")}>
-          {data.headline?.text}
-        </h2>
-        <p {...editable(data.subtext, `${basePath}.subtext`, "text")}>
-          {data.subtext?.text}
-        </p>
-      </div>
+    <section {...editable(data.container, "sections.blog.container", "section", "bg-white py-24")}>
+      <div className="container mx-auto px-6 lg:px-8">
+        
+        {/* HEADER */}
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 {...editable(data.header, "sections.blog.header", "headline", "text-3xl font-bold tracking-tight text-gray-900")}>
+            {data.header?.text}
+          </h2>
+        </div>
 
-      {/* Grid */}
-      <div {...editable(data.grid, `${basePath}.grid`, "container")}>
-        {posts.map((post) => (
-          <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
+        {/* POSTS GRID */}
+        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          {data.posts?.map((post: PostData, index: number) => (
             <article 
-              {...editable(data.card, `${basePath}.card`, "container", "h-full transition-transform duration-300 group-hover:-translate-y-1")}
+              key={index} 
+              {...editable(post, `sections.blog.posts.${index}`, "container", "flex flex-col items-start justify-between")}
             >
-              {/* Cover Image */}
-              {post.coverImage && (
-                <img 
-                  {...editable(data.cardImage, `${basePath}.cardImage`, "image")}
-                  src={post.coverImage} 
-                  alt={post.title} 
+              
+              {/* IMAGE */}
+              <div className="relative w-full aspect-[16/9] sm:aspect-[2/1] lg:aspect-[3/2] rounded-2xl overflow-hidden bg-gray-100">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill // Automatically fills parent container
+                  {...editable(null, `sections.blog.posts.${index}.image`, "image object-cover")}
                 />
-              )}
+                <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10 pointer-events-none" />
+              </div>
 
-              <div {...editable(data.cardContent, `${basePath}.cardContent`, "container")}>
+              {/* CONTENT */}
+              <div className="max-w-xl">
+                <div className="mt-8 flex items-center gap-x-4 text-xs">
+                  <time dateTime={post.date} className="text-gray-500">
+                    {post.date}
+                  </time>
+                  <span className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+                    {post.category}
+                  </span>
+                </div>
                 
-                {/* Category */}
-                <span {...editable(data.cardCategory, `${basePath}.cardCategory`, "text")}>
-                  {post.category}
-                </span>
-
-                {/* Title */}
-                <h3 {...editable(data.cardTitle, `${basePath}.cardTitle`, "headline")}>
-                  {post.title}
-                </h3>
-
-                {/* Date */}
-                <time {...editable(data.cardDate, `${basePath}.cardDate`, "text")}>
-                  {post.date}
-                </time>
-
+                <div className="group relative">
+                  <h3 {...editable(null, `sections.blog.posts.${index}.title`, "text", "mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600")}>
+                    <Link href={post.href || '#'}>
+                      <span className="absolute inset-0" />
+                      {post.title}
+                    </Link>
+                  </h3>
+                  <p {...editable(null, `sections.blog.posts.${index}.excerpt`, "text", "mt-5 line-clamp-3 text-sm leading-6 text-gray-600")}>
+                    {post.excerpt}
+                  </p>
+                </div>
               </div>
             </article>
-          </Link>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -6,14 +6,21 @@ import Features from './components/sections/Features';
 import Testimonials from './components/sections/Testimonials';
 import FAQ from './components/sections/FAQ';
 import Blog from './components/sections/Blog';
+import Footer from './components/sections/Footer';
+import Header from './components/sections/Header';
 
 // 1. Map string names to actual Components
-const SECTION_COMPONENTS: Record<string, any> = {
+//TODO: drive this from config.json layout.order
+
+const SECTION_COMPONENTS: Record<string, React.ComponentType<any> | undefined> = {
+  header: Header, 
   hero: Hero,
   features: Features,
   testimonials: Testimonials,
   blog: Blog,
   faq: FAQ,
+  // cta: CTA,
+  footer: Footer,
 };
 
 export default function Home() {
