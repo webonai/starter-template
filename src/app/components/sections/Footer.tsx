@@ -35,7 +35,7 @@ export default function Footer({ data }: FooterProps) {
                       <ul>
                           {item.links.map((link, linkIndex) => (
                               <li key={linkIndex} className="mb-2">
-                                  <Link href={link.href} className="text-gray-400 hover:text-white">
+                                  <Link {...editable(link, `sections.footer.items.${index}.links.${linkIndex}`, "link", "text-gray-400 hover:text-white") } href={link.href}>
                                       {link.text}
                                   </Link>
                               </li>
