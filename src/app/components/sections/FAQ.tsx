@@ -10,8 +10,8 @@ type FaqProps = {
         container: ElementConfig;
         header: ElementConfig;
         questions: {
-            q: string;
-            a: string;
+            q: ElementConfig;
+            a: ElementConfig;
         }[]
     }
 }
@@ -42,14 +42,16 @@ export default function FAQ({ data }: FaqProps) {
                                 onClick={() => toggleFAQ(index)}
                                 className="flex w-full cursor-pointer items-start justify-between text-left text-gray-900 hover:text-indigo-600 transition-colors group"
                             >
-                                <span className="text-base font-semibold leading-7">{faq.q}</span>
+                                <span {...editable(faq.q, `${basePath}.questions.${index}.q`, "text", "text-base font-semibold leading-7")}>
+                                    {faq.q?.text}
+                                </span>
                                 <span className="ml-6 flex h-7 items-center">
                                     <ChevronDown className={`h-6 w-6 transition-transform duration-200 ${openIndex === index ? '-rotate-180' : 'rotate-0'}`} />
                                 </span>
                             </button>
                             {openIndex === index && (
                                 <div className="mt-2 pr-12">
-                                    <p className="text-base leading-7 text-gray-600">{faq.a}</p>
+                                    <p {...editable(faq.a, `${basePath}.questions.${index}.a`, "text", "text-base leading-7 text-gray-600")}>{faq.a?.text}</p>
                                 </div>
                             )}
                         </div>

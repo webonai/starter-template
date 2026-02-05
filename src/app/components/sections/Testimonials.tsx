@@ -35,7 +35,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
           <h2 {...editable(data.headline, "sections.testimonials.headline", "headline", "text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl")}>
             {data.headline?.text}
           </h2>
-          <p {...editable(data.subtext, "sections.testimonials.subtext", "text", "mt-4 text-lg leading-8 text-gray-600")}>
+          <p {...editable(data.subtext, "sections.testimonials.subtext", "subtext", "mt-4 text-lg leading-8 text-gray-600")}>
             {data.subtext?.text}
           </p>
         </div>

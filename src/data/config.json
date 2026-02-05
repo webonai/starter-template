@@ -127,6 +127,9 @@
           "color": "#4b5563"
         }
       },
+      "grid": {
+        "className": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+      },
       "items": [
         {
           "container": {
@@ -136,12 +139,8 @@
             }
           },
           "icon": {
-            "src": "/uploads/fast.svg",
-            "alt": "Fast Performance Icon",
-            "className": "h-12 w-12 mb-4",
-            "styles": {
-              "color": "#4f46e5"
-            }
+            "icon": "zap",
+            "alt": "Fast Performance Icon"
           },
           "title": {
             "text": "Fast Performance",
@@ -166,12 +165,8 @@
             }
           },
           "icon": {
-            "src": "/uploads/secure.svg",
-            "alt": "Secure Payment Icon",
-            "className": "h-12 w-12 mb-4",
-            "styles": {
-              "color": "#4f46e5"
-            }
+            "icon": "shield",
+            "alt": "Secure Payment Icon"
           },
           "title": {
             "text": "Secure Payments",
@@ -196,12 +191,8 @@
             }
           },
           "icon": {
-            "src": "/uploads/easy-to-use.svg",
-            "alt": "Easy to Use Icon",
-            "className": "h-12 w-12 mb-4",
-            "styles": {
-              "color": "#4f46e5"
-            }
+            "icon": "mouse-pointer",
+            "alt": "Easy to Use Icon"
           },
           "title": {
             "text": "Easy to Use",
@@ -397,20 +388,54 @@
       },
       "questions": [
         {
-          "q": "Is it free?",
-          "a": "Yes, for now."
+          "q": {
+            "text": "What is Webonai?",
+            "className": "text-xl font-bold mb-4"
+          },
+          "a": {
+            "text": "Webonai is a platform that allows you to create and manage static sites with ease.",
+            "className": "text-base"
+          }
         },
         {
-          "q": "Can I use my own domain?",
-          "a": "Absolutely."
+          "q": {
+            "text": "How does Webonai work?",
+            "className": "text-xl font-bold mb-4"
+          },
+          "a": {
+            "text": "Webonai works by providing a simple interface to manage static sites.",
+            "className": "text-base"
+          }
         },
         {
-          "q": "What is the uptime guarantee?",
-          "a": "Absolutely."
+          "q": {
+            "text": "Can I use my own domain?",
+            "className": "text-xl font-bold mb-4"
+          },
+          "a": {
+            "text": "Absolutely.",
+            "className": "text-base"
+          }
         },
         {
-          "q": "Do you offer customer support?",
-          "a": "Absolutely."
+          "q": {
+            "text": "What is the uptime guarantee?",
+            "className": "text-xl font-bold mb-4"
+          },
+          "a": {
+            "text": "We guarantee 99.9% uptime.",
+            "className": "text-base"
+          }
+        },
+        {
+          "q": {
+            "text": "Do you offer customer support?",
+            "className": "text-xl font-bold mb-4"
+          },
+          "a": {
+            "text": "Absolutely.",
+            "className": "text-base"
+          }
         }
       ]
     },
