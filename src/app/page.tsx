@@ -8,9 +8,9 @@ import FAQ from './components/sections/FAQ';
 import Blog from './components/sections/Blog';
 import Footer from './components/sections/Footer';
 import Header from './components/sections/Header';
+import CTA from './components/sections/CTA';
 
 // 1. Map string names to actual Components
-//TODO: drive this from config.json layout.order
 
 const SECTION_COMPONENTS: Record<string, React.ComponentType<any> | undefined> = {
   header: Header, 
@@ -18,8 +18,8 @@ const SECTION_COMPONENTS: Record<string, React.ComponentType<any> | undefined> =
   features: Features,
   testimonials: Testimonials,
   blog: Blog,
+  cta: CTA,
   faq: FAQ,
-  // cta: CTA,
   footer: Footer,
 };
 
@@ -41,11 +41,13 @@ export default function Home() {
 
   // 2. Fallback if layout order is missing
   const sectionOrder = safeConfig.layout?.order || Object.keys(safeConfig.sections);
+  const hiddenSections = new Set(safeConfig.layout?.hiddenSections || []);
 
   return (
     <main>
       {sectionOrder.map((sectionKey: string) => {
-        // A. Find the component
+        if (hiddenSections.has(sectionKey)) return null;
+
         const Component = SECTION_COMPONENTS[sectionKey];
         
         // B. Find the data (Safe now because we checked config.sections above)

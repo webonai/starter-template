@@ -22,6 +22,85 @@
       "cta",
       "faq",
       "footer"
+    ],
+    "hiddenSections": ["faq"],
+    "pages": [
+      { "slug": "", "title": "Home", "href": "/" },
+      { 
+        "slug": "about", 
+        "title": "About Us", 
+        "href": "/about",
+        "headline": {
+          "text": "About Our Company",
+          "className": "text-4xl font-bold mb-4",
+          "styles": {
+            "color": "#111827"
+          }
+        },
+        "subtext": {
+          "text": "We are dedicated to providing the best service to our customers."
+        },
+        "body": {
+          "text": "Founded in 2010, our company has consistently delivered high-quality products and services to clients worldwide. Our team of experts is passionate about innovation and excellence."
+        },
+        "grid": {
+          "className": "grid grid-cols-1 sm:grid-cols-2 gap-8"
+        },
+        "items": [
+          {
+            "title": {
+              "text": "Our Mission"
+            },
+            "description": {
+              "text": "To deliver high-quality products that bring value to our customers."
+            }
+          },
+          {
+            "title": {
+              "text": "Our Vision"
+            },
+            "description": {
+              "text": "To be the leading brand in our industry, known for innovation and excellence."
+            }
+          },
+          {
+            "title": {
+              "text": "Our Values"
+            },
+            "description": {
+              "text": "Integrity, Customer Focus, Innovation, and Teamwork."
+            }
+          },
+          {
+            "title": {
+              "text": "Our History"
+            },
+            "description": {
+              "text": "Founded in 2010, we have consistently grown and adapted to meet market needs."
+            }
+          }
+        ]
+      },
+      { 
+        "slug": "contact", 
+        "title": "Contact", 
+        "href": "/contact",
+        "heading": {
+          "text": "Get in Touch",
+          "className": "text-4xl font-bold mb-4",
+          "styles": {
+            "color": "#111827"
+          }
+        },
+        "subtext": {
+          "text": "We'd love to hear from you. Reach out with any questions."
+        },
+        "socials": [
+          { "platform": "Twitter", "href": "https://twitter.com", "icon": "twitter" },
+          { "platform": "GitHub", "href": "https://github.com", "icon": "github" },
+          { "platform": "LinkedIn", "href": "https://linkedin.com", "icon": "linkedin" }
+        ]
+      }
     ]
   },
   "sections": {
@@ -451,6 +530,13 @@
         "className": "text-4xl font-bold mb-8",
         "styles": {
           "color": "#ffffff"
+        }
+      },
+      "subtext": {
+        "text": "Get started with Webonai today and take your static sites to the next level.",
+        "className": "text-lg mb-12",
+        "styles": {
+          "color": "#e0e7ff"
         }
       },
       "button": {
