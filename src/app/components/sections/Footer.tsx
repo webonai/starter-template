@@ -31,7 +31,7 @@ export default function Footer({ data }: FooterProps) {
           <div {...editable(data.grid, "sections.footer.grid", "container", "mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6")}>
               {data.items.map((item, index) => (
                   <div key={index}>
-                      <h4 {...editable(null, `sections.footer.items.${index}.title`, "text", "text-lg font-semibold text-white")}>{item.title}</h4>
+                      <h4 {...editable(item.title, `sections.footer.items.${index}.title`, "text", "text-lg font-semibold text-white")}>{item.title}</h4>
                       <ul>
                           {item.links.map((link, linkIndex) => (
                               <li key={linkIndex} className="mb-2">
