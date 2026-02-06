@@ -41,7 +41,7 @@ export default function Blog({ data }: BlogProps) {
   if (!data) return null;
 
   return (
-    <section {...editable(data.container, "sections.blog.container", "section", "bg-white py-24")}>
+    <section data-section="blog" {...editable(data.container, "sections.blog.container", "section", "bg-white py-24")}>
       <div className="container mx-auto px-6 lg:px-8">
         
         {/* HEADER */}

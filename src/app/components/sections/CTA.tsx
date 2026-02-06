@@ -11,7 +11,7 @@ type ctaProps = {
 };
 export default function CTA({data}: ctaProps) {
   return (
-    <section {...editable(data.container, "sections.cta.container", "section", "bg-indigo-600")}>
+    <section data-section="cta" {...editable(data.container, "sections.cta.container", "section", "bg-indigo-600")}>
       <div className="max-w-3xl mx-auto text-center py-20 px-6">
         <h2 {...editable(data.headline.text, "sections.cta.headline", "headline", "text-4xl font-bold text-white mb-6")}>
             {data.headline?.text}

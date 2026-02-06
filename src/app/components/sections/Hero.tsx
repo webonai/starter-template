@@ -19,7 +19,7 @@ export default function Hero({ data }: { data: HeroData }) {
   if (!data) return null;
 
   return (
-    <section {...editable(data.container, "sections.hero.container", "section", "relative py-24 sm:py-32 bg-white")}>
+    <section data-section="hero" {...editable(data.container, "sections.hero.container", "section", "relative py-24 sm:py-32 bg-white")}>
       <div {...editable(data.innerWrapper, "sections.hero.innerWrapper", "container", "container mx-auto px-6 text-center")}>
         
         {/* HEADLINE */}

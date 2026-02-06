@@ -34,7 +34,7 @@ export default function Features({ data }: FeaturesProps) {
   const items = data.items || [];
 
   return (
-    <section 
+    <section data-section="features"
       {...editable(data.container, "sections.features.container", "section", "py-24 bg-gray-50")}
     >
       <div className="container mx-auto px-6 lg:px-8">

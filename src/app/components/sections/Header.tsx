@@ -35,7 +35,7 @@ export default function Header({ data }: { data: HeaderProps }) {
     if (!data) return null;
 
     return (
-        <header {...editable(data.container, "sections.header.container", "header")}>
+        <header data-section="header" {...editable(data.container, "sections.header.container", "header")}>
             <div className="container mx-auto flex items-center justify-between">
                 {/* Logo */}
                 <Link href={data.logo?.href || '/'} {...editable(data.logo, "sections.header.logo", "image")}>

@@ -28,7 +28,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
   const items = data.items || [];
 
   return (
-    <section {...editable(data.container, "sections.testimonials.container", "section", "py-24 sm:py-32 bg-white")}>
+    <section data-section="testimonials" {...editable(data.container, "sections.testimonials.container", "section", "py-24 sm:py-32 bg-white")}>
       <div className="container mx-auto px-6 lg:px-8">
         
         <div className="mx-auto max-w-xl text-center mb-16">

@@ -28,7 +28,7 @@ export default function FAQ({ data }: FaqProps) {
     const basePath = "sections.faq";
 
     return (
-        <section {...editable(data.container, `${basePath}.container`, "section", "bg-gray-50 py-24 sm:py-32")}>
+        <section data-section="faq" {...editable(data.container, `${basePath}.container`, "section", "bg-gray-50 py-24 sm:py-32")}>
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div {...editable(data.header, `${basePath}.header`, "container", "mx-auto max-w-2xl lg:text-center mb-16")}>
                     <h2 {...editable(data.header, `${basePath}.header`, "headline", "text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl")} >

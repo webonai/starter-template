@@ -25,7 +25,7 @@ type FooterProps = {
 
 export default function Footer({ data }: FooterProps) {
   return (
-    <footer {...editable(data.container, "sections.footer.container", "footer", "bg-slate-800 py-6 text-gray-300")}>
+    <footer data-section="footer" {...editable(data.container, "sections.footer.container", "footer", "bg-slate-800 py-6 text-gray-300")}>
       <div className="container mx-auto text-center">
           <h3 {...editable(data.text, "sections.footer.text", "text", "text-gray-100")}>{data.text?.text}</h3>
           <div {...editable(data.grid, "sections.footer.grid", "container", "mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6")}>
