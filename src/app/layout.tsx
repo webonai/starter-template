@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.variable} ${playfair.variable} ${roboto.variable}`}>
         {/* 1. Wrap in Provider to share data */}
         <ConfigProvider>
-          {/* <ConfigListener /> */}
+          <ConfigListener />
           {/* 2. Wrap in ThemeWrapper to apply dynamic styles */}
           <ThemeWrapper>
             {children}
