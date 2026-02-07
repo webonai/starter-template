@@ -1,5 +1,4 @@
 'use client';
-
 import { ElementConfig } from '@/types/schema';
 import { editable } from '@/lib/editable';
 import Link from 'next/link';
@@ -39,7 +38,7 @@ type BlogProps = {
 
 export default function Blog({ data }: BlogProps) {
   if (!data) return null;
-
+  const topPosts = data.posts?.slice(0, 3) || [];
   return (
     <section data-section="blog" {...editable(data.container, "sections.blog.container", "section", "bg-white py-24")}>
       <div className="container mx-auto px-6 lg:px-8">
@@ -53,10 +52,10 @@ export default function Blog({ data }: BlogProps) {
 
         {/* POSTS GRID */}
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {data.posts?.map((post: PostData, index: number) => (
+          {topPosts?.map((post: PostData, index: number) => (
             <article 
               key={index} 
-              {...editable(post, `sections.blog.posts.${index}`, "container", "flex flex-col items-start justify-between")}
+              {...editable(data.posts[index], `sections.blog.posts.${index}`, "container", "flex flex-col items-start justify-between")}
             >
               
               {/* IMAGE */}

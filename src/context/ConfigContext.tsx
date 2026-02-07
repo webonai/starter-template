@@ -57,8 +57,23 @@ const initialConfig: SiteConfig = (defaultConfigFile as unknown as SiteConfig) |
 
 const ConfigContext = createContext<SiteConfig>(initialConfig);
 
-export function ConfigProvider({ children }: { children: React.ReactNode }) {
-  const [config, setConfig] = useState<SiteConfig>(initialConfig);
+export function ConfigProvider({ children, initialPosts }: { children: React.ReactNode; initialPosts?: any[] }) {
+  const [config, setConfig] = useState<SiteConfig>(() => {
+    const baseConfig = (defaultConfigFile as unknown as SiteConfig) || SAFE_DEFAULTS;
+    if (initialPosts && initialPosts.length > 0) {
+        return {
+            ...baseConfig,
+            sections: {
+                ...baseConfig.sections,
+                blog: {
+                    ...baseConfig.sections?.blog,
+                    posts: initialPosts
+                }
+            }
+        };
+    }
+    return baseConfig;
+  });
 
   useEffect(() => {
     const handler = (event: MessageEvent) => {

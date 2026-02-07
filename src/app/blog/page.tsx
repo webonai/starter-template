@@ -3,11 +3,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Header from '../components/sections/Header';
 import Footer from '../components/sections/Footer';
-import config from '../../../src/data/config.json';
-import { ElementConfig, PageConfig } from '@/types/schema';
+import { ElementConfig } from '@/types/schema';
 import { editable } from '@/lib/editable';
+import config from '../../data/config.json';
 
 export default async function BlogIndex({ searchParams }: { searchParams: Promise<{ page?: string; category?: string }> }) {
+  const safeConfig = config as any;
+
   const resolvedSearchParams = await searchParams;
   const currentPage = Number(resolvedSearchParams?.page) || 1;
   const category = resolvedSearchParams?.category;
@@ -17,7 +19,6 @@ export default async function BlogIndex({ searchParams }: { searchParams: Promis
   const totalPages = Math.ceil(allPosts.length / postsPerPage);
   
   const posts = allPosts.slice((currentPage - 1) * postsPerPage, currentPage * postsPerPage);
-  const safeConfig = config as PageConfig;
 
   return (
     <main>
