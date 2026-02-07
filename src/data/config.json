@@ -453,6 +453,17 @@
         }
       ]
     },
+    "blogIndex": {
+      "container": { "className": "bg-white py-24 sm:py-32" },
+      "headline": {
+        "text": "Our Blog",
+        "className": "text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+      },
+      "subtext": {
+        "text": "Learn how to grow your business with our expert advice.",
+        "className": "mt-2 text-lg leading-8 text-gray-600"
+      }
+    },
     "faq": {
       "container": {
         "className": "py-24 border-t border-gray-100",
