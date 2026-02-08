@@ -54,12 +54,12 @@ export default function Header({ data }: { data: HeaderProps }) {
                 <div className="flex items-center gap-x-8">
                     <nav {...editable(data.nav, "sections.header.nav", "container")}>
                         {data.nav?.links.map((link, index) => (
-                            <Link {...editable(link, `sections.header.nav.links.${index}`, "link", "text-sm font-semibold leading-6 text-gray-100 hover:text-indigo-600 transition-colors")} key={index} href={link.href}>
+                            <Link {...editable(link, `sections.header.nav.links.${index}`, "link", "text-sm font-semibold leading-6 text-gray-100 hover:bg-primary transition-colors")} key={index} href={link.href}>
                                 {link.text}
                             </Link>
                         ))}
                     </nav>
-                    <Link href={data.ctaButton?.href || '#'} {...editable(data.ctaButton, "sections.header.ctaButton", "button")}>
+                    <Link href={data.ctaButton?.href || '#'} {...editable(data.ctaButton, "sections.header.ctaButton", "button", data.ctaButton.className)}>
                         {data.ctaButton?.text}
                     </Link>
                 </div>
