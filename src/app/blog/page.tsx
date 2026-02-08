@@ -40,7 +40,7 @@ export default async function BlogIndex({ searchParams }: { searchParams: Promis
                 href="/blog"
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                     !category 
-                    ? 'bg-indigo-600 text-white' 
+                    ? 'bg-primary text-white' 
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
             >
@@ -52,7 +52,7 @@ export default async function BlogIndex({ searchParams }: { searchParams: Promis
                     href={`/blog?category=${encodeURIComponent(cat)}`}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                         category === cat
-                        ? 'bg-indigo-600 text-white'
+                        ? 'bg-primary text-white'
                         : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                     }`}
                 >

@@ -2,43 +2,14 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import defaultConfigFile from '../data/config.json';
-
-// 1. DEFINE THE TYPES
-export interface SiteConfig {
-  meta: {
-    siteName: string;
-    description?: string;
-    favicon?: string;
-  };
-  theme: {
-    primary: string;
-    secondary?: string;
-    accent?: string;
-    neutral?: string;
-    fontHeading?: string;
-    fontBody?: string;
-    radius?: string;
-    mode?: string;
-  };
-  layout: {
-    order: string[];
-  };
-  sections: Record<string, any>; // Changed to any to allow flexible section types
-  logo?: {
-    src?: string;
-    text?: string;
-    styles?: Record<string, string | number>;
-    [key: string]: unknown;
-  };
-  [key: string]: unknown;
-}
+import { SiteConfig } from '@/types/configTypes';
 
 export const CONFIG_MESSAGE_TYPE = 'WEBONAI_CONFIG_UPDATE';
 export const SELECT_ELEMENT_MESSAGE_TYPE = 'WEBONAI_SELECT_ELEMENT';
 
 // Fix for TypeScript error regarding <style jsx>
 declare module 'react' {
-  interface StyleHTMLAttributes<T> {
+  interface StyleHTMLAttributes<T> extends React.HTMLAttributes<T> {
     jsx?: boolean;
     global?: boolean;
   }
@@ -128,17 +99,6 @@ export function ConfigProvider({ children, initialPosts }: { children: React.Rea
 
   return (
     <ConfigContext.Provider value={config}>
-      <style jsx global>{`
-        [data-editing="true"] {
-          outline: 2px solid #3b82f6;
-          outline-offset: 2px;
-          cursor: pointer;
-        }
-        [data-path]:hover {
-          outline: 1px dashed #94a3b8;
-          cursor: pointer;
-        }
-      `}</style>
       {children}
     </ConfigContext.Provider>
   );

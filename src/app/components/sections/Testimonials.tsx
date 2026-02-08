@@ -1,8 +1,6 @@
 import { ElementConfig } from '@/types/schema';
 import { editable } from '@/lib/editable';
-import { QuoteIcon } from 'lucide-react';
 
-// Define the shape of a single review item
 type ReviewItem = {
   container: ElementConfig;
   quote: ElementConfig;
@@ -10,7 +8,6 @@ type ReviewItem = {
   role: ElementConfig;
 };
 
-// Define the shape of the main data prop
 type TestimonialsProps = {
   data: {
     container: ElementConfig;
@@ -19,7 +16,7 @@ type TestimonialsProps = {
     headline: ElementConfig;
     subtext: ElementConfig;
     grid: ElementConfig;
-    items?: ReviewItem[]; // Mark as optional (?) to prevent type errors
+    items?: ReviewItem[];
   };
 };
 
@@ -28,14 +25,14 @@ export default function Testimonials({ data }: TestimonialsProps) {
   const items = data.items || [];
 
   return (
-    <section data-section="testimonials" {...editable(data.container, "sections.testimonials.container", "section", "py-24 sm:py-32 bg-white")}>
+    <section data-section="testimonials" {...editable(data.container, "sections.testimonials.container", "section", "py-24 sm:py-32 bg-background")}>
       <div className="container mx-auto px-6 lg:px-8">
         
         <div className="mx-auto max-w-xl text-center mb-16">
-          <h2 {...editable(data.headline, "sections.testimonials.headline", "headline", "text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl")}>
+          <h2 {...editable(data.headline, "sections.testimonials.headline", "headline", "text-3xl font-bold tracking-tight text-foreground sm:text-4xl")}>
             {data.headline?.text}
           </h2>
-          <p {...editable(data.subtext, "sections.testimonials.subtext", "subtext", "mt-4 text-lg leading-8 text-gray-600")}>
+          <p {...editable(data.subtext, "sections.testimonials.subtext", "subtext", "mt-4 text-lg leading-8 text-muted-foreground")}>
             {data.subtext?.text}
           </p>
         </div>
@@ -44,18 +41,18 @@ export default function Testimonials({ data }: TestimonialsProps) {
           {items.map((testimonial: ReviewItem, index: number) => (
             <div 
               key={index} 
-              {...editable(testimonial.container, `sections.testimonials.items.${index}.container`, "container", "flex flex-col justify-between bg-white p-8 shadow-sm ring-1 ring-gray-900/5 rounded-2xl")}
+              {...editable(testimonial.container, `sections.testimonials.items.${index}.container`, "container", "flex flex-col justify-between bg-card p-8 shadow-sm ring-1 ring-border rounded-2xl")}
             >
-              <div {...editable(testimonial.quote, `sections.testimonials.items.${index}.quote`, "text", "text-gray-900")}>
+              <div {...editable(testimonial.quote, `sections.testimonials.items.${index}.quote`, "text", "text-card-foreground")}>
                 <p>{testimonial.quote?.text}</p>
               </div>
               
               <div className="mt-6 flex items-center gap-x-4">
                  <div className="text-sm leading-6">
-                    <div {...editable(testimonial.author, `sections.testimonials.items.${index}.author`, "text", "font-semibold text-gray-900")}>
+                    <div {...editable(testimonial.author, `sections.testimonials.items.${index}.author`, "text", "font-semibold text-card-foreground")}>
                       {testimonial.author?.text}
                     </div>
-                    <div {...editable(testimonial.role, `sections.testimonials.items.${index}.role`, "text", "text-gray-600")}>
+                    <div {...editable(testimonial.role, `sections.testimonials.items.${index}.role`, "text", "text-muted-foreground")}>
                       {testimonial.role?.text}
                     </div>
                  </div>

@@ -4,6 +4,7 @@ import { editable } from '@/lib/editable';
 import type { ElementConfig } from '@/types/schema';
 import Link from 'next/link';
 import Image from 'next/image';
+
 type NavLink = {
     text: string;
     href: string;
@@ -15,19 +16,16 @@ type HeaderProps = {
         src: string;
         alt: string;
         href: string;
-        styles?: Record<string, string>;
         className?: string;
     };
     nav: {
         links: NavLink[];
         className?: string;
-        styles?: Record<string, string>;
     };
     ctaButton: {
         text: string;
         href: string;
         className?: string;
-        styles?: Record<string, string>;
     };
 };
 
@@ -54,12 +52,16 @@ export default function Header({ data }: { data: HeaderProps }) {
                 <div className="flex items-center gap-x-8">
                     <nav {...editable(data.nav, "sections.header.nav", "container")}>
                         {data.nav?.links.map((link, index) => (
-                            <Link {...editable(link, `sections.header.nav.links.${index}`, "link", "text-sm font-semibold leading-6 text-gray-100 hover:bg-primary transition-colors")} key={index} href={link.href}>
+                            <Link 
+                                {...editable(link, `sections.header.nav.links.${index}`, "link", "text-sm font-semibold leading-6 text-secondary-foreground hover:text-primary transition-colors")} 
+                                key={index} 
+                                href={link.href}
+                            >
                                 {link.text}
                             </Link>
                         ))}
                     </nav>
-                    <Link href={data.ctaButton?.href || '#'} {...editable(data.ctaButton, "sections.header.ctaButton", "button", data.ctaButton.className)}>
+                    <Link href={data.ctaButton?.href || '#'} {...editable(data.ctaButton, "sections.header.ctaButton", "button")}>
                         {data.ctaButton?.text}
                     </Link>
                 </div>

@@ -4,7 +4,6 @@ import { editable } from '@/lib/editable';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// Define the shape of the post data from our API
 type PostData = {
   slug: string;
   title: string;
@@ -35,17 +34,17 @@ type BlogProps = {
   };
 };
 
-
 export default function Blog({ data }: BlogProps) {
   if (!data) return null;
   const topPosts = data.posts?.slice(0, 3) || [];
+  
   return (
-    <section data-section="blog" {...editable(data.container, "sections.blog.container", "section", "bg-white py-24")}>
+    <section data-section="blog" {...editable(data.container, "sections.blog.container", "section", "bg-background py-24")}>
       <div className="container mx-auto px-6 lg:px-8">
         
         {/* HEADER */}
         <div className="mx-auto max-w-2xl text-center">
-          <h2 {...editable(data.header, "sections.blog.header", "headline", "text-3xl font-bold tracking-tight text-gray-900")}>
+          <h2 {...editable(data.header, "sections.blog.header", "headline", "text-3xl font-bold tracking-tight text-foreground")}>
             {data.header?.text}
           </h2>
         </div>
@@ -59,35 +58,35 @@ export default function Blog({ data }: BlogProps) {
             >
               
               {/* IMAGE */}
-              <div className="relative w-full aspect-[16/9] sm:aspect-[2/1] lg:aspect-[3/2] rounded-2xl overflow-hidden bg-gray-100">
+              <div className="relative w-full aspect-[16/9] sm:aspect-[2/1] lg:aspect-[3/2] rounded-2xl overflow-hidden bg-muted">
                 <Image
                   src={post.image}
                   alt={post.title}
-                  fill // Automatically fills parent container
-                  {...editable(null, `sections.blog.posts.${index}.image`, "image object-cover")}
+                  fill
+                  {...editable(null, `sections.blog.posts.${index}.image`, "image", "object-cover")}
                 />
-                <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10 pointer-events-none" />
+                <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-border pointer-events-none" />
               </div>
 
               {/* CONTENT */}
               <div className="max-w-xl">
                 <div className="mt-8 flex items-center gap-x-4 text-xs">
-                  <time dateTime={post.date} className="text-gray-500">
+                  <time dateTime={post.date} className="text-muted-foreground">
                     {post.date}
                   </time>
-                  <span className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+                  <span className="relative z-10 rounded-full bg-muted px-3 py-1.5 font-medium text-muted-foreground hover:bg-accent">
                     {post.category}
                   </span>
                 </div>
                 
                 <div className="group relative">
-                  <h3 {...editable(null, `sections.blog.posts.${index}.title`, "text", "mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600")}>
+                  <h3 {...editable(null, `sections.blog.posts.${index}.title`, "text", "mt-3 text-lg font-semibold leading-6 text-foreground group-hover:text-muted-foreground")}>
                     <Link href={post.href || '#'}>
                       <span className="absolute inset-0" />
                       {post.title}
                     </Link>
                   </h3>
-                  <p {...editable(null, `sections.blog.posts.${index}.excerpt`, "text", "mt-5 line-clamp-3 text-sm leading-6 text-gray-600")}>
+                  <p {...editable(null, `sections.blog.posts.${index}.excerpt`, "text", "mt-5 line-clamp-3 text-sm leading-6 text-muted-foreground")}>
                     {post.excerpt}
                   </p>
                 </div>
