@@ -21,5 +21,6 @@ export function editable(
     // Editor Attributes
     "data-path": path,
     "data-type": type,
+    "contenteditable": "true"
   };
 }
