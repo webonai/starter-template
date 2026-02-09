@@ -42,19 +42,6 @@ const config: Config = {
       },
     },
   },
-  safelist: [
-    {
-      pattern: /^(bg|text|border)-(primary|secondary|accent|background|card|muted|destructive|popover|neutral|foreground|border)$/,
-      variants: ['hover', 'focus'],
-    },
-    {
-      pattern: /^text-(primary|secondary|accent|card|muted|destructive|popover)-foreground$/,
-    },
-    'font-heading','font-body','text-left', 'text-center', 'text-right', 'text-justify',
-    'text-sm', 'text-base', 'text-lg', 'text-xl', 'text-2xl', 'text-3xl', 'text-4xl', 'text-5xl', 'text-6xl',
-    'font-light', 'font-normal', 'font-medium', 'font-semibold', 'font-bold', 'font-extrabold',
-    { pattern: /^(p|m)(t|b|l|r|x|y)?-(0|1|2|4|6|8|12|16|20|24|32)$/ }
-  ],
   plugins: [],
 };
 export default config;

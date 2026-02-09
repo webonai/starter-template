@@ -53,7 +53,7 @@ export default function Header({ data }: { data: HeaderProps }) {
                     <nav {...editable(data.nav, "sections.header.nav", "container")}>
                         {data.nav?.links.map((link, index) => (
                             <Link 
-                                {...editable(link, `sections.header.nav.links.${index}`, "link", "text-sm font-semibold leading-6 text-secondary-foreground hover:text-primary transition-colors")} 
+                                {...editable(link, `sections.header.nav.links.${index}`, "link")} 
                                 key={index} 
                                 href={link.href}
                             >

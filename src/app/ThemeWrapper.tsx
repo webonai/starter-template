@@ -11,7 +11,11 @@ export default function ThemeWrapper({ children }: { children: React.ReactNode }
     if (!safeConfig || !safeConfig.theme) return;
 
     const theme = safeConfig.theme;
+    const mode = theme.mode || 'light';
     const root = document.documentElement;
+
+    // Set theme mode
+    root.setAttribute('data-theme', mode);
 
     const mapFont = (fontName?: string) => {
       if (!fontName) return 'sans-serif';
@@ -22,29 +26,43 @@ export default function ThemeWrapper({ children }: { children: React.ReactNode }
       return fontName;
     };
 
-    // Set CSS variables directly on :root
-    root.style.setProperty('--primary', theme.primary || '#000000');
-    root.style.setProperty('--secondary', theme.secondary || '#1e293b');
-    root.style.setProperty('--accent', theme.accent || '#10b981');
-    root.style.setProperty('--neutral', theme.neutral || '#f3f4f6');
-    root.style.setProperty('--destructive', theme.destructive || '#ef4444');
-    root.style.setProperty('--muted', theme.muted || '#f1f5f9');
-    root.style.setProperty('--popover', theme.popover || '#ffffff');
-    root.style.setProperty('--card', theme.card || '#ffffff');
-    root.style.setProperty('--border', theme.border || '#e2e8f0');
-    root.style.setProperty('--input', theme.input || '#e2e8f0');
-    root.style.setProperty('--ring', theme.ring || '#4f46e5');
-    root.style.setProperty('--background', theme.background || '#ffffff');
-    root.style.setProperty('--foreground', theme.foreground || '#020817');
-    root.style.setProperty('--primary-foreground', theme.primaryForeground || '#ffffff');
-    root.style.setProperty('--secondary-foreground', theme.secondaryForeground || '#f8fafc');
-    root.style.setProperty('--accent-foreground', theme.accentForeground || '#1e293b');
-    root.style.setProperty('--destructive-foreground', theme.destructiveForeground || '#f8fafc');
-    root.style.setProperty('--muted-foreground', theme.mutedForeground || '#64748b');
-    root.style.setProperty('--card-foreground', theme.cardForeground || '#020817');
-    root.style.setProperty('--popover-foreground', theme.popoverForeground || '#020817');
-    root.style.setProperty('--font-heading-family', mapFont(theme.fontHeading));
-    root.style.setProperty('--font-body-family', mapFont(theme.fontBody));
+    // Get colors based on mode
+    const colors = theme.colors?.[mode] || theme.colors?.light || {};
+
+    // Set Color variables
+    Object.entries(colors).forEach(([key, value]) => {
+      const cssVar = key.replace(/([A-Z])/g, '-$1').toLowerCase();
+      root.style.setProperty(`--${cssVar}`, value as string);
+    });
+
+    // Set Typography variables
+    if (theme.typography?.fontFamily) {
+      root.style.setProperty('--font-heading-family', mapFont(theme.typography.fontFamily.heading));
+      root.style.setProperty('--font-body-family', mapFont(theme.typography.fontFamily.body));
+      root.style.setProperty('--font-mono-family', theme.typography.fontFamily.mono || 'monospace');
+    }
+
+    // Set Spacing variables
+    if (theme.spacing) {
+      Object.entries(theme.spacing).forEach(([key, value]) => {
+        root.style.setProperty(`--space-${key}`, value as string);
+      });
+    }
+
+    // Set Border Radius variables
+    if (theme.borderRadius) {
+      Object.entries(theme.borderRadius).forEach(([key, value]) => {
+        root.style.setProperty(`--radius-${key}-val`, value as string);
+      });
+    }
+
+    // Set Shadow variables
+    if (theme.shadows) {
+      Object.entries(theme.shadows).forEach(([key, value]) => {
+        root.style.setProperty(`--shadow-${key}-val`, value as string);
+      });
+    }
+
   }, [safeConfig]);
 
   if (!safeConfig || !safeConfig.theme) {

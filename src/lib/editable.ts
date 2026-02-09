@@ -7,7 +7,7 @@ export function editable(
   data: any, 
   path: string, 
   type: string = 'text', 
-  defaultClass: string = ""
+  defaultClass: string = "" 
 ) {
   if (!data) return { className: defaultClass };
 
