@@ -1,20 +1,8 @@
 'use client';
-
-import { ElementConfig } from '@/types/schema';
+import { FaqProps } from './types';
 import { editable } from '@/lib/editable';
 import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
-
-type FaqProps = {
-    data: { 
-        container: ElementConfig;
-        header: ElementConfig;
-        questions: {
-            q: ElementConfig;
-            a: ElementConfig;
-        }[]
-    }
-}
 
 export default function FAQ({ data }: FaqProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(null);

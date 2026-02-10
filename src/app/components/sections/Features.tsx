@@ -1,32 +1,16 @@
-import { ElementConfig } from '@/types/schema';
+'use client';
+
 import { editable } from '@/lib/editable';
 import { Zap, Shield, MousePointer, Star } from 'lucide-react';
+import { FeaturesProps, FeatureItem } from './types';
 
-const ICON_MAP: Record<string, any> = {
+const ICON_MAP: Record<string, unknown> = {
   zap: Zap,
   shield: Shield,
   'mouse-pointer': MousePointer,
   star: Star,
 };
 
-type FeatureItem = {
-  container: ElementConfig;
-  icon?: ElementConfig; 
-  title: ElementConfig;
-  description: ElementConfig;
-  [key: string]: any;
-};
-
-type FeaturesProps = {
-  data: {
-    container: ElementConfig;
-    header: ElementConfig;
-    headline: ElementConfig;
-    subtext: ElementConfig;
-    grid: ElementConfig;
-    items: FeatureItem[];
-  };
-};
 
 export default function Features({ data }: FeaturesProps) {
   if (!data) return null;
@@ -52,7 +36,6 @@ export default function Features({ data }: FeaturesProps) {
         <div {...editable(data.grid, "sections.features.grid", "grid", "mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3")}>
           {items.map((feature: FeatureItem, index: number) => {
             
-            // @ts-expect-error
             const iconName = feature.icon?.icon || 'star';
             const IconComponent = ICON_MAP[iconName] || Star;
             const iconData = typeof feature.icon === 'object' ? feature.icon : null;

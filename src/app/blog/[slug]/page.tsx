@@ -5,8 +5,6 @@ import Link from 'next/link';
 import Header from '../../components/sections/Header';
 import Footer from '../../components/sections/Footer';
 import config from '../../../../src/data/config.json';
-import { ElementConfig } from '@/types/schema';
-import { editable } from '@/lib/editable';
 import ReactMarkdown from 'react-markdown';
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {

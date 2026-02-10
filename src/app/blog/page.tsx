@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Header from '../components/sections/Header';
 import Footer from '../components/sections/Footer';
-import { ElementConfig } from '@/types/schema';
 import { editable } from '@/lib/editable';
 import config from '../../data/config.json';
 

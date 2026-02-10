@@ -1,38 +1,9 @@
 'use client';
-import { ElementConfig } from '@/types/schema';
 import { editable } from '@/lib/editable';
 import Link from 'next/link';
 import Image from 'next/image';
-
-type PostData = {
-  slug: string;
-  title: string;
-  excerpt: string;
-  href: string;
-  date: string;
-  author: string;
-  category: string;
-  tags: string[];
-  image: string;
-  content: string;
-};
-
-type BlogProps = {
-  data: {
-    container: ElementConfig;
-    header: ElementConfig;
-    headline: ElementConfig;
-    subtext: ElementConfig;
-    grid: ElementConfig;
-    card: ElementConfig;
-    cardImage: ElementConfig;
-    cardContent: ElementConfig;
-    cardCategory: ElementConfig;
-    cardTitle: ElementConfig;
-    cardDate: ElementConfig;
-    posts: PostData[];
-  };
-};
+import { BlogProps } from './types';
+import { Post } from '@/types/dataTypes';
 
 export default function Blog({ data }: BlogProps) {
   if (!data) return null;
@@ -51,7 +22,7 @@ export default function Blog({ data }: BlogProps) {
 
         {/* POSTS GRID */}
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {topPosts?.map((post: PostData, index: number) => (
+          {topPosts?.map((post: Post, index: number) => (
             <article 
               key={index} 
               {...editable(data.posts[index], `sections.blog.posts.${index}`, "container", "flex flex-col items-start justify-between")}

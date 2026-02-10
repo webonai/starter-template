@@ -1,24 +1,8 @@
-import { ElementConfig } from '@/types/schema';
+'user client';
+
 import { editable } from '@/lib/editable';
+import { TestimonialsProps, ReviewItem } from './types';
 
-type ReviewItem = {
-  container: ElementConfig;
-  quote: ElementConfig;
-  author: ElementConfig;
-  role: ElementConfig;
-};
-
-type TestimonialsProps = {
-  data: {
-    container: ElementConfig;
-    innerWrapper: ElementConfig;
-    header: ElementConfig;
-    headline: ElementConfig;
-    subtext: ElementConfig;
-    grid: ElementConfig;
-    items?: ReviewItem[];
-  };
-};
 
 export default function Testimonials({ data }: TestimonialsProps) {
   if (!data) return null;

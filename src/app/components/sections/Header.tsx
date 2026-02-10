@@ -1,33 +1,10 @@
 'use client';
 
 import { editable } from '@/lib/editable';
-import type { ElementConfig } from '@/types/schema';
 import Link from 'next/link';
 import Image from 'next/image';
+import { HeaderProps } from './types';
 
-type NavLink = {
-    text: string;
-    href: string;
-};
-
-type HeaderProps = {
-    container: ElementConfig;
-    logo: {
-        src: string;
-        alt: string;
-        href: string;
-        className?: string;
-    };
-    nav: {
-        links: NavLink[];
-        className?: string;
-    };
-    ctaButton: {
-        text: string;
-        href: string;
-        className?: string;
-    };
-};
 
 export default function Header({ data }: { data: HeaderProps }) {   
     if (!data) return null;

@@ -1,26 +1,8 @@
 'use client';
 import {editable } from '@/lib/editable';
-import { ElementConfig } from '@/types/schema';
 import Link from 'next/link';
+import { FooterProps } from './types';
 
-type FooterLinks = {
-    text: string;
-    href: string;
-};
-
-type FooterProps = {
-    data: {
-        container: {
-          className?: string;
-        };
-        text: ElementConfig;
-        grid: ElementConfig;
-        items: {
-          title: string;
-          links: FooterLinks[]
-        }[];
-    };
-};
 
 export default function Footer({ data }: FooterProps) {
   return (

@@ -1,14 +1,7 @@
-import { ElementConfig } from "@/types/schema";
-import { editable } from "@/lib/editable";
+'use client';
 
-type ctaProps = {
-  data: {
-    container: ElementConfig;
-    headline: ElementConfig;
-    subtext: ElementConfig;
-    button: ElementConfig;
-  };
-};
+import { editable } from "@/lib/editable";
+import { ctaProps } from "./types";
 
 export default function CTA({data}: ctaProps) {
   return (

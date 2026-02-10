@@ -15,29 +15,22 @@ declare module 'react' {
   }
 }
 
-// 2. TYPE-SAFE DEFAULTS
-const SAFE_DEFAULTS: SiteConfig = {
-  meta: { siteName: "Loading..." },
-  theme: { primary: "#000000" },
-  layout: { order: [] },
-  sections: {}
-};
 
 // Ensure defaultConfigFile is treated as SiteConfig
-const initialConfig: SiteConfig = (defaultConfigFile as unknown as SiteConfig) || SAFE_DEFAULTS;
+const initialConfig: SiteConfig = (defaultConfigFile as unknown as SiteConfig);
 
 const ConfigContext = createContext<SiteConfig>(initialConfig);
 
 export function ConfigProvider({ children, initialPosts }: { children: React.ReactNode; initialPosts?: any[] }) {
   const [config, setConfig] = useState<SiteConfig>(() => {
-    const baseConfig = (defaultConfigFile as unknown as SiteConfig) || SAFE_DEFAULTS;
+    const baseConfig = (defaultConfigFile as unknown as SiteConfig);
     if (initialPosts && initialPosts.length > 0) {
         return {
             ...baseConfig,
             sections: {
                 ...baseConfig.sections,
                 blog: {
-                    ...baseConfig.sections?.blog,
+                    ...baseConfig?.sections?.blog,
                     posts: initialPosts
                 }
             }

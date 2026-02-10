@@ -1,16 +1,10 @@
+'use client';
+
 import Link from 'next/link'; 
-import { ElementConfig } from '@/types/schema';
 import Image from 'next/image';
 import { editable } from '@/lib/editable';
+import { HeroData } from './types';
 
-type HeroData = {
-  container: ElementConfig;
-  innerWrapper: ElementConfig;
-  headline: ElementConfig;
-  subtext: ElementConfig;
-  heroImage?: ElementConfig;
-  primaryButton: ElementConfig;
-};
 
 export default function Hero({ data }: { data: HeroData }) {
   if (!data) return null;
