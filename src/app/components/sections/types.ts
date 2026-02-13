@@ -16,6 +16,8 @@ type PostData = {
 export type BlogProps = {
   data: {
     container: ElementConfig;
+    innerWrapper: ElementConfig;
+    headerWrapper: ElementConfig;
     header: ElementConfig;
     headline: ElementConfig;
     subtext: ElementConfig;
@@ -33,6 +35,10 @@ export type BlogProps = {
 export type FaqProps = {
     data: { 
         container: ElementConfig;
+        innerWrapper: ElementConfig;
+        headerWrapper: ElementConfig;
+        subtext: ElementConfig;
+        list: ElementConfig;
         header: ElementConfig;
         questions: {
             q: ElementConfig;
@@ -44,6 +50,7 @@ export type FaqProps = {
 export type ctaProps = {
   data: {
     container: ElementConfig;
+    innerWrapper: ElementConfig;
     headline: ElementConfig;
     subtext: ElementConfig;
     button: ElementConfig;
@@ -60,12 +67,25 @@ export type FeatureItem = {
 
 export type FeaturesProps = {
   data: {
-    container: ElementConfig;
-    header: ElementConfig;
-    headline: ElementConfig;
-    subtext: ElementConfig;
-    grid: ElementConfig;
-    items: FeatureItem[];
+  container?: ElementConfig;
+  background?: ElementConfig & { enabled: boolean };
+  innerWrapper?: ElementConfig;
+  header?: ElementConfig;
+  eyebrow?: ElementConfig & { text: string; enabled: boolean };
+  headline?: ElementConfig & { text: string; enabled: boolean };
+  subtext?: ElementConfig & { text: string; enabled: boolean };
+  grid?: ElementConfig;
+  items?: Array<ElementConfig & {
+    enabled: boolean;
+    icon?: ElementConfig & { enabled: boolean; emoji?: string; svg?: string; alt?: string; };
+    iconEmoji?: ElementConfig;
+    iconSvg?: ElementConfig;
+    title?: ElementConfig & { text: string; enabled: boolean };
+    description?: ElementConfig & { text: string; enabled: boolean };
+    link?: ElementConfig & { text?: string; href?: string; enabled: boolean };
+  }>;
+  ctaWrapper?: ElementConfig;
+  cta?: ElementConfig & { text?: string; href?: string; enabled: boolean };
   };
 };
 
@@ -76,9 +96,8 @@ type FooterLinks = {
 
 export type FooterProps = {
     data: {
-        container: {
-          className?: string;
-        };
+        container: ElementConfig;
+        innerWrapper: ElementConfig
         text: ElementConfig;
         grid: ElementConfig;
         items: {
@@ -96,30 +115,52 @@ type NavLink = {
 
 export type HeaderProps = {
     container: ElementConfig;
-    logo: {
-        src: string;
-        alt: string;
-        href: string;
-        className?: string;
+    innerWrapper: ElementConfig;
+    logo: ElementConfig;
+    logoImage: ElementConfig;
+    actions: { 
+      enabled: boolean;
     };
     nav: {
         links: NavLink[];
         className?: string;
     };
-    ctaButton: {
-        text: string;
-        href: string;
-        className?: string;
-    };
+    ctaButton: ElementConfig;
+    logoWrapper: ElementConfig;
+    wrapper: ElementConfig;
+    mobileMenuButton: ElementConfig;
+    mobileMenuInner: ElementConfig;
+    mobileMenu: ElementConfig;
+    hamburgerIcon: ElementConfig;
+    closeIcon: ElementConfig;
+    srText: ElementConfig;
+    mobileCTA: ElementConfig;
 };
 
 export type HeroData = {
   container: ElementConfig;
   innerWrapper: ElementConfig;
+  backgroundGradient: ElementConfig;
+  contentWrapper: ElementConfig;
+  eyebrow?: ElementConfig;
   headline: ElementConfig;
   subtext: ElementConfig;
+  buttonWrapper: ElementConfig;
+  primaryButton?: ElementConfig;
+  secondaryButton?: ElementConfig;
+  imageWrapper: ElementConfig;
+  imageInner: ElementConfig;
+  imageGlow: ElementConfig;
   heroImage?: ElementConfig;
-  primaryButton: ElementConfig;
+  statsContainer?: ElementConfig;
+  stats?: Array<ElementConfig & { 
+    iconWrapper?: ElementConfig; 
+    valueWrapper?: ElementConfig; 
+    labelWrapper?: ElementConfig; 
+    value: string; 
+    label: string; 
+    icon?: string; 
+  }>;
 };
 
 
@@ -132,12 +173,28 @@ export type ReviewItem = {
 
 export type TestimonialsProps = {
   data: {
-    container: ElementConfig;
-    innerWrapper: ElementConfig;
-    header: ElementConfig;
-    headline: ElementConfig;
-    subtext: ElementConfig;
-    grid: ElementConfig;
-    items?: ReviewItem[];
+  container?: ElementConfig;
+  innerWrapper?: ElementConfig;
+  header?: ElementConfig;
+  eyebrow?: ElementConfig & { text: string; enabled: boolean };
+  headline?: ElementConfig & { text: string; enabled: boolean };
+  subtext?: ElementConfig & { text: string; enabled: boolean };
+  grid?: ElementConfig;
+  showQuoteIcon?: boolean;
+  items?: Array<ElementConfig & {
+    enabled: boolean;
+    quote?: ElementConfig & { text: string; enabled: boolean };
+    quoteIcon?: ElementConfig;
+    authorWrapper?: ElementConfig;
+    avatarWrapper?: ElementConfig;
+    avatar?: ElementConfig & { src?: string; alt?: string; enabled: boolean };
+    authorDetails?: ElementConfig;
+    author?: ElementConfig & { text: string; enabled: boolean };
+    role?: ElementConfig & { text: string; enabled: boolean };
+    company?: ElementConfig & { text: string; enabled: boolean };
+    roleCompany?: ElementConfig;
+    rating?: ElementConfig & { value?: number; enabled: boolean };
+    ratingWrapper?: ElementConfig;
+  }>;
   };
 };

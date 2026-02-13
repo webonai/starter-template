@@ -5,6 +5,7 @@
     "favicon": "/uploads/favicon.ico"
   },
   "theme": {
+    "name": "modern",
     "mode": "light",
     "colors": {
       "light": {
@@ -68,10 +69,7 @@
         "3xl": "1.875rem",
         "4xl": "2.25rem",
         "5xl": "3rem",
-        "6xl": "3.75rem",
-        "7xl": "4.5rem",
-        "8xl": "6rem",
-        "9xl": "8rem"
+        "6xl": "3.75rem"
       },
       "fontWeight": {
         "thin": "100",
@@ -133,15 +131,26 @@
       "full": "9999px"
     },
     "shadows": {
-      "sm": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
-      "base": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
-      "md": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
-      "lg": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
-      "xl": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
-      "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
-      "inner": "inset 0 2px 4px 0 rgb(0 0 0 / 0.05)",
-      "none": "0 0 #0000"
+      "light": {
+        "sm": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        "base": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+        "md": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+        "lg": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+        "xl": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+        "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
+        "none": "none"
+      },
+      "dark": {
+        "sm": "0 1px 2px 0 rgb(0 0 0 / 0.3)",
+        "base": "0 1px 3px 0 rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.4)",
+        "md": "0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4)",
+        "lg": "0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4)",
+        "xl": "0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.4)",
+        "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.5)",
+        "none": "none"
+      }
     },
+    
     "borderWidth": {
       "0": "0px",
       "1": "1px",
@@ -210,69 +219,15 @@
     }
   },
   "layout": {
-    "order": [
-      "header",
-      "hero",
-      "features",
-      "testimonials",
-      "blog",
-      "cta",
-      "footer"
-    ],
+    "order": ["header","hero","features","testimonials","blog","cta","footer"],
     "hiddenSections": ["faq"],
     "pages": [
       { "slug": "", "title": "Home", "href": "/" },
-      { 
-        "slug": "about", 
-        "title": "About Us", 
-        "href": "/about",
-        "headline": {
-          "text": "About Our Company",
-          "className": "text-4xl font-bold mb-4 text-foreground"
-        },
-        "subtext": {
-          "text": "We are dedicated to providing the best service to our customers."
-        },
-        "body": {
-          "text": "Founded in 2010, our company has consistently delivered high-quality products and services to clients worldwide. Our team of experts is passionate about innovation and excellence."
-        },
-        "grid": {
-          "className": "grid grid-cols-1 sm:grid-cols-2 gap-8"
-        },
-        "items": [
-          {
-            "title": {
-              "text": "Our Mission"
-            },
-            "description": {
-              "text": "To deliver high-quality products that bring value to our customers."
-            }
-          },
-          {
-            "title": {
-              "text": "Our Vision"
-            },
-            "description": {
-              "text": "To be the leading brand in our industry, known for innovation and excellence."
-            }
-          },
-          {
-            "title": {
-              "text": "Our Values"
-            },
-            "description": {
-              "text": "Integrity, Customer Focus, Innovation, and Teamwork."
-            }
-          },
-          {
-            "title": {
-              "text": "Our History"
-            },
-            "description": {
-              "text": "Founded in 2010, we have consistently grown and adapted to meet market needs."
-            }
-          }
-        ]
+      { "slug": "about", "title": "About Us", "href": "/about",
+        "headline": { "text": "About Our Company", "className": "text-4xl font-bold mb-4 text-foreground" }, 
+        "subtext": { "text": "We are dedicated to providing the best service to our customers." }, "body": { "text": "Founded in 2010, our company has consistently delivered high-quality products and services to clients worldwide. Our team of experts is passionate about innovation and excellence." },
+        "grid": { "className": "grid grid-cols-1 sm:grid-cols-2 gap-8" },
+        "items": [ { "title": { "text": "Our Mission" }, "description": { "text": "To deliver high-quality products that bring value to our customers." } }, { "title": { "text": "Our Vision" }, "description": { "text": "To be the leading brand in our industry, known for innovation and excellence." } }, { "title": { "text": "Our Values" }, "description": { "text": "Integrity, Customer Focus, Innovation, and Teamwork." } }, { "title": { "text": "Our History" }, "description": { "text": "Founded in 2010, we have consistently grown and adapted to meet market needs." } } ]
       },
       { 
         "slug": "contact", 
@@ -295,344 +250,399 @@
   },
   "sections": {
     "header": {
-      "container": {
-        "className": "py-6 px-6 sm:px-12 flex justify-between items-center bg-secondary"
-      },
-      "logo": {
-        "src": "/logo.png",
-        "alt": "My Awesome Brand Logo",
-        "className": "h-8",
-        "href": "/"
-      },
+      "container": { "enabled": true, "className": "" },
+      "innerWrapper": { "enabled": true, "className": "" },
+      "wrapper": { "enabled": true, "className": "" },
+      "logo": { "enabled": true, "href": "/", "alt": "Company Logo", "className": "" },
+      "logoImage": { "enabled": true, "src": "/logo.png", "alt": "Company Logo", "className": "" },
       "nav": {
+        "enabled": true,
+        "className": "",
         "links": [
-          { "text": "Home", "href": "/", "className": "text-sm font-semibold leading-6 text-secondary-foreground hover:text-primary transition-colors"},
-          { "text": "Features", "href": "/features", "className": "text-sm font-semibold leading-6 text-secondary-foreground hover:text-primary transition-colors" },
-          { "text": "Pricing", "href": "/pricing", "className": "text-sm font-semibold leading-6 text-secondary-foreground hover:text-primary transition-colors"},
-          { "text": "Blog", "href": "/blog", "className": "text-sm font-semibold leading-6 text-secondary-foreground hover:text-primary transition-colors"},
-          { "text": "Contact", "href": "/contact", "className": "text-sm font-semibold leading-6 text-secondary-foreground hover:text-primary transition-colors"}
-        ],
-        "className": "flex items-center gap-x-8"
+          { "enabled": true, "text": "Features", "href": "/#features", "className": "" },
+          { "enabled": true, "text": "Blog", "href": "/blog", "className": "" },
+          { "enabled": true, "text": "FAQs", "href": "/#faq", "className": "" },
+          { "enabled": true, "text": "Pricing", "href": "/#pricing", "className": "" },
+          { "enabled": true, "text": "About", "href": "/#about", "className": "" },
+          { "enabled": true, "text": "Contact", "href": "/#contact", "className": "" }
+        ]
       },
-      "ctaButton": {
-        "text": "Sign Up",
-        "href": "/signup",
-        "className": "px-4 py-2 rounded-md bg-primary text-primary-foreground font-semibold hover:opacity-90 transition"
-      }
+      "actions": { "enabled": true, "className": "" },
+      "ctaButton": { "enabled": true, "text": "Get Started", "href": "#signup", "className": "" },
+      "mobileMenuButton": { "enabled": true, "className": "" },
+      "srText": { "enabled": true, "className": "" },
+      "hamburgerIcon": { "enabled": true, "className": "" },
+      "closeIcon": { "enabled": true, "className": "" },
+      "mobileMenu": { "enabled": true, "className": "" },
+      "mobileMenuInner": { "enabled": true, "className": "" },
+      "mobileCTA": { "enabled": true, "className": "" }
     },
-    "hero": {
-      "container": {
-        "className": "relative overflow-hidden py-24 sm:py-32 text-center bg-background"
-      },
-      "innerWrapper": {
-        "className": "container mx-auto px-6"
-      },
-      "headline": {
-        "text": "Build Faster with Webonai",
-        "className": "text-5xl sm:text-6xl font-bold mb-6 font-heading text-foreground"
-      },
-      "subtext": {
-        "text": "The ultimate platform for static sites. Customizable, fast, and secure.",
-        "className": "text-xl mb-10 max-w-2xl mx-auto text-muted-foreground"
-      },
-      "primaryButton": {
-        "text": "Get Started",
-        "href": "/signup",
-        "className": "inline-block px-8 py-3 rounded-md font-bold shadow-lg transition-transform hover:scale-105 bg-primary text-primary-foreground"
-      },
-      "imageWrapper": {
-        "className": "mt-16 relative w-full max-w-5xl mx-auto"
+    "hero": { 
+      "container": { "enabled": true, "className": "" },
+      "innerWrapper": { "enabled": true, "className": "" },
+      "eyebrow": { "enabled": true, "text": "✨ New Feature Launch", "className": "" },
+      "headline": { "enabled": true, "text": "Build Your Next Big Thing", "className": "" },
+      "subtext": { "enabled": true, "text": "The ultimate platform for creators, developers, and entrepreneurs to bring their ideas to life.", "className": "" },
+      "primaryButton": { "enabled": true, "text": "Get Started Free", "href": "#signup", "className": "" },
+      "secondaryButton": { "enabled": true, "text": "Learn More", "href": "/about", "className": "" },
+      "stats": [
+        {
+          "enabled": true,
+          "value": "10k+",
+          "label": "Active Users",
+          "icon": "👥",
+          "className": ""
+        },
+        {
+          "enabled": true,
+          "value": "99.9%",
+          "label": "Uptime",
+          "icon": "⚡",
+          "className": ""
+        },
+        {
+          "enabled": true,
+          "value": "4.9/5",
+          "label": "User Rating",
+          "icon": "⭐",
+          "className": ""
+        }
+      ],
+      "statsContainer": {
+        "enabled": true,
+        "className": ""
       },
       "heroImage": {
+        "enabled": true,
         "src": "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&auto=format&fit=crop&w=3603&q=80",
-        "alt": "Dashboard Preview",
-        "className": "mt-16 rounded-xl shadow-2xl border border-border"
+        "alt": "Product Dashboard",
+        "className": ""
       }
     },
     "features": {
-      "container": {
-        "className": "py-24 bg-muted"
-      },
-      "header": {
-        "className": "text-center max-w-2xl mx-auto mb-16"
+      "container": { "enabled": true },
+      "background": { "enabled": true },
+      "innerWrapper": { "enabled": true },
+      "header": { "enabled": true },
+      "eyebrow": {
+        "enabled": true,
+        "text": "✨ Features"
       },
       "headline": {
-        "text": "Why Us?",
-        "className": "text-3xl font-bold text-center mb-16 text-secondary"
+        "enabled": true,
+        "text": "Everything you need to succeed"
       },
       "subtext": {
-        "text": "See what our customers have to say about their experience.",
-        "className": "text-lg text-muted-foreground"
+        "enabled": true,
+        "text": "Powerful features designed to help you build, grow, and scale your business with confidence."
       },
-      "grid": {
-        "className": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
-      },
+      "grid": { "enabled": true },
       "items": [
         {
-          "container": {
-            "className": "p-8 rounded-2xl shadow-sm bg-card"
-          },
+          "enabled": true,
           "icon": {
-            "icon": "zap",
-            "alt": "Fast Performance Icon"
+            "enabled": true,
+            "emoji": "⚡",
+            "alt": "Lightning fast"
           },
           "title": {
-            "text": "Fast Performance",
-            "className": "text-xl font-bold mb-2 text-card-foreground"
+            "enabled": true,
+            "text": "Lightning Fast"
           },
           "description": {
-            "text": "Our static sites load in milliseconds, ensuring a smooth user experience.",
-            "className": "text-base text-muted-foreground"
+            "enabled": true,
+            "text": "Optimized for speed with cutting-edge technology that delivers instant results."
+          },
+          "link": {
+            "enabled": false,
+            "text": "Learn more",
+            "href": "#"
           }
         },
         {
-          "container": {
-            "className": "p-8 rounded-2xl shadow-sm bg-card"
-          },
+          "enabled": true,
           "icon": {
-            "icon": "shield",
-            "alt": "Secure Payment Icon"
+            "enabled": true,
+            "emoji": "🔒",
+            "alt": "Secure"
           },
           "title": {
-            "text": "Secure Payments",
-            "className": "text-xl font-bold mb-2 text-card-foreground"
+            "enabled": true,
+            "text": "Secure by Default"
           },
           "description": {
-            "text": "We use industry-leading security measures to protect your data and transactions.",
-            "className": "text-base text-muted-foreground"
+            "enabled": true,
+            "text": "Enterprise-grade security with end-to-end encryption and compliance certifications."
+          },
+          "link": {
+            "enabled": false,
+            "text": "Learn more",
+            "href": "#"
           }
         },
         {
-          "container": {
-            "className": "p-8 rounded-2xl shadow-sm bg-card"
-          },
+          "enabled": true,
           "icon": {
-            "icon": "mouse-pointer",
-            "alt": "Easy to Use Icon"
+            "enabled": true,
+            "emoji": "📊",
+            "alt": "Analytics"
           },
           "title": {
-            "text": "Easy to Use",
-            "className": "text-xl font-bold mb-2 text-card-foreground"
+            "enabled": true,
+            "text": "Powerful Analytics"
           },
           "description": {
-            "text": "Our intuitive platform makes it simple to create and manage your static sites.",
-            "className": "text-base text-muted-foreground"
+            "enabled": true,
+            "text": "Real-time insights and detailed reports to help you make data-driven decisions."
+          },
+          "link": {
+            "enabled": false,
+            "text": "Learn more",
+            "href": "#"
+          }
+        },
+        {
+          "enabled": true,
+          "icon": {
+            "enabled": true,
+            "emoji": "🎨",
+            "alt": "Customizable"
+          },
+          "title": {
+            "enabled": true,
+            "text": "Fully Customizable"
+          },
+          "description": {
+            "enabled": true,
+            "text": "Tailor every aspect to match your brand with our flexible design system."
+          },
+          "link": {
+            "enabled": false,
+            "text": "Learn more",
+            "href": "#"
+          }
+        },
+        {
+          "enabled": true,
+          "icon": {
+            "enabled": true,
+            "emoji": "🌐",
+            "alt": "Global"
+          },
+          "title": {
+            "enabled": true,
+            "text": "Global Scale"
+          },
+          "description": {
+            "enabled": true,
+            "text": "Deploy worldwide with our distributed infrastructure and CDN network."
+          },
+          "link": {
+            "enabled": false,
+            "text": "Learn more",
+            "href": "#"
+          }
+        },
+        {
+          "enabled": true,
+          "icon": {
+            "enabled": true,
+            "emoji": "🤝",
+            "alt": "Support"
+          },
+          "title": {
+            "enabled": true,
+            "text": "24/7 Support"
+          },
+          "description": {
+            "enabled": true,
+            "text": "Our dedicated team is always here to help you succeed, day or night."
+          },
+          "link": {
+            "enabled": false,
+            "text": "Learn more",
+            "href": "#"
           }
         }
-      ]
-    },
-    "testimonials": {
-      "container": {
-        "className": "py-24 sm:py-32 bg-background"
-      },
-      "header": {
-        "className": "text-center max-w-2xl mx-auto mb-16"
-      },
-      "headline": {
-        "text": "Loved by Thousands",
-        "className": "text-3xl sm:text-4xl font-bold mb-4 font-heading text-foreground"
-      },
-      "subtext": {
-        "text": "See what our customers have to say about their experience.",
-        "className": "text-lg text-muted-foreground"
-      },
-      "grid": {
-        "className": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
-      },
-      "items": [
-        {
-          "container": {
-            "className": "p-8 rounded-2xl shadow-sm bg-card"
-          },
-          "quote": {
-            "text": "This platform completely transformed how we build websites.",
-            "className": "text-base italic text-muted-foreground"
-          },
-          "author": {
-            "text": "Alex Smith",
-            "className": "font-bold mt-4 text-card-foreground"
-          },
-          "role": {
-            "text": "CEO at TechCorp",
-            "className": "text-sm text-muted-foreground"
-          }
-        },
-        {
-          "container": {
-            "className": "p-8 rounded-2xl shadow-sm bg-card"
-          },
-          "quote": {
-            "text": "Webonai made it incredibly easy to launch our landing page in minutes.",
-            "className": "text-base italic text-muted-foreground"
-          },
-          "author": {
-            "text": "Sarah Jones",
-            "className": "font-bold mt-4 text-card-foreground"
-          },
-          "role": {
-            "text": "Marketing Director",
-            "className": "text-sm text-muted-foreground"
-          }
-        },
-        {
-          "container": {
-            "className": "p-8 rounded-2xl shadow-sm bg-card"
-          },
-          "quote": {
-            "text": "The performance and SEO benefits were immediate. Highly recommended!",
-            "className": "text-base italic text-muted-foreground"
-          },
-          "author": {
-            "text": "David Lee",
-            "className": "font-bold mt-4 text-card-foreground"
-          },
-          "role": {
-            "text": "Founder at StartupX",
-            "className": "text-sm text-muted-foreground"
-          }
-        }
-      ]
-    },
-    "blog": {
-      "container": {
-        "className": "py-24 sm:py-32 bg-background"
-      },
-      "header": {
-        "text": "Latest from the Blog",
-        "className": "text-3xl font-bold tracking-tight text-center mb-16 sm:text-4xl text-foreground"
-      },
-      "posts": [
-        {
-          "title": "Boost your conversion rate",
-          "excerpt": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid porro sed dolores et.",
-          "date": "Mar 16, 2024",
-          "author": "Michael Foster",
-          "category": "Marketing",
-          "image": "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&auto=format&fit=crop&w=3603&q=80",
-          "href": "/blog/boost-conversion",
-          "className": "flex flex-col items-start justify-between"
-        },
-        {
-          "title": "How to use search engine optimization to drive sales",
-          "excerpt": "Optio cumque autem voluntas. Dolor est. Hic vel totam vitae illo. Non aliquid porro sed dolores et.",
-          "date": "Mar 10, 2024",
-          "author": "Lindsay Walton",
-          "category": "SEO",
-          "image": "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-4.0.3&auto=format&fit=crop&w=3270&q=80",
-          "href": "/blog/seo-sales",
-          "className": "flex flex-col items-start justify-between"
-        },
-        {
-          "title": "Improve your customer experience",
-          "excerpt": "Cupiditate maiores ullam eveniet adipisci in doloribus nulla minus. Voluptas iusto libero adipisci rem et corporis.",
-          "date": "Feb 12, 2024",
-          "author": "Tom Cook",
-          "category": "Business",
-          "image": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-4.0.3&auto=format&fit=crop&w=3270&q=80",
-          "href": "/blog/customer-experience",
-          "className": "flex flex-col items-start justify-between"
-        }
-      ]
-    },
-    "blogIndex": {
-      "container": { 
-        "className": "bg-background py-24 sm:py-32" 
-      },
-      "headline": {
-        "text": "Our Blog",
-        "className": "text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
-      },
-      "subtext": {
-        "text": "Learn how to grow your business with our expert advice.",
-        "className": "mt-2 text-lg leading-8 text-muted-foreground"
+      ],
+      "ctaWrapper": { "enabled": true },
+      "cta": {
+        "enabled": false,
+        "text": "Explore All Features",
+        "href": "/features"
       }
     },
-    "faq": {
-      "container": {
-        "className": "py-24 border-t border-border bg-background"
+    "testimonials": {
+      "container": { "enabled": true },
+      "innerWrapper": { "enabled": true },
+      "header": { "enabled": true },
+      "eyebrow": {
+        "enabled": true,
+        "text": "💬 Testimonials"
       },
-      "header": {
-        "text": "Frequently Asked Questions",
-        "className": "text-3xl font-bold text-center mb-12 text-foreground"
+      "headline": {
+        "enabled": true,
+        "text": "Loved by thousands worldwide"
       },
-      "questions": [
+      "subtext": {
+        "enabled": true,
+        "text": "See what our customers have to say about their experience with our platform."
+      },
+      "grid": { "enabled": true },
+      "showQuoteIcon": true,
+      "items": [
         {
-          "q": {
-            "text": "What is Webonai?",
-            "className": "text-xl font-bold mb-4 text-foreground"
+          "enabled": true,
+          "quote": {
+            "enabled": true,
+            "text": "This platform has completely transformed how we work. The intuitive interface and powerful features make it a joy to use every day."
           },
-          "a": {
-            "text": "Webonai is a platform that allows you to create and manage static sites with ease.",
-            "className": "text-base text-muted-foreground"
+          "avatar": {
+            "enabled": true,
+            "src": "/avatars/avatar-1.jpg",
+            "alt": "Sarah Chen"
+          },
+          "author": {
+            "enabled": true,
+            "text": "Sarah Chen"
+          },
+          "role": {
+            "enabled": true,
+            "text": "CEO"
+          },
+          "company": {
+            "enabled": true,
+            "text": "TechCorp"
+          },
+          "rating": {
+            "enabled": true,
+            "value": 5
           }
         },
         {
-          "q": {
-            "text": "How does Webonai work?",
-            "className": "text-xl font-bold mb-4 text-foreground"
+          "enabled": true,
+          "quote": {
+            "enabled": true,
+            "text": "The best decision we made this year. Our team's productivity has increased dramatically, and our customers are happier than ever."
           },
-          "a": {
-            "text": "Webonai works by providing a simple interface to manage static sites.",
-            "className": "text-base text-muted-foreground"
+          "avatar": {
+            "enabled": true,
+            "src": "/avatars/avatar-2.jpg",
+            "alt": "Michael Rodriguez"
+          },
+          "author": {
+            "enabled": true,
+            "text": "Michael Rodriguez"
+          },
+          "role": {
+            "enabled": true,
+            "text": "Product Manager"
+          },
+          "company": {
+            "enabled": true,
+            "text": "StartupXYZ"
+          },
+          "rating": {
+            "enabled": true,
+            "value": 5
           }
         },
         {
-          "q": {
-            "text": "Can I use my own domain?",
-            "className": "text-xl font-bold mb-4 text-foreground"
+          "enabled": true,
+          "quote": {
+            "enabled": true,
+            "text": "Outstanding support and documentation. The team went above and beyond to help us get set up and running smoothly."
           },
-          "a": {
-            "text": "Absolutely.",
-            "className": "text-base text-muted-foreground"
-          }
-        },
-        {
-          "q": {
-            "text": "What is the uptime guarantee?",
-            "className": "text-xl font-bold mb-4 text-foreground"
+          "avatar": {
+            "enabled": true,
+            "src": "/avatars/avatar-3.jpg",
+            "alt": "Emily Taylor"
           },
-          "a": {
-            "text": "We guarantee 99.9% uptime.",
-            "className": "text-base text-muted-foreground"
-          }
-        },
-        {
-          "q": {
-            "text": "Do you offer customer support?",
-            "className": "text-xl font-bold mb-4 text-foreground"
+          "author": {
+            "enabled": true,
+            "text": "Emily Taylor"
           },
-          "a": {
-            "text": "Absolutely.",
-            "className": "text-base text-muted-foreground"
+          "role": {
+            "enabled": true,
+            "text": "Head of Operations"
+          },
+          "company": {
+            "enabled": true,
+            "text": "Enterprise Co"
+          },
+          "rating": {
+            "enabled": true,
+            "value": 5
           }
         }
       ]
     },
+    
+    "blog": {
+      "container": { "className": "bg-background py-24" },
+      "innerWrapper": { "className": "container mx-auto px-6 lg:px-8" },
+      "headerWrapper": { "className": "mx-auto max-w-2xl text-center" },
+      "header": { "text": "Latest from the Blog", "className": "text-3xl font-bold text-foreground" },
+      "grid": { "className": "mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3" },
+      "article": { "className": "flex flex-col" },
+      "imageWrapper": { "className": "relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-muted" },
+      "contentWrapper": { "className": "flex-1 mt-6" },
+      "metaWrapper": { "className": "flex items-center gap-x-4 text-xs" },
+      "date": { "className": "text-muted-foreground" },
+      "category": { "className": "rounded-full bg-muted px-3 py-1.5 font-medium text-muted-foreground" },
+      "title": { "className": "mt-3 text-lg font-semibold text-foreground" },
+      "excerpt": { "className": "mt-3 text-sm text-muted-foreground line-clamp-3" },
+      "posts": []
+    },
+    
     "cta": {
       "container": {
         "className": "py-20 text-center bg-primary"
       },
+      "innerWrapper": {
+        "className": "max-w-3xl mx-auto px-6"
+      },
       "headline": {
-        "text": "Ready to launch?",
-        "className": "text-4xl font-bold mb-8 text-primary-foreground"
+        "text": "Ready to Get Started?",
+        "className": "text-4xl font-bold text-primary-foreground mb-6"
       },
       "subtext": {
-        "text": "Get started with Webonai today and take your static sites to the next level.",
-        "className": "text-lg mb-12 text-primary-foreground opacity-90"
+        "text": "Join thousands of satisfied customers today.",
+        "className": "text-lg text-primary-foreground opacity-90 mb-8"
       },
       "button": {
-        "text": "Start Now",
+        "text": "Start Free Trial",
         "href": "/signup",
-        "className": "inline-block px-8 py-3 rounded-full font-bold bg-background text-primary transition hover:opacity-90"
+        "className": "inline-block px-8 py-3 rounded-full font-bold shadow-xl transition-transform hover:scale-105 bg-background text-primary"
       }
     },
+    
     "footer": {
       "container": {
         "className": "py-12 bg-secondary"
       },
-      "text": "Footer Section",
+      "innerWrapper": {
+        "className": "container mx-auto px-6"
+      },
       "grid": {
-        "className": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        "className": "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8"
+      },
+      "columnTitle": {
+        "className": "text-lg font-semibold text-secondary-foreground mb-3"
+      },
+      "linkList": {
+        "className": "space-y-2"
+      },
+      "link": {
+        "className": "text-secondary-foreground opacity-80 hover:opacity-100 transition-opacity block"
+      },
+      "copyright": {
+        "text": "© 2024 Webonai. All rights reserved.",
+        "className": "text-center text-secondary-foreground opacity-70 mt-8 pt-8 border-t border-border"
+      },
+      "text": {
+        "text": "Building the future, one line of code at a time.",
+        "className": "text-secondary-foreground opacity-70"
       },
       "items": [
         {
@@ -646,24 +656,26 @@
         {
           "title": "Company",
           "links": [
-            { "text": "About Us", "href": "/about" },
-            { "text": "Careers", "href": "/careers" },
+            { "text": "About", "href": "/about" },
             { "text": "Contact", "href": "/contact" }
           ]
         },
         {
-          "title": "Support",
+          "title": "Resources",
           "links": [
-            { "text": "Help Center", "href": "/help" },
-            { "text": "Terms of Service", "href": "/terms" },
-            { "text": "Privacy Policy", "href": "/privacy" }
+            { "text": "Documentation", "href": "/docs" },
+            { "text": "API Reference", "href": "/api" },
+            { "text": "Support", "href": "/support" }
+          ]
+        },
+        {
+          "title": "Legal",
+          "links": [
+            { "text": "Privacy", "href": "/privacy" },
+            { "text": "Terms", "href": "/terms" }
           ]
         }
-      ],
-      "copyright": {
-        "text": "© 2023 Webonai. All rights reserved.",
-        "className": "text-center text-sm text-muted-foreground mt-8"
-      }
+      ]
     }
   }
 }

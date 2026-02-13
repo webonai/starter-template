@@ -1,0 +1,526 @@
+{
+  "meta": {
+    "siteName": "WEBONAI",
+    "description": "◢◤ RETRO VIBES ONLY ◢◤",
+    "favicon": "/uploads/favicon.ico"
+  },
+  "theme": {
+    "name": "retro",
+    "mode": "dark",
+    
+    "colors": {
+      "light": {
+        "primary": "#ff6b9d",
+        "primaryForeground": "#2d1b69",
+        "secondary": "#ffd700",
+        "secondaryForeground": "#2d1b69",
+        "accent": "#00ffff",
+        "accentForeground": "#2d1b69",
+        "destructive": "#ff3864",
+        "destructiveForeground": "#fff5f7",
+        "muted": "#f0e6ff",
+        "mutedForeground": "#7b2d95",
+        "card": "#fff5f7",
+        "cardForeground": "#2d1b69",
+        "popover": "#fff5f7",
+        "popoverForeground": "#2d1b69",
+        "background": "#ffeef8",
+        "foreground": "#2d1b69",
+        "border": "#ff6b9d",
+        "input": "#fff5f7",
+        "ring": "#00ffff",
+        "neutral": "#f0e6ff"
+      },
+      "dark": {
+        "primary": "#ff6b9d",
+        "primaryForeground": "#ffeaa7",
+        "secondary": "#c9184a",
+        "secondaryForeground": "#ffeaa7",
+        "accent": "#00d9ff",
+        "accentForeground": "#1a1a2e",
+        "destructive": "#ff006e",
+        "destructiveForeground": "#ffeaa7",
+        "muted": "#16213e",
+        "mutedForeground": "#ffeaa7",
+        "card": "#0f3460",
+        "cardForeground": "#ffeaa7",
+        "popover": "#16213e",
+        "popoverForeground": "#ffeaa7",
+        "background": "#1a1a2e",
+        "foreground": "#ffeaa7",
+        "border": "#ff6b9d",
+        "input": "#0f3460",
+        "ring": "#00d9ff",
+        "neutral": "#16213e"
+      }
+    },
+    
+    "typography": {
+      "fontFamily": {
+        "heading": "Press Start 2P",
+        "body": "VT323",
+        "mono": "Courier Prime"
+      },
+      "fontSize": {
+        "xs": "0.875rem",
+        "sm": "1rem",
+        "base": "1.125rem",
+        "lg": "1.25rem",
+        "xl": "1.5rem",
+        "2xl": "1.875rem",
+        "3xl": "2.25rem",
+        "4xl": "3rem",
+        "5xl": "4rem",
+        "6xl": "5rem"
+      },
+      "fontWeight": {
+        "normal": "400",
+        "bold": "700"
+      },
+      "lineHeight": {
+        "tight": "1.2",
+        "normal": "1.6",
+        "relaxed": "2"
+      },
+      "letterSpacing": {
+        "normal": "0.05em",
+        "wide": "0.1em"
+      }
+    },
+    
+    "spacing": {
+      "0": "0px",
+      "1": "0.5rem",
+      "2": "1rem",
+      "3": "1.5rem",
+      "4": "2rem",
+      "5": "2.5rem",
+      "6": "3rem",
+      "8": "4rem",
+      "10": "5rem",
+      "12": "6rem",
+      "16": "8rem",
+      "20": "10rem",
+      "24": "12rem",
+      "32": "16rem"
+    },
+    
+    "borderRadius": {
+      "none": "0px",
+      "sm": "0px",
+      "base": "0px",
+      "md": "0px",
+      "lg": "0px",
+      "xl": "0px",
+      "2xl": "0px",
+      "3xl": "0px",
+      "full": "0px"
+    },
+    
+    "shadows": {
+      "light": {
+        "sm": "3px 3px 0px #ff6b9d",
+        "base": "4px 4px 0px #ff6b9d",
+        "md": "5px 5px 0px #ff6b9d",
+        "lg": "6px 6px 0px #ff6b9d",
+        "xl": "8px 8px 0px #ff6b9d",
+        "2xl": "12px 12px 0px #ff6b9d",
+        "none": "none"
+      },
+      "dark": {
+        "sm": "3px 3px 0px #ff6b9d",
+        "base": "4px 4px 0px #ff6b9d",
+        "md": "5px 5px 0px #ff6b9d",
+        "lg": "6px 6px 0px #ff6b9d",
+        "xl": "8px 8px 0px #ff6b9d",
+        "2xl": "12px 12px 0px #ff6b9d",
+        "none": "none"
+      }
+    },
+    
+    "borderWidth": {
+      "0": "0px",
+      "1": "3px",
+      "2": "4px",
+      "4": "6px"
+    },
+    
+    "effects": {
+      "textShadow": "3px 3px 0px rgba(0, 0, 0, 0.5)",
+      "buttonTransform": "translate(-3px, -3px)",
+      "scanlines": true
+    }
+  },
+  
+  "layout": {
+    "order": ["header", "hero", "features", "testimonials", "blog", "cta", "footer"]
+  },
+  
+  "sections": {
+    "header": {
+      "container": {
+        "className": "py-4 px-6 sm:px-12 bg-secondary border-b-4 border-primary"
+      },
+      "innerWrapper": {
+        "className": "container mx-auto flex justify-between items-center"
+      },
+      "logo": {
+        "src": "/logo.png",
+        "alt": "WEBONAI",
+        "className": "h-10",
+        "href": "/"
+      },
+      "navWrapper": {
+        "className": "flex items-center gap-x-6"
+      },
+      "nav": {
+        "className": "flex items-center gap-x-6",
+        "links": [
+          { 
+            "text": "HOME", 
+            "href": "/",
+            "className": "text-sm font-bold uppercase text-secondary-foreground hover:text-accent transition-colors"
+          },
+          { 
+            "text": "FEATURES", 
+            "href": "/features",
+            "className": "text-sm font-bold uppercase text-secondary-foreground hover:text-accent transition-colors"
+          },
+          { 
+            "text": "PRICING", 
+            "href": "/pricing",
+            "className": "text-sm font-bold uppercase text-secondary-foreground hover:text-accent transition-colors"
+          },
+          { 
+            "text": "BLOG", 
+            "href": "/blog",
+            "className": "text-sm font-bold uppercase text-secondary-foreground hover:text-accent transition-colors"
+          }
+        ]
+      },
+      "ctaButton": {
+        "text": "SIGN UP",
+        "href": "/signup",
+        "className": "px-6 py-3 bg-primary text-primary-foreground font-bold uppercase border-4 border-foreground shadow-lg hover:shadow-xl active:translate-x-1 active:translate-y-1 transition-all"
+      }
+    },
+    
+    "hero": {
+      "container": {
+        "className": "relative py-20 sm:py-32 bg-background border-b-4 border-primary"
+      },
+      "innerWrapper": {
+        "className": "container mx-auto px-6 text-center"
+      },
+      "headline": {
+        "text": "◢◤ WEBONAI ◢◤",
+        "className": "text-4xl sm:text-6xl font-bold mb-8 font-heading text-primary uppercase tracking-wider"
+      },
+      "subtext": {
+        "text": "BUILD RETRO SITES • FAST & RADICAL",
+        "className": "text-2xl mb-12 text-foreground uppercase tracking-wide font-bold"
+      },
+      "buttonWrapper": {
+        "className": "flex items-center justify-center gap-6"
+      },
+      "primaryButton": {
+        "text": "GET STARTED",
+        "href": "/signup",
+        "className": "px-10 py-4 bg-accent text-accent-foreground font-bold uppercase text-lg border-4 border-foreground shadow-2xl hover:shadow-xl active:translate-x-1 active:translate-y-1 transition-all"
+      },
+      "imageWrapper": {
+        "className": "mt-16 relative w-full max-w-4xl mx-auto border-4 border-primary shadow-2xl"
+      },
+      "heroImage": {
+        "src": "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&auto=format&fit=crop&w=3603&q=80",
+        "alt": "RETRO DASHBOARD",
+        "className": ""
+      }
+    },
+    
+    "features": {
+      "container": {
+        "className": "py-20 bg-muted border-b-4 border-primary"
+      },
+      "innerWrapper": {
+        "className": "container mx-auto px-6"
+      },
+      "header": {
+        "className": "text-center mb-16"
+      },
+      "headline": {
+        "text": "◢ FEATURES ◤",
+        "className": "text-3xl sm:text-4xl font-bold text-foreground uppercase mb-4 font-heading"
+      },
+      "subtext": {
+        "text": "EVERYTHING YOU NEED • NOTHING YOU DON'T",
+        "className": "text-xl text-muted-foreground uppercase tracking-wide"
+      },
+      "grid": {
+        "className": "grid grid-cols-1 md:grid-cols-3 gap-8"
+      },
+      "items": [
+        {
+          "container": {
+            "className": "bg-card p-8 border-4 border-primary shadow-lg"
+          },
+          "iconWrapper": {
+            "className": "mb-6 w-16 h-16 bg-primary border-4 border-foreground flex items-center justify-center"
+          },
+          "icon": {
+            "icon": "zap",
+            "className": "h-8 w-8 text-primary-foreground"
+          },
+          "title": {
+            "text": "ULTRA FAST",
+            "className": "text-xl font-bold text-card-foreground uppercase mb-3 font-heading"
+          },
+          "description": {
+            "text": "SPEED LIKE IT'S 1985 BUT ACTUALLY FASTER",
+            "className": "text-lg text-muted-foreground uppercase"
+          }
+        },
+        {
+          "container": {
+            "className": "bg-card p-8 border-4 border-accent shadow-lg"
+          },
+          "iconWrapper": {
+            "className": "mb-6 w-16 h-16 bg-accent border-4 border-foreground flex items-center justify-center"
+          },
+          "icon": {
+            "icon": "shield",
+            "className": "h-8 w-8 text-accent-foreground"
+          },
+          "title": {
+            "text": "SUPER SECURE",
+            "className": "text-xl font-bold text-card-foreground uppercase mb-3 font-heading"
+          },
+          "description": {
+            "text": "PROTECTED BY PIXEL POWER",
+            "className": "text-lg text-muted-foreground uppercase"
+          }
+        },
+        {
+          "container": {
+            "className": "bg-card p-8 border-4 border-secondary shadow-lg"
+          },
+          "iconWrapper": {
+            "className": "mb-6 w-16 h-16 bg-secondary border-4 border-foreground flex items-center justify-center"
+          },
+          "icon": {
+            "icon": "mouse-pointer",
+            "className": "h-8 w-8 text-secondary-foreground"
+          },
+          "title": {
+            "text": "EASY MODE",
+            "className": "text-xl font-bold text-card-foreground uppercase mb-3 font-heading"
+          },
+          "description": {
+            "text": "NO CHEAT CODES NEEDED",
+            "className": "text-lg text-muted-foreground uppercase"
+          }
+        }
+      ]
+    },
+    
+    "testimonials": {
+      "container": {
+        "className": "py-20 bg-background border-b-4 border-primary"
+      },
+      "innerWrapper": {
+        "className": "container mx-auto px-6"
+      },
+      "header": {
+        "className": "text-center mb-16"
+      },
+      "headline": {
+        "text": "◢ TESTIMONIALS ◤",
+        "className": "text-3xl sm:text-4xl font-bold text-primary uppercase font-heading"
+      },
+      "subtext": {
+        "text": "REAL PEOPLE • REAL VIBES",
+        "className": "mt-4 text-xl text-foreground uppercase"
+      },
+      "grid": {
+        "className": "grid grid-cols-1 md:grid-cols-3 gap-8"
+      },
+      "items": [
+        {
+          "container": {
+            "className": "bg-card p-8 border-4 border-primary shadow-xl"
+          },
+          "quote": {
+            "text": "TOTALLY RADICAL! BEST SITE BUILDER EVER!",
+            "className": "text-lg text-card-foreground uppercase mb-6"
+          },
+          "authorWrapper": {
+            "className": "border-t-4 border-border pt-4"
+          },
+          "author": {
+            "text": "ALEX S.",
+            "className": "font-bold text-card-foreground uppercase"
+          },
+          "role": {
+            "text": "CEO • TECHCORP",
+            "className": "text-sm text-muted-foreground uppercase"
+          }
+        },
+        {
+          "container": {
+            "className": "bg-card p-8 border-4 border-accent shadow-xl"
+          },
+          "quote": {
+            "text": "GNARLY FEATURES! COWABUNGA DUDE!",
+            "className": "text-lg text-card-foreground uppercase mb-6"
+          },
+          "authorWrapper": {
+            "className": "border-t-4 border-border pt-4"
+          },
+          "author": {
+            "text": "SARAH J.",
+            "className": "font-bold text-card-foreground uppercase"
+          },
+          "role": {
+            "text": "MARKETING DIR",
+            "className": "text-sm text-muted-foreground uppercase"
+          }
+        },
+        {
+          "container": {
+            "className": "bg-card p-8 border-4 border-secondary shadow-xl"
+          },
+          "quote": {
+            "text": "BODACIOUS! TAKES ME BACK TO THE ARCADE!",
+            "className": "text-lg text-card-foreground uppercase mb-6"
+          },
+          "authorWrapper": {
+            "className": "border-t-4 border-border pt-4"
+          },
+          "author": {
+            "text": "DAVID L.",
+            "className": "font-bold text-card-foreground uppercase"
+          },
+          "role": {
+            "text": "FOUNDER • STARTUPX",
+            "className": "text-sm text-muted-foreground uppercase"
+          }
+        }
+      ]
+    },
+    
+    "blog": {
+      "container": {
+        "className": "py-20 bg-muted border-b-4 border-primary"
+      },
+      "innerWrapper": {
+        "className": "container mx-auto px-6"
+      },
+      "headerWrapper": {
+        "className": "text-center mb-16"
+      },
+      "header": {
+        "text": "◢ LATEST POSTS ◤",
+        "className": "text-3xl font-bold text-foreground uppercase font-heading"
+      },
+      "grid": {
+        "className": "grid grid-cols-1 md:grid-cols-3 gap-8"
+      },
+      "article": {
+        "className": "bg-card border-4 border-primary shadow-xl"
+      },
+      "imageWrapper": {
+        "className": "relative w-full aspect-video border-b-4 border-primary"
+      },
+      "contentWrapper": {
+        "className": "p-6"
+      },
+      "metaWrapper": {
+        "className": "flex items-center gap-4 mb-4"
+      },
+      "date": {
+        "className": "text-sm text-muted-foreground uppercase"
+      },
+      "category": {
+        "className": "px-3 py-1 bg-accent text-accent-foreground font-bold uppercase text-xs border-2 border-foreground"
+      },
+      "title": {
+        "className": "text-xl font-bold text-card-foreground uppercase mb-3 font-heading"
+      },
+      "excerpt": {
+        "className": "text-base text-muted-foreground uppercase"
+      },
+      "posts": []
+    },
+    
+    "cta": {
+      "container": {
+        "className": "py-20 bg-primary border-y-4 border-foreground"
+      },
+      "innerWrapper": {
+        "className": "max-w-3xl mx-auto px-6 text-center"
+      },
+      "headline": {
+        "text": "◢◤ READY PLAYER ONE? ◢◤",
+        "className": "text-4xl font-bold text-primary-foreground uppercase mb-6 font-heading"
+      },
+      "subtext": {
+        "text": "JOIN THE RETRO REVOLUTION TODAY",
+        "className": "text-2xl text-primary-foreground uppercase mb-8 tracking-wide"
+      },
+      "button": {
+        "text": "START NOW",
+        "href": "/signup",
+        "className": "px-12 py-4 bg-accent text-accent-foreground font-bold uppercase text-xl border-4 border-foreground shadow-2xl hover:shadow-xl active:translate-x-1 active:translate-y-1 transition-all"
+      }
+    },
+    
+    "footer": {
+      "container": {
+        "className": "py-12 bg-secondary border-t-4 border-primary"
+      },
+      "innerWrapper": {
+        "className": "container mx-auto px-6"
+      },
+      "grid": {
+        "className": "grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8"
+      },
+      "columnTitle": {
+        "className": "text-lg font-bold text-secondary-foreground uppercase mb-4 font-heading"
+      },
+      "linkList": {
+        "className": "space-y-2"
+      },
+      "link": {
+        "className": "text-secondary-foreground hover:text-accent transition-colors uppercase block font-bold"
+      },
+      "copyright": {
+        "text": "◢◤ 2024 WEBONAI • ALL RIGHTS RESERVED ◢◤",
+        "className": "text-center text-secondary-foreground uppercase pt-8 border-t-4 border-primary font-bold"
+      },
+      "items": [
+        {
+          "title": "PRODUCT",
+          "links": [
+            { "text": "FEATURES", "href": "/features" },
+            { "text": "PRICING", "href": "/pricing" },
+            { "text": "BLOG", "href": "/blog" }
+          ]
+        },
+        {
+          "title": "COMPANY",
+          "links": [
+            { "text": "ABOUT", "href": "/about" },
+            { "text": "CONTACT", "href": "/contact" }
+          ]
+        },
+        {
+          "title": "LEGAL",
+          "links": [
+            { "text": "PRIVACY", "href": "/privacy" },
+            { "text": "TERMS", "href": "/terms" }
+          ]
+        }
+      ]
+    }
+  }
+}

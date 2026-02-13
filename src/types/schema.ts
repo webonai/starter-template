@@ -28,6 +28,7 @@ export type UniversalStyles = {
 };
 
 export type ElementConfig = {
+  enabled?: boolean; // For conditional rendering
   // Content
   text?: string;
   src?: string;     // For images
