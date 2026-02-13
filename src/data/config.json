@@ -189,8 +189,8 @@
     "zIndex": { "0": "0", "10": "10", "20": "20", "30": "30", "40": "40", "50": "50", "auto": "auto" }
   },
   "layout": {
-    "order": ["header","hero","features","testimonials", "blog", "cta","footer"],
-    "hiddenSections": ["faq"],
+    "order": ["header","hero","features","testimonials", "faq", "blog", "cta","footer"],
+    "hiddenSections": [],
     "pages": [
       { "slug": "", "title": "Home", "href": "/" },
       { "slug": "about", "title": "About Us", "href": "/about",
@@ -224,7 +224,7 @@
       "innerWrapper": { "enabled": true, "className": "" },
       "wrapper": { "enabled": true, "className": "" },
       "logo": { "enabled": true, "href": "/", "alt": "Company Logo", "className": "" },
-      "logoImage": { "enabled": true, "src": "/logo.png", "alt": "Company Logo", "className": "" },
+      "logoImage": { "enabled": true, "src": "/logo.svg", "alt": "Company Logo", "className": "" },
       "nav": {
         "enabled": true,
         "className": "",
@@ -664,6 +664,89 @@
           "text": "Cancel anytime"
         }
       ]
+    },
+    "faq": {
+      "container": { "enabled": true, "className": "" },
+      "innerWrapper": { "enabled": true, "className": "" },
+      "headerWrapper": { "enabled": true, "className": "" },
+      "eyebrow": {
+        "enabled": true,
+        "text": "FAQ"
+      },
+      "header": {
+        "enabled": true,
+        "text": "Frequently asked questions"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "Everything you need to know about our platform. Can't find what you're looking for? Reach out to our support team."
+      },
+      "list": { "enabled": true, "className": "" },
+      "questions": [
+        {
+          "q": { "text": "How do I get started?" },
+          "a": { "text": "Getting started is easy. Simply create a free account, choose your plan, and start building. Our onboarding wizard will guide you through the setup process step by step." }
+        },
+        {
+          "q": { "text": "Is there a free trial available?" },
+          "a": { "text": "Yes! We offer a 14-day free trial with full access to all features. No credit card required. You can upgrade, downgrade, or cancel at any time." }
+        },
+        {
+          "q": { "text": "Can I change my plan later?" },
+          "a": { "text": "Absolutely. You can upgrade or downgrade your plan at any time from your account settings. Changes take effect immediately, and we'll prorate any differences." }
+        },
+        {
+          "q": { "text": "What kind of support do you offer?" },
+          "a": { "text": "We provide 24/7 support through live chat, email, and our comprehensive documentation. Enterprise customers also get a dedicated account manager and priority support." }
+        },
+        {
+          "q": { "text": "Is my data secure?" },
+          "a": { "text": "Security is our top priority. We use enterprise-grade encryption, regular security audits, and comply with SOC 2, GDPR, and HIPAA standards to keep your data safe." }
+        }
+      ]
+    },
+    "blogIndex": {
+      "container": { "enabled": true },
+      "innerWrapper": { "enabled": true },
+      "header": { "enabled": true },
+      "eyebrow": {
+        "enabled": true,
+        "text": "Blog"
+      },
+      "headline": {
+        "enabled": true,
+        "text": "Latest insights and updates"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "Stay up to date with the latest news, tips, and best practices from our team."
+      },
+      "categoryFilter": { "enabled": true },
+      "categoryAllLabel": { "enabled": true, "text": "All" },
+      "grid": { "enabled": true },
+      "emptyState": { "enabled": true, "text": "No posts found." },
+      "emptyStateLink": { "enabled": true, "text": "View all posts", "href": "/blog" },
+      "pagination": { "enabled": true },
+      "prevButton": { "enabled": true, "text": "Previous" },
+      "nextButton": { "enabled": true, "text": "Next" }
+    },
+    "blogPost": {
+      "container": { "enabled": true },
+      "innerWrapper": { "enabled": true },
+      "contentWrapper": { "enabled": true },
+      "backLink": { "enabled": true, "text": "Back to Blog", "href": "/blog" },
+      "category": { "enabled": true },
+      "title": { "enabled": true },
+      "meta": { "enabled": true },
+      "imageWrapper": { "enabled": true },
+      "content": { "enabled": true },
+      "bottomNav": { "enabled": true },
+      "backToAllLink": { "enabled": true, "text": "Back to all posts", "href": "/blog" }
+    },
+    "dynamicPage": {
+      "container": { "enabled": true },
+      "innerWrapper": { "enabled": true },
+      "contentWrapper": { "enabled": true }
     },
     "footer": {
       "container": { "enabled": true },

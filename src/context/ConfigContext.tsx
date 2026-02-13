@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import defaultConfigFile from '../data/config.json';
+import defaultConfigFile from '../data/config-retro.json';
 import { SiteConfig } from '@/types/configTypes';
 
 export const CONFIG_MESSAGE_TYPE = 'WEBONAI_CONFIG_UPDATE';

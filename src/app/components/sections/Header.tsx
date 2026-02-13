@@ -2,11 +2,23 @@
 
 import { editable } from '@/lib/editable';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { HeaderProps } from './types';
 
 export default function Header({ data }: { data: HeaderProps }) {   
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [svgContent, setSvgContent] = useState<string>('');
+
+    useEffect(() => {
+        if (data?.logoImage?.src?.endsWith('.svg')) {
+            fetch(data.logoImage.src)
+                .then(res => res.text())
+                .then(svg => setSvgContent(svg))
+                .catch(() => setSvgContent(''));
+        } else {
+            setSvgContent('');
+        }
+    }, [data?.logoImage?.src]);
     
     if (!data) return null;
 
@@ -18,9 +30,16 @@ export default function Header({ data }: { data: HeaderProps }) {
                     {/* Logo */}
                     <div {...editable(data.logoWrapper, "sections.header.logoWrapper", "container", "flex items-center")}>
                         <Link {...editable(data.logo, "sections.header.logo", "link", "flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm")} aria-label={data.logoImage?.alt || data.logo?.alt || 'Home'}>
-                            {data.logoImage?.src && (
+                            {data.logoImage?.src?.endsWith('.svg') && svgContent ? (
+                                <span
+                                    className="inline-flex h-8 [&>svg]:h-full [&>svg]:w-auto"
+                                    style={{ color: 'var(--primary)' }}
+                                    dangerouslySetInnerHTML={{ __html: svgContent }}
+                                    {...editable(data.logoImage, "sections.header.logoImage", "image")}
+                                />
+                            ) : data.logoImage?.src ? (
                                 <img src={data.logoImage.src} alt={data.logoImage.alt || data.logo?.alt || 'Logo'} className="h-8 w-auto" {...editable(data.logoImage, "sections.header.logoImage", "image")} />
-                            )}
+                            ) : null}
                         </Link>
                     </div>
 

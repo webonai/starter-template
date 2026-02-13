@@ -100,7 +100,7 @@ export default function Blog({ data }: BlogProps) {
         </div>
 
         {/* Posts Grid */}
-        <div {...editable(data.grid, "sections.blog.grid", "container", "grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3")}>
+        <div {...editable(data.grid, "sections.blog.grid", "container", "mx-auto max-w-6xl grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3")}>
           {normalizedPosts.filter(post => post.enabled !== false).slice(0, data.maxPosts || 3).map((post, index) => (
             <article key={index} {...editable(post, `sections.blog.posts.${index}`, "container", "group flex flex-col rounded-xl border border-border bg-card overflow-hidden shadow-sm transition-all hover:shadow-md")}>
               

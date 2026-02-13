@@ -89,6 +89,7 @@ export type FaqProps = {
         container: ElementConfig;
         innerWrapper: ElementConfig;
         headerWrapper: ElementConfig;
+        eyebrow?: ElementConfig & { text?: string; enabled?: boolean };
         subtext: ElementConfig;
         list: ElementConfig;
         header: ElementConfig;

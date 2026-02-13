@@ -32,6 +32,7 @@ export default function DynamicPage() {
 
   const pageIndex = safeConfig.layout.pages.findIndex((p: any) => p.slug === slug);
   const page = safeConfig.layout.pages[pageIndex];
+  const dynamicPage = safeConfig.sections?.dynamicPage || {};
 
   if (!page) {
     return notFound();
@@ -41,13 +42,13 @@ export default function DynamicPage() {
     <main>
       {safeConfig.sections.header && <Header data={safeConfig.sections.header} />}
       
-      <div className="py-24 sm:py-32 bg-white">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 {...editable(page.headline, `layout.pages.${pageIndex}.headline`, "text", "text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl")}>
+      <div {...editable(dynamicPage.container, "sections.dynamicPage.container", "section", "py-24 sm:py-32 bg-background")}>
+        <div {...editable(dynamicPage.innerWrapper, "sections.dynamicPage.innerWrapper", "container", "container mx-auto px-6 lg:px-8")}>
+          <div {...editable(dynamicPage.contentWrapper, "sections.dynamicPage.contentWrapper", "container", "mx-auto max-w-2xl text-center")}>
+            <h1 {...editable(page.headline, `layout.pages.${pageIndex}.headline`, "headline", "text-4xl font-bold tracking-tight text-foreground sm:text-6xl")}>
               {page.headline?.text || page.title}
             </h1>
-            <p {...editable(page.subtext, `layout.pages.${pageIndex}.subtext`, "text", "mt-6 text-lg leading-8 text-gray-600")}>
+            <p {...editable(page.subtext, `layout.pages.${pageIndex}.subtext`, "text", "mt-6 text-lg leading-8 text-muted-foreground")}>
               {page.subtext?.text || `This is the ${page.title} page.`}
             </p>
 
@@ -56,7 +57,7 @@ export default function DynamicPage() {
                 {page.socials.map((social: any, index: number) => {
                   const Icon = SOCIAL_ICONS[social.icon?.toLowerCase()] || Mail;
                   return (
-                    <a key={index} href={social.href} target="_blank" rel="noreferrer" {...editable(social, `layout.pages.${pageIndex}.socials.${index}`, "link", "text-gray-600 hover:text-gray-900")}>
+                    <a key={index} href={social.href} target="_blank" rel="noreferrer" {...editable(social, `layout.pages.${pageIndex}.socials.${index}`, "link", "text-muted-foreground hover:text-foreground")}>
                       <span className="sr-only">{social.platform}</span>
                       <Icon className="h-6 w-6" />
                     </a>
@@ -67,7 +68,7 @@ export default function DynamicPage() {
 
             {page.body && (
               <div className="mt-10 max-w-2xl mx-auto">
-                <div {...editable(page.body, `layout.pages.${pageIndex}.body`, "text", "text-lg leading-8 text-gray-600")}>
+                <div {...editable(page.body, `layout.pages.${pageIndex}.body`, "text", "text-lg leading-8 text-muted-foreground")}>
                   {page.body.text}
                 </div>
               </div>
@@ -78,10 +79,10 @@ export default function DynamicPage() {
                 <dl {...editable(page.grid, `layout.pages.${pageIndex}.grid`, "grid", "grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16")}>
                   {page.items.map((item: any, index: number) => (
                     <div key={index} className="flex flex-col">
-                      <dt {...editable(item.title, `layout.pages.${pageIndex}.items.${index}.title`, "text", "text-base font-semibold leading-7 text-gray-900")}>
+                      <dt {...editable(item.title, `layout.pages.${pageIndex}.items.${index}.title`, "text", "text-base font-semibold leading-7 text-foreground")}>
                         {item.title?.text}
                       </dt>
-                      <dd {...editable(item.description, `layout.pages.${pageIndex}.items.${index}.description`, "text", "mt-1 flex-auto text-base leading-7 text-gray-600")}>
+                      <dd {...editable(item.description, `layout.pages.${pageIndex}.items.${index}.description`, "text", "mt-1 flex-auto text-base leading-7 text-muted-foreground")}>
                         {item.description?.text}
                       </dd>
                     </div>

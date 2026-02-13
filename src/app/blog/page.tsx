@@ -5,14 +5,16 @@ import Header from '../components/sections/Header';
 import Footer from '../components/sections/Footer';
 import { editable } from '@/lib/editable';
 import config from '../../data/config.json';
+import { ArrowRight, Calendar, User } from 'lucide-react';
 
 export default async function BlogIndex({ searchParams }: { searchParams: Promise<{ page?: string; category?: string }> }) {
   const safeConfig = config as any;
+  const blogIndex = safeConfig.sections.blogIndex || {};
 
   const resolvedSearchParams = await searchParams;
   const currentPage = Number(resolvedSearchParams?.page) || 1;
   const category = resolvedSearchParams?.category;
-  const postsPerPage = 5;
+  const postsPerPage = 6;
   const allPosts = getPosts(category);
   const categories = getCategories();
   const totalPages = Math.ceil(allPosts.length / postsPerPage);
@@ -22,97 +24,167 @@ export default async function BlogIndex({ searchParams }: { searchParams: Promis
   return (
     <main>
       <Header data={safeConfig.sections.header} />
-      <div className="bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 {...editable(safeConfig.sections.blogIndex?.headline, "sections.blogIndex.headline", "headline", "text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl")}>
-              {safeConfig.sections.blogIndex?.headline?.text}
+      
+      <div {...editable(blogIndex.container, "sections.blogIndex.container", "section", "relative py-20 sm:py-24 lg:py-32")}>
+        {/* Background gradient */}
+        <div className="absolute inset-0 -z-10 bg-linear-to-b from-primary/5 via-background to-background" />
+        
+        <div {...editable(blogIndex.innerWrapper, "sections.blogIndex.innerWrapper", "container", "container mx-auto px-4 sm:px-6 lg:px-8")}>
+          
+          {/* Header */}
+          <div {...editable(blogIndex.header, "sections.blogIndex.header", "container", "mx-auto max-w-3xl text-center mb-16 sm:mb-20")}>
+            {blogIndex.eyebrow?.enabled && (
+              <div {...editable(blogIndex.eyebrow, "sections.blogIndex.eyebrow", "badge", "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4")}>
+                {blogIndex.eyebrow.text}
+              </div>
+            )}
+            
+            <h2 {...editable(blogIndex.headline, "sections.blogIndex.headline", "headline", "text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-4")}>
+              {blogIndex.headline?.text || "Blog"}
             </h2>
-            <p {...editable(safeConfig.sections.blogIndex?.subtext, "sections.blogIndex.subtext", "subtext", "mt-2 text-lg leading-8 text-gray-600")}>
-              {safeConfig.sections.blogIndex?.subtext?.text}
+            <p {...editable(blogIndex.subtext, "sections.blogIndex.subtext", "text", "text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto")}>
+              {blogIndex.subtext?.text || "Latest insights and updates from our team."}
             </p>
           </div>
           
           {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div {...editable(blogIndex.categoryFilter, "sections.blogIndex.categoryFilter", "container", "flex flex-wrap justify-center gap-3 mb-12 sm:mb-16")}>
             <Link 
-                href="/blog"
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                    !category 
-                    ? 'bg-primary text-white' 
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                }`}
+              href="/blog"
+              className={`inline-flex items-center rounded-full px-4 py-2 text-sm font-medium transition-all ${
+                !category 
+                  ? 'bg-primary text-primary-foreground shadow-sm' 
+                  : 'border border-border bg-card text-muted-foreground hover:border-primary/30 hover:text-primary hover:shadow-sm'
+              }`}
             >
-                All
+              {blogIndex.categoryAllLabel?.text || 'All'}
             </Link>
             {categories.map((cat) => (
-                <Link
-                    key={cat}
-                    href={`/blog?category=${encodeURIComponent(cat)}`}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                        category === cat
-                        ? 'bg-primary text-white'
-                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                    }`}
-                >
-                    {cat}
-                </Link>
+              <Link
+                key={cat}
+                href={`/blog?category=${encodeURIComponent(cat)}`}
+                className={`inline-flex items-center rounded-full px-4 py-2 text-sm font-medium transition-all ${
+                  category === cat
+                    ? 'bg-primary text-primary-foreground shadow-sm'
+                    : 'border border-border bg-card text-muted-foreground hover:border-primary/30 hover:text-primary hover:shadow-sm'
+                }`}
+              >
+                {cat}
+              </Link>
             ))}
           </div>
 
-          <div className="mx-auto max-w-3xl flex flex-col gap-16">
+          {/* Posts Grid */}
+          <div {...editable(blogIndex.grid, "sections.blogIndex.grid", "container", "mx-auto max-w-6xl grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3")}>
             {posts.map((post) => (
-              <article key={post.slug} className="flex flex-col items-start justify-between border-b border-gray-100 pb-16 last:border-0">
-                <div className="relative w-full mb-8">
-                  <div className="aspect-[16/9] w-full rounded-2xl bg-gray-100 overflow-hidden relative">
-                      <Image
-                          src={post.image}
-                          alt={post.title}
-                          fill
-                          className="object-cover"
-                      />
-                  </div>
-                </div>
-                <div className="max-w-xl">
-                  <div className="flex items-center gap-x-4 text-xs">
-                    <time dateTime={post.date} className="text-gray-500">
-                      {new Date(post.date).toLocaleDateString()}
+              <article key={post.slug} className="group relative flex flex-col rounded-xl border border-border bg-card shadow-sm transition-all hover:shadow-md hover:border-primary/30 overflow-hidden">
+                
+                {/* Image */}
+                {post.image && (
+                  <Link href={`/blog/${post.slug}`} className="relative aspect-16/10 w-full overflow-hidden bg-muted">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </Link>
+                )}
+
+                {/* Content */}
+                <div className="flex flex-1 flex-col p-6">
+                  {/* Meta */}
+                  <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
+                    <time dateTime={post.date} className="inline-flex items-center gap-1">
+                      <Calendar className="h-3 w-3" />
+                      {new Date(post.date).toLocaleDateString('en-US', { 
+                        month: 'short', 
+                        day: 'numeric', 
+                        year: 'numeric' 
+                      })}
                     </time>
-                    <span className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
-                      {post.category}
-                    </span>
+                    {post.category && (
+                      <>
+                        <span className="h-1 w-1 rounded-full bg-border" />
+                        <span className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
+                          {post.category}
+                        </span>
+                      </>
+                    )}
                   </div>
-                  <div className="group relative">
-                    <h3 className="mt-3 text-2xl font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                      <Link href={`/blog/${post.slug}`}>
-                        <span className="absolute inset-0" />
-                        {post.title}
-                      </Link>
-                    </h3>
-                    <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{post.excerpt}</p>
+
+                  {/* Title */}
+                  <h3 className="text-lg font-semibold text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                    <Link href={`/blog/${post.slug}`}>
+                      {post.title}
+                    </Link>
+                  </h3>
+
+                  {/* Excerpt */}
+                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 mb-4 flex-1">
+                    {post.excerpt}
+                  </p>
+
+                  {/* Author & Read more */}
+                  <div className="flex items-center justify-between pt-4 border-t border-border">
+                    <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
+                      <User className="h-3 w-3" />
+                      {post.author}
+                    </span>
+                    <Link 
+                      href={`/blog/${post.slug}`}
+                      className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
+                    >
+                      Read more
+                      <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
+                    </Link>
                   </div>
                 </div>
               </article>
             ))}
           </div>
 
-          {/* Pagination */}
-          <div className="flex justify-center gap-4 mt-12">
-            {currentPage > 1 && (
-                <Link href={`/blog?page=${currentPage - 1}${category ? `&category=${category}` : ''}`} className="px-4 py-2 border rounded hover:bg-gray-50">
-                    Previous
+          {/* Empty state */}
+          {posts.length === 0 && (
+            <div className="mx-auto max-w-md text-center py-16">
+              <p {...editable(blogIndex.emptyState, "sections.blogIndex.emptyState", "text", "text-lg text-muted-foreground")}>
+                {blogIndex.emptyState?.text || 'No posts found.'}
+              </p>
+              {category && (
+                <Link {...editable(blogIndex.emptyStateLink, "sections.blogIndex.emptyStateLink", "link", "mt-4 inline-flex items-center text-sm font-medium text-primary hover:underline")}>
+                  {blogIndex.emptyStateLink?.text || 'View all posts'}
                 </Link>
-            )}
-            <span className="px-4 py-2 text-gray-600">Page {currentPage} of {totalPages}</span>
-            {currentPage < totalPages && (
-                <Link href={`/blog?page=${currentPage + 1}${category ? `&category=${category}` : ''}`} className="px-4 py-2 border rounded hover:bg-gray-50">
-                    Next
-                </Link>
-            )}
-          </div>
+              )}
+            </div>
+          )}
 
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div {...editable(blogIndex.pagination, "sections.blogIndex.pagination", "container", "flex items-center justify-center gap-3 mt-16")}>
+              {currentPage > 1 && (
+                <Link 
+                  href={`/blog?page=${currentPage - 1}${category ? `&category=${category}` : ''}`} 
+                  {...editable(blogIndex.prevButton, "sections.blogIndex.prevButton", "button", "inline-flex items-center rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-all hover:border-primary/30 hover:shadow-md")}
+                >
+                  {blogIndex.prevButton?.text || 'Previous'}
+                </Link>
+              )}
+              <span className="px-4 py-2 text-sm text-muted-foreground">
+                Page {currentPage} of {totalPages}
+              </span>
+              {currentPage < totalPages && (
+                <Link 
+                  href={`/blog?page=${currentPage + 1}${category ? `&category=${category}` : ''}`} 
+                  {...editable(blogIndex.nextButton, "sections.blogIndex.nextButton", "button", "inline-flex items-center rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-all hover:border-primary/30 hover:shadow-md")}
+                >
+                  {blogIndex.nextButton?.text || 'Next'}
+                </Link>
+              )}
+            </div>
+          )}
         </div>
       </div>
+
       <Footer data={safeConfig.sections.footer} />
     </main>
   );

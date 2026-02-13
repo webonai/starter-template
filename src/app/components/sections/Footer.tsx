@@ -2,9 +2,23 @@
 
 import { editable } from '@/lib/editable';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import { FooterProps } from './types';
 
 export default function Footer({ data }: FooterProps) {
+  const [svgContent, setSvgContent] = useState<string>('');
+
+  useEffect(() => {
+    if (data?.logo?.src?.endsWith('.svg')) {
+      fetch(data.logo.src)
+        .then(res => res.text())
+        .then(svg => setSvgContent(svg))
+        .catch(() => setSvgContent(''));
+    } else {
+      setSvgContent('');
+    }
+  }, [data?.logo?.src]);
+
   if (!data) return null;
 
   return (
@@ -16,7 +30,15 @@ export default function Footer({ data }: FooterProps) {
           <div {...editable(data.brandColumn, "sections.footer.brandColumn", "container", "lg:col-span-4")}>
             {data.logo?.enabled && (
               <Link href={data.logo.href || '/'} className="inline-block mb-6">
-                 <img src={data.logo.src} alt={data.logo.alt} className="h-8 w-auto" />
+                {data.logo.src?.endsWith('.svg') && svgContent ? (
+                  <span
+                    className="inline-flex h-8 [&>svg]:h-full [&>svg]:w-auto"
+                    style={{ color: 'var(--primary)' }}
+                    dangerouslySetInnerHTML={{ __html: svgContent }}
+                  />
+                ) : (
+                  <img src={data.logo.src} alt={data.logo.alt} className="h-8 w-auto" />
+                )}
               </Link>
             )}
             {data.tagline?.enabled && (

@@ -28,6 +28,9 @@ export default function ThemeWrapper({ children }: { children: React.ReactNode }
       if (lower.includes('vt323')) return "'VT323', monospace";
       if (lower.includes('courier')) return "'Courier Prime', monospace";
       
+      // Handle editorial/magazine fonts
+      if (lower.includes('lora')) return 'var(--font-lora), serif';
+      
       // Handle modern fonts
       if (lower.includes('inter')) return 'var(--font-inter)';
       if (lower.includes('playfair')) return 'var(--font-playfair)';
