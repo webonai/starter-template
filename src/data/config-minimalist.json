@@ -1,0 +1,788 @@
+{
+  "meta": {
+    "siteName": "Outline",
+    "description": "Simple tools for thoughtful work.",
+    "favicon": "/uploads/favicon.ico"
+  },
+  "theme": {
+    "name": "minimalist",
+    "mode": "light",
+    "colors": {
+      "light": {
+        "primary": "#18181b",
+        "primaryForeground": "#fafafa",
+        "secondary": "#f4f4f5",
+        "secondaryForeground": "#18181b",
+        "accent": "#f4f4f5",
+        "accentForeground": "#18181b",
+        "destructive": "#dc2626",
+        "destructiveForeground": "#fafafa",
+        "muted": "#f4f4f5",
+        "mutedForeground": "#71717a",
+        "card": "#ffffff",
+        "cardForeground": "#09090b",
+        "popover": "#ffffff",
+        "popoverForeground": "#09090b",
+        "background": "#ffffff",
+        "foreground": "#09090b",
+        "border": "#e4e4e7",
+        "input": "#e4e4e7",
+        "ring": "#18181b",
+        "neutral": "#f4f4f5"
+      },
+      "dark": {
+        "primary": "#fafafa",
+        "primaryForeground": "#18181b",
+        "secondary": "#27272a",
+        "secondaryForeground": "#fafafa",
+        "accent": "#27272a",
+        "accentForeground": "#fafafa",
+        "destructive": "#f87171",
+        "destructiveForeground": "#18181b",
+        "muted": "#27272a",
+        "mutedForeground": "#a1a1aa",
+        "card": "#09090b",
+        "cardForeground": "#fafafa",
+        "popover": "#09090b",
+        "popoverForeground": "#fafafa",
+        "background": "#09090b",
+        "foreground": "#fafafa",
+        "border": "#27272a",
+        "input": "#27272a",
+        "ring": "#fafafa",
+        "neutral": "#27272a"
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "heading": "Inter",
+        "body": "Inter",
+        "mono": "monospace"
+      },
+      "fontSize": {
+        "xs": "0.75rem",
+        "sm": "0.875rem",
+        "base": "1rem",
+        "lg": "1.125rem",
+        "xl": "1.25rem",
+        "2xl": "1.5rem",
+        "3xl": "1.875rem",
+        "4xl": "2.25rem",
+        "5xl": "3rem",
+        "6xl": "3.75rem"
+      },
+      "fontWeight": {
+        "thin": "100",
+        "extralight": "200",
+        "light": "300",
+        "normal": "400",
+        "medium": "500",
+        "semibold": "600",
+        "bold": "700",
+        "extrabold": "800",
+        "black": "900"
+      },
+      "lineHeight": {
+        "none": "1",
+        "tight": "1.2",
+        "snug": "1.375",
+        "normal": "1.6",
+        "relaxed": "1.75",
+        "loose": "2"
+      },
+      "letterSpacing": {
+        "tighter": "-0.04em",
+        "tight": "-0.02em",
+        "normal": "0em",
+        "wide": "0.025em",
+        "wider": "0.05em",
+        "widest": "0.1em"
+      }
+    },
+    "spacing": {
+      "0": "0px",
+      "1": "0.25rem",
+      "2": "0.5rem",
+      "3": "0.75rem",
+      "4": "1rem",
+      "5": "1.25rem",
+      "6": "1.5rem",
+      "8": "2rem",
+      "10": "2.5rem",
+      "12": "3rem",
+      "16": "4rem",
+      "20": "5rem",
+      "24": "6rem",
+      "32": "8rem",
+      "40": "10rem",
+      "48": "12rem",
+      "56": "14rem",
+      "64": "16rem"
+    },
+    "borderRadius": {
+      "none": "0px",
+      "sm": "0.25rem",
+      "base": "0.375rem",
+      "md": "0.5rem",
+      "lg": "0.625rem",
+      "xl": "0.75rem",
+      "2xl": "1rem",
+      "3xl": "1.25rem",
+      "full": "9999px"
+    },
+    "shadows": {
+      "light": {
+        "sm": "0 1px 2px 0 rgb(0 0 0 / 0.03)",
+        "base": "0 1px 2px 0 rgb(0 0 0 / 0.04)",
+        "md": "0 2px 4px -1px rgb(0 0 0 / 0.04), 0 1px 2px -1px rgb(0 0 0 / 0.03)",
+        "lg": "0 4px 6px -1px rgb(0 0 0 / 0.04), 0 2px 4px -2px rgb(0 0 0 / 0.03)",
+        "xl": "0 8px 16px -4px rgb(0 0 0 / 0.06), 0 4px 6px -2px rgb(0 0 0 / 0.03)",
+        "2xl": "0 16px 32px -8px rgb(0 0 0 / 0.08)",
+        "none": "none"
+      },
+      "dark": {
+        "sm": "0 1px 2px 0 rgb(0 0 0 / 0.3)",
+        "base": "0 1px 2px 0 rgb(0 0 0 / 0.4)",
+        "md": "0 2px 4px -1px rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.3)",
+        "lg": "0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3)",
+        "xl": "0 8px 16px -4px rgb(0 0 0 / 0.5), 0 4px 6px -2px rgb(0 0 0 / 0.3)",
+        "2xl": "0 16px 32px -8px rgb(0 0 0 / 0.6)",
+        "none": "none"
+      }
+    },
+    "borderWidth": {
+      "0": "0px",
+      "1": "1px",
+      "2": "2px",
+      "4": "4px",
+      "8": "8px"
+    },
+    "opacity": { "0": "0", "5": "0.05", "10": "0.1", "20": "0.2", "25": "0.25", "30": "0.3", "40": "0.4", "50": "0.5", "60": "0.6", "70": "0.7", "75": "0.75", "80": "0.8", "90": "0.9", "95": "0.95", "100": "1" },
+    "transitions": {
+      "none": "none",
+      "all": "all 200ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "colors": "color, background-color, border-color, text-decoration-color, fill, stroke 200ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "opacity": "opacity 200ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "shadow": "box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "transform": "transform 200ms cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    "animation": {
+      "duration": {
+        "fast": "150ms",
+        "normal": "250ms",
+        "slow": "400ms",
+        "slower": "700ms"
+      },
+      "easing": {
+        "linear": "linear",
+        "in": "cubic-bezier(0.4, 0, 1, 1)",
+        "out": "cubic-bezier(0, 0, 0.2, 1)",
+        "inOut": "cubic-bezier(0.4, 0, 0.2, 1)"
+      }
+    },
+    "breakpoints": { "sm": "640px", "md": "768px", "lg": "1024px", "xl": "1280px", "2xl": "1536px" },
+    "container": {
+      "padding": "1.5rem",
+      "maxWidth": "1200px"
+    },
+    "zIndex": { "0": "0", "10": "10", "20": "20", "30": "30", "40": "40", "50": "50", "auto": "auto" }
+  },
+  "layout": {
+    "order": ["header", "hero", "features", "testimonials", "faq", "blog", "cta", "footer"],
+    "hiddenSections": [],
+    "pages": [
+      { "slug": "", "title": "Home", "href": "/" },
+      {
+        "slug": "about",
+        "title": "About",
+        "href": "/about",
+        "headline": { "text": "About Outline", "className": "text-4xl font-semibold mb-4 text-foreground tracking-tight" },
+        "subtext": { "text": "We believe the best tools disappear into the background, letting you focus on what matters." },
+        "body": { "text": "Outline was built by a small team who got tired of over-engineered software. We set out to create something different: tools that are simple, fast, and respectful of your attention. No bloat, no noise, just what you need." },
+        "grid": { "className": "grid grid-cols-1 sm:grid-cols-2 gap-8" },
+        "items": [
+          { "title": { "text": "Simplicity" }, "description": { "text": "Every feature earns its place. We remove more than we add." } },
+          { "title": { "text": "Speed" }, "description": { "text": "Fast by default. No loading spinners, no waiting." } },
+          { "title": { "text": "Privacy" }, "description": { "text": "Your data is yours. We don't sell it, share it, or mine it." } },
+          { "title": { "text": "Craft" }, "description": { "text": "Built with care and attention to every detail." } }
+        ]
+      },
+      {
+        "slug": "contact",
+        "title": "Contact",
+        "href": "/contact",
+        "heading": {
+          "text": "Get in touch",
+          "className": "text-4xl font-semibold mb-4 text-foreground tracking-tight"
+        },
+        "subtext": {
+          "text": "Questions, feedback, or just want to say hello? We'd love to hear from you."
+        },
+        "socials": [
+          { "platform": "Twitter", "href": "https://twitter.com", "icon": "twitter" },
+          { "platform": "GitHub", "href": "https://github.com", "icon": "github" },
+          { "platform": "LinkedIn", "href": "https://linkedin.com", "icon": "linkedin" }
+        ]
+      }
+    ]
+  },
+  "sections": {
+    "header": {
+      "container": { "enabled": true, "className": "border-b border-border/50" },
+      "innerWrapper": { "enabled": true, "className": "" },
+      "wrapper": { "enabled": true, "className": "" },
+      "logo": { "enabled": true, "href": "/", "alt": "Outline", "className": "text-base font-medium tracking-tight" },
+      "logoImage": { "enabled": true, "src": "/logo.svg", "alt": "Outline", "className": "" },
+      "nav": {
+        "enabled": true,
+        "className": "",
+        "links": [
+          { "enabled": true, "text": "Features", "href": "/#features", "className": "text-sm text-muted-foreground hover:text-foreground" },
+          { "enabled": true, "text": "Blog", "href": "/blog", "className": "text-sm text-muted-foreground hover:text-foreground" },
+          { "enabled": true, "text": "About", "href": "/about", "className": "text-sm text-muted-foreground hover:text-foreground" },
+          { "enabled": true, "text": "Contact", "href": "/contact", "className": "text-sm text-muted-foreground hover:text-foreground" }
+        ]
+      },
+      "actions": { "enabled": true, "className": "" },
+      "ctaButton": { "enabled": true, "text": "Get Started", "href": "#signup", "className": "text-sm" },
+      "mobileMenuButton": { "enabled": true, "className": "" },
+      "srText": { "enabled": true, "className": "" },
+      "hamburgerIcon": { "enabled": true, "className": "" },
+      "closeIcon": { "enabled": true, "className": "" },
+      "mobileMenu": { "enabled": true, "className": "" },
+      "mobileMenuInner": { "enabled": true, "className": "" },
+      "mobileCTA": { "enabled": true, "className": "" }
+    },
+    "hero": {
+      "container": { "enabled": true, "className": "" },
+      "innerWrapper": { "enabled": true, "className": "" },
+      "eyebrow": { "enabled": true, "text": "Now in public beta", "className": "text-sm font-normal text-muted-foreground" },
+      "headline": { "enabled": true, "text": "Work at the\nspeed of thought", "className": "tracking-tighter" },
+      "subtext": { "enabled": true, "text": "A simple, fast workspace for teams who value clarity over complexity. Write, plan, and build together without the noise.", "className": "" },
+      "primaryButton": { "enabled": true, "text": "Start for free", "href": "#signup", "className": "" },
+      "secondaryButton": { "enabled": true, "text": "See how it works", "href": "/about", "className": "" },
+      "stats": [
+        {
+          "enabled": true,
+          "value": "12k+",
+          "label": "teams",
+          "icon": "",
+          "className": ""
+        },
+        {
+          "enabled": true,
+          "value": "99.9%",
+          "label": "uptime",
+          "icon": "",
+          "className": ""
+        },
+        {
+          "enabled": true,
+          "value": "<50ms",
+          "label": "response",
+          "icon": "",
+          "className": ""
+        }
+      ],
+      "statsContainer": {
+        "enabled": true,
+        "className": ""
+      },
+      "heroImage": {
+        "enabled": false,
+        "src": "",
+        "alt": "",
+        "className": ""
+      }
+    },
+    "features": {
+      "container": { "enabled": true, "className": "" },
+      "background": { "enabled": false },
+      "innerWrapper": { "enabled": true },
+      "header": { "enabled": true },
+      "eyebrow": {
+        "enabled": false,
+        "text": "",
+        "className": ""
+      },
+      "headline": {
+        "enabled": true,
+        "text": "Less, but better"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "Every feature is designed with intention. Nothing extra, nothing missing."
+      },
+      "grid": { "enabled": true },
+      "items": [
+        {
+          "enabled": true,
+          "icon": {
+            "enabled": false,
+            "emoji": "",
+            "alt": ""
+          },
+          "title": {
+            "enabled": true,
+            "text": "Instant search"
+          },
+          "description": {
+            "enabled": true,
+            "text": "Find anything across your workspace in milliseconds. Full-text search that actually works."
+          },
+          "link": {
+            "enabled": false,
+            "text": "",
+            "href": "#"
+          }
+        },
+        {
+          "enabled": true,
+          "icon": {
+            "enabled": false,
+            "emoji": "",
+            "alt": ""
+          },
+          "title": {
+            "enabled": true,
+            "text": "Real-time collaboration"
+          },
+          "description": {
+            "enabled": true,
+            "text": "Work together seamlessly. See changes as they happen with zero lag or conflicts."
+          },
+          "link": {
+            "enabled": false,
+            "text": "",
+            "href": "#"
+          }
+        },
+        {
+          "enabled": true,
+          "icon": {
+            "enabled": false,
+            "emoji": "",
+            "alt": ""
+          },
+          "title": {
+            "enabled": true,
+            "text": "Markdown native"
+          },
+          "description": {
+            "enabled": true,
+            "text": "Write in markdown, render beautifully. Keyboard shortcuts for everything."
+          },
+          "link": {
+            "enabled": false,
+            "text": "",
+            "href": "#"
+          }
+        },
+        {
+          "enabled": true,
+          "icon": {
+            "enabled": false,
+            "emoji": "",
+            "alt": ""
+          },
+          "title": {
+            "enabled": true,
+            "text": "API-first"
+          },
+          "description": {
+            "enabled": true,
+            "text": "Build on top of Outline with a clean, well-documented REST API and webhooks."
+          },
+          "link": {
+            "enabled": false,
+            "text": "",
+            "href": "#"
+          }
+        },
+        {
+          "enabled": true,
+          "icon": {
+            "enabled": false,
+            "emoji": "",
+            "alt": ""
+          },
+          "title": {
+            "enabled": true,
+            "text": "Version history"
+          },
+          "description": {
+            "enabled": true,
+            "text": "Every change is tracked. Restore any previous version with a single click."
+          },
+          "link": {
+            "enabled": false,
+            "text": "",
+            "href": "#"
+          }
+        },
+        {
+          "enabled": true,
+          "icon": {
+            "enabled": false,
+            "emoji": "",
+            "alt": ""
+          },
+          "title": {
+            "enabled": true,
+            "text": "Self-hostable"
+          },
+          "description": {
+            "enabled": true,
+            "text": "Run on your own infrastructure. Docker image, full control, zero vendor lock-in."
+          },
+          "link": {
+            "enabled": false,
+            "text": "",
+            "href": "#"
+          }
+        }
+      ],
+      "ctaWrapper": { "enabled": true },
+      "cta": {
+        "enabled": false,
+        "text": "",
+        "href": ""
+      }
+    },
+    "testimonials": {
+      "container": { "enabled": true, "className": "" },
+      "innerWrapper": { "enabled": true },
+      "header": { "enabled": true },
+      "eyebrow": {
+        "enabled": false,
+        "text": "",
+        "className": ""
+      },
+      "headline": {
+        "enabled": true,
+        "text": "Trusted by thoughtful teams"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "Used by teams who care about doing their best work."
+      },
+      "grid": { "enabled": true },
+      "showQuoteIcon": false,
+      "items": [
+        {
+          "enabled": true,
+          "quote": {
+            "enabled": true,
+            "text": "We switched from Notion and never looked back. Outline is faster, simpler, and respects our workflow instead of imposing one."
+          },
+          "avatar": {
+            "enabled": false,
+            "src": "",
+            "alt": ""
+          },
+          "author": {
+            "enabled": true,
+            "text": "Anna Kowalski"
+          },
+          "role": {
+            "enabled": true,
+            "text": "Engineering Lead"
+          },
+          "company": {
+            "enabled": true,
+            "text": "Linear"
+          },
+          "rating": {
+            "enabled": false,
+            "value": 5
+          }
+        },
+        {
+          "enabled": true,
+          "quote": {
+            "enabled": true,
+            "text": "Finally, a tool that gets out of the way. The writing experience is perfect, and the API lets us build exactly what we need."
+          },
+          "avatar": {
+            "enabled": false,
+            "src": "",
+            "alt": ""
+          },
+          "author": {
+            "enabled": true,
+            "text": "James Thornton"
+          },
+          "role": {
+            "enabled": true,
+            "text": "Head of Product"
+          },
+          "company": {
+            "enabled": true,
+            "text": "Raycast"
+          },
+          "rating": {
+            "enabled": false,
+            "value": 5
+          }
+        },
+        {
+          "enabled": true,
+          "quote": {
+            "enabled": true,
+            "text": "The speed is unreal. Search, navigation, editing, everything happens instantly. This is what modern software should feel like."
+          },
+          "avatar": {
+            "enabled": false,
+            "src": "",
+            "alt": ""
+          },
+          "author": {
+            "enabled": true,
+            "text": "Sofia Nguyen"
+          },
+          "role": {
+            "enabled": true,
+            "text": "Design Director"
+          },
+          "company": {
+            "enabled": true,
+            "text": "Vercel"
+          },
+          "rating": {
+            "enabled": false,
+            "value": 5
+          }
+        }
+      ]
+    },
+    "faq": {
+      "container": { "enabled": true, "className": "" },
+      "innerWrapper": { "enabled": true, "className": "" },
+      "headerWrapper": { "enabled": true, "className": "" },
+      "eyebrow": {
+        "enabled": false,
+        "text": "",
+        "className": ""
+      },
+      "header": {
+        "enabled": true,
+        "text": "Common questions"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "Everything you need to know to get started."
+      },
+      "list": { "enabled": true, "className": "" },
+      "questions": [
+        {
+          "q": { "text": "How does pricing work?" },
+          "a": { "text": "Outline is free for up to 5 team members. After that, it's a simple per-seat price with no tiers, no feature gating, and no surprises." }
+        },
+        {
+          "q": { "text": "Can I import from other tools?" },
+          "a": { "text": "Yes. We support one-click import from Notion, Confluence, Google Docs, and Markdown files. Your data comes over cleanly with formatting intact." }
+        },
+        {
+          "q": { "text": "Is there an offline mode?" },
+          "a": { "text": "The web app works offline with automatic sync when you reconnect. The desktop app has full offline support built in." }
+        },
+        {
+          "q": { "text": "How is my data protected?" },
+          "a": { "text": "All data is encrypted at rest and in transit. We run on SOC 2 Type II certified infrastructure with regular third-party security audits." }
+        },
+        {
+          "q": { "text": "Can I self-host Outline?" },
+          "a": { "text": "Absolutely. We provide Docker images and detailed documentation for running Outline on your own infrastructure with full feature parity." }
+        }
+      ]
+    },
+    "blog": {
+      "container": { "enabled": true, "className": "" },
+      "innerWrapper": { "enabled": true },
+      "header": { "enabled": true },
+      "headerContent": { "enabled": true },
+      "eyebrow": {
+        "enabled": false,
+        "text": "",
+        "className": ""
+      },
+      "headline": {
+        "enabled": true,
+        "text": "From the blog"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "Updates, ideas, and thinking from the team."
+      },
+      "viewAllButton": {
+        "enabled": true,
+        "text": "All posts",
+        "href": "/blog",
+        "className": ""
+      },
+      "grid": { "enabled": true },
+      "maxPosts": 3,
+      "posts": []
+    },
+    "cta": {
+      "container": { "enabled": true, "className": "" },
+      "background": { "enabled": true, "className": "" },
+      "pattern": { "enabled": false },
+      "innerWrapper": { "enabled": true },
+      "content": { "enabled": true },
+      "eyebrow": {
+        "enabled": false,
+        "text": "",
+        "className": ""
+      },
+      "headline": {
+        "enabled": true,
+        "text": "Ready to simplify your workflow?"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "Start for free. No credit card required. Set up in under two minutes."
+      },
+      "buttonWrapper": { "enabled": true },
+      "primaryButton": {
+        "enabled": true,
+        "text": "Get started",
+        "href": "/signup",
+        "className": ""
+      },
+      "secondaryButton": {
+        "enabled": true,
+        "text": "Talk to us",
+        "href": "/contact",
+        "className": ""
+      },
+      "featuresWrapper": { "enabled": false },
+      "features": []
+    },
+    "blogIndex": {
+      "container": { "enabled": true },
+      "innerWrapper": { "enabled": true },
+      "header": { "enabled": true },
+      "eyebrow": {
+        "enabled": false,
+        "text": "",
+        "className": ""
+      },
+      "headline": {
+        "enabled": true,
+        "text": "Blog"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "Updates, ideas, and thinking from the team."
+      },
+      "categoryFilter": { "enabled": true },
+      "categoryAllLabel": { "enabled": true, "text": "All" },
+      "grid": { "enabled": true },
+      "emptyState": { "enabled": true, "text": "No posts yet." },
+      "emptyStateLink": { "enabled": true, "text": "View all posts", "href": "/blog" },
+      "pagination": { "enabled": true },
+      "prevButton": { "enabled": true, "text": "Previous" },
+      "nextButton": { "enabled": true, "text": "Next" }
+    },
+    "blogPost": {
+      "container": { "enabled": true },
+      "innerWrapper": { "enabled": true },
+      "contentWrapper": { "enabled": true },
+      "backLink": { "enabled": true, "text": "Back", "href": "/blog" },
+      "category": { "enabled": true },
+      "title": { "enabled": true },
+      "meta": { "enabled": true },
+      "imageWrapper": { "enabled": true },
+      "content": { "enabled": true },
+      "bottomNav": { "enabled": true },
+      "backToAllLink": { "enabled": true, "text": "All posts", "href": "/blog" }
+    },
+    "dynamicPage": {
+      "container": { "enabled": true },
+      "innerWrapper": { "enabled": true },
+      "contentWrapper": { "enabled": true }
+    },
+    "footer": {
+      "container": { "enabled": true, "className": "border-t border-border/50" },
+      "innerWrapper": { "enabled": true },
+      "mainContent": { "enabled": true },
+      "brandColumn": { "enabled": true },
+      "logo": {
+        "enabled": true,
+        "src": "/logo.svg",
+        "alt": "Outline",
+        "href": "/"
+      },
+      "tagline": {
+        "enabled": true,
+        "text": "Simple tools for thoughtful work."
+      },
+      "socialWrapper": { "enabled": true },
+      "socialLinks": [
+        {
+          "enabled": true,
+          "platform": "twitter",
+          "label": "Twitter",
+          "href": "https://twitter.com/outline",
+          "icon": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z'/></svg>"
+        },
+        {
+          "enabled": true,
+          "platform": "github",
+          "label": "GitHub",
+          "href": "https://github.com/outline",
+          "icon": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z'/></svg>"
+        }
+      ],
+      "linkColumns": [
+        {
+          "enabled": true,
+          "title": {
+            "enabled": true,
+            "text": "Product"
+          },
+          "links": [
+            { "enabled": true, "text": "Features", "href": "/features" },
+            { "enabled": true, "text": "Pricing", "href": "/pricing" },
+            { "enabled": true, "text": "Changelog", "href": "/changelog" },
+            { "enabled": true, "text": "API", "href": "/api" }
+          ]
+        },
+        {
+          "enabled": true,
+          "title": {
+            "enabled": true,
+            "text": "Company"
+          },
+          "links": [
+            { "enabled": true, "text": "About", "href": "/about" },
+            { "enabled": true, "text": "Blog", "href": "/blog" },
+            { "enabled": true, "text": "Contact", "href": "/contact" }
+          ]
+        },
+        {
+          "enabled": true,
+          "title": {
+            "enabled": true,
+            "text": "Legal"
+          },
+          "links": [
+            { "enabled": true, "text": "Privacy", "href": "/privacy" },
+            { "enabled": true, "text": "Terms", "href": "/terms" }
+          ]
+        }
+      ],
+      "bottomBar": { "enabled": true },
+      "copyright": {
+        "enabled": true,
+        "text": "\u00a9 2026 Outline. All rights reserved."
+      },
+      "bottomLinksWrapper": { "enabled": true },
+      "bottomLinks": [
+        { "enabled": true, "text": "Privacy", "href": "/privacy" },
+        { "enabled": true, "text": "Terms", "href": "/terms" }
+      ]
+    }
+  }
+}

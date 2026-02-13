@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import defaultConfigFile from '../data/config-retro.json';
+import defaultConfigFile from '../data/config-minimalist.json';
 import { SiteConfig } from '@/types/configTypes';
 
 export const CONFIG_MESSAGE_TYPE = 'WEBONAI_CONFIG_UPDATE';
@@ -22,12 +22,13 @@ export function ConfigProvider({ children, initialPosts }: { children: React.Rea
   const [config, setConfig] = useState<SiteConfig>(() => {
     const baseConfig = (defaultConfigFile as unknown as SiteConfig);
     if (initialPosts && initialPosts.length > 0) {
+        const blogSection = baseConfig?.sections?.blog ?? {};
         return {
             ...baseConfig,
             sections: {
                 ...baseConfig.sections,
                 blog: {
-                    ...baseConfig?.sections?.blog,
+                    ...(blogSection as Record<string, unknown>),
                     posts: initialPosts
                 }
             }

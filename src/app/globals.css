@@ -223,6 +223,16 @@
   transform: var(--button-transform) !important;
 }
 
+/* Minimalist Theme Styles */
+:root[data-theme-name="minimalist"] {
+  --theme-name: "minimalist";
+}
+
+/* Minimalist — clean, no decorative noise */
+:root[data-theme-name="minimalist"] * {
+  text-shadow: none;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
