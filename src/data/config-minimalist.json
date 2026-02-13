@@ -9,54 +9,54 @@
     "mode": "light",
     "colors": {
       "light": {
-        "primary": "#18181b",
-        "primaryForeground": "#fafafa",
-        "secondary": "#f4f4f5",
-        "secondaryForeground": "#18181b",
-        "accent": "#f4f4f5",
-        "accentForeground": "#18181b",
-        "destructive": "#dc2626",
-        "destructiveForeground": "#fafafa",
-        "muted": "#f4f4f5",
-        "mutedForeground": "#71717a",
-        "card": "#ffffff",
-        "cardForeground": "#09090b",
-        "popover": "#ffffff",
-        "popoverForeground": "#09090b",
-        "background": "#ffffff",
-        "foreground": "#09090b",
-        "border": "#e4e4e7",
-        "input": "#e4e4e7",
-        "ring": "#18181b",
-        "neutral": "#f4f4f5"
+        "primary": "#b45309",
+        "primaryForeground": "#fef7ed",
+        "secondary": "#3d2e1f",
+        "secondaryForeground": "#faf6f0",
+        "accent": "#6b7c3e",
+        "accentForeground": "#faf6f0",
+        "destructive": "#c2410c",
+        "destructiveForeground": "#fef7ed",
+        "muted": "#f0ebe3",
+        "mutedForeground": "#8c7e6a",
+        "card": "#fdfbf7",
+        "cardForeground": "#292018",
+        "popover": "#fdfbf7",
+        "popoverForeground": "#292018",
+        "background": "#faf7f2",
+        "foreground": "#292018",
+        "border": "#e0d8cc",
+        "input": "#e0d8cc",
+        "ring": "#b45309",
+        "neutral": "#f0ebe3"
       },
       "dark": {
-        "primary": "#fafafa",
-        "primaryForeground": "#18181b",
-        "secondary": "#27272a",
-        "secondaryForeground": "#fafafa",
-        "accent": "#27272a",
-        "accentForeground": "#fafafa",
-        "destructive": "#f87171",
-        "destructiveForeground": "#18181b",
-        "muted": "#27272a",
-        "mutedForeground": "#a1a1aa",
-        "card": "#09090b",
-        "cardForeground": "#fafafa",
-        "popover": "#09090b",
-        "popoverForeground": "#fafafa",
-        "background": "#09090b",
-        "foreground": "#fafafa",
-        "border": "#27272a",
-        "input": "#27272a",
-        "ring": "#fafafa",
-        "neutral": "#27272a"
+        "primary": "#d97706",
+        "primaryForeground": "#1c1408",
+        "secondary": "#3d3226",
+        "secondaryForeground": "#e8dfd4",
+        "accent": "#84a044",
+        "accentForeground": "#1c1408",
+        "destructive": "#ea580c",
+        "destructiveForeground": "#1c1408",
+        "muted": "#2a2218",
+        "mutedForeground": "#a89a86",
+        "card": "#1e1810",
+        "cardForeground": "#ede6db",
+        "popover": "#1e1810",
+        "popoverForeground": "#ede6db",
+        "background": "#171108",
+        "foreground": "#ede6db",
+        "border": "#3a3026",
+        "input": "#3a3026",
+        "ring": "#d97706",
+        "neutral": "#2a2218"
       }
     },
     "typography": {
       "fontFamily": {
-        "heading": "Inter",
-        "body": "Inter",
+        "heading": "Pacifico",
+        "body": "Lora",
         "mono": "monospace"
       },
       "fontSize": {
@@ -132,21 +132,21 @@
     },
     "shadows": {
       "light": {
-        "sm": "0 1px 2px 0 rgb(0 0 0 / 0.03)",
-        "base": "0 1px 2px 0 rgb(0 0 0 / 0.04)",
-        "md": "0 2px 4px -1px rgb(0 0 0 / 0.04), 0 1px 2px -1px rgb(0 0 0 / 0.03)",
-        "lg": "0 4px 6px -1px rgb(0 0 0 / 0.04), 0 2px 4px -2px rgb(0 0 0 / 0.03)",
-        "xl": "0 8px 16px -4px rgb(0 0 0 / 0.06), 0 4px 6px -2px rgb(0 0 0 / 0.03)",
-        "2xl": "0 16px 32px -8px rgb(0 0 0 / 0.08)",
+        "sm": "0 1px 2px 0 rgb(80 50 20 / 0.04)",
+        "base": "0 1px 3px 0 rgb(80 50 20 / 0.06), 0 1px 2px -1px rgb(80 50 20 / 0.04)",
+        "md": "0 4px 6px -1px rgb(80 50 20 / 0.06), 0 2px 4px -2px rgb(80 50 20 / 0.04)",
+        "lg": "0 8px 12px -2px rgb(80 50 20 / 0.06), 0 4px 6px -2px rgb(80 50 20 / 0.04)",
+        "xl": "0 12px 20px -4px rgb(80 50 20 / 0.08), 0 4px 8px -2px rgb(80 50 20 / 0.04)",
+        "2xl": "0 20px 40px -8px rgb(80 50 20 / 0.12)",
         "none": "none"
       },
       "dark": {
         "sm": "0 1px 2px 0 rgb(0 0 0 / 0.3)",
-        "base": "0 1px 2px 0 rgb(0 0 0 / 0.4)",
-        "md": "0 2px 4px -1px rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.3)",
-        "lg": "0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3)",
-        "xl": "0 8px 16px -4px rgb(0 0 0 / 0.5), 0 4px 6px -2px rgb(0 0 0 / 0.3)",
-        "2xl": "0 16px 32px -8px rgb(0 0 0 / 0.6)",
+        "base": "0 1px 3px 0 rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.3)",
+        "md": "0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3)",
+        "lg": "0 8px 12px -2px rgb(0 0 0 / 0.4), 0 4px 6px -2px rgb(0 0 0 / 0.3)",
+        "xl": "0 12px 20px -4px rgb(0 0 0 / 0.5), 0 4px 8px -2px rgb(0 0 0 / 0.3)",
+        "2xl": "0 20px 40px -8px rgb(0 0 0 / 0.6)",
         "none": "none"
       }
     },
@@ -196,7 +196,7 @@
         "slug": "about",
         "title": "About",
         "href": "/about",
-        "headline": { "text": "About Outline", "className": "text-4xl font-semibold mb-4 text-foreground tracking-tight" },
+        "headline": { "text": "About Outline", "className": "text-4xl font-heading font-normal mb-4 text-foreground tracking-normal" },
         "subtext": { "text": "We believe the best tools disappear into the background, letting you focus on what matters." },
         "body": { "text": "Outline was built by a small team who got tired of over-engineered software. We set out to create something different: tools that are simple, fast, and respectful of your attention. No bloat, no noise, just what you need." },
         "grid": { "className": "grid grid-cols-1 sm:grid-cols-2 gap-8" },
@@ -213,7 +213,7 @@
         "href": "/contact",
         "heading": {
           "text": "Get in touch",
-          "className": "text-4xl font-semibold mb-4 text-foreground tracking-tight"
+          "className": "text-4xl font-heading font-normal mb-4 text-foreground tracking-normal"
         },
         "subtext": {
           "text": "Questions, feedback, or just want to say hello? We'd love to hear from you."
@@ -256,8 +256,8 @@
     "hero": {
       "container": { "enabled": true, "className": "" },
       "innerWrapper": { "enabled": true, "className": "" },
-      "eyebrow": { "enabled": true, "text": "Now in public beta", "className": "text-sm font-normal text-muted-foreground" },
-      "headline": { "enabled": true, "text": "Work at the\nspeed of thought", "className": "tracking-tighter" },
+      "eyebrow": { "enabled": true, "text": "Now in public beta", "className": "border-0 bg-transparent rounded-none px-0 py-0 text-sm font-normal text-muted-foreground" },
+      "headline": { "enabled": true, "text": "Work at the\nspeed of thought", "className": "font-heading font-normal tracking-normal" },
       "subtext": { "enabled": true, "text": "A simple, fast workspace for teams who value clarity over complexity. Write, plan, and build together without the noise.", "className": "" },
       "primaryButton": { "enabled": true, "text": "Start for free", "href": "#signup", "className": "" },
       "secondaryButton": { "enabled": true, "text": "See how it works", "href": "/about", "className": "" },
@@ -307,7 +307,8 @@
       },
       "headline": {
         "enabled": true,
-        "text": "Less, but better"
+        "text": "Less, but better",
+        "className": "font-heading font-normal tracking-normal"
       },
       "subtext": {
         "enabled": true,
@@ -450,7 +451,7 @@
       }
     },
     "testimonials": {
-      "container": { "enabled": true, "className": "" },
+      "container": { "enabled": true, "className": "bg-background" },
       "innerWrapper": { "enabled": true },
       "header": { "enabled": true },
       "eyebrow": {
@@ -460,7 +461,8 @@
       },
       "headline": {
         "enabled": true,
-        "text": "Trusted by thoughtful teams"
+        "text": "Trusted by thoughtful teams",
+        "className": "font-heading font-normal tracking-normal"
       },
       "subtext": {
         "enabled": true,
@@ -566,7 +568,8 @@
       },
       "header": {
         "enabled": true,
-        "text": "Common questions"
+        "text": "Common questions",
+        "className": "font-heading font-normal tracking-normal"
       },
       "subtext": {
         "enabled": true,
@@ -608,7 +611,8 @@
       },
       "headline": {
         "enabled": true,
-        "text": "From the blog"
+        "text": "From the blog",
+        "className": "font-heading font-normal tracking-normal"
       },
       "subtext": {
         "enabled": true,
@@ -626,7 +630,7 @@
     },
     "cta": {
       "container": { "enabled": true, "className": "" },
-      "background": { "enabled": true, "className": "" },
+      "background": { "enabled": true, "className": "bg-muted/40" },
       "pattern": { "enabled": false },
       "innerWrapper": { "enabled": true },
       "content": { "enabled": true },
@@ -637,24 +641,26 @@
       },
       "headline": {
         "enabled": true,
-        "text": "Ready to simplify your workflow?"
+        "text": "Ready to simplify your workflow?",
+        "className": "font-heading font-normal tracking-normal text-foreground"
       },
       "subtext": {
         "enabled": true,
-        "text": "Start for free. No credit card required. Set up in under two minutes."
+        "text": "Start for free. No credit card required. Set up in under two minutes.",
+        "className": "text-muted-foreground"
       },
       "buttonWrapper": { "enabled": true },
       "primaryButton": {
         "enabled": true,
         "text": "Get started",
         "href": "/signup",
-        "className": ""
+        "className": "bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-100"
       },
       "secondaryButton": {
         "enabled": true,
         "text": "Talk to us",
         "href": "/contact",
-        "className": ""
+        "className": "border-border text-muted-foreground hover:text-foreground hover:bg-muted"
       },
       "featuresWrapper": { "enabled": false },
       "features": []
@@ -670,7 +676,8 @@
       },
       "headline": {
         "enabled": true,
-        "text": "Blog"
+        "text": "Blog",
+        "className": "font-heading font-normal tracking-normal"
       },
       "subtext": {
         "enabled": true,

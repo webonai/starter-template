@@ -31,6 +31,10 @@ export default function ThemeWrapper({ children }: { children: React.ReactNode }
       // Handle editorial/magazine fonts
       if (lower.includes('lora')) return 'var(--font-lora), serif';
       
+      // Handle cursive fonts
+      if (lower.includes('pacifico')) return 'var(--font-pacifico), cursive';
+      if (lower.includes('caveat')) return 'var(--font-caveat), cursive';
+      
       // Handle modern fonts
       if (lower.includes('inter')) return 'var(--font-inter)';
       if (lower.includes('playfair')) return 'var(--font-playfair)';
