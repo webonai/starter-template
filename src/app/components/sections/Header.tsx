@@ -2,7 +2,6 @@
 
 import { editable } from '@/lib/editable';
 import Link from 'next/link';
-import Image from 'next/image';
 import { useState } from 'react';
 import { HeaderProps } from './types';
 
@@ -18,9 +17,9 @@ export default function Header({ data }: { data: HeaderProps }) {
                     
                     {/* Logo */}
                     <div {...editable(data.logoWrapper, "sections.header.logoWrapper", "container", "flex items-center")}>
-                        <Link {...editable(data.logo, "sections.header.logo", "link", "flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm")} aria-label={data.logo?.alt || 'Home'}>
-                            {data.logo?.src && (
-                                <Image src={data.logo.src} alt={data.logo.alt || 'Logo'} width={120} height={40} priority {...editable(data.logoImage, "sections.header.logoImage", "image", "h-8 w-auto")} />
+                        <Link {...editable(data.logo, "sections.header.logo", "link", "flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm")} aria-label={data.logoImage?.alt || data.logo?.alt || 'Home'}>
+                            {data.logoImage?.src && (
+                                <img src={data.logoImage.src} alt={data.logoImage.alt || data.logo?.alt || 'Logo'} className="h-8 w-auto" {...editable(data.logoImage, "sections.header.logoImage", "image")} />
                             )}
                         </Link>
                     </div>

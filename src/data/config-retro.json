@@ -7,7 +7,6 @@
   "theme": {
     "name": "retro",
     "mode": "dark",
-    
     "colors": {
       "light": {
         "primary": "#ff6b9d",
@@ -54,7 +53,6 @@
         "neutral": "#16213e"
       }
     },
-    
     "typography": {
       "fontFamily": {
         "heading": "Press Start 2P",
@@ -74,20 +72,33 @@
         "6xl": "5rem"
       },
       "fontWeight": {
+        "thin": "400",
+        "extralight": "400",
+        "light": "400",
         "normal": "400",
-        "bold": "700"
+        "medium": "700",
+        "semibold": "700",
+        "bold": "700",
+        "extrabold": "700",
+        "black": "700"
       },
       "lineHeight": {
+        "none": "1",
         "tight": "1.2",
+        "snug": "1.375",
         "normal": "1.6",
-        "relaxed": "2"
+        "relaxed": "2",
+        "loose": "2"
       },
       "letterSpacing": {
+        "tighter": "0em",
+        "tight": "0em",
         "normal": "0.05em",
-        "wide": "0.1em"
+        "wide": "0.1em",
+        "wider": "0.1em",
+        "widest": "0.15em"
       }
     },
-    
     "spacing": {
       "0": "0px",
       "1": "0.5rem",
@@ -102,9 +113,12 @@
       "16": "8rem",
       "20": "10rem",
       "24": "12rem",
-      "32": "16rem"
+      "32": "16rem",
+      "40": "20rem",
+      "48": "24rem",
+      "56": "28rem",
+      "64": "32rem"
     },
-    
     "borderRadius": {
       "none": "0px",
       "sm": "0px",
@@ -116,7 +130,6 @@
       "3xl": "0px",
       "full": "0px"
     },
-    
     "shadows": {
       "light": {
         "sm": "3px 3px 0px #ff6b9d",
@@ -137,389 +150,588 @@
         "none": "none"
       }
     },
-    
     "borderWidth": {
       "0": "0px",
       "1": "3px",
       "2": "4px",
-      "4": "6px"
+      "4": "6px",
+      "8": "8px"
     },
-    
+    "opacity": { "0": "0", "5": "0.05", "10": "0.1", "20": "0.2", "25": "0.25", "30": "0.3", "40": "0.4", "50": "0.5", "60": "0.6", "70": "0.7", "75": "0.75", "80": "0.8", "90": "0.9", "95": "0.95", "100": "1" },
+    "transitions": {
+      "none": "none",
+      "all": "all 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "colors": "color, background-color, border-color, text-decoration-color, fill, stroke 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "opacity": "opacity 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "shadow": "box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "transform": "transform 150ms cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    "animation": {
+      "duration": {
+        "fast": "150ms",
+        "normal": "300ms",
+        "slow": "500ms",
+        "slower": "1000ms"
+      },
+      "easing": {
+        "linear": "linear",
+        "in": "cubic-bezier(0.4, 0, 1, 1)",
+        "out": "cubic-bezier(0, 0, 0.2, 1)",
+        "inOut": "cubic-bezier(0.4, 0, 0.2, 1)"
+      }
+    },
+    "breakpoints": { "sm": "640px", "md": "768px", "lg": "1024px", "xl": "1280px", "2xl": "1536px" },
+    "container": {
+      "padding": "1rem",
+      "maxWidth": "1280px"
+    },
+    "zIndex": { "0": "0", "10": "10", "20": "20", "30": "30", "40": "40", "50": "50", "auto": "auto" },
     "effects": {
       "textShadow": "3px 3px 0px rgba(0, 0, 0, 0.5)",
       "buttonTransform": "translate(-3px, -3px)",
       "scanlines": true
     }
   },
-  
   "layout": {
-    "order": ["header", "hero", "features", "testimonials", "blog", "cta", "footer"]
-  },
-  
-  "sections": {
-    "header": {
-      "container": {
-        "className": "py-4 px-6 sm:px-12 bg-secondary border-b-4 border-primary"
-      },
-      "innerWrapper": {
-        "className": "container mx-auto flex justify-between items-center"
-      },
-      "logo": {
-        "src": "/logo.png",
-        "alt": "WEBONAI",
-        "className": "h-10",
-        "href": "/"
-      },
-      "navWrapper": {
-        "className": "flex items-center gap-x-6"
-      },
-      "nav": {
-        "className": "flex items-center gap-x-6",
-        "links": [
-          { 
-            "text": "HOME", 
-            "href": "/",
-            "className": "text-sm font-bold uppercase text-secondary-foreground hover:text-accent transition-colors"
-          },
-          { 
-            "text": "FEATURES", 
-            "href": "/features",
-            "className": "text-sm font-bold uppercase text-secondary-foreground hover:text-accent transition-colors"
-          },
-          { 
-            "text": "PRICING", 
-            "href": "/pricing",
-            "className": "text-sm font-bold uppercase text-secondary-foreground hover:text-accent transition-colors"
-          },
-          { 
-            "text": "BLOG", 
-            "href": "/blog",
-            "className": "text-sm font-bold uppercase text-secondary-foreground hover:text-accent transition-colors"
-          }
+    "order": ["header", "hero", "features", "testimonials", "blog", "cta", "footer"],
+    "hiddenSections": [],
+    "pages": [
+      { "slug": "", "title": "Home", "href": "/" },
+      {
+        "slug": "about",
+        "title": "About Us",
+        "href": "/about",
+        "headline": { "text": "◢ ABOUT US ◤", "className": "text-4xl font-bold mb-4 text-foreground uppercase" },
+        "subtext": { "text": "WE BUILD RADICAL RETRO EXPERIENCES." },
+        "body": { "text": "Founded in the golden age of pixels, our team crafts digital experiences that combine nostalgia with cutting-edge technology." },
+        "grid": { "className": "grid grid-cols-1 sm:grid-cols-2 gap-8" },
+        "items": [
+          { "title": { "text": "OUR MISSION" }, "description": { "text": "DELIVERING PIXEL-PERFECT PRODUCTS THAT BRING VALUE." } },
+          { "title": { "text": "OUR VISION" }, "description": { "text": "LEADING THE RETRO REVOLUTION IN TECH." } },
+          { "title": { "text": "OUR VALUES" }, "description": { "text": "RADICAL HONESTY, TUBULAR TEAMWORK, GNARLY INNOVATION." } },
+          { "title": { "text": "OUR HISTORY" }, "description": { "text": "BEEN DROPPING PIXELS SINCE THE EARLY DAYS." } }
         ]
       },
-      "ctaButton": {
-        "text": "SIGN UP",
-        "href": "/signup",
-        "className": "px-6 py-3 bg-primary text-primary-foreground font-bold uppercase border-4 border-foreground shadow-lg hover:shadow-xl active:translate-x-1 active:translate-y-1 transition-all"
+      {
+        "slug": "contact",
+        "title": "Contact",
+        "href": "/contact",
+        "heading": {
+          "text": "◢ GET IN TOUCH ◤",
+          "className": "text-4xl font-bold mb-4 text-foreground uppercase"
+        },
+        "subtext": {
+          "text": "DROP US A LINE. WE DON'T BITE."
+        },
+        "socials": [
+          { "platform": "Twitter", "href": "https://twitter.com", "icon": "twitter" },
+          { "platform": "GitHub", "href": "https://github.com", "icon": "github" },
+          { "platform": "LinkedIn", "href": "https://linkedin.com", "icon": "linkedin" }
+        ]
       }
+    ]
+  },
+  "sections": {
+    "header": {
+      "container": { "enabled": true, "className": "border-b-4 border-primary bg-secondary" },
+      "innerWrapper": { "enabled": true, "className": "" },
+      "wrapper": { "enabled": true, "className": "" },
+      "logo": { "enabled": true, "href": "/", "alt": "WEBONAI", "className": "" },
+      "logoImage": { "enabled": true, "src": "/logo.png", "alt": "WEBONAI", "className": "" },
+      "nav": {
+        "enabled": true,
+        "className": "",
+        "links": [
+          { "enabled": true, "text": "FEATURES", "href": "/#features", "className": "uppercase font-bold tracking-wider" },
+          { "enabled": true, "text": "BLOG", "href": "/blog", "className": "uppercase font-bold tracking-wider" },
+          { "enabled": true, "text": "ABOUT", "href": "/about", "className": "uppercase font-bold tracking-wider" },
+          { "enabled": true, "text": "CONTACT", "href": "/contact", "className": "uppercase font-bold tracking-wider" }
+        ]
+      },
+      "actions": { "enabled": true, "className": "" },
+      "ctaButton": { "enabled": true, "text": "SIGN UP", "href": "/signup", "className": "uppercase font-bold border-4 border-foreground" },
+      "mobileMenuButton": { "enabled": true, "className": "" },
+      "srText": { "enabled": true, "className": "" },
+      "hamburgerIcon": { "enabled": true, "className": "" },
+      "closeIcon": { "enabled": true, "className": "" },
+      "mobileMenu": { "enabled": true, "className": "border-t-4 border-primary bg-secondary" },
+      "mobileMenuInner": { "enabled": true, "className": "" },
+      "mobileCTA": { "enabled": true, "className": "uppercase font-bold border-4 border-foreground" }
     },
-    
     "hero": {
-      "container": {
-        "className": "relative py-20 sm:py-32 bg-background border-b-4 border-primary"
-      },
-      "innerWrapper": {
-        "className": "container mx-auto px-6 text-center"
-      },
-      "headline": {
-        "text": "◢◤ WEBONAI ◢◤",
-        "className": "text-4xl sm:text-6xl font-bold mb-8 font-heading text-primary uppercase tracking-wider"
-      },
-      "subtext": {
-        "text": "BUILD RETRO SITES • FAST & RADICAL",
-        "className": "text-2xl mb-12 text-foreground uppercase tracking-wide font-bold"
-      },
-      "buttonWrapper": {
-        "className": "flex items-center justify-center gap-6"
-      },
-      "primaryButton": {
-        "text": "GET STARTED",
-        "href": "/signup",
-        "className": "px-10 py-4 bg-accent text-accent-foreground font-bold uppercase text-lg border-4 border-foreground shadow-2xl hover:shadow-xl active:translate-x-1 active:translate-y-1 transition-all"
-      },
-      "imageWrapper": {
-        "className": "mt-16 relative w-full max-w-4xl mx-auto border-4 border-primary shadow-2xl"
+      "container": { "enabled": true, "className": "border-b-4 border-primary" },
+      "innerWrapper": { "enabled": true, "className": "" },
+      "eyebrow": { "enabled": true, "text": "◢◤ NEW POWER-UP UNLOCKED", "className": "uppercase font-bold tracking-wider border-4 border-primary" },
+      "headline": { "enabled": true, "text": "◢◤ WEBONAI ◢◤", "className": "uppercase tracking-wider" },
+      "subtext": { "enabled": true, "text": "BUILD RETRO SITES • FAST & RADICAL • NO CHEAT CODES NEEDED", "className": "uppercase tracking-wide font-bold" },
+      "primaryButton": { "enabled": true, "text": "GET STARTED", "href": "/signup", "className": "uppercase font-bold border-4 border-foreground text-lg" },
+      "secondaryButton": { "enabled": true, "text": "LEARN MORE", "href": "/about", "className": "uppercase font-bold border-4 border-foreground" },
+      "stats": [
+        {
+          "enabled": true,
+          "value": "10k+",
+          "label": "PLAYERS",
+          "icon": "👾",
+          "className": "uppercase"
+        },
+        {
+          "enabled": true,
+          "value": "99.9%",
+          "label": "UPTIME",
+          "icon": "⚡",
+          "className": "uppercase"
+        },
+        {
+          "enabled": true,
+          "value": "5/5",
+          "label": "RATING",
+          "icon": "🏆",
+          "className": "uppercase"
+        }
+      ],
+      "statsContainer": {
+        "enabled": true,
+        "className": ""
       },
       "heroImage": {
-        "src": "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&auto=format&fit=crop&w=3603&q=80",
+        "enabled": true,
+        "src": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         "alt": "RETRO DASHBOARD",
-        "className": ""
+        "className": "border-4 border-primary"
       }
     },
-    
     "features": {
-      "container": {
-        "className": "py-20 bg-muted border-b-4 border-primary"
-      },
-      "innerWrapper": {
-        "className": "container mx-auto px-6"
-      },
-      "header": {
-        "className": "text-center mb-16"
+      "container": { "enabled": true, "className": "border-b-4 border-primary bg-muted" },
+      "background": { "enabled": false },
+      "innerWrapper": { "enabled": true },
+      "header": { "enabled": true },
+      "eyebrow": {
+        "enabled": true,
+        "text": "◢ POWER-UPS ◤",
+        "className": "uppercase font-bold border-4 border-primary"
       },
       "headline": {
-        "text": "◢ FEATURES ◤",
-        "className": "text-3xl sm:text-4xl font-bold text-foreground uppercase mb-4 font-heading"
+        "enabled": true,
+        "text": "EVERYTHING YOU NEED",
+        "className": "uppercase"
       },
       "subtext": {
-        "text": "EVERYTHING YOU NEED • NOTHING YOU DON'T",
-        "className": "text-xl text-muted-foreground uppercase tracking-wide"
+        "enabled": true,
+        "text": "RADICAL FEATURES • NO CHEAT CODES REQUIRED",
+        "className": "uppercase tracking-wide"
       },
-      "grid": {
-        "className": "grid grid-cols-1 md:grid-cols-3 gap-8"
-      },
+      "grid": { "enabled": true },
       "items": [
         {
-          "container": {
-            "className": "bg-card p-8 border-4 border-primary shadow-lg"
-          },
-          "iconWrapper": {
-            "className": "mb-6 w-16 h-16 bg-primary border-4 border-foreground flex items-center justify-center"
-          },
+          "enabled": true,
           "icon": {
-            "icon": "zap",
-            "className": "h-8 w-8 text-primary-foreground"
+            "enabled": true,
+            "emoji": "⚡",
+            "alt": "Ultra Fast"
           },
           "title": {
-            "text": "ULTRA FAST",
-            "className": "text-xl font-bold text-card-foreground uppercase mb-3 font-heading"
+            "enabled": true,
+            "text": "ULTRA FAST"
           },
           "description": {
-            "text": "SPEED LIKE IT'S 1985 BUT ACTUALLY FASTER",
-            "className": "text-lg text-muted-foreground uppercase"
+            "enabled": true,
+            "text": "SPEED LIKE IT'S 1985 BUT ACTUALLY FASTER"
+          },
+          "link": {
+            "enabled": false,
+            "text": "LEARN MORE",
+            "href": "#"
           }
         },
         {
-          "container": {
-            "className": "bg-card p-8 border-4 border-accent shadow-lg"
-          },
-          "iconWrapper": {
-            "className": "mb-6 w-16 h-16 bg-accent border-4 border-foreground flex items-center justify-center"
-          },
+          "enabled": true,
           "icon": {
-            "icon": "shield",
-            "className": "h-8 w-8 text-accent-foreground"
+            "enabled": true,
+            "emoji": "🛡️",
+            "alt": "Super Secure"
           },
           "title": {
-            "text": "SUPER SECURE",
-            "className": "text-xl font-bold text-card-foreground uppercase mb-3 font-heading"
+            "enabled": true,
+            "text": "SUPER SECURE"
           },
           "description": {
-            "text": "PROTECTED BY PIXEL POWER",
-            "className": "text-lg text-muted-foreground uppercase"
+            "enabled": true,
+            "text": "PROTECTED BY PIXEL POWER & ENCRYPTION"
+          },
+          "link": {
+            "enabled": false,
+            "text": "LEARN MORE",
+            "href": "#"
           }
         },
         {
-          "container": {
-            "className": "bg-card p-8 border-4 border-secondary shadow-lg"
-          },
-          "iconWrapper": {
-            "className": "mb-6 w-16 h-16 bg-secondary border-4 border-foreground flex items-center justify-center"
-          },
+          "enabled": true,
           "icon": {
-            "icon": "mouse-pointer",
-            "className": "h-8 w-8 text-secondary-foreground"
+            "enabled": true,
+            "emoji": "🎮",
+            "alt": "Easy Mode"
           },
           "title": {
-            "text": "EASY MODE",
-            "className": "text-xl font-bold text-card-foreground uppercase mb-3 font-heading"
+            "enabled": true,
+            "text": "EASY MODE"
           },
           "description": {
-            "text": "NO CHEAT CODES NEEDED",
-            "className": "text-lg text-muted-foreground uppercase"
+            "enabled": true,
+            "text": "NO INSTRUCTION MANUAL NEEDED"
+          },
+          "link": {
+            "enabled": false,
+            "text": "LEARN MORE",
+            "href": "#"
+          }
+        },
+        {
+          "enabled": true,
+          "icon": {
+            "enabled": true,
+            "emoji": "🚀",
+            "alt": "Turbo Boost"
+          },
+          "title": {
+            "enabled": true,
+            "text": "TURBO BOOST"
+          },
+          "description": {
+            "enabled": true,
+            "text": "ACTIVATE WARP SPEED FOR YOUR PROJECTS"
+          },
+          "link": {
+            "enabled": false,
+            "text": "LEARN MORE",
+            "href": "#"
+          }
+        },
+        {
+          "enabled": true,
+          "icon": {
+            "enabled": true,
+            "emoji": "🌐",
+            "alt": "World Wide"
+          },
+          "title": {
+            "enabled": true,
+            "text": "WORLD WIDE"
+          },
+          "description": {
+            "enabled": true,
+            "text": "DEPLOY ACROSS THE ENTIRE GRID"
+          },
+          "link": {
+            "enabled": false,
+            "text": "LEARN MORE",
+            "href": "#"
+          }
+        },
+        {
+          "enabled": true,
+          "icon": {
+            "enabled": true,
+            "emoji": "🤖",
+            "alt": "AI Powered"
+          },
+          "title": {
+            "enabled": true,
+            "text": "AI POWERED"
+          },
+          "description": {
+            "enabled": true,
+            "text": "SMARTER THAN YOUR AVERAGE ARCADE BOSS"
+          },
+          "link": {
+            "enabled": false,
+            "text": "LEARN MORE",
+            "href": "#"
           }
         }
-      ]
+      ],
+      "ctaWrapper": { "enabled": true },
+      "cta": {
+        "enabled": false,
+        "text": "SEE ALL FEATURES",
+        "href": "/features"
+      }
     },
-    
     "testimonials": {
-      "container": {
-        "className": "py-20 bg-background border-b-4 border-primary"
-      },
-      "innerWrapper": {
-        "className": "container mx-auto px-6"
-      },
-      "header": {
-        "className": "text-center mb-16"
+      "container": { "enabled": true, "className": "border-b-4 border-primary" },
+      "innerWrapper": { "enabled": true },
+      "header": { "enabled": true },
+      "eyebrow": {
+        "enabled": true,
+        "text": "◢ HIGH SCORES ◤",
+        "className": "uppercase font-bold border-4 border-primary"
       },
       "headline": {
-        "text": "◢ TESTIMONIALS ◤",
-        "className": "text-3xl sm:text-4xl font-bold text-primary uppercase font-heading"
+        "enabled": true,
+        "text": "REAL PEOPLE • REAL VIBES",
+        "className": "uppercase"
       },
       "subtext": {
-        "text": "REAL PEOPLE • REAL VIBES",
-        "className": "mt-4 text-xl text-foreground uppercase"
+        "enabled": true,
+        "text": "HEAR WHAT OUR RADICAL USERS HAVE TO SAY",
+        "className": "uppercase tracking-wide"
       },
-      "grid": {
-        "className": "grid grid-cols-1 md:grid-cols-3 gap-8"
-      },
+      "grid": { "enabled": true },
+      "showQuoteIcon": true,
       "items": [
         {
-          "container": {
-            "className": "bg-card p-8 border-4 border-primary shadow-xl"
-          },
+          "enabled": true,
           "quote": {
-            "text": "TOTALLY RADICAL! BEST SITE BUILDER EVER!",
-            "className": "text-lg text-card-foreground uppercase mb-6"
+            "enabled": true,
+            "text": "TOTALLY RADICAL! THE BEST SITE BUILDER THIS SIDE OF THE ARCADE!"
           },
-          "authorWrapper": {
-            "className": "border-t-4 border-border pt-4"
+          "avatar": {
+            "enabled": false,
+            "src": "",
+            "alt": "Alex S."
           },
           "author": {
-            "text": "ALEX S.",
-            "className": "font-bold text-card-foreground uppercase"
+            "enabled": true,
+            "text": "ALEX S."
           },
           "role": {
-            "text": "CEO • TECHCORP",
-            "className": "text-sm text-muted-foreground uppercase"
+            "enabled": true,
+            "text": "CEO"
+          },
+          "company": {
+            "enabled": true,
+            "text": "TECHCORP"
+          },
+          "rating": {
+            "enabled": true,
+            "value": 5
           }
         },
         {
-          "container": {
-            "className": "bg-card p-8 border-4 border-accent shadow-xl"
-          },
+          "enabled": true,
           "quote": {
-            "text": "GNARLY FEATURES! COWABUNGA DUDE!",
-            "className": "text-lg text-card-foreground uppercase mb-6"
+            "enabled": true,
+            "text": "GNARLY FEATURES! COWABUNGA DUDE! MY SITES HAVE NEVER LOOKED BETTER!"
           },
-          "authorWrapper": {
-            "className": "border-t-4 border-border pt-4"
+          "avatar": {
+            "enabled": false,
+            "src": "",
+            "alt": "Sarah J."
           },
           "author": {
-            "text": "SARAH J.",
-            "className": "font-bold text-card-foreground uppercase"
+            "enabled": true,
+            "text": "SARAH J."
           },
           "role": {
-            "text": "MARKETING DIR",
-            "className": "text-sm text-muted-foreground uppercase"
+            "enabled": true,
+            "text": "MARKETING DIR"
+          },
+          "company": {
+            "enabled": true,
+            "text": "STARTUPXYZ"
+          },
+          "rating": {
+            "enabled": true,
+            "value": 5
           }
         },
         {
-          "container": {
-            "className": "bg-card p-8 border-4 border-secondary shadow-xl"
-          },
+          "enabled": true,
           "quote": {
-            "text": "BODACIOUS! TAKES ME BACK TO THE ARCADE!",
-            "className": "text-lg text-card-foreground uppercase mb-6"
+            "enabled": true,
+            "text": "BODACIOUS! TAKES ME BACK TO THE ARCADE BUT WITH MODERN POWER-UPS!"
           },
-          "authorWrapper": {
-            "className": "border-t-4 border-border pt-4"
+          "avatar": {
+            "enabled": false,
+            "src": "",
+            "alt": "David L."
           },
           "author": {
-            "text": "DAVID L.",
-            "className": "font-bold text-card-foreground uppercase"
+            "enabled": true,
+            "text": "DAVID L."
           },
           "role": {
-            "text": "FOUNDER • STARTUPX",
-            "className": "text-sm text-muted-foreground uppercase"
+            "enabled": true,
+            "text": "FOUNDER"
+          },
+          "company": {
+            "enabled": true,
+            "text": "STARTUPX"
+          },
+          "rating": {
+            "enabled": true,
+            "value": 5
           }
         }
       ]
     },
-    
     "blog": {
-      "container": {
-        "className": "py-20 bg-muted border-b-4 border-primary"
+      "container": { "enabled": true, "className": "border-b-4 border-primary bg-muted" },
+      "innerWrapper": { "enabled": true },
+      "header": { "enabled": true },
+      "headerContent": { "enabled": true },
+      "eyebrow": {
+        "enabled": true,
+        "text": "◢ LATEST DISPATCHES ◤",
+        "className": "uppercase font-bold border-4 border-primary"
       },
-      "innerWrapper": {
-        "className": "container mx-auto px-6"
+      "headline": {
+        "enabled": true,
+        "text": "NEWS FROM THE GRID",
+        "className": "uppercase"
       },
-      "headerWrapper": {
-        "className": "text-center mb-16"
+      "subtext": {
+        "enabled": true,
+        "text": "STAY PLUGGED IN WITH THE LATEST UPDATES FROM HQ",
+        "className": "uppercase tracking-wide"
       },
-      "header": {
-        "text": "◢ LATEST POSTS ◤",
-        "className": "text-3xl font-bold text-foreground uppercase font-heading"
+      "viewAllButton": {
+        "enabled": true,
+        "text": "VIEW ALL POSTS",
+        "href": "/blog",
+        "className": "uppercase font-bold border-4 border-foreground"
       },
-      "grid": {
-        "className": "grid grid-cols-1 md:grid-cols-3 gap-8"
-      },
-      "article": {
-        "className": "bg-card border-4 border-primary shadow-xl"
-      },
-      "imageWrapper": {
-        "className": "relative w-full aspect-video border-b-4 border-primary"
-      },
-      "contentWrapper": {
-        "className": "p-6"
-      },
-      "metaWrapper": {
-        "className": "flex items-center gap-4 mb-4"
-      },
-      "date": {
-        "className": "text-sm text-muted-foreground uppercase"
-      },
-      "category": {
-        "className": "px-3 py-1 bg-accent text-accent-foreground font-bold uppercase text-xs border-2 border-foreground"
-      },
-      "title": {
-        "className": "text-xl font-bold text-card-foreground uppercase mb-3 font-heading"
-      },
-      "excerpt": {
-        "className": "text-base text-muted-foreground uppercase"
-      },
+      "grid": { "enabled": true },
+      "maxPosts": 3,
       "posts": []
     },
-    
     "cta": {
-      "container": {
-        "className": "py-20 bg-primary border-y-4 border-foreground"
-      },
-      "innerWrapper": {
-        "className": "max-w-3xl mx-auto px-6 text-center"
+      "container": { "enabled": true, "className": "" },
+      "background": { "enabled": true, "className": "bg-gradient-to-br from-primary via-secondary to-primary" },
+      "pattern": { "enabled": false },
+      "innerWrapper": { "enabled": true },
+      "content": { "enabled": true },
+      "eyebrow": {
+        "enabled": true,
+        "text": "◢ INSERT COIN ◤",
+        "className": "uppercase font-bold border-4 border-primary-foreground"
       },
       "headline": {
-        "text": "◢◤ READY PLAYER ONE? ◢◤",
-        "className": "text-4xl font-bold text-primary-foreground uppercase mb-6 font-heading"
+        "enabled": true,
+        "text": "READY PLAYER ONE?",
+        "className": "uppercase"
       },
       "subtext": {
-        "text": "JOIN THE RETRO REVOLUTION TODAY",
-        "className": "text-2xl text-primary-foreground uppercase mb-8 tracking-wide"
+        "enabled": true,
+        "text": "JOIN THE RETRO REVOLUTION TODAY • PRESS START TO BEGIN",
+        "className": "uppercase tracking-wide"
       },
-      "button": {
+      "buttonWrapper": { "enabled": true },
+      "primaryButton": {
+        "enabled": true,
         "text": "START NOW",
         "href": "/signup",
-        "className": "px-12 py-4 bg-accent text-accent-foreground font-bold uppercase text-xl border-4 border-foreground shadow-2xl hover:shadow-xl active:translate-x-1 active:translate-y-1 transition-all"
-      }
+        "className": "uppercase font-bold border-4 border-foreground text-lg"
+      },
+      "secondaryButton": {
+        "enabled": true,
+        "text": "WATCH DEMO",
+        "href": "/demo",
+        "className": "uppercase font-bold border-4 border-primary-foreground/50"
+      },
+      "featuresWrapper": { "enabled": true },
+      "features": [
+        {
+          "enabled": true,
+          "icon": "◆",
+          "text": "FREE 14-DAY TRIAL"
+        },
+        {
+          "enabled": true,
+          "icon": "◆",
+          "text": "NO CREDIT CARD"
+        },
+        {
+          "enabled": true,
+          "icon": "◆",
+          "text": "CANCEL ANYTIME"
+        }
+      ]
     },
-    
     "footer": {
-      "container": {
-        "className": "py-12 bg-secondary border-t-4 border-primary"
+      "container": { "enabled": true, "className": "border-t-4 border-primary bg-secondary" },
+      "innerWrapper": { "enabled": true },
+      "mainContent": { "enabled": true },
+      "brandColumn": { "enabled": true },
+      "logo": {
+        "enabled": true,
+        "src": "/logo.png",
+        "alt": "WEBONAI",
+        "href": "/"
       },
-      "innerWrapper": {
-        "className": "container mx-auto px-6"
+      "tagline": {
+        "enabled": true,
+        "text": "◢◤ BUILDING THE FUTURE WITH RETRO POWER ◢◤"
       },
-      "grid": {
-        "className": "grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8"
-      },
-      "columnTitle": {
-        "className": "text-lg font-bold text-secondary-foreground uppercase mb-4 font-heading"
-      },
-      "linkList": {
-        "className": "space-y-2"
-      },
-      "link": {
-        "className": "text-secondary-foreground hover:text-accent transition-colors uppercase block font-bold"
-      },
-      "copyright": {
-        "text": "◢◤ 2024 WEBONAI • ALL RIGHTS RESERVED ◢◤",
-        "className": "text-center text-secondary-foreground uppercase pt-8 border-t-4 border-primary font-bold"
-      },
-      "items": [
+      "socialWrapper": { "enabled": true },
+      "socialLinks": [
         {
-          "title": "PRODUCT",
+          "enabled": true,
+          "platform": "twitter",
+          "label": "Twitter",
+          "href": "https://twitter.com/company",
+          "icon": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z'/></svg>"
+        },
+        {
+          "enabled": true,
+          "platform": "github",
+          "label": "GitHub",
+          "href": "https://github.com/company",
+          "icon": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z'/></svg>"
+        },
+        {
+          "enabled": true,
+          "platform": "linkedin",
+          "label": "LinkedIn",
+          "href": "https://linkedin.com/company/company",
+          "icon": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'/></svg>"
+        }
+      ],
+      "linkColumns": [
+        {
+          "enabled": true,
+          "title": {
+            "enabled": true,
+            "text": "PRODUCT"
+          },
           "links": [
-            { "text": "FEATURES", "href": "/features" },
-            { "text": "PRICING", "href": "/pricing" },
-            { "text": "BLOG", "href": "/blog" }
+            { "enabled": true, "text": "FEATURES", "href": "/features" },
+            { "enabled": true, "text": "PRICING", "href": "/pricing" },
+            { "enabled": true, "text": "BLOG", "href": "/blog" }
           ]
         },
         {
-          "title": "COMPANY",
+          "enabled": true,
+          "title": {
+            "enabled": true,
+            "text": "COMPANY"
+          },
           "links": [
-            { "text": "ABOUT", "href": "/about" },
-            { "text": "CONTACT", "href": "/contact" }
+            { "enabled": true, "text": "ABOUT", "href": "/about" },
+            { "enabled": true, "text": "CONTACT", "href": "/contact" },
+            { "enabled": true, "text": "CAREERS", "href": "/careers" }
           ]
         },
         {
-          "title": "LEGAL",
+          "enabled": true,
+          "title": {
+            "enabled": true,
+            "text": "LEGAL"
+          },
           "links": [
-            { "text": "PRIVACY", "href": "/privacy" },
-            { "text": "TERMS", "href": "/terms" }
+            { "enabled": true, "text": "PRIVACY", "href": "/privacy" },
+            { "enabled": true, "text": "TERMS", "href": "/terms" }
           ]
         }
+      ],
+      "bottomBar": { "enabled": true },
+      "copyright": {
+        "enabled": true,
+        "text": "◢◤ 2025 WEBONAI • ALL RIGHTS RESERVED ◢◤"
+      },
+      "bottomLinksWrapper": { "enabled": true },
+      "bottomLinks": [
+        { "enabled": true, "text": "PRIVACY POLICY", "href": "/privacy" },
+        { "enabled": true, "text": "TERMS OF SERVICE", "href": "/terms" }
       ]
     }
   }

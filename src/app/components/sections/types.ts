@@ -1,33 +1,85 @@
 import { ElementConfig } from '@/types/schema';
 
-type PostData = {
+// Nested post format (from config.json or after normalization)
+type NestedPostData = {
+  enabled?: boolean;
+  slug?: string;
+  title?: {
+    enabled?: boolean;
+    text?: string;
+  };
+  titleLink?: ElementConfig;
+  meta?: ElementConfig;
+  excerpt?: {
+    enabled?: boolean;
+    text?: string;
+  };
+  href?: string;
+  author?: {
+    enabled?: boolean;
+    name?: string;
+    avatar?: {
+      enabled?: boolean;
+      src?: string;
+      alt?: string;
+    };
+  };
+  category?: {
+    text?: string;
+    enabled?: boolean;
+  };
+  image?: {
+    enabled?: boolean;
+    src?: string;
+    alt?: string;
+  };
+  imageLink?: ElementConfig;
+  content?: string;
+  date?: {
+    enabled?: boolean;
+    text?: string;
+    datetime?: string;
+  };
+  readTime?: {
+    enabled?: boolean;
+    text?: string;
+  };
+  readMore?: {
+    enabled?: boolean;
+    text?: string;
+    href?: string;
+  };
+};
+
+// Flat post format (from content/posts/posts.json)
+type FlatPostData = {
   slug: string;
   title: string;
-  excerpt: string;
-  href: string;
   date: string;
+  excerpt: string;
+  image: string;
   author: string;
   category: string;
-  tags: string[];
-  image: string;
+  tags?: string[];
   content: string;
+  href?: string;
 };
+
+// Posts can be either format — Blog component normalizes them
+type PostData = NestedPostData | FlatPostData;
 
 export type BlogProps = {
   data: {
     container: ElementConfig;
     innerWrapper: ElementConfig;
-    headerWrapper: ElementConfig;
+    headerContent: ElementConfig;
     header: ElementConfig;
+    eyebrow: ElementConfig;
     headline: ElementConfig;
+    viewAllButton: ElementConfig;
     subtext: ElementConfig;
     grid: ElementConfig;
-    card: ElementConfig;
-    cardImage: ElementConfig;
-    cardContent: ElementConfig;
-    cardCategory: ElementConfig;
-    cardTitle: ElementConfig;
-    cardDate: ElementConfig;
+    maxPosts?: number;
     posts: PostData[];
   };
 };
@@ -50,10 +102,22 @@ export type FaqProps = {
 export type ctaProps = {
   data: {
     container: ElementConfig;
+    background: ElementConfig;
+    pattern: ElementConfig;
+    content: ElementConfig;
+    eyebrow: ElementConfig;
+    buttonWrapper: ElementConfig;
+    primaryButton: ElementConfig;
+    secondaryButton: ElementConfig;
     innerWrapper: ElementConfig;
     headline: ElementConfig;
     subtext: ElementConfig;
-    button: ElementConfig;
+    featuresWrapper: ElementConfig;
+    features?: Array<{
+      enabled?: boolean;
+      icon?: string;
+      text?: string;
+    }>;
   };
 };
 
@@ -89,21 +153,41 @@ export type FeaturesProps = {
   };
 };
 
-type FooterLinks = {
+type FooterLink = {
+    enabled?: boolean;
     text: string;
     href: string;
+};
+
+type FooterLinkColumn = {
+    enabled?: boolean;
+    title?: ElementConfig & { text?: string };
+    links?: FooterLink[];
+};
+
+type SocialLink = {
+    enabled?: boolean;
+    platform?: string;
+    label?: string;
+    href?: string;
+    icon?: string;
 };
 
 export type FooterProps = {
     data: {
         container: ElementConfig;
-        innerWrapper: ElementConfig
-        text: ElementConfig;
-        grid: ElementConfig;
-        items: {
-          title: string;
-          links: FooterLinks[]
-        }[];
+        innerWrapper: ElementConfig;
+        mainContent: ElementConfig;
+        brandColumn: ElementConfig;
+        logo: ElementConfig & { src?: string; alt?: string; href?: string };
+        tagline: ElementConfig & { text?: string };
+        socialWrapper: ElementConfig;
+        socialLinks?: SocialLink[];
+        linkColumns?: FooterLinkColumn[];
+        bottomBar: ElementConfig;
+        copyright: ElementConfig & { text?: string };
+        bottomLinksWrapper: ElementConfig;
+        bottomLinks?: FooterLink[];
     };
 };
 
