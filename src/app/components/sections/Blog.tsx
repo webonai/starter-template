@@ -63,26 +63,26 @@ export default function Blog({ data }: BlogProps) {
   const normalizedPosts = (data.posts || []).map(normalizePost);
   
   return (
-    <section data-section="blog-preview" {...editable(data.container, "sections.blog.container", "section", "relative py-20 sm:py-24 lg:py-32 bg-background")}>
-      <div {...editable(data.innerWrapper, "sections.blog.innerWrapper", "container", "container mx-auto px-4 sm:px-6 lg:px-8")}>
+    <section data-section="blog-preview" {...editable(data.container, "sections.blog.container", "section", "")}>
+      <div {...editable(data.innerWrapper, "sections.blog.innerWrapper", "container", "")}>
         
         {/* Header */}
-        <div {...editable(data.header, "sections.blog.header", "container", "flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12 sm:mb-16")}>
-          <div {...editable(data.headerContent, "sections.blog.headerContent", "container", "flex-1")}>
+        <div {...editable(data.header, "sections.blog.header", "container", "")}>
+          <div {...editable(data.headerContent, "sections.blog.headerContent", "container", "")}>
             {data.eyebrow?.enabled && (
-              <div {...editable(data.eyebrow, "sections.blog.eyebrow", "badge", "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4")}>
+              <div {...editable(data.eyebrow, "sections.blog.eyebrow", "badge", "")}>
                 {data.eyebrow.text}
               </div>
             )}
             
             {data.headline?.enabled && (
-              <h2 {...editable(data.headline, "sections.blog.headline", "headline", "text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-4")}>
+              <h2 {...editable(data.headline, "sections.blog.headline", "headline", "")}>
                 {data.headline.text}
               </h2>
             )}
             
             {data.subtext?.enabled && (
-              <p {...editable(data.subtext, "sections.blog.subtext", "text", "text-base sm:text-lg text-muted-foreground max-w-2xl")}>
+              <p {...editable(data.subtext, "sections.blog.subtext", "text", "")}>
                 {data.subtext.text}
               </p>
             )}
@@ -90,7 +90,7 @@ export default function Blog({ data }: BlogProps) {
 
           {/* View All Button */}
           {data.viewAllButton?.enabled && (
-            <Link {...editable(data.viewAllButton, "sections.blog.viewAllButton", "button", "inline-flex items-center justify-center rounded-lg border-2 border-border px-5 py-2.5 text-sm font-semibold text-foreground hover:bg-accent transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary whitespace-nowrap")}>
+            <Link {...editable(data.viewAllButton, "sections.blog.viewAllButton", "button", "")}>
               {data.viewAllButton.text || 'View All Posts'}
               <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -100,7 +100,7 @@ export default function Blog({ data }: BlogProps) {
         </div>
 
         {/* Posts Grid */}
-        <div {...editable(data.grid, "sections.blog.grid", "container", "mx-auto max-w-6xl grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3")}>
+        <div {...editable(data.grid, "sections.blog.grid", "container", "")}>
           {normalizedPosts.filter(post => post.enabled !== false).slice(0, data.maxPosts || 3).map((post, index) => (
             <article key={index} {...editable(post, `sections.blog.posts.${index}`, "container", "group flex flex-col rounded-xl border border-border bg-card overflow-hidden shadow-sm transition-all hover:shadow-md")}>
               

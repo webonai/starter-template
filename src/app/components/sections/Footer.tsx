@@ -22,34 +22,33 @@ export default function Footer({ data }: FooterProps) {
   if (!data) return null;
 
   return (
-    <footer data-section="footer" {...editable(data.container, "sections.footer.container", "section", "bg-background border-t border-border")}>
-      <div {...editable(data.innerWrapper, "sections.footer.innerWrapper", "container", "container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16")}>
-        <div {...editable(data.mainContent, "sections.footer.mainContent", "container", "grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-12 lg:mb-16")}>
+    <footer data-section="footer" {...editable(data.container, "sections.footer.container", "section", "")}>
+      <div {...editable(data.innerWrapper, "sections.footer.innerWrapper", "container", "")}>
+        <div {...editable(data.mainContent, "sections.footer.mainContent", "container", "")}>
           
           {/* Brand Column */}
-          <div {...editable(data.brandColumn, "sections.footer.brandColumn", "container", "lg:col-span-4")}>
+          <div {...editable(data.brandColumn, "sections.footer.brandColumn", "container", "")}>
             {data.logo?.enabled && (
               <Link href={data.logo.href || '/'} className="inline-block mb-6">
                 {data.logo.src?.endsWith('.svg') && svgContent ? (
                   <span
-                    className="inline-flex h-8 [&>svg]:h-full [&>svg]:w-auto"
-                    style={{ color: 'var(--primary)' }}
+                    className="inline-flex h-8 text-primary [&>svg]:h-full [&>svg]:w-auto"
                     dangerouslySetInnerHTML={{ __html: svgContent }}
                   />
                 ) : (
-                  <img src={data.logo.src} alt={data.logo.alt} className="h-8 w-auto" />
+                  <img src={data.logo.src} alt={data.logo.alt} className="h-8 w-auto text-primary" />
                 )}
               </Link>
             )}
             {data.tagline?.enabled && (
-              <p {...editable(data.tagline, "sections.footer.tagline", "text", "text-muted-foreground mb-6 max-w-sm")}>
+              <p {...editable(data.tagline, "sections.footer.tagline", "text", "")}>
                 {data.tagline.text}
               </p>
             )}
             
             {/* Social Links */}
             {data.socialWrapper?.enabled && (
-              <div {...editable(data.socialWrapper, "sections.footer.socialWrapper", "container", "flex items-center gap-4")}>
+              <div {...editable(data.socialWrapper, "sections.footer.socialWrapper", "container", "")}>
                 {data.socialLinks?.map((social: any, index: number) => (
                   social.enabled && (
                     <a 
@@ -99,15 +98,15 @@ export default function Footer({ data }: FooterProps) {
 
         {/* Bottom Bar */}
         {data.bottomBar?.enabled && (
-          <div {...editable(data.bottomBar, "sections.footer.bottomBar", "container", "pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4")}>
+          <div {...editable(data.bottomBar, "sections.footer.bottomBar", "container", "")}>
             {data.copyright?.enabled && (
-              <p {...editable(data.copyright, "sections.footer.copyright", "text", "text-sm text-muted-foreground")}>
+              <p {...editable(data.copyright, "sections.footer.copyright", "text", "")}>
                 {data.copyright.text}
               </p>
             )}
             
             {data.bottomLinksWrapper?.enabled && (
-              <div {...editable(data.bottomLinksWrapper, "sections.footer.bottomLinksWrapper", "container", "flex flex-wrap justify-center gap-x-6 gap-y-2")}>
+              <div {...editable(data.bottomLinksWrapper, "sections.footer.bottomLinksWrapper", "container", "")}>
                 {data.bottomLinks?.map((link: any, index: number) => (
                   link.enabled && (
                     <Link 

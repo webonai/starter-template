@@ -42,9 +42,9 @@ export default function DynamicPage() {
     <main>
       {safeConfig.sections.header && <Header data={safeConfig.sections.header} />}
       
-      <div {...editable(dynamicPage.container, "sections.dynamicPage.container", "section", "py-24 sm:py-32 bg-background")}>
-        <div {...editable(dynamicPage.innerWrapper, "sections.dynamicPage.innerWrapper", "container", "container mx-auto px-6 lg:px-8")}>
-          <div {...editable(dynamicPage.contentWrapper, "sections.dynamicPage.contentWrapper", "container", "mx-auto max-w-2xl text-center")}>
+      <div {...editable(dynamicPage.container, "sections.dynamicPage.container", "section", "")}>
+        <div {...editable(dynamicPage.innerWrapper, "sections.dynamicPage.innerWrapper", "container", "")}>
+          <div {...editable(dynamicPage.contentWrapper, "sections.dynamicPage.contentWrapper", "container", "")}>
             <h1 {...editable(page.headline, `layout.pages.${pageIndex}.headline`, "headline", "text-4xl font-bold tracking-tight text-foreground sm:text-6xl")}>
               {page.headline?.text || page.title}
             </h1>

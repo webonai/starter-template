@@ -16,30 +16,30 @@ export default function FAQ({ data }: FaqProps) {
     const basePath = "sections.faq";
 
     return (
-        <section data-section="faq" {...editable(data.container, `${basePath}.container`, "section", "relative py-20 sm:py-24 lg:py-32")}>
-            <div {...editable(data.innerWrapper, `${basePath}.innerWrapper`, "container", "container mx-auto px-4 sm:px-6 lg:px-8")}>
+        <section data-section="faq" {...editable(data.container, `${basePath}.container`, "section", "")}>
+            <div {...editable(data.innerWrapper, `${basePath}.innerWrapper`, "container", "")}>
                 
                 {/* Header */}
-                <div {...editable(data.headerWrapper, `${basePath}.headerWrapper`, "container", "mx-auto max-w-3xl text-center mb-16 sm:mb-20")}>
+                <div {...editable(data.headerWrapper, `${basePath}.headerWrapper`, "container", "")}>
                     {data.eyebrow?.enabled && (
-                        <div {...editable(data.eyebrow, `${basePath}.eyebrow`, "badge", "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4")}>
+                        <div {...editable(data.eyebrow, `${basePath}.eyebrow`, "badge", "")}>
                             {data.eyebrow.text}
                         </div>
                     )}
                     
-                    <h2 {...editable(data.header, `${basePath}.header`, "headline", "text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-4")}>
+                    <h2 {...editable(data.header, `${basePath}.header`, "headline", "")}>
                         {data.header?.text || "Common Questions"}
                     </h2>
                     
                     {data.subtext?.text && (
-                        <p {...editable(data.subtext, `${basePath}.subtext`, "text", "text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto")}>
+                        <p {...editable(data.subtext, `${basePath}.subtext`, "text", "")}>
                             {data.subtext.text}
                         </p>
                     )}
                 </div>
 
                 {/* FAQ Items */}
-                <div {...editable(data.list, `${basePath}.list`, "container", "mx-auto max-w-3xl space-y-4")}>
+                <div {...editable(data.list, `${basePath}.list`, "container", "")}>
                     {data.questions.map((faq, index) => (
                         <AccordionItem
                             key={index}

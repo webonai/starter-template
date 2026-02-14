@@ -228,39 +228,43 @@
   },
   "sections": {
     "header": {
-      "container": { "enabled": true, "className": "border-b border-border/50" },
-      "innerWrapper": { "enabled": true, "className": "" },
-      "wrapper": { "enabled": true, "className": "" },
-      "logo": { "enabled": true, "href": "/", "alt": "Outline", "className": "text-base font-medium tracking-tight" },
-      "logoImage": { "enabled": true, "src": "/logo.svg", "alt": "Outline", "className": "" },
+      "container": { "enabled": true, "className": "sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-4 sm:px-6 lg:px-8" },
+      "wrapper": { "enabled": true, "className": "flex h-16 items-center justify-between" },
+      "logoWrapper": { "enabled": true, "className": "flex items-center" },
+      "logo": { "enabled": true, "href": "/", "alt": "Outline", "className": "flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" },
+      "logoImage": { "enabled": true, "src": "/logo.svg", "alt": "Outline", "className": "inline-flex h-8 text-primary [&>svg]:h-full [&>svg]:w-auto" },
       "nav": {
         "enabled": true,
-        "className": "",
+        "className": "hidden lg:flex lg:items-center lg:gap-x-8",
         "links": [
-          { "enabled": true, "text": "Features", "href": "/#features", "className": "text-sm text-muted-foreground hover:text-foreground" },
-          { "enabled": true, "text": "Blog", "href": "/blog", "className": "text-sm text-muted-foreground hover:text-foreground" },
-          { "enabled": true, "text": "About", "href": "/about", "className": "text-sm text-muted-foreground hover:text-foreground" },
-          { "enabled": true, "text": "Contact", "href": "/contact", "className": "text-sm text-muted-foreground hover:text-foreground" }
+          { "enabled": true, "text": "Features", "href": "/#features", "className": "text-sm font-medium text-foreground/70 hover:text-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-1 py-0.5" },
+          { "enabled": true, "text": "Blog", "href": "/blog", "className": "text-sm font-medium text-foreground/70 hover:text-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-1 py-0.5" },
+          { "enabled": true, "text": "About", "href": "/about", "className": "text-sm font-medium text-foreground/70 hover:text-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-1 py-0.5" },
+          { "enabled": true, "text": "Contact", "href": "/contact", "className": "text-sm font-medium text-foreground/70 hover:text-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-1 py-0.5" }
         ]
       },
-      "actions": { "enabled": true, "className": "" },
-      "ctaButton": { "enabled": true, "text": "Get Started", "href": "#signup", "className": "text-sm" },
-      "mobileMenuButton": { "enabled": true, "className": "" },
-      "srText": { "enabled": true, "className": "" },
+      "actions": { "enabled": true, "className": "flex items-center gap-x-4" },
+      "ctaButton": { "enabled": true, "text": "Get Started", "href": "#signup", "className": "hidden sm:inline-flex rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" },
+      "mobileMenuButton": { "enabled": true, "className": "lg:hidden inline-flex items-center justify-center rounded-md p-2 text-foreground hover:bg-accent hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" },
+      "srText": { "enabled": true, "className": "sr-only" },
       "hamburgerIcon": { "enabled": true, "className": "" },
       "closeIcon": { "enabled": true, "className": "" },
-      "mobileMenu": { "enabled": true, "className": "" },
-      "mobileMenuInner": { "enabled": true, "className": "" },
-      "mobileCTA": { "enabled": true, "className": "" }
+      "mobileMenu": { "enabled": true, "className": "lg:hidden border-t border-border bg-background" },
+      "mobileMenuInner": { "enabled": true, "className": "container mx-auto px-4 py-4 space-y-1" },
+      "mobileCTA": { "enabled": true, "className": "mt-4 block w-full rounded-lg bg-primary px-4 py-2.5 text-center text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" }
     },
     "hero": {
-      "container": { "enabled": true, "className": "" },
-      "innerWrapper": { "enabled": true, "className": "" },
-      "eyebrow": { "enabled": true, "text": "Now in public beta", "className": "border-0 bg-transparent rounded-none px-0 py-0 text-sm font-normal text-muted-foreground" },
-      "headline": { "enabled": true, "text": "Work at the\nspeed of thought", "className": "font-heading font-normal tracking-normal" },
-      "subtext": { "enabled": true, "text": "A simple, fast workspace for teams who value clarity over complexity. Write, plan, and build together without the noise.", "className": "" },
-      "primaryButton": { "enabled": true, "text": "Start for free", "href": "#signup", "className": "" },
-      "secondaryButton": { "enabled": true, "text": "See how it works", "href": "/about", "className": "" },
+      "container": { "enabled": true, "className": "relative overflow-hidden py-20 sm:py-32 lg:py-40" },
+      "backgroundGradient": { "enabled": true, "className": "absolute inset-0 -z-10 bg-gradient-to-b from-primary/5 via-background to-background" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-6" },
+      "contentWrapper": { "enabled": true, "className": "mx-auto max-w-4xl text-center" },
+      "eyebrow": { "enabled": true, "text": "Now in public beta", "className": "mb-8 inline-flex items-center border-0 bg-transparent rounded-none px-0 py-0 text-sm font-normal text-muted-foreground" },
+      "headline": { "enabled": true, "text": "Work at the\nspeed of thought", "className": "text-4xl font-heading font-normal tracking-normal text-foreground sm:text-6xl lg:text-7xl mb-6" },
+      "subtext": { "enabled": true, "text": "A simple, fast workspace for teams who value clarity over complexity. Write, plan, and build together without the noise.", "className": "mt-6 text-lg sm:text-xl leading-8 text-muted-foreground max-w-2xl mx-auto" },
+      "buttonWrapper": { "enabled": true, "className": "mt-10 flex flex-col sm:flex-row items-center justify-center gap-4" },
+      "primaryButton": { "enabled": true, "text": "Start for free", "href": "#signup", "className": "rounded-lg bg-primary px-6 py-3 text-base font-semibold text-primary-foreground shadow-lg hover:opacity-90 transition-all hover:scale-105" },
+      "secondaryButton": { "enabled": true, "text": "See how it works", "href": "/about", "className": "rounded-lg border-2 border-border px-6 py-3 text-base font-semibold text-foreground hover:bg-accent transition-colors" },
       "stats": [
         {
           "enabled": true,
@@ -286,50 +290,58 @@
       ],
       "statsContainer": {
         "enabled": true,
-        "className": ""
+        "className": "mt-12 flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm"
       },
+      "imageWrapper": { "enabled": true, "className": "mt-16 sm:mt-20 lg:mt-24" },
+      "imageInner": { "enabled": true, "className": "relative mx-auto max-w-6xl" },
+      "imageGlow": { "enabled": true, "className": "absolute inset-0 -z-10 bg-gradient-to-tr from-primary/20 via-primary/5 to-transparent blur-3xl" },
       "heroImage": {
         "enabled": false,
         "src": "",
         "alt": "",
-        "className": ""
+        "className": "rounded-xl shadow-2xl border border-border ring-1 ring-border/50 w-full h-auto"
       }
     },
     "features": {
-      "container": { "enabled": true, "className": "" },
-      "background": { "enabled": false },
-      "innerWrapper": { "enabled": true },
-      "header": { "enabled": true },
+      "container": { "enabled": true, "className": "relative py-20 sm:py-24 lg:py-32" },
+      "background": { "enabled": false, "className": "absolute inset-0 -z-10 bg-gradient-to-b from-background via-muted/30 to-background" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-4 sm:px-6 lg:px-8" },
+      "header": { "enabled": true, "className": "mx-auto max-w-3xl text-center mb-16 sm:mb-20" },
       "eyebrow": {
         "enabled": false,
         "text": "",
-        "className": ""
+        "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
       },
       "headline": {
         "enabled": true,
         "text": "Less, but better",
-        "className": "font-heading font-normal tracking-normal"
+        "className": "text-3xl font-heading font-normal tracking-normal text-foreground sm:text-4xl lg:text-5xl mb-4"
       },
       "subtext": {
         "enabled": true,
-        "text": "Every feature is designed with intention. Nothing extra, nothing missing."
+        "text": "Every feature is designed with intention. Nothing extra, nothing missing.",
+        "className": "text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto"
       },
-      "grid": { "enabled": true },
+      "grid": { "enabled": true, "className": "grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3" },
       "items": [
         {
           "enabled": true,
+          "className": "group relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md hover:border-primary/50",
           "icon": {
             "enabled": false,
             "emoji": "",
-            "alt": ""
+            "alt": "",
+            "className": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
           },
           "title": {
             "enabled": true,
-            "text": "Instant search"
+            "text": "Instant search",
+            "className": "text-xl font-semibold text-foreground mb-2"
           },
           "description": {
             "enabled": true,
-            "text": "Find anything across your workspace in milliseconds. Full-text search that actually works."
+            "text": "Find anything across your workspace in milliseconds. Full-text search that actually works.",
+            "className": "text-sm text-muted-foreground leading-relaxed"
           },
           "link": {
             "enabled": false,
@@ -339,18 +351,22 @@
         },
         {
           "enabled": true,
+          "className": "group relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md hover:border-primary/50",
           "icon": {
             "enabled": false,
             "emoji": "",
-            "alt": ""
+            "alt": "",
+            "className": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
           },
           "title": {
             "enabled": true,
-            "text": "Real-time collaboration"
+            "text": "Real-time collaboration",
+            "className": "text-xl font-semibold text-foreground mb-2"
           },
           "description": {
             "enabled": true,
-            "text": "Work together seamlessly. See changes as they happen with zero lag or conflicts."
+            "text": "Work together seamlessly. See changes as they happen with zero lag or conflicts.",
+            "className": "text-sm text-muted-foreground leading-relaxed"
           },
           "link": {
             "enabled": false,
@@ -360,18 +376,22 @@
         },
         {
           "enabled": true,
+          "className": "group relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md hover:border-primary/50",
           "icon": {
             "enabled": false,
             "emoji": "",
-            "alt": ""
+            "alt": "",
+            "className": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
           },
           "title": {
             "enabled": true,
-            "text": "Markdown native"
+            "text": "Markdown native",
+            "className": "text-xl font-semibold text-foreground mb-2"
           },
           "description": {
             "enabled": true,
-            "text": "Write in markdown, render beautifully. Keyboard shortcuts for everything."
+            "text": "Write in markdown, render beautifully. Keyboard shortcuts for everything.",
+            "className": "text-sm text-muted-foreground leading-relaxed"
           },
           "link": {
             "enabled": false,
@@ -381,18 +401,22 @@
         },
         {
           "enabled": true,
+          "className": "group relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md hover:border-primary/50",
           "icon": {
             "enabled": false,
             "emoji": "",
-            "alt": ""
+            "alt": "",
+            "className": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
           },
           "title": {
             "enabled": true,
-            "text": "API-first"
+            "text": "API-first",
+            "className": "text-xl font-semibold text-foreground mb-2"
           },
           "description": {
             "enabled": true,
-            "text": "Build on top of Outline with a clean, well-documented REST API and webhooks."
+            "text": "Build on top of Outline with a clean, well-documented REST API and webhooks.",
+            "className": "text-sm text-muted-foreground leading-relaxed"
           },
           "link": {
             "enabled": false,
@@ -402,18 +426,22 @@
         },
         {
           "enabled": true,
+          "className": "group relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md hover:border-primary/50",
           "icon": {
             "enabled": false,
             "emoji": "",
-            "alt": ""
+            "alt": "",
+            "className": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
           },
           "title": {
             "enabled": true,
-            "text": "Version history"
+            "text": "Version history",
+            "className": "text-xl font-semibold text-foreground mb-2"
           },
           "description": {
             "enabled": true,
-            "text": "Every change is tracked. Restore any previous version with a single click."
+            "text": "Every change is tracked. Restore any previous version with a single click.",
+            "className": "text-sm text-muted-foreground leading-relaxed"
           },
           "link": {
             "enabled": false,
@@ -423,18 +451,22 @@
         },
         {
           "enabled": true,
+          "className": "group relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md hover:border-primary/50",
           "icon": {
             "enabled": false,
             "emoji": "",
-            "alt": ""
+            "alt": "",
+            "className": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
           },
           "title": {
             "enabled": true,
-            "text": "Self-hostable"
+            "text": "Self-hostable",
+            "className": "text-xl font-semibold text-foreground mb-2"
           },
           "description": {
             "enabled": true,
-            "text": "Run on your own infrastructure. Docker image, full control, zero vendor lock-in."
+            "text": "Run on your own infrastructure. Docker image, full control, zero vendor lock-in.",
+            "className": "text-sm text-muted-foreground leading-relaxed"
           },
           "link": {
             "enabled": false,
@@ -443,39 +475,43 @@
           }
         }
       ],
-      "ctaWrapper": { "enabled": true },
+      "ctaWrapper": { "enabled": true, "className": "mt-16 text-center" },
       "cta": {
         "enabled": false,
         "text": "",
-        "href": ""
+        "href": "",
+        "className": "inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-base font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
       }
     },
     "testimonials": {
-      "container": { "enabled": true, "className": "bg-background" },
-      "innerWrapper": { "enabled": true },
-      "header": { "enabled": true },
+      "container": { "enabled": true, "className": "relative py-20 sm:py-24 lg:py-32 bg-background" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-4 sm:px-6 lg:px-8" },
+      "header": { "enabled": true, "className": "mx-auto max-w-3xl text-center mb-16 sm:mb-20" },
       "eyebrow": {
         "enabled": false,
         "text": "",
-        "className": ""
+        "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
       },
       "headline": {
         "enabled": true,
         "text": "Trusted by thoughtful teams",
-        "className": "font-heading font-normal tracking-normal"
+        "className": "text-3xl font-heading font-normal tracking-normal text-foreground sm:text-4xl lg:text-5xl mb-4"
       },
       "subtext": {
         "enabled": true,
-        "text": "Used by teams who care about doing their best work."
+        "text": "Used by teams who care about doing their best work.",
+        "className": "text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto"
       },
-      "grid": { "enabled": true },
+      "grid": { "enabled": true, "className": "grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3" },
       "showQuoteIcon": false,
       "items": [
         {
           "enabled": true,
+          "className": "relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md",
           "quote": {
             "enabled": true,
-            "text": "We switched from Notion and never looked back. Outline is faster, simpler, and respects our workflow instead of imposing one."
+            "text": "We switched from Notion and never looked back. Outline is faster, simpler, and respects our workflow instead of imposing one.",
+            "className": "text-base text-foreground leading-relaxed mb-6"
           },
           "avatar": {
             "enabled": false,
@@ -484,7 +520,8 @@
           },
           "author": {
             "enabled": true,
-            "text": "Anna Kowalski"
+            "text": "Anna Kowalski",
+            "className": "font-semibold text-foreground truncate"
           },
           "role": {
             "enabled": true,
@@ -501,9 +538,11 @@
         },
         {
           "enabled": true,
+          "className": "relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md",
           "quote": {
             "enabled": true,
-            "text": "Finally, a tool that gets out of the way. The writing experience is perfect, and the API lets us build exactly what we need."
+            "text": "Finally, a tool that gets out of the way. The writing experience is perfect, and the API lets us build exactly what we need.",
+            "className": "text-base text-foreground leading-relaxed mb-6"
           },
           "avatar": {
             "enabled": false,
@@ -512,7 +551,8 @@
           },
           "author": {
             "enabled": true,
-            "text": "James Thornton"
+            "text": "James Thornton",
+            "className": "font-semibold text-foreground truncate"
           },
           "role": {
             "enabled": true,
@@ -529,9 +569,11 @@
         },
         {
           "enabled": true,
+          "className": "relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md",
           "quote": {
             "enabled": true,
-            "text": "The speed is unreal. Search, navigation, editing, everything happens instantly. This is what modern software should feel like."
+            "text": "The speed is unreal. Search, navigation, editing, everything happens instantly. This is what modern software should feel like.",
+            "className": "text-base text-foreground leading-relaxed mb-6"
           },
           "avatar": {
             "enabled": false,
@@ -540,7 +582,8 @@
           },
           "author": {
             "enabled": true,
-            "text": "Sofia Nguyen"
+            "text": "Sofia Nguyen",
+            "className": "font-semibold text-foreground truncate"
           },
           "role": {
             "enabled": true,
@@ -558,24 +601,25 @@
       ]
     },
     "faq": {
-      "container": { "enabled": true, "className": "" },
-      "innerWrapper": { "enabled": true, "className": "" },
-      "headerWrapper": { "enabled": true, "className": "" },
+      "container": { "enabled": true, "className": "relative py-20 sm:py-24 lg:py-32" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-4 sm:px-6 lg:px-8" },
+      "headerWrapper": { "enabled": true, "className": "mx-auto max-w-3xl text-center mb-16 sm:mb-20" },
       "eyebrow": {
         "enabled": false,
         "text": "",
-        "className": ""
+        "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
       },
       "header": {
         "enabled": true,
         "text": "Common questions",
-        "className": "font-heading font-normal tracking-normal"
+        "className": "text-3xl font-heading font-normal tracking-normal text-foreground sm:text-4xl lg:text-5xl mb-4"
       },
       "subtext": {
         "enabled": true,
-        "text": "Everything you need to know to get started."
+        "text": "Everything you need to know to get started.",
+        "className": "text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto"
       },
-      "list": { "enabled": true, "className": "" },
+      "list": { "enabled": true, "className": "mx-auto max-w-3xl space-y-4" },
       "questions": [
         {
           "q": { "text": "How does pricing work?" },
@@ -600,121 +644,123 @@
       ]
     },
     "blog": {
-      "container": { "enabled": true, "className": "" },
-      "innerWrapper": { "enabled": true },
-      "header": { "enabled": true },
-      "headerContent": { "enabled": true },
+      "container": { "enabled": true, "className": "relative py-20 sm:py-24 lg:py-32 bg-background" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-4 sm:px-6 lg:px-8" },
+      "header": { "enabled": true, "className": "flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12 sm:mb-16" },
+      "headerContent": { "enabled": true, "className": "flex-1" },
       "eyebrow": {
         "enabled": false,
         "text": "",
-        "className": ""
+        "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
       },
       "headline": {
         "enabled": true,
         "text": "From the blog",
-        "className": "font-heading font-normal tracking-normal"
+        "className": "text-3xl font-heading font-normal tracking-normal text-foreground sm:text-4xl lg:text-5xl mb-4"
       },
       "subtext": {
         "enabled": true,
-        "text": "Updates, ideas, and thinking from the team."
+        "text": "Updates, ideas, and thinking from the team.",
+        "className": "text-base sm:text-lg text-muted-foreground max-w-2xl"
       },
       "viewAllButton": {
         "enabled": true,
         "text": "All posts",
         "href": "/blog",
-        "className": ""
+        "className": "inline-flex items-center justify-center rounded-lg border-2 border-border px-5 py-2.5 text-sm font-semibold text-foreground hover:bg-accent transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary whitespace-nowrap"
       },
-      "grid": { "enabled": true },
+      "grid": { "enabled": true, "className": "mx-auto max-w-6xl grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3" },
       "maxPosts": 3,
       "posts": []
     },
     "cta": {
-      "container": { "enabled": true, "className": "" },
-      "background": { "enabled": true, "className": "bg-muted/40" },
-      "pattern": { "enabled": false },
-      "innerWrapper": { "enabled": true },
-      "content": { "enabled": true },
+      "container": { "enabled": true, "className": "relative isolate py-20 sm:py-24 lg:py-32" },
+      "background": { "enabled": true, "className": "absolute inset-0 -z-10 bg-muted/40" },
+      "pattern": { "enabled": false, "className": "absolute inset-0 -z-10 bg-[url('/grid-pattern.svg')] opacity-10" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-4 sm:px-6 lg:px-8" },
+      "content": { "enabled": true, "className": "mx-auto max-w-4xl text-center" },
       "eyebrow": {
         "enabled": false,
         "text": "",
-        "className": ""
+        "className": "inline-flex items-center rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3 py-1 text-xs font-medium text-primary-foreground mb-6"
       },
       "headline": {
         "enabled": true,
         "text": "Ready to simplify your workflow?",
-        "className": "font-heading font-normal tracking-normal text-foreground"
+        "className": "text-3xl font-heading font-normal tracking-normal text-foreground sm:text-4xl lg:text-5xl mb-6"
       },
       "subtext": {
         "enabled": true,
         "text": "Start for free. No credit card required. Set up in under two minutes.",
-        "className": "text-muted-foreground"
+        "className": "text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
       },
-      "buttonWrapper": { "enabled": true },
+      "buttonWrapper": { "enabled": true, "className": "flex flex-col sm:flex-row items-center justify-center gap-4" },
       "primaryButton": {
         "enabled": true,
         "text": "Get started",
         "href": "/signup",
-        "className": "bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-100"
+        "className": "inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-base font-semibold text-primary-foreground shadow-lg hover:bg-primary/90 transition-all hover:scale-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
       },
       "secondaryButton": {
         "enabled": true,
         "text": "Talk to us",
         "href": "/contact",
-        "className": "border-border text-muted-foreground hover:text-foreground hover:bg-muted"
+        "className": "inline-flex items-center justify-center rounded-lg border-2 border-border px-6 py-3 text-base font-semibold text-muted-foreground hover:bg-muted transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground"
       },
       "featuresWrapper": { "enabled": false },
       "features": []
     },
     "blogIndex": {
-      "container": { "enabled": true },
-      "innerWrapper": { "enabled": true },
-      "header": { "enabled": true },
+      "container": { "enabled": true, "className": "relative py-20 sm:py-24 lg:py-32" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-4 sm:px-6 lg:px-8" },
+      "header": { "enabled": true, "className": "mx-auto max-w-3xl text-center mb-16 sm:mb-20" },
       "eyebrow": {
         "enabled": false,
         "text": "",
-        "className": ""
+        "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
       },
       "headline": {
         "enabled": true,
         "text": "Blog",
-        "className": "font-heading font-normal tracking-normal"
+        "className": "text-3xl font-heading font-normal tracking-normal text-foreground sm:text-4xl lg:text-5xl mb-4"
       },
       "subtext": {
         "enabled": true,
-        "text": "Updates, ideas, and thinking from the team."
+        "text": "Updates, ideas, and thinking from the team.",
+        "className": "text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto"
       },
-      "categoryFilter": { "enabled": true },
+      "categoryFilter": { "enabled": true, "className": "flex flex-wrap justify-center gap-3 mb-12 sm:mb-16" },
       "categoryAllLabel": { "enabled": true, "text": "All" },
-      "grid": { "enabled": true },
-      "emptyState": { "enabled": true, "text": "No posts yet." },
-      "emptyStateLink": { "enabled": true, "text": "View all posts", "href": "/blog" },
-      "pagination": { "enabled": true },
-      "prevButton": { "enabled": true, "text": "Previous" },
-      "nextButton": { "enabled": true, "text": "Next" }
+      "grid": { "enabled": true, "className": "mx-auto max-w-6xl grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3" },
+      "emptyState": { "enabled": true, "text": "No posts yet.", "className": "text-lg text-muted-foreground" },
+      "emptyStateLink": { "enabled": true, "text": "View all posts", "href": "/blog", "className": "mt-4 inline-flex items-center text-sm font-medium text-primary hover:underline" },
+      "pagination": { "enabled": true, "className": "flex items-center justify-center gap-3 mt-16" },
+      "prevButton": { "enabled": true, "text": "Previous", "className": "inline-flex items-center rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-all hover:border-primary/30 hover:shadow-md" },
+      "nextButton": { "enabled": true, "text": "Next", "className": "inline-flex items-center rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-all hover:border-primary/30 hover:shadow-md" }
     },
     "blogPost": {
-      "container": { "enabled": true },
-      "innerWrapper": { "enabled": true },
-      "contentWrapper": { "enabled": true },
-      "backLink": { "enabled": true, "text": "Back", "href": "/blog" },
-      "category": { "enabled": true },
-      "title": { "enabled": true },
-      "meta": { "enabled": true },
-      "imageWrapper": { "enabled": true },
-      "content": { "enabled": true },
-      "bottomNav": { "enabled": true },
-      "backToAllLink": { "enabled": true, "text": "All posts", "href": "/blog" }
+      "container": { "enabled": true, "className": "relative py-20 sm:py-24 lg:py-32" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-4 sm:px-6 lg:px-8" },
+      "contentWrapper": { "enabled": true, "className": "mx-auto max-w-3xl" },
+      "backLink": { "enabled": true, "text": "Back", "href": "/blog", "className": "group mb-10 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-muted-foreground shadow-sm transition-all hover:border-primary/30 hover:text-primary hover:shadow-md" },
+      "category": { "enabled": true, "className": "mb-4" },
+      "title": { "enabled": true, "className": "text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-6" },
+      "meta": { "enabled": true, "className": "flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-10" },
+      "imageWrapper": { "enabled": true, "className": "mx-auto max-w-4xl mb-12 sm:mb-16" },
+      "content": { "enabled": true, "className": "prose prose-lg max-w-none text-muted-foreground prose-headings:text-foreground prose-headings:font-bold prose-headings:tracking-tight prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-blockquote:border-primary/30 prose-blockquote:text-muted-foreground prose-code:text-primary prose-code:bg-muted prose-code:rounded prose-code:px-1.5 prose-code:py-0.5 prose-code:text-sm prose-code:before:content-none prose-code:after:content-none prose-img:rounded-xl prose-img:border prose-img:border-border prose-img:shadow-md" },
+      "bottomNav": { "enabled": true, "className": "mt-16 border-t border-border pt-8" },
+      "backToAllLink": { "enabled": true, "text": "All posts", "href": "/blog", "className": "group inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary" }
     },
     "dynamicPage": {
-      "container": { "enabled": true },
-      "innerWrapper": { "enabled": true },
-      "contentWrapper": { "enabled": true }
+      "container": { "enabled": true, "className": "py-24 sm:py-32 bg-background" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-6 lg:px-8" },
+      "contentWrapper": { "enabled": true, "className": "mx-auto max-w-2xl text-center" }
     },
     "footer": {
-      "container": { "enabled": true, "className": "border-t border-border/50" },
-      "innerWrapper": { "enabled": true },
-      "mainContent": { "enabled": true },
-      "brandColumn": { "enabled": true },
+      "container": { "enabled": true, "className": "bg-background border-t border-border" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16" },
+      "mainContent": { "enabled": true, "className": "grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-12 lg:mb-16" },
+      "brandColumn": { "enabled": true, "className": "lg:col-span-4" },
       "logo": {
         "enabled": true,
         "src": "/logo.svg",
@@ -723,9 +769,10 @@
       },
       "tagline": {
         "enabled": true,
-        "text": "Simple tools for thoughtful work."
+        "text": "Simple tools for thoughtful work.",
+        "className": "text-muted-foreground mb-6 max-w-sm"
       },
-      "socialWrapper": { "enabled": true },
+      "socialWrapper": { "enabled": true, "className": "flex items-center gap-4" },
       "socialLinks": [
         {
           "enabled": true,
@@ -780,12 +827,13 @@
           ]
         }
       ],
-      "bottomBar": { "enabled": true },
+      "bottomBar": { "enabled": true, "className": "pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4" },
       "copyright": {
         "enabled": true,
-        "text": "\u00a9 2026 Outline. All rights reserved."
+        "text": "\u00a9 2026 Outline. All rights reserved.",
+        "className": "text-sm text-muted-foreground"
       },
-      "bottomLinksWrapper": { "enabled": true },
+      "bottomLinksWrapper": { "enabled": true, "className": "flex flex-wrap justify-center gap-x-6 gap-y-2" },
       "bottomLinks": [
         { "enabled": true, "text": "Privacy", "href": "/privacy" },
         { "enabled": true, "text": "Terms", "href": "/terms" }

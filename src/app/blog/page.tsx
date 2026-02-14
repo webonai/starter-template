@@ -25,30 +25,30 @@ export default async function BlogIndex({ searchParams }: { searchParams: Promis
     <main>
       <Header data={safeConfig.sections.header} />
       
-      <div {...editable(blogIndex.container, "sections.blogIndex.container", "section", "relative py-20 sm:py-24 lg:py-32")}>
+      <div {...editable(blogIndex.container, "sections.blogIndex.container", "section", "")}>
         {/* Background gradient */}
         <div className="absolute inset-0 -z-10 bg-linear-to-b from-primary/5 via-background to-background" />
         
-        <div {...editable(blogIndex.innerWrapper, "sections.blogIndex.innerWrapper", "container", "container mx-auto px-4 sm:px-6 lg:px-8")}>
+        <div {...editable(blogIndex.innerWrapper, "sections.blogIndex.innerWrapper", "container", "")}>
           
           {/* Header */}
-          <div {...editable(blogIndex.header, "sections.blogIndex.header", "container", "mx-auto max-w-3xl text-center mb-16 sm:mb-20")}>
+          <div {...editable(blogIndex.header, "sections.blogIndex.header", "container", "")}>
             {blogIndex.eyebrow?.enabled && (
-              <div {...editable(blogIndex.eyebrow, "sections.blogIndex.eyebrow", "badge", "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4")}>
+              <div {...editable(blogIndex.eyebrow, "sections.blogIndex.eyebrow", "badge", "")}>
                 {blogIndex.eyebrow.text}
               </div>
             )}
             
-            <h2 {...editable(blogIndex.headline, "sections.blogIndex.headline", "headline", "text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-4")}>
+            <h2 {...editable(blogIndex.headline, "sections.blogIndex.headline", "headline", "")}>
               {blogIndex.headline?.text || "Blog"}
             </h2>
-            <p {...editable(blogIndex.subtext, "sections.blogIndex.subtext", "text", "text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto")}>
+            <p {...editable(blogIndex.subtext, "sections.blogIndex.subtext", "text", "")}>
               {blogIndex.subtext?.text || "Latest insights and updates from our team."}
             </p>
           </div>
           
           {/* Category Filter */}
-          <div {...editable(blogIndex.categoryFilter, "sections.blogIndex.categoryFilter", "container", "flex flex-wrap justify-center gap-3 mb-12 sm:mb-16")}>
+          <div {...editable(blogIndex.categoryFilter, "sections.blogIndex.categoryFilter", "container", "")}>
             <Link 
               href="/blog"
               className={`inline-flex items-center rounded-full px-4 py-2 text-sm font-medium transition-all ${
@@ -75,7 +75,7 @@ export default async function BlogIndex({ searchParams }: { searchParams: Promis
           </div>
 
           {/* Posts Grid */}
-          <div {...editable(blogIndex.grid, "sections.blogIndex.grid", "container", "mx-auto max-w-6xl grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3")}>
+          <div {...editable(blogIndex.grid, "sections.blogIndex.grid", "container", "")}>
             {posts.map((post) => (
               <article key={post.slug} className="group relative flex flex-col rounded-xl border border-border bg-card shadow-sm transition-all hover:shadow-md hover:border-primary/30 overflow-hidden">
                 
@@ -147,11 +147,11 @@ export default async function BlogIndex({ searchParams }: { searchParams: Promis
           {/* Empty state */}
           {posts.length === 0 && (
             <div className="mx-auto max-w-md text-center py-16">
-              <p {...editable(blogIndex.emptyState, "sections.blogIndex.emptyState", "text", "text-lg text-muted-foreground")}>
+              <p {...editable(blogIndex.emptyState, "sections.blogIndex.emptyState", "text", "")}>
                 {blogIndex.emptyState?.text || 'No posts found.'}
               </p>
               {category && (
-                <Link {...editable(blogIndex.emptyStateLink, "sections.blogIndex.emptyStateLink", "link", "mt-4 inline-flex items-center text-sm font-medium text-primary hover:underline")}>
+                <Link {...editable(blogIndex.emptyStateLink, "sections.blogIndex.emptyStateLink", "link", "")}>
                   {blogIndex.emptyStateLink?.text || 'View all posts'}
                 </Link>
               )}
@@ -160,11 +160,11 @@ export default async function BlogIndex({ searchParams }: { searchParams: Promis
 
           {/* Pagination */}
           {totalPages > 1 && (
-            <div {...editable(blogIndex.pagination, "sections.blogIndex.pagination", "container", "flex items-center justify-center gap-3 mt-16")}>
+            <div {...editable(blogIndex.pagination, "sections.blogIndex.pagination", "container", "")}>
               {currentPage > 1 && (
                 <Link 
                   href={`/blog?page=${currentPage - 1}${category ? `&category=${category}` : ''}`} 
-                  {...editable(blogIndex.prevButton, "sections.blogIndex.prevButton", "button", "inline-flex items-center rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-all hover:border-primary/30 hover:shadow-md")}
+                  {...editable(blogIndex.prevButton, "sections.blogIndex.prevButton", "button", "")}
                 >
                   {blogIndex.prevButton?.text || 'Previous'}
                 </Link>
@@ -175,7 +175,7 @@ export default async function BlogIndex({ searchParams }: { searchParams: Promis
               {currentPage < totalPages && (
                 <Link 
                   href={`/blog?page=${currentPage + 1}${category ? `&category=${category}` : ''}`} 
-                  {...editable(blogIndex.nextButton, "sections.blogIndex.nextButton", "button", "inline-flex items-center rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-all hover:border-primary/30 hover:shadow-md")}
+                  {...editable(blogIndex.nextButton, "sections.blogIndex.nextButton", "button", "")}
                 >
                   {blogIndex.nextButton?.text || 'Next'}
                 </Link>

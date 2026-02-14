@@ -8,34 +8,34 @@ export default function Testimonials({ data }: TestimonialsProps) {
   if (!data) return null;
 
   return (
-    <section data-section="testimonials" {...editable(data.container, "sections.testimonials.container", "section", "relative py-20 sm:py-24 lg:py-32 bg-muted/30")}>
-      <div {...editable(data.innerWrapper, "sections.testimonials.innerWrapper", "container", "container mx-auto px-4 sm:px-6 lg:px-8")}>
+    <section data-section="testimonials" {...editable(data.container, "sections.testimonials.container", "section", "")}>
+      <div {...editable(data.innerWrapper, "sections.testimonials.innerWrapper", "container", "")}>
         
         {/* Header */}
-        <div {...editable(data.header, "sections.testimonials.header", "container", "mx-auto max-w-3xl text-center mb-16 sm:mb-20")}>
+        <div {...editable(data.header, "sections.testimonials.header", "container", "")}>
           {data.eyebrow?.enabled && (
-            <div {...editable(data.eyebrow, "sections.testimonials.eyebrow", "badge", "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4")}>
+            <div {...editable(data.eyebrow, "sections.testimonials.eyebrow", "badge", "")}>
               {data.eyebrow.text}
             </div>
           )}
           
           {data.headline?.enabled && (
-            <h2 {...editable(data.headline, "sections.testimonials.headline", "headline", "text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-4")}>
+            <h2 {...editable(data.headline, "sections.testimonials.headline", "headline", "")}>
               {data.headline.text}
             </h2>
           )}
           
           {data.subtext?.enabled && (
-            <p {...editable(data.subtext, "sections.testimonials.subtext", "text", "text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto")}>
+            <p {...editable(data.subtext, "sections.testimonials.subtext", "text", "")}>
               {data.subtext.text}
             </p>
           )}
         </div>
 
         {/* Testimonials Grid */}
-        <div {...editable(data.grid, "sections.testimonials.grid", "container", "grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3")}>
+        <div {...editable(data.grid, "sections.testimonials.grid", "container", "")}>
           {data.items?.filter(item => item.enabled).map((item, index) => (
-            <article key={index} {...editable(item, `sections.testimonials.items.${index}`, "container", "relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md")}>
+            <article key={index} {...editable(item, `sections.testimonials.items.${index}`, "container", "")}>
               
               {/* Quote Icon */}
               {data.showQuoteIcon && (
@@ -48,7 +48,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
 
               {/* Quote */}
               {item.quote?.enabled && (
-                <blockquote {...editable(item.quote, `sections.testimonials.items.${index}.quote`, "text", "text-base text-foreground leading-relaxed mb-6")}>
+                <blockquote {...editable(item.quote, `sections.testimonials.items.${index}.quote`, "text", "")}>
                   "{item.quote.text}"
                 </blockquote>
               )}
@@ -65,7 +65,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
                 <div {...editable(item.authorDetails, `sections.testimonials.items.${index}.authorDetails`, "container", "flex-1 min-w-0")}>
                   {/* Name */}
                   {item.author?.enabled && (
-                    <p {...editable(item.author, `sections.testimonials.items.${index}.author`, "text", "font-semibold text-foreground truncate")}>
+                    <p {...editable(item.author, `sections.testimonials.items.${index}.author`, "text", "")}>
                       {item.author.text}
                     </p>
                   )}
