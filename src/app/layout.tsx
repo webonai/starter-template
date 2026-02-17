@@ -1,9 +1,14 @@
+import type { Metadata } from "next";
 import { Inter, Playfair_Display, Roboto, Lora, Pacifico, Caveat } from "next/font/google";
 import "./globals.css";
 import { ConfigProvider } from '@/context/ConfigContext';
 import ThemeWrapper from './ThemeWrapper';
 import ConfigListener from './ConfigListener';
 import { getPosts } from '@/lib/blog';
+
+export const metadata: Metadata = {
+  icons: { icon: '/favicon.ico' },
+};
 
 // Keep font loaders here (Server Side)
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
