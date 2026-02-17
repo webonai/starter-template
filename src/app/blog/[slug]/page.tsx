@@ -1,4 +1,9 @@
-import { getPostBySlug } from '@/lib/blog';
+import { getPostBySlug, getPosts } from '@/lib/blog';
+
+export async function generateStaticParams() {
+  const posts = getPosts();
+  return posts.map((post) => ({ slug: post.slug }));
+}
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -12,6 +17,7 @@ import { ArrowLeft, Calendar, User, Tag, Clock } from 'lucide-react';
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const safeConfig = config as any;
   const blogPost = safeConfig.sections.blogPost || {};
 
