@@ -1,0 +1,402 @@
+{
+  "meta": {
+    "siteName": "Golden Crust Bakery",
+    "description": "Artisan bakery crafting sourdough, pastries, and seasonal sweets each morning."
+  },
+  "theme": {
+    "mode": "light",
+    "colors": {
+      "light": {
+        "primary": "#7c2d12",
+        "primaryForeground": "#fff7ed",
+        "secondary": "#78350f",
+        "secondaryForeground": "#fffbeb",
+        "accent": "#f4d9b1",
+        "accentForeground": "#451a03",
+        "background": "#fff7ed",
+        "foreground": "#3b1f0b",
+        "muted": "#fde7c9",
+        "mutedForeground": "#7c4a1f",
+        "border": "#f0cfa1",
+        "ring": "#9a3412"
+      },
+      "dark": {
+        "primary": "#fdba74",
+        "primaryForeground": "#3b1f0b",
+        "secondary": "#92400e",
+        "secondaryForeground": "#ffedd5",
+        "accent": "#78350f",
+        "accentForeground": "#ffedd5",
+        "background": "#1c120a",
+        "foreground": "#ffedd5",
+        "muted": "#2a1a10",
+        "mutedForeground": "#e5c8aa",
+        "border": "#4a2a18",
+        "ring": "#fdba74"
+      }
+    }
+  },
+  "layout": {
+    "order": [],
+    "hiddenSections": [
+      "header",
+      "hero",
+      "features",
+      "testimonials",
+      "faq",
+      "blog",
+      "cta",
+      "footer"
+    ],
+    "sections": [
+      {
+        "id": "bakery-nav",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "sticky top-0 z-50 py-0 sm:py-0 lg:py-0 border-b border-amber-900/20 bg-[#fff4e2]/90 backdrop-blur"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 py-0"
+          },
+          "blocks": [
+            {
+              "type": "navBar",
+              "enabled": true,
+              "className": "h-14 text-[#5a2f12]",
+              "brandText": "Golden Crust",
+              "brandHref": "#",
+              "links": [
+                { "text": "Menu", "href": "#menu", "className": "text-xs uppercase tracking-[0.14em]" },
+                { "text": "Seasonal", "href": "#seasonal", "className": "text-xs uppercase tracking-[0.14em]" },
+                { "text": "Story", "href": "#story", "className": "text-xs uppercase tracking-[0.14em]" },
+                { "text": "Visit", "href": "#visit", "className": "text-xs uppercase tracking-[0.14em]" }
+              ],
+              "ctaText": "Order Ahead",
+              "ctaHref": "#visit"
+            }
+          ]
+        }
+      },
+      {
+        "id": "bakery-hero",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-[#fff4e2] py-10"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10"
+          },
+          "blocks": [
+            {
+              "type": "split",
+              "enabled": true,
+              "ratio": "1:1",
+              "className": "items-center gap-12 lg:gap-16",
+              "leftBlocks": [
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Baked fresh from 6:30 AM",
+                  "align": "left",
+                  "size": "sm",
+                  "className": "text-xs uppercase tracking-[0.2em] text-[#9a3412]"
+                },
+                {
+                  "type": "heading",
+                  "enabled": true,
+                  "text": "Small-batch bakery with big morning energy.",
+                  "level": 1,
+                  "align": "left",
+                  "size": "lg",
+                  "className": "font-serif text-5xl sm:text-6xl lg:text-7xl leading-[0.98] tracking-tight text-[#5a2f12]"
+                },
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "From long-fermented sourdough to laminated pastries, we bake daily with seasonal ingredients and classic technique.",
+                  "align": "left",
+                  "size": "md",
+                  "className": "text-base sm:text-lg leading-8 text-[#7c4a1f]"
+                },
+                {
+                  "type": "buttonRow",
+                  "enabled": true,
+                  "align": "left",
+                  "size": "md",
+                  "buttons": [
+                    { "text": "See Today's Bakes", "href": "#menu", "variant": "primary" },
+                    { "text": "Our Story", "href": "#story", "variant": "secondary" }
+                  ]
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "image",
+                  "enabled": true,
+                  "src": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1600&q=80",
+                  "alt": "Fresh artisan bread on bakery counter",
+                  "size": "lg",
+                  "className": "aspect-[4/5] rounded-2xl border border-[#e8c89a] shadow-xl"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "bakery-menu",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "id": "menu",
+            "className": "bg-[#fbe6c9] py-20"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 space-y-10"
+          },
+          "blocks": [
+            {
+              "type": "heading",
+              "enabled": true,
+              "text": "Today's Counter Favorites",
+              "level": 2,
+              "align": "left",
+              "size": "md",
+              "className": "font-serif text-5xl text-[#5a2f12]"
+            },
+            {
+              "type": "imageGrid",
+              "enabled": true,
+              "size": "lg",
+              "items": [
+                {
+                  "src": "https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=1200&q=80",
+                  "alt": "Country sourdough loaf",
+                  "caption": "Country Sourdough"
+                },
+                {
+                  "src": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1200&q=80",
+                  "alt": "Butter croissants",
+                  "caption": "Butter Croissant"
+                },
+                {
+                  "src": "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1200&q=80",
+                  "alt": "Fruit tart pastry",
+                  "caption": "Seasonal Fruit Tart"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "bakery-seasonal",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "id": "seasonal",
+            "className": "bg-[#fff4e2] py-20"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10"
+          },
+          "blocks": [
+            {
+              "type": "split",
+              "enabled": true,
+              "ratio": "1:1",
+              "className": "items-center gap-12",
+              "leftBlocks": [
+                {
+                  "type": "image",
+                  "enabled": true,
+                  "src": "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1400&q=80",
+                  "alt": "Assorted pastries on tray",
+                  "size": "lg",
+                  "className": "aspect-[4/3] rounded-xl border border-[#e8c89a]"
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Seasonal Spotlight",
+                  "align": "left",
+                  "size": "sm",
+                  "className": "text-xs uppercase tracking-[0.2em] text-[#9a3412]"
+                },
+                {
+                  "type": "heading",
+                  "enabled": true,
+                  "text": "Orange cardamom buns, only this month.",
+                  "level": 2,
+                  "align": "left",
+                  "size": "md",
+                  "className": "font-serif text-5xl leading-tight text-[#5a2f12]"
+                },
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Soft spirals glazed with citrus syrup and toasted cardamom sugar. Limited batch every Friday to Sunday.",
+                  "align": "left",
+                  "size": "md",
+                  "className": "text-base leading-8 text-[#7c4a1f]"
+                },
+                {
+                  "type": "buttonRow",
+                  "enabled": true,
+                  "align": "left",
+                  "buttons": [
+                    { "text": "Reserve A Box", "href": "#visit", "variant": "primary" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "bakery-story",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "id": "story",
+            "className": "bg-[#fbe6c9] py-20"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 space-y-8"
+          },
+          "blocks": [
+            {
+              "type": "split",
+              "enabled": true,
+              "ratio": "1:2",
+              "className": "items-start",
+              "leftBlocks": [
+                {
+                  "type": "heading",
+                  "enabled": true,
+                  "text": "Our Story",
+                  "level": 2,
+                  "align": "left",
+                  "size": "md",
+                  "className": "font-serif text-5xl text-[#5a2f12]"
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Golden Crust began as a weekend table at the market and grew into a neighborhood bakery known for handcrafted bread and warm hospitality. We mill select grains, ferment slowly, and bake in small batches so every loaf and pastry arrives at its best.",
+                  "align": "left",
+                  "size": "md",
+                  "className": "text-base sm:text-lg leading-8 text-[#7c4a1f]"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "bakery-footer",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "id": "visit",
+            "className": "bg-[#4a2a18] py-16 text-[#ffedd5]"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 space-y-8"
+          },
+          "blocks": [
+            {
+              "type": "split",
+              "enabled": true,
+              "ratio": "2:1",
+              "leftBlocks": [
+                {
+                  "type": "heading",
+                  "enabled": true,
+                  "text": "Visit The Bakery",
+                  "level": 3,
+                  "align": "left",
+                  "size": "md",
+                  "className": "font-serif text-4xl text-[#ffedd5]"
+                },
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Open daily 6:30 AM - 4:00 PM\n128 Market Street, Old Town\nhello@goldencrustbakery.com",
+                  "align": "left",
+                  "size": "md",
+                  "className": "text-base leading-8 text-[#fdd9b5] whitespace-pre-line"
+                },
+                {
+                  "type": "formRow",
+                  "enabled": true,
+                  "inputType": "email",
+                  "inputName": "email",
+                  "inputPlaceholder": "Join the morning list",
+                  "buttonText": "Subscribe"
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Quick Links",
+                  "align": "left",
+                  "size": "sm",
+                  "className": "text-xs uppercase tracking-[0.18em] text-[#fdd9b5]"
+                },
+                {
+                  "type": "linkList",
+                  "enabled": true,
+                  "className": "flex-col items-start gap-y-3",
+                  "links": [
+                    { "text": "Menu", "href": "#menu", "className": "text-[#ffedd5]" },
+                    { "text": "Seasonal", "href": "#seasonal", "className": "text-[#ffedd5]" },
+                    { "text": "Story", "href": "#story", "className": "text-[#ffedd5]" },
+                    { "text": "Order Ahead", "href": "#visit", "className": "text-[#ffedd5]" }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "divider",
+              "enabled": true
+            },
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "(c) 2026 Golden Crust Bakery",
+              "align": "left",
+              "size": "sm",
+              "className": "text-xs uppercase tracking-[0.12em] text-[#fdd9b5]"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

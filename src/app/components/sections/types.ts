@@ -132,9 +132,11 @@ export type FeatureItem = {
 
 export type FeaturesProps = {
   data: {
+  variant?: 'default' | 'portfolio';
   container?: ElementConfig;
   background?: ElementConfig & { enabled: boolean };
   innerWrapper?: ElementConfig;
+  contentLayout?: ElementConfig;
   header?: ElementConfig;
   eyebrow?: ElementConfig & { text: string; enabled: boolean };
   headline?: ElementConfig & { text: string; enabled: boolean };
@@ -143,6 +145,7 @@ export type FeaturesProps = {
   items?: Array<ElementConfig & {
     enabled: boolean;
     icon?: ElementConfig & { enabled: boolean; emoji?: string; svg?: string; alt?: string; };
+    image?: ElementConfig & { enabled?: boolean; src?: string; alt?: string };
     iconEmoji?: ElementConfig;
     iconSvg?: ElementConfig;
     title?: ElementConfig & { text: string; enabled: boolean };
@@ -189,6 +192,12 @@ export type FooterProps = {
         copyright: ElementConfig & { text?: string };
         bottomLinksWrapper: ElementConfig;
         bottomLinks?: FooterLink[];
+        newsletter?: {
+            enabled?: boolean;
+            className?: string;
+            input?: ElementConfig & { placeholder?: string; type?: string; name?: string };
+            button?: ElementConfig & { text?: string; type?: string };
+        };
     };
 };
 
@@ -237,6 +246,7 @@ export type HeroData = {
   imageInner: ElementConfig;
   imageGlow: ElementConfig;
   heroImage?: ElementConfig;
+  topRightNote?: ElementConfig & { text?: string; enabled?: boolean };
   statsContainer?: ElementConfig;
   stats?: Array<ElementConfig & { 
     iconWrapper?: ElementConfig; 

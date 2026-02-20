@@ -1,0 +1,355 @@
+{
+  "meta": {
+    "siteName": "Avery Morgan",
+    "description": "Visual and interactive designer portfolio."
+  },
+  "theme": {
+    "mode": "light",
+    "colors": {
+      "light": {
+        "primary": "#2b3440",
+        "primaryForeground": "#f8f6f1",
+        "secondary": "#475569",
+        "secondaryForeground": "#f8fafc",
+        "accent": "#efe5d6",
+        "accentForeground": "#2b3440",
+        "background": "#e9dfcf",
+        "foreground": "#1f2937",
+        "muted": "#ddd2c0",
+        "mutedForeground": "#4b5563",
+        "border": "#b9aa91",
+        "ring": "#2b3440"
+      },
+      "dark": {
+        "primary": "#e2e8f0",
+        "primaryForeground": "#111827",
+        "secondary": "#94a3b8",
+        "secondaryForeground": "#0f172a",
+        "accent": "#334155",
+        "accentForeground": "#e2e8f0",
+        "background": "#0f172a",
+        "foreground": "#e2e8f0",
+        "muted": "#1e293b",
+        "mutedForeground": "#94a3b8",
+        "border": "#334155",
+        "ring": "#e2e8f0"
+      }
+    }
+  },
+  "layout": {
+    "order": [],
+    "hiddenSections": [
+      "header",
+      "hero",
+      "features",
+      "testimonials",
+      "faq",
+      "blog",
+      "cta",
+      "footer"
+    ],
+    "sections": [
+      {
+        "id": "portfolio-nav",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-[#e9dfcf] py-0 sm:py-0 lg:py-0"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 py-0"
+          },
+          "blocks": [
+            {
+              "type": "navBar",
+              "enabled": true,
+              "className": "h-16",
+              "brandText": "AVERY MORGAN",
+              "brandHref": "#",
+              "links": [
+                {
+                  "text": "ABOUT",
+                  "href": "#about",
+                  "className": "text-xs tracking-[0.14em] text-black/80"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "portfolio-intro",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "id": "about",
+            "className": "bg-[#e9dfcf] py-10"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10"
+          },
+          "blocks": [
+            {
+              "type": "split",
+              "enabled": true,
+              "ratio": "1:1",
+              "className": "items-start gap-12 lg:gap-16",
+              "leftBlocks": [
+                {
+                  "type": "heading",
+                  "enabled": true,
+                  "text": "I'm Avery Morgan, a visual and interactive designer. Currently, Creative Director at Studio North.",
+                  "level": 1,
+                  "align": "left",
+                  "size": "lg",
+                  "className": "font-serif text-5xl sm:text-6xl leading-[1.1] tracking-tight text-[#2b3440]"
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "image",
+                  "enabled": true,
+                  "src": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1400&q=80",
+                  "alt": "Portrait of Avery Morgan",
+                  "size": "lg",
+                  "className": "aspect-[4/5] rounded-none border-0"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "portfolio-services",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-[#e9dfcf] py-16"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 space-y-10"
+          },
+          "blocks": [
+            {
+              "type": "heading",
+              "enabled": true,
+              "text": "✨ Services",
+              "level": 2,
+              "align": "left",
+              "size": "md",
+              "className": "font-serif text-5xl text-[#2b3440]"
+            },
+            {
+              "type": "split",
+              "enabled": true,
+              "ratio": "1:1",
+              "className": "items-start",
+              "leftBlocks": [
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "BRANDING -\nBrand Positioning\nLogo and Identity System\nBrand Guidelines\nArt Direction\nBrand Collateral",
+                  "align": "left",
+                  "size": "md",
+                  "className": "text-base leading-8 text-[#334155] whitespace-pre-line"
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "split",
+                  "enabled": true,
+                  "ratio": "1:1",
+                  "className": "items-start gap-10",
+                  "leftBlocks": [
+                    {
+                      "type": "paragraph",
+                      "enabled": true,
+                      "text": "DIGITAL -\nWebsite Design\nSquarespace Development\nUI and UX\nArchitecture\nSocial",
+                      "align": "left",
+                      "size": "md",
+                      "className": "text-base leading-8 text-[#334155] whitespace-pre-line"
+                    }
+                  ],
+                  "rightBlocks": [
+                    {
+                      "type": "paragraph",
+                      "enabled": true,
+                      "text": "PACKAGING -\nProduct Design\nSupplemental Packaging\nPrint Production",
+                      "align": "left",
+                      "size": "md",
+                      "className": "text-base leading-8 text-[#334155] whitespace-pre-line"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "portfolio-experience-connect",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-[#e9dfcf] py-16"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10"
+          },
+          "blocks": [
+            {
+              "type": "split",
+              "enabled": true,
+              "ratio": "1:1",
+              "className": "items-start gap-14",
+              "leftBlocks": [
+                {
+                  "type": "heading",
+                  "enabled": true,
+                  "text": "✨ Experience",
+                  "level": 2,
+                  "align": "left",
+                  "size": "md",
+                  "className": "font-serif text-5xl"
+                },
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "ilovecreatives Studio\nCreative Director\nDecember 2019 - Present\n\nUse All Five\nSenior Designer\n2017 - 2021\n\nLinkedIn\nDesigner\n2015 - 2017",
+                  "align": "left",
+                  "size": "md",
+                  "className": "text-base leading-8 text-[#334155] whitespace-pre-line"
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "heading",
+                  "enabled": true,
+                  "text": "✨ Connect",
+                  "level": 2,
+                  "align": "left",
+                  "size": "md",
+                  "className": "font-serif text-5xl"
+                },
+                {
+                  "type": "linkList",
+                  "enabled": true,
+                  "className": "flex-col items-start gap-y-4 text-base",
+                  "links": [
+                    {
+                      "text": "💬 mindmnguyen@gmail.com",
+                      "href": "mailto:mindmnguyen@gmail.com",
+                      "className": "text-[#1f2937] underline"
+                    },
+                    {
+                      "text": "📷 Instagram",
+                      "href": "https://instagram.com",
+                      "className": "text-[#1f2937] underline"
+                    },
+                    {
+                      "text": "📌 Pinterest",
+                      "href": "https://pinterest.com",
+                      "className": "text-[#1f2937] underline"
+                    },
+                    {
+                      "text": "🎵 Spotify",
+                      "href": "https://spotify.com",
+                      "className": "text-[#1f2937] underline"
+                    },
+                    {
+                      "text": "💼 LinkedIn",
+                      "href": "https://linkedin.com",
+                      "className": "text-[#1f2937] underline"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "portfolio-footer",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-[#e9dfcf] py-16 border-t border-black/10"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10"
+          },
+          "blocks": [
+            {
+              "type": "split",
+              "enabled": true,
+              "ratio": "1:1",
+              "className": "items-start",
+              "leftBlocks": [
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "PROJECT INQUIRIES\navery.morgan.design@gmail.com",
+                  "align": "left",
+                  "size": "sm",
+                  "className": "text-sm leading-8 text-[#1f2937] whitespace-pre-line"
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "SOCIAL",
+                  "align": "left",
+                  "size": "sm",
+                  "className": "text-sm text-[#1f2937]"
+                },
+                {
+                  "type": "linkList",
+                  "enabled": true,
+                  "className": "justify-start gap-x-6 text-sm",
+                  "links": [
+                    {
+                      "text": "📷 Instagram",
+                      "href": "https://instagram.com",
+                      "className": "text-[#1f2937] underline"
+                    },
+                    {
+                      "text": "📌 Pinterest",
+                      "href": "https://pinterest.com",
+                      "className": "text-[#1f2937] underline"
+                    },
+                    {
+                      "text": "🎵 Spotify",
+                      "href": "https://spotify.com",
+                      "className": "text-[#1f2937] underline"
+                    },
+                    {
+                      "text": "💼 LinkedIn",
+                      "href": "https://linkedin.com",
+                      "className": "text-[#1f2937] underline"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

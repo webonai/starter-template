@@ -97,6 +97,14 @@ export interface LayoutConfig {
   order: string[];
   hiddenSections?: string[];
   pages?: Page[];
+  sections?: Array<{
+    id?: string;
+    key?: string;
+    type?: string;
+    source?: string;
+    enabled?: boolean;
+    data?: Record<string, unknown>;
+  }>;
 }
 
 export interface SiteConfig {

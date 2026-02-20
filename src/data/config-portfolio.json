@@ -1,0 +1,1076 @@
+{
+  "meta": {
+    "siteName": "Alex Carter Portfolio",
+    "description": "Designer and frontend developer portfolio.",
+    "favicon": "/uploads/favicon.ico"
+  },
+  "theme": {
+    "name": "modern",
+    "mode": "light",
+    "colors": {
+      "light": {
+        "primary": "#f97316",
+        "primaryForeground": "#fff7ed",
+        "secondary": "#14532d",
+        "secondaryForeground": "#f0fdf4",
+        "accent": "#84cc16",
+        "accentForeground": "#1a2e05",
+        "destructive": "#ef4444",
+        "destructiveForeground": "#f8fafc",
+        "muted": "#f3f7f2",
+        "mutedForeground": "#5f6f63",
+        "card": "#ffffff",
+        "cardForeground": "#020817",
+        "popover": "#ffffff",
+        "popoverForeground": "#020817",
+        "background": "#ffffff",
+        "foreground": "#020817",
+        "border": "#dfe7de",
+        "input": "#dfe7de",
+        "ring": "#f97316",
+        "neutral": "#f7f9f7"
+      },
+      "dark": {
+        "primary": "#fb923c",
+        "primaryForeground": "#1c1917",
+        "secondary": "#166534",
+        "secondaryForeground": "#dcfce7",
+        "accent": "#a3e635",
+        "accentForeground": "#1a2e05",
+        "destructive": "#f87171",
+        "destructiveForeground": "#fef2f2",
+        "muted": "#173322",
+        "mutedForeground": "#9fb4a3",
+        "card": "#0f172a",
+        "cardForeground": "#f8fafc",
+        "popover": "#0f172a",
+        "popoverForeground": "#f8fafc",
+        "background": "#020817",
+        "foreground": "#f8fafc",
+        "border": "#244335",
+        "input": "#244335",
+        "ring": "#fb923c",
+        "neutral": "#102218"
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "heading": "Inter",
+        "body": "Inter",
+        "mono": "monospace"
+      },
+      "fontSize": {
+        "xs": "0.75rem",
+        "sm": "0.875rem",
+        "base": "1rem",
+        "lg": "1.125rem",
+        "xl": "1.25rem",
+        "2xl": "1.5rem",
+        "3xl": "1.875rem",
+        "4xl": "2.25rem",
+        "5xl": "3rem",
+        "6xl": "3.75rem"
+      },
+      "fontWeight": {
+        "thin": "100",
+        "extralight": "200",
+        "light": "300",
+        "normal": "400",
+        "medium": "500",
+        "semibold": "600",
+        "bold": "700",
+        "extrabold": "800",
+        "black": "900"
+      },
+      "lineHeight": {
+        "none": "1",
+        "tight": "1.25",
+        "snug": "1.375",
+        "normal": "1.5",
+        "relaxed": "1.625",
+        "loose": "2"
+      },
+      "letterSpacing": {
+        "tighter": "-0.05em",
+        "tight": "-0.025em",
+        "normal": "0em",
+        "wide": "0.025em",
+        "wider": "0.05em",
+        "widest": "0.1em"
+      }
+    },
+    "spacing": {
+      "0": "0px",
+      "1": "0.25rem",
+      "2": "0.5rem",
+      "3": "0.75rem",
+      "4": "1rem",
+      "5": "1.25rem",
+      "6": "1.5rem",
+      "8": "2rem",
+      "10": "2.5rem",
+      "12": "3rem",
+      "16": "4rem",
+      "20": "5rem",
+      "24": "6rem",
+      "32": "8rem",
+      "40": "10rem",
+      "48": "12rem",
+      "56": "14rem",
+      "64": "16rem"
+    },
+    "borderRadius": {
+      "none": "0px",
+      "sm": "0.125rem",
+      "base": "0.25rem",
+      "md": "0.375rem",
+      "lg": "0.5rem",
+      "xl": "0.75rem",
+      "2xl": "1rem",
+      "3xl": "1.5rem",
+      "full": "9999px"
+    },
+    "shadows": {
+      "light": {
+        "sm": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        "base": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+        "md": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+        "lg": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+        "xl": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+        "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
+        "none": "none"
+      },
+      "dark": {
+        "sm": "0 1px 2px 0 rgb(0 0 0 / 0.3)",
+        "base": "0 1px 3px 0 rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.4)",
+        "md": "0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4)",
+        "lg": "0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4)",
+        "xl": "0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.4)",
+        "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.5)",
+        "none": "none"
+      }
+    },
+    "borderWidth": {
+      "0": "0px",
+      "1": "1px",
+      "2": "2px",
+      "4": "4px",
+      "8": "8px"
+    },
+    "opacity": {
+      "0": "0",
+      "5": "0.05",
+      "10": "0.1",
+      "20": "0.2",
+      "25": "0.25",
+      "30": "0.3",
+      "40": "0.4",
+      "50": "0.5",
+      "60": "0.6",
+      "70": "0.7",
+      "75": "0.75",
+      "80": "0.8",
+      "90": "0.9",
+      "95": "0.95",
+      "100": "1"
+    },
+    "transitions": {
+      "none": "none",
+      "all": "all 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "colors": "color, background-color, border-color, text-decoration-color, fill, stroke 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "opacity": "opacity 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "shadow": "box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "transform": "transform 150ms cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    "animation": {
+      "duration": {
+        "fast": "150ms",
+        "normal": "300ms",
+        "slow": "500ms",
+        "slower": "1000ms"
+      },
+      "easing": {
+        "linear": "linear",
+        "in": "cubic-bezier(0.4, 0, 1, 1)",
+        "out": "cubic-bezier(0, 0, 0.2, 1)",
+        "inOut": "cubic-bezier(0.4, 0, 0.2, 1)"
+      }
+    },
+    "breakpoints": {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1536px"
+    },
+    "container": {
+      "padding": "1rem",
+      "maxWidth": "1280px"
+    },
+    "zIndex": {
+      "0": "0",
+      "10": "10",
+      "20": "20",
+      "30": "30",
+      "40": "40",
+      "50": "50",
+      "auto": "auto"
+    }
+  },
+  "layout": {
+    "order": [
+      "header",
+      "hero",
+      "features",
+      "footer"
+    ],
+    "hiddenSections": [
+      "testimonials",
+      "faq",
+      "blog",
+      "cta"
+    ],
+    "pages": [
+      {
+        "slug": "",
+        "title": "Home",
+        "href": "/"
+      }
+    ],
+    "sections": [
+      {
+        "id": "home-header-1",
+        "type": "header",
+        "source": "header",
+        "enabled": true
+      },
+      {
+        "id": "home-hero-2",
+        "type": "hero",
+        "source": "hero",
+        "enabled": true
+      },
+      {
+        "id": "home-features-3",
+        "type": "features",
+        "source": "features",
+        "enabled": true
+      },
+      {
+        "id": "home-footer-4",
+        "type": "footer",
+        "source": "footer",
+        "enabled": true
+      }
+    ]
+  },
+  "sections": {
+    "header": {
+      "container": {
+        "enabled": true,
+        "className": "sticky top-0 z-50 w-full border-b border-border bg-background shadow-sm"
+      },
+      "innerWrapper": {
+        "enabled": true,
+        "className": "container mx-auto px-4 sm:px-6 lg:px-8"
+      },
+      "wrapper": {
+        "enabled": true,
+        "className": "flex h-16 items-center justify-between"
+      },
+      "logoWrapper": {
+        "enabled": true,
+        "className": "flex items-center"
+      },
+      "logo": {
+        "enabled": true,
+        "href": "/",
+        "alt": "Alex Carter",
+        "className": "flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm"
+      },
+      "logoImage": {
+        "enabled": true,
+        "src": "/logo.svg",
+        "alt": "Alex Carter",
+        "className": "inline-flex h-9 text-primary [&>svg]:h-full [&>svg]:w-auto"
+      },
+      "nav": {
+        "enabled": true,
+        "className": "hidden lg:flex lg:items-center lg:gap-x-8",
+        "links": [
+          {
+            "enabled": true,
+            "text": "Work",
+            "href": "/#features",
+            "className": "text-sm font-medium text-foreground/70 hover:text-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-1 py-0.5"
+          },
+          {
+            "enabled": true,
+            "text": "About",
+            "href": "/#about",
+            "className": "text-sm font-medium text-foreground/70 hover:text-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-1 py-0.5"
+          },
+          {
+            "enabled": true,
+            "text": "Contact",
+            "href": "/#contact",
+            "className": "text-sm font-medium text-foreground/70 hover:text-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-1 py-0.5"
+          }
+        ]
+      },
+      "actions": {
+        "enabled": true,
+        "className": "flex items-center gap-x-4"
+      },
+      "ctaButton": {
+        "enabled": true,
+        "text": "Contact",
+        "href": "/#contact",
+        "className": "hidden sm:inline-flex rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+      },
+      "mobileMenuButton": {
+        "enabled": true,
+        "className": "lg:hidden inline-flex items-center justify-center rounded-md p-2 text-foreground hover:bg-accent hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+      },
+      "srText": {
+        "enabled": true,
+        "className": "sr-only"
+      },
+      "hamburgerIcon": {
+        "enabled": true,
+        "className": ""
+      },
+      "closeIcon": {
+        "enabled": true,
+        "className": ""
+      },
+      "mobileMenu": {
+        "enabled": true,
+        "className": "lg:hidden border-t border-border bg-background"
+      },
+      "mobileMenuInner": {
+        "enabled": true,
+        "className": "container mx-auto px-4 py-4 space-y-1"
+      },
+      "mobileCTA": {
+        "enabled": true,
+        "className": "mt-4 block w-full rounded-lg bg-primary px-4 py-2.5 text-center text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+      }
+    },
+    "hero": {
+      "container": {
+        "enabled": true,
+        "className": "relative overflow-hidden py-0",
+        "id": "about"
+      },
+      "backgroundGradient": {
+        "enabled": true,
+        "className": "absolute inset-0 -z-10 bg-gradient-to-b from-primary/5 via-background to-background"
+      },
+      "innerWrapper": {
+        "enabled": true,
+        "className": "mx-auto flex min-h-[calc(100vh-4rem)] w-full flex-col lg:h-[calc(100vh-4rem)] lg:min-h-0 lg:flex-row-reverse lg:items-stretch"
+      },
+      "contentWrapper": {
+        "enabled": true,
+        "className": "flex min-h-[calc(100vh-4rem)] w-full flex-col justify-center px-6 py-10 sm:px-10 lg:h-[calc(100vh-4rem)] lg:min-h-0 lg:w-1/2 lg:px-16 xl:px-24 text-left"
+      },
+      "eyebrow": {
+        "enabled": true,
+        "text": "Available for freelance and full-time roles",
+        "className": "mb-5 inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary"
+      },
+      "headline": {
+        "enabled": true,
+        "text": "Designer & Frontend Developer",
+        "className": "text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl mb-5"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "I design and build clean, accessible web experiences for brands and independent founders.",
+        "className": "text-base sm:text-lg leading-7 text-muted-foreground max-w-xl"
+      },
+      "buttonWrapper": {
+        "enabled": true,
+        "className": "mt-8 flex flex-wrap items-center gap-3"
+      },
+      "primaryButton": {
+        "enabled": true,
+        "text": "View Work",
+        "href": "/#features",
+        "className": "rounded-lg bg-primary px-6 py-3 text-base font-semibold text-primary-foreground shadow-lg hover:opacity-90 transition-all hover:scale-105"
+      },
+      "secondaryButton": {
+        "enabled": true,
+        "text": "Contact",
+        "href": "/#contact",
+        "className": "rounded-lg border-2 border-border px-6 py-3 text-base font-semibold text-foreground hover:bg-accent transition-colors"
+      },
+      "stats": [
+        {
+          "enabled": true,
+          "value": "5+",
+          "label": "Years Exp",
+          "icon": "?",
+          "className": "whitespace-nowrap"
+        },
+        {
+          "enabled": true,
+          "value": "40+",
+          "label": "Projects",
+          "icon": "?",
+          "className": "whitespace-nowrap"
+        },
+        {
+          "enabled": true,
+          "value": "Remote",
+          "label": "Remote-Ready",
+          "icon": "?",
+          "className": "whitespace-nowrap"
+        }
+      ],
+      "statsContainer": {
+        "enabled": true,
+        "className": "mt-6 flex flex-nowrap items-center gap-x-6 text-sm overflow-x-auto lg:overflow-visible"
+      },
+      "imageWrapper": {
+        "enabled": true,
+        "className": "relative h-[45vh] w-full lg:h-[calc(100vh-4rem)] lg:w-1/2"
+      },
+      "imageInner": {
+        "enabled": true,
+        "className": "relative h-full w-full"
+      },
+      "imageGlow": {
+        "enabled": false,
+        "className": "absolute inset-0 -z-10 bg-gradient-to-tr from-primary/20 via-primary/5 to-transparent blur-3xl"
+      },
+      "heroImage": {
+        "enabled": true,
+        "src": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1600&q=80",
+        "alt": "Portrait of Alex Carter",
+        "className": "h-full w-full object-cover rounded-none border-0 shadow-none ring-0"
+      }
+    },
+    "features": {
+      "container": {
+        "enabled": true,
+        "className": "relative py-20 sm:py-24 lg:py-32",
+        "styles": {
+          "background": "linear-gradient(135deg, color-mix(in srgb, var(--background) 68%, #f59e0b 32%) 0%, var(--background) 45%, color-mix(in srgb, var(--background) 70%, #84cc16 30%) 100%)"
+        }
+      },
+      "background": {
+        "enabled": false,
+        "className": "absolute inset-0 -z-10 recent-work-gradient"
+      },
+      "innerWrapper": {
+        "enabled": true,
+        "className": "container mx-auto px-4 sm:px-6 lg:px-8"
+      },
+      "header": {
+        "enabled": true,
+        "className": "lg:col-span-4 text-left lg:sticky lg:top-24"
+      },
+      "eyebrow": {
+        "enabled": true,
+        "text": "Selected Work",
+        "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
+      },
+      "headline": {
+        "enabled": true,
+        "text": "Recent Projects",
+        "className": "text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "A few projects focused on product design, frontend build quality, and real user outcomes.",
+        "className": "text-base sm:text-lg text-muted-foreground max-w-md"
+      },
+      "grid": {
+        "enabled": true,
+        "className": "lg:col-span-8"
+      },
+      "items": [
+        {
+          "enabled": true,
+          "className": "group relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md hover:border-primary/50",
+          "icon": {
+            "enabled": false,
+            "emoji": "?",
+            "alt": "Design system",
+            "className": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
+          },
+          "title": {
+            "enabled": true,
+            "text": "Design System Revamp",
+            "className": "text-xl font-semibold text-foreground mb-2"
+          },
+          "description": {
+            "enabled": true,
+            "text": "Built a reusable component library and improved visual consistency across 20+ product screens.",
+            "className": "text-sm text-muted-foreground leading-relaxed"
+          },
+          "link": {
+            "enabled": true,
+            "text": "Case study",
+            "href": "#"
+          },
+          "image": {
+            "enabled": true,
+            "src": "/screenshot-minimalist.png",
+            "alt": "Design System Revamp preview"
+          }
+        },
+        {
+          "enabled": true,
+          "className": "group relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md hover:border-primary/50",
+          "icon": {
+            "enabled": false,
+            "emoji": "?",
+            "alt": "Marketing site",
+            "className": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
+          },
+          "title": {
+            "enabled": true,
+            "text": "Marketing Site Redesign",
+            "className": "text-xl font-semibold text-foreground mb-2"
+          },
+          "description": {
+            "enabled": true,
+            "text": "Redesigned and shipped a performant landing site with improved clarity and conversion flow.",
+            "className": "text-sm text-muted-foreground leading-relaxed"
+          },
+          "link": {
+            "enabled": true,
+            "text": "Case study",
+            "href": "#"
+          },
+          "image": {
+            "enabled": true,
+            "src": "/screenshot-retro.png",
+            "alt": "Marketing Site Redesign preview"
+          }
+        },
+        {
+          "enabled": true,
+          "className": "group relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md hover:border-primary/50",
+          "icon": {
+            "enabled": false,
+            "emoji": "?",
+            "alt": "Dashboard",
+            "className": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
+          },
+          "title": {
+            "enabled": true,
+            "text": "Analytics Dashboard UI",
+            "className": "text-xl font-semibold text-foreground mb-2"
+          },
+          "description": {
+            "enabled": true,
+            "text": "Designed and implemented a data-rich dashboard with clear hierarchy and responsive behavior.",
+            "className": "text-sm text-muted-foreground leading-relaxed"
+          },
+          "link": {
+            "enabled": true,
+            "text": "Case study",
+            "href": "#"
+          },
+          "image": {
+            "enabled": true,
+            "src": "/screenshot.png",
+            "alt": "Analytics Dashboard UI preview"
+          }
+        }
+      ],
+      "ctaWrapper": {
+        "enabled": true,
+        "className": "mt-16 text-center"
+      },
+      "cta": {
+        "enabled": false,
+        "text": "Explore All Features",
+        "href": "/features",
+        "className": "inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-base font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+      },
+      "contentLayout": {
+        "enabled": true,
+        "className": "grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16 items-start"
+      },
+      "variant": "portfolio"
+    },
+    "testimonials": {
+      "container": {
+        "enabled": false,
+        "className": "relative py-20 sm:py-24 lg:py-32 bg-muted/30"
+      },
+      "innerWrapper": {
+        "enabled": true,
+        "className": "container mx-auto px-4 sm:px-6 lg:px-8"
+      },
+      "header": {
+        "enabled": true,
+        "className": "mx-auto max-w-3xl text-center mb-16 sm:mb-20"
+      },
+      "eyebrow": {
+        "enabled": true,
+        "text": "Testimonials",
+        "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
+      },
+      "headline": {
+        "enabled": true,
+        "text": "Client Feedback",
+        "className": "text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-4"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "Selected feedback from collaborators.",
+        "className": "text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto"
+      },
+      "grid": {
+        "enabled": true,
+        "className": "grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3"
+      },
+      "showQuoteIcon": true,
+      "items": []
+    },
+    "blog": {
+      "container": {
+        "enabled": false,
+        "className": "relative py-20 sm:py-24 lg:py-32 bg-background"
+      },
+      "innerWrapper": {
+        "enabled": true,
+        "className": "container mx-auto px-4 sm:px-6 lg:px-8"
+      },
+      "header": {
+        "enabled": true,
+        "className": "flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12 sm:mb-16"
+      },
+      "headerContent": {
+        "enabled": true,
+        "className": "flex-1"
+      },
+      "eyebrow": {
+        "enabled": true,
+        "text": "📝 Blog",
+        "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
+      },
+      "headline": {
+        "enabled": true,
+        "text": "Writing",
+        "className": "text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-4"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "Notes on design, frontend development, and process.",
+        "className": "text-base sm:text-lg text-muted-foreground max-w-2xl"
+      },
+      "viewAllButton": {
+        "enabled": true,
+        "text": "View Posts",
+        "href": "/blog",
+        "className": "inline-flex items-center justify-center rounded-lg border-2 border-border px-5 py-2.5 text-sm font-semibold text-foreground hover:bg-accent transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary whitespace-nowrap"
+      },
+      "grid": {
+        "enabled": true,
+        "className": "mx-auto max-w-6xl grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+      },
+      "maxPosts": 3,
+      "posts": [
+        {
+          "enabled": true,
+          "image": {
+            "enabled": true,
+            "src": "/blog/post-1.jpg",
+            "alt": "Blog post cover"
+          },
+          "imageLink": {
+            "href": "/blog/getting-started"
+          },
+          "category": {
+            "enabled": true,
+            "text": "Tutorial"
+          },
+          "date": {
+            "enabled": true,
+            "text": "Jan 15, 2025",
+            "datetime": "2025-01-15"
+          },
+          "readTime": {
+            "enabled": true,
+            "text": "5 min read"
+          },
+          "title": {
+            "enabled": true,
+            "text": "Getting Started with Our Platform"
+          },
+          "titleLink": {
+            "href": "/blog/getting-started"
+          },
+          "excerpt": {
+            "enabled": true,
+            "text": "Learn the fundamentals and get up and running in just a few minutes with our comprehensive getting started guide."
+          },
+          "author": {
+            "enabled": true,
+            "name": "Sarah Johnson",
+            "avatar": {
+              "enabled": true,
+              "src": "/avatars/sarah.jpg",
+              "alt": "Sarah Johnson"
+            }
+          },
+          "readMore": {
+            "enabled": true,
+            "text": "Read article",
+            "href": "/blog/getting-started"
+          }
+        }
+      ]
+    },
+    "cta": {
+      "container": {
+        "enabled": false,
+        "className": "relative isolate py-20 sm:py-24 lg:py-32"
+      },
+      "background": {
+        "enabled": true,
+        "className": "absolute inset-0 -z-10 bg-gradient-to-br from-primary/90 via-primary to-primary/80"
+      },
+      "pattern": {
+        "enabled": true,
+        "className": "absolute inset-0 -z-10 bg-[url('/grid-pattern.svg')] opacity-10"
+      },
+      "innerWrapper": {
+        "enabled": true,
+        "className": "container mx-auto px-4 sm:px-6 lg:px-8"
+      },
+      "content": {
+        "enabled": true,
+        "className": "mx-auto max-w-4xl text-center"
+      },
+      "eyebrow": {
+        "enabled": true,
+        "text": "Contact",
+        "className": "inline-flex items-center rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3 py-1 text-xs font-medium text-primary-foreground mb-6"
+      },
+      "headline": {
+        "enabled": true,
+        "text": "Let's work together",
+        "className": "text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl lg:text-5xl mb-6"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "Available for design and frontend projects.",
+        "className": "text-lg sm:text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-10"
+      },
+      "buttonWrapper": {
+        "enabled": true,
+        "className": "flex flex-col sm:flex-row items-center justify-center gap-4"
+      },
+      "primaryButton": {
+        "enabled": true,
+        "text": "Send Email",
+        "href": "mailto:hello@example.com",
+        "className": "inline-flex items-center justify-center rounded-lg bg-primary-foreground px-6 py-3 text-base font-semibold text-primary shadow-lg hover:bg-primary-foreground/90 transition-all hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
+      },
+      "secondaryButton": {
+        "enabled": false,
+        "text": "",
+        "href": "/",
+        "className": "inline-flex items-center justify-center rounded-lg border-2 border-primary-foreground/30 px-6 py-3 text-base font-semibold text-primary-foreground hover:bg-primary-foreground/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground"
+      },
+      "featuresWrapper": {
+        "enabled": true,
+        "className": "mt-10 flex flex-wrap justify-center gap-x-8 gap-y-4"
+      },
+      "features": []
+    },
+    "faq": {
+      "container": {
+        "enabled": false,
+        "className": "relative py-20 sm:py-24 lg:py-32"
+      },
+      "innerWrapper": {
+        "enabled": true,
+        "className": "container mx-auto px-4 sm:px-6 lg:px-8"
+      },
+      "headerWrapper": {
+        "enabled": true,
+        "className": "mx-auto max-w-3xl text-center mb-16 sm:mb-20"
+      },
+      "eyebrow": {
+        "enabled": true,
+        "text": "FAQ",
+        "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
+      },
+      "header": {
+        "enabled": true,
+        "text": "FAQ",
+        "className": "text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-4"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "Common questions about process and availability.",
+        "className": "text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto"
+      },
+      "list": {
+        "enabled": true,
+        "className": "mx-auto max-w-3xl space-y-4"
+      },
+      "questions": []
+    },
+    "blogIndex": {
+      "container": {
+        "enabled": true,
+        "className": "relative py-20 sm:py-24 lg:py-32"
+      },
+      "innerWrapper": {
+        "enabled": true,
+        "className": "container mx-auto px-4 sm:px-6 lg:px-8"
+      },
+      "header": {
+        "enabled": true,
+        "className": "mx-auto max-w-3xl text-center mb-16 sm:mb-20"
+      },
+      "eyebrow": {
+        "enabled": true,
+        "text": "Blog",
+        "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
+      },
+      "headline": {
+        "enabled": true,
+        "text": "Writing",
+        "className": "text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-4"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "Notes on design, frontend development, and process.",
+        "className": "text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto"
+      },
+      "categoryFilter": {
+        "enabled": true,
+        "className": "flex flex-wrap justify-center gap-3 mb-12 sm:mb-16"
+      },
+      "categoryAllLabel": {
+        "enabled": true,
+        "text": "All"
+      },
+      "grid": {
+        "enabled": true,
+        "className": "mx-auto max-w-6xl grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+      },
+      "emptyState": {
+        "enabled": true,
+        "text": "No posts found.",
+        "className": "text-lg text-muted-foreground"
+      },
+      "emptyStateLink": {
+        "enabled": true,
+        "text": "View all posts",
+        "href": "/blog",
+        "className": "mt-4 inline-flex items-center text-sm font-medium text-primary hover:underline"
+      },
+      "pagination": {
+        "enabled": true,
+        "className": "flex items-center justify-center gap-3 mt-16"
+      },
+      "prevButton": {
+        "enabled": true,
+        "text": "Previous",
+        "className": "inline-flex items-center rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-all hover:border-primary/30 hover:shadow-md"
+      },
+      "nextButton": {
+        "enabled": true,
+        "text": "Next",
+        "className": "inline-flex items-center rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-all hover:border-primary/30 hover:shadow-md"
+      }
+    },
+    "blogPost": {
+      "container": {
+        "enabled": true,
+        "className": "relative py-20 sm:py-24 lg:py-32"
+      },
+      "innerWrapper": {
+        "enabled": true,
+        "className": "container mx-auto px-4 sm:px-6 lg:px-8"
+      },
+      "contentWrapper": {
+        "enabled": true,
+        "className": "mx-auto max-w-3xl"
+      },
+      "backLink": {
+        "enabled": true,
+        "text": "Back to Writing",
+        "href": "/blog",
+        "className": "group mb-10 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-muted-foreground shadow-sm transition-all hover:border-primary/30 hover:text-primary hover:shadow-md"
+      },
+      "category": {
+        "enabled": true,
+        "className": "mb-4"
+      },
+      "title": {
+        "enabled": true,
+        "className": "text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-6"
+      },
+      "meta": {
+        "enabled": true,
+        "className": "flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-10"
+      },
+      "imageWrapper": {
+        "enabled": true,
+        "className": "mx-auto max-w-4xl mb-12 sm:mb-16"
+      },
+      "content": {
+        "enabled": true,
+        "className": "prose prose-lg max-w-none text-muted-foreground prose-headings:text-foreground prose-headings:font-bold prose-headings:tracking-tight prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-blockquote:border-primary/30 prose-blockquote:text-muted-foreground prose-code:text-primary prose-code:bg-muted prose-code:rounded prose-code:px-1.5 prose-code:py-0.5 prose-code:text-sm prose-code:before:content-none prose-code:after:content-none prose-img:rounded-xl prose-img:border prose-img:border-border prose-img:shadow-md"
+      },
+      "bottomNav": {
+        "enabled": true,
+        "className": "mt-16 border-t border-border pt-8"
+      },
+      "backToAllLink": {
+        "enabled": true,
+        "text": "Back to all posts",
+        "href": "/blog",
+        "className": "group inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+      }
+    },
+    "dynamicPage": {
+      "container": {
+        "enabled": true,
+        "className": "py-24 sm:py-32 bg-background"
+      },
+      "innerWrapper": {
+        "enabled": true,
+        "className": "container mx-auto px-6 lg:px-8"
+      },
+      "contentWrapper": {
+        "enabled": true,
+        "className": "mx-auto max-w-2xl text-center"
+      }
+    },
+    "footer": {
+      "container": {
+        "enabled": true,
+        "className": "bg-stone-100 dark:bg-stone-800 py-10 text-stone-900 dark:text-lime-50 border-t border-stone-300 dark:border-stone-700",
+        "id": "contact"
+      },
+      "innerWrapper": {
+        "enabled": true,
+        "className": "container mx-auto px-4 sm:px-6 lg:px-8 py-10"
+      },
+      "mainContent": {
+        "enabled": true,
+        "className": "flex flex-col gap-6 md:flex-row md:items-center md:justify-between mb-6"
+      },
+      "brandColumn": {
+        "enabled": true,
+        "className": "max-w-md"
+      },
+      "logo": {
+        "enabled": true,
+        "src": "/logo.svg",
+        "alt": "Alex Carter",
+        "href": "/"
+      },
+      "tagline": {
+        "enabled": true,
+        "text": "Open to design and frontend opportunities. Reach me on email or social links.",
+        "className": "text-stone-700 dark:text-lime-100/90 mb-6 max-w-sm"
+      },
+      "socialWrapper": {
+        "enabled": true,
+        "className": "flex items-center gap-4"
+      },
+      "socialLinks": [
+        {
+          "enabled": true,
+          "platform": "github",
+          "label": "GitHub",
+          "href": "https://github.com/your-handle",
+          "icon": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z'/></svg>"
+        },
+        {
+          "enabled": true,
+          "platform": "linkedin",
+          "label": "LinkedIn",
+          "href": "https://linkedin.com/in/your-handle",
+          "icon": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'/></svg>"
+        },
+        {
+          "enabled": true,
+          "platform": "email",
+          "label": "Email",
+          "href": "mailto:hello@example.com",
+          "icon": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M1.5 5.25A2.25 2.25 0 0 1 3.75 3h16.5a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 20.25 21H3.75A2.25 2.25 0 0 1 1.5 18.75V5.25zm2.806-.75L12 10.22l7.694-5.72H4.306zM21 6.03l-8.307 6.172a1.125 1.125 0 0 1-1.386 0L3 6.03v12.72c0 .207.168.375.375.375h17.25a.375.375 0 0 0 .375-.375V6.03z'/></svg>"
+        }
+      ],
+      "linkColumns": [
+        {
+          "enabled": true,
+          "title": {
+            "enabled": false,
+            "text": "Navigate"
+          },
+          "links": [
+            {
+              "enabled": true,
+              "text": "Home",
+              "href": "/"
+            },
+            {
+              "enabled": true,
+              "text": "Work",
+              "href": "/#features"
+            },
+            {
+              "enabled": true,
+              "text": "Contact",
+              "href": "/#contact"
+            }
+          ]
+        },
+        {
+          "enabled": false,
+          "title": {
+            "enabled": false,
+            "text": ""
+          },
+          "links": []
+        },
+        {
+          "enabled": false,
+          "title": {
+            "enabled": false,
+            "text": ""
+          },
+          "links": []
+        },
+        {
+          "enabled": false,
+          "title": {
+            "enabled": false,
+            "text": ""
+          },
+          "links": []
+        }
+      ],
+      "bottomBar": {
+        "enabled": true,
+        "className": "pt-6 border-t border-stone-300 dark:border-stone-700 flex items-center justify-between gap-4"
+      },
+      "copyright": {
+        "enabled": true,
+        "text": "? 2026 Alex Carter. All rights reserved.",
+        "className": "text-sm text-stone-700 dark:text-lime-100/80"
+      },
+      "bottomLinksWrapper": {
+        "enabled": false,
+        "className": "flex flex-wrap justify-center gap-x-6 gap-y-2"
+      },
+      "bottomLinks": []
+    }
+  }
+}

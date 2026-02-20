@@ -1,0 +1,8 @@
+<svg width="250" height="48" viewBox="0 0 250 48" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <g fill="currentColor">
+    <text x="0" y="21" font-family="Georgia, 'Times New Roman', serif" font-size="14" letter-spacing="2.5">MOSS & OLIVE</text>
+    <text x="0" y="38" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="2">KITCHEN & TABLE</text>
+    <circle cx="236" cy="23" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+    <path d="M236 16v14M229 23h14" stroke="currentColor" stroke-width="1.2"/>
+  </g>
+</svg>

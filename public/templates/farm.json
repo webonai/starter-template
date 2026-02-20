@@ -1,0 +1,370 @@
+{
+  "meta": {
+    "siteName": "Camp Bernier",
+    "description": "Farm camp with nature-based creative programs and seasonal family events."
+  },
+  "theme": {
+    "mode": "light",
+    "colors": {
+      "light": {
+        "primary": "#365314",
+        "primaryForeground": "#f7fee7",
+        "secondary": "#1f2937",
+        "secondaryForeground": "#f9fafb",
+        "accent": "#b45309",
+        "accentForeground": "#fff7ed",
+        "background": "#f8f7f2",
+        "foreground": "#1f2937",
+        "muted": "#e7e5df",
+        "mutedForeground": "#4b5563",
+        "border": "#d6d3cd",
+        "ring": "#65a30d"
+      },
+      "dark": {
+        "primary": "#a3e635",
+        "primaryForeground": "#1f2937",
+        "secondary": "#111827",
+        "secondaryForeground": "#e5e7eb",
+        "accent": "#d97706",
+        "accentForeground": "#1f1300",
+        "background": "#11120f",
+        "foreground": "#ece9e1",
+        "muted": "#1a1c18",
+        "mutedForeground": "#a8a29e",
+        "border": "#2b2f28",
+        "ring": "#a3e635"
+      }
+    }
+  },
+  "layout": {
+    "order": [],
+    "hiddenSections": [
+      "header",
+      "hero",
+      "features",
+      "testimonials",
+      "faq",
+      "blog",
+      "cta",
+      "footer"
+    ],
+    "sections": [
+      {
+        "id": "farm-shell",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "p-0 py-0 sm:py-0 lg:py-0"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "w-full max-w-none !max-w-none !px-0 px-0 lg:px-0 space-y-0"
+          },
+          "blocks": [
+            {
+              "type": "group",
+              "enabled": true,
+              "className": "fixed inset-x-0 top-0 z-50 bg-muted border-b border-white/20",
+              "blocks": [
+                {
+                  "type": "navBar",
+                  "enabled": true,
+                  "className": "container mx-auto px-6 lg:px-10 h-16",
+                  "brandImageSrc": "/logos/farmmark.svg",
+                  "brandImageAlt": "Camp Bernier",
+                  "brandHref": "/",
+                  "brandText": "Camp Bernier",
+                  "links": [
+                    {
+                      "text": "About",
+                      "href": "#"
+                    },
+                    {
+                      "text": "Programs",
+                      "href": "#tracks"
+                    },
+                    {
+                      "text": "Contact",
+                      "href": "#contact"
+                    }
+                  ],
+                  "ctaText": "Enroll",
+                  "ctaHref": "#contact"
+                }
+              ]
+            },
+            {
+              "type": "heroOverlay",
+              "enabled": true,
+              "src": "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=2600&q=80",
+              "alt": "Camp lake and forest scene",
+              "minHeightClassName": "min-h-[76vh]",
+              "overlayClassName": "absolute inset-0 z-10 bg-gradient-to-b from-black/55 via-black/45 to-black/65",
+              "noteText": "Open June - Oct",
+              "noteClassName": "pointer-events-none absolute right-6 top-24 z-20 text-[11px] uppercase tracking-[0.18em] text-white/90 sm:right-10 lg:right-14",
+              "contentClassName": "relative z-20 container mx-auto min-h-[76vh] px-6 lg:px-10 flex items-end pb-8",
+              "blocks": [
+                {
+                  "type": "heading",
+                  "enabled": true,
+                  "text": "Where Creativity Runs Free",
+                  "level": 1,
+                  "align": "left",
+                  "size": "lg",
+                  "className": "font-serif text-5xl sm:text-6xl lg:text-7xl leading-[0.96] tracking-tight text-white"
+                },
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Farm days for curious kids with nature craft, movement, music, and open-air play.",
+                  "align": "left",
+                  "size": "md",
+                  "className": "max-w-xl text-base sm:text-lg leading-8 text-white/90"
+                }
+              ],
+              "className": "relative overflow-hidden min-h-[76vh] ring-1 ring-white/60 ring-inset",
+              "leftNoteText": "Camp Bernier, Quebec",
+              "leftNoteClassName": "pointer-events-none absolute left-6 top-24 z-20 text-[11px] uppercase tracking-[0.18em] text-white/90 sm:left-10 lg:left-14"
+            }
+          ]
+        }
+      },
+      {
+        "id": "farm-red-intro",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-[#ef233c] py-20 text-[#fff8e8]"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 space-y-8"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "A FARM CAMP",
+              "size": "sm",
+              "align": "left",
+              "className": "text-xs uppercase tracking-[0.22em] text-[#ffe9a8]"
+            },
+            {
+              "type": "heading",
+              "enabled": true,
+              "text": "Nature, Movement, and Making",
+              "level": 2,
+              "size": "md",
+              "align": "left",
+              "className": "font-serif text-5xl sm:text-6xl leading-[1.02] tracking-tight text-[#fff8e8]"
+            },
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "Every week blends art workshops, farm exploration, and collaborative play designed to build confidence and curiosity.",
+              "size": "md",
+              "align": "left",
+              "className": "text-base sm:text-lg leading-8 text-[#fff1d6]"
+            }
+          ]
+        }
+      },
+      {
+        "id": "farm-quote-image",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-[#1f3b2d] py-0"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "max-w-none px-0 space-y-0"
+          },
+          "blocks": [
+            {
+              "type": "image",
+              "enabled": true,
+              "src": "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=2400&q=80",
+              "alt": "Pumpkin field on family farm",
+              "size": "lg",
+              "className": "aspect-[21/9] rounded-none border-0"
+            },
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "Because summer should be messy, magical, and creatively yours.",
+              "size": "md",
+              "align": "center",
+              "className": "bg-[#1f3b2d] py-10 text-2xl font-medium text-[#f4f7ee]"
+            }
+          ]
+        }
+      },
+      {
+        "id": "farm-tracks",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "id": "tracks",
+            "className": "bg-[#ece6cf] py-24 border-y border-black/20"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 space-y-8"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "PROGRAMS",
+              "size": "sm",
+              "align": "left",
+              "className": "text-xs uppercase tracking-[0.22em]"
+            },
+            {
+              "type": "heading",
+              "enabled": true,
+              "text": "Creative Tracks to Explore",
+              "level": 2,
+              "size": "md",
+              "align": "left",
+              "className": "font-serif text-5xl leading-tight"
+            },
+            {
+              "type": "cards",
+              "enabled": true,
+              "size": "lg",
+              "items": [
+                {
+                  "title": "Shape & Color",
+                  "text": "Painting, fabric dye, sculpture, and nature-based craft sessions for hands-on makers.",
+                  "href": "#contact"
+                },
+                {
+                  "title": "Sound & Song",
+                  "text": "Rhythm circles, voice workshops, and collaborative songwriting outdoors.",
+                  "href": "#contact"
+                },
+                {
+                  "title": "Stage & Story",
+                  "text": "Movement, improv, and storytelling games that build confidence and imagination.",
+                  "href": "#contact"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "farm-footer",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "id": "contact",
+            "className": "bg-[#e7e1c7] border-t border-black/20 py-12 text-black"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 space-y-8"
+          },
+          "blocks": [
+            {
+              "type": "split",
+              "enabled": true,
+              "ratio": "2:1",
+              "leftBlocks": [
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Camp Bernier. Summer farm camp for curious kids and creative families.",
+                  "align": "left",
+                  "size": "md",
+                  "className": "max-w-xl text-sm text-black/80"
+                },
+                {
+                  "type": "formRow",
+                  "enabled": true,
+                  "inputType": "email",
+                  "inputName": "email",
+                  "inputPlaceholder": "Your email address",
+                  "buttonText": "Sign Up"
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Explore",
+                  "align": "left",
+                  "size": "sm",
+                  "className": "text-xs uppercase tracking-[0.18em]"
+                },
+                {
+                  "type": "linkList",
+                  "enabled": true,
+                  "className": "flex-col items-start gap-y-3",
+                  "links": [
+                    {
+                      "text": "Programs",
+                      "href": "#tracks"
+                    },
+                    {
+                      "text": "Contact",
+                      "href": "#contact"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "divider",
+              "enabled": true
+            },
+            {
+              "type": "split",
+              "enabled": true,
+              "ratio": "2:1",
+              "leftBlocks": [
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "(c) 2026 Camp Bernier",
+                  "align": "left",
+                  "size": "sm",
+                  "className": "text-xs uppercase tracking-[0.14em] text-black/70"
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "linkList",
+                  "enabled": true,
+                  "className": "justify-start lg:justify-end gap-x-5",
+                  "links": [
+                    {
+                      "text": "Privacy",
+                      "href": "#"
+                    },
+                    {
+                      "text": "Terms",
+                      "href": "#"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,559 @@
+{
+  "meta": {
+    "siteName": "Brightline Agency",
+    "description": "Strategy, brand, and web systems for ambitious teams."
+  },
+  "theme": {
+    "mode": "light",
+    "colors": {
+      "light": {
+        "primary": "#3b2abf",
+        "primaryForeground": "#f8f7ff",
+        "secondary": "#0f766e",
+        "secondaryForeground": "#ecfeff",
+        "accent": "#e8d2c3",
+        "accentForeground": "#221b17",
+        "background": "#f1f2f4",
+        "foreground": "#131313",
+        "muted": "#e4e5e8",
+        "mutedForeground": "#4b5563",
+        "border": "#d2d5da",
+        "ring": "#3b2abf"
+      },
+      "dark": {
+        "primary": "#8b7fff",
+        "primaryForeground": "#130f2e",
+        "secondary": "#2dd4bf",
+        "secondaryForeground": "#052e2b",
+        "accent": "#3c2f29",
+        "accentForeground": "#f4e8df",
+        "background": "#101216",
+        "foreground": "#e7e9ef",
+        "muted": "#1a1e25",
+        "mutedForeground": "#9aa3b3",
+        "border": "#2a303a",
+        "ring": "#8b7fff"
+      }
+    }
+  },
+  "layout": {
+    "order": [],
+    "hiddenSections": [
+      "header",
+      "hero",
+      "features",
+      "testimonials",
+      "faq",
+      "blog",
+      "cta",
+      "footer"
+    ],
+    "sections": [
+      {
+        "id": "agency-nav",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "sticky top-0 z-50 py-0 sm:py-0 lg:py-0 border-b border-black/10 bg-[#edd8d0]/90 backdrop-blur"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 py-0"
+          },
+          "blocks": [
+            {
+              "type": "navBar",
+              "enabled": true,
+              "className": "h-14",
+              "brandText": "Brightline",
+              "brandHref": "#",
+              "links": [
+                {
+                  "text": "Services",
+                  "href": "#use-cases"
+                },
+                {
+                  "text": "Case Studies",
+                  "href": "#stories"
+                },
+                {
+                  "text": "Process",
+                  "href": "#features"
+                },
+                {
+                  "text": "Contact",
+                  "href": "#contact"
+                }
+              ],
+              "ctaText": "Start Project",
+              "ctaHref": "#contact"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agency-hero",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-[#edd8d0] py-14"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 space-y-10"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "Creative partner for fast-moving teams",
+              "size": "sm",
+              "align": "center",
+              "className": "text-xs uppercase tracking-[0.2em] text-black/65"
+            },
+            {
+              "type": "heading",
+              "enabled": true,
+              "text": "Strategy, brand, and websites that convert.",
+              "level": 1,
+              "size": "md",
+              "align": "center",
+              "className": "font-serif text-5xl sm:text-6xl leading-[1.02] tracking-tight text-black"
+            },
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "We help startups and growth-stage companies clarify positioning, ship standout brand systems, and launch high-performing marketing sites.",
+              "size": "md",
+              "align": "center",
+              "className": "mx-auto max-w-3xl text-base sm:text-lg text-black/75"
+            },
+            {
+              "type": "buttonRow",
+              "enabled": true,
+              "size": "md",
+              "align": "center",
+              "buttons": [
+                {
+                  "text": "Book Discovery Call",
+                  "href": "#contact",
+                  "variant": "primary"
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "enabled": true,
+              "src": "https://images.unsplash.com/photo-1587614382346-4ec70e388b28?auto=format&fit=crop&w=2200&q=80",
+              "alt": "Agency team working on website strategy",
+              "size": "lg",
+              "className": "mx-auto aspect-[16/8] rounded-xl border border-black/10"
+            }
+          ]
+        }
+      },
+      {
+        "id": "agency-trust",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-[#f1f2f4] py-10"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 space-y-6"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "Trusted by product and service teams",
+              "size": "sm",
+              "align": "center",
+              "className": "text-xs uppercase tracking-[0.18em] text-black/60"
+            },
+            {
+              "type": "linkList",
+              "enabled": true,
+              "className": "justify-center gap-x-8 text-sm font-medium text-black/70",
+              "links": [
+                {
+                  "text": "Northpeak",
+                  "href": "#"
+                },
+                {
+                  "text": "Tebra",
+                  "href": "#"
+                },
+                {
+                  "text": "Serenis",
+                  "href": "#"
+                },
+                {
+                  "text": "Occurx",
+                  "href": "#"
+                },
+                {
+                  "text": "DraStore",
+                  "href": "#"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "agency-use-cases",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "id": "use-cases",
+            "className": "bg-[#f1f2f4] py-20"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 space-y-10"
+          },
+          "blocks": [
+            {
+              "type": "heading",
+              "enabled": true,
+              "text": "Services built for outcomes",
+              "level": 2,
+              "size": "md",
+              "align": "center",
+              "className": "font-serif text-5xl leading-tight"
+            },
+            {
+              "type": "split",
+              "enabled": true,
+              "ratio": "1:1",
+              "leftBlocks": [
+                {
+                  "type": "image",
+                  "enabled": true,
+                  "src": "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&w=1200&q=80",
+                  "alt": "Team on video conference",
+                  "size": "lg",
+                  "className": "aspect-[16/10] rounded-lg border border-black/10"
+                },
+                {
+                  "type": "heading",
+                  "enabled": true,
+                  "text": "Brand & Positioning",
+                  "level": 3,
+                  "align": "left",
+                  "size": "md",
+                  "className": "text-3xl"
+                },
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Naming, messaging, visual identity, and brand systems that create clarity and trust.",
+                  "align": "left",
+                  "size": "md"
+                },
+                {
+                  "type": "buttonRow",
+                  "enabled": true,
+                  "align": "left",
+                  "buttons": [
+                    {
+                      "text": "Explore Branding",
+                      "href": "#contact",
+                      "variant": "primary"
+                    }
+                  ]
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "image",
+                  "enabled": true,
+                  "src": "https://images.unsplash.com/photo-1616587894289-86480e533129?auto=format&fit=crop&w=1200&q=80",
+                  "alt": "Product UI for video SDK",
+                  "size": "lg",
+                  "className": "aspect-[16/10] rounded-lg border border-black/10"
+                },
+                {
+                  "type": "heading",
+                  "enabled": true,
+                  "text": "Web Design & Growth",
+                  "level": 3,
+                  "align": "left",
+                  "size": "md",
+                  "className": "text-3xl"
+                },
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Conversion-focused websites, landing systems, analytics, and optimization programs.",
+                  "align": "left",
+                  "size": "md"
+                },
+                {
+                  "type": "buttonRow",
+                  "enabled": true,
+                  "align": "left",
+                  "buttons": [
+                    {
+                      "text": "Explore Web Services",
+                      "href": "#contact",
+                      "variant": "primary"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "agency-why",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "id": "features",
+            "className": "bg-[#e6d3b7] py-20"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 space-y-8"
+          },
+          "blocks": [
+            {
+              "type": "split",
+              "enabled": true,
+              "ratio": "1:2",
+              "leftBlocks": [
+                {
+                  "type": "heading",
+                  "enabled": true,
+                  "text": "Why Brightline?",
+                  "level": 2,
+                  "align": "left",
+                  "size": "md",
+                  "className": "font-serif text-6xl leading-[0.95]"
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "cards",
+                  "enabled": true,
+                  "size": "lg",
+                  "items": [
+                    {
+                      "title": "Senior team only",
+                      "text": "Work directly with senior strategists, designers, and builders from kickoff to launch."
+                    },
+                    {
+                      "title": "Reliable delivery",
+                      "text": "Clear milestones, proactive communication, and predictable execution across every phase."
+                    },
+                    {
+                      "title": "Business-first design",
+                      "text": "Every output is tied to conversion, retention, and measurable pipeline impact."
+                    },
+                    {
+                      "title": "Long-term support",
+                      "text": "Post-launch optimization, experiments, and system maintenance without handoff friction."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "agency-quote",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-[#f1f2f4] py-20"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10"
+          },
+          "blocks": [
+            {
+              "type": "group",
+              "enabled": true,
+              "className": "mx-auto max-w-6xl rounded-xl bg-[#edd8d0] px-8 py-14 text-center",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "\"Brightline gave us a sharper positioning and a new site that doubled qualified demo requests in one quarter.\"",
+                  "size": "md",
+                  "align": "center",
+                  "className": "font-serif text-4xl leading-[1.2] text-black"
+                },
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Maya Chen, VP Marketing at Northpeak",
+                  "size": "sm",
+                  "align": "center",
+                  "className": "text-sm text-black/70"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "agency-stories",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "id": "stories",
+            "className": "bg-[#f1f2f4] py-20"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 space-y-10"
+          },
+          "blocks": [
+            {
+              "type": "heading",
+              "enabled": true,
+              "text": "Explore client case studies",
+              "level": 2,
+              "size": "md",
+              "align": "center",
+              "className": "font-serif text-5xl"
+            },
+            {
+              "type": "imageGrid",
+              "enabled": true,
+              "size": "lg",
+              "items": [
+                {
+                  "src": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80",
+                  "alt": "Team dashboard story",
+                  "caption": "Rebrand and website relaunch for B2B SaaS"
+                },
+                {
+                  "src": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
+                  "alt": "Product call center story",
+                  "caption": "How we increased conversion rate by 38%"
+                },
+                {
+                  "src": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80",
+                  "alt": "Remote collaboration story",
+                  "caption": "From fragmented pages to scalable growth system"
+                }
+              ]
+            },
+            {
+              "type": "buttonRow",
+              "enabled": true,
+              "align": "center",
+              "buttons": [
+                {
+                  "text": "View Case Studies",
+                  "href": "#",
+                  "variant": "primary"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "agency-footer",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "id": "contact",
+            "className": "bg-[#f1f2f4] py-20 border-t border-black/10"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 space-y-8"
+          },
+          "blocks": [
+            {
+              "type": "split",
+              "enabled": true,
+              "ratio": "1:1",
+              "leftBlocks": [
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Brightline Agency",
+                  "align": "left",
+                  "size": "sm",
+                  "className": "font-semibold uppercase tracking-[0.14em] text-black"
+                },
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "hello@brightline.agency",
+                  "align": "left",
+                  "size": "sm",
+                  "className": "text-black/70"
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "linkList",
+                  "enabled": true,
+                  "className": "justify-start lg:justify-end gap-x-8 text-sm text-black/80",
+                  "links": [
+                    {
+                      "text": "About",
+                      "href": "#"
+                    },
+                    {
+                      "text": "Services",
+                      "href": "#use-cases"
+                    },
+                    {
+                      "text": "Case Studies",
+                      "href": "#stories"
+                    },
+                    {
+                      "text": "Pricing",
+                      "href": "#"
+                    },
+                    {
+                      "text": "Contact",
+                      "href": "#contact"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "(c) 2026 Brightline Agency",
+              "align": "left",
+              "size": "sm",
+              "className": "text-xs uppercase tracking-[0.12em] text-black/60"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

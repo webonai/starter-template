@@ -1,0 +1,462 @@
+{
+  "meta": {
+    "siteName": "Lens Atelier",
+    "description": "LA-based photography studio for seasonal editorial and still life collections."
+  },
+  "theme": {
+    "mode": "light",
+    "colors": {
+      "light": {
+        "primary": "#101114",
+        "primaryForeground": "#f2f2f2",
+        "secondary": "#17191d",
+        "secondaryForeground": "#e5e7eb",
+        "accent": "#d4d4d4",
+        "accentForeground": "#101114",
+        "background": "#e5e5e5",
+        "foreground": "#111111",
+        "muted": "#d9d9d9",
+        "mutedForeground": "#2f2f2f",
+        "border": "#1f1f1f",
+        "ring": "#111111"
+      },
+      "dark": {
+        "primary": "#f2f2f2",
+        "primaryForeground": "#101114",
+        "secondary": "#20242a",
+        "secondaryForeground": "#e5e7eb",
+        "accent": "#4b5563",
+        "accentForeground": "#f2f2f2",
+        "background": "#121418",
+        "foreground": "#eceff4",
+        "muted": "#1b1f24",
+        "mutedForeground": "#b7bec8",
+        "border": "#2a313a",
+        "ring": "#e5e7eb"
+      }
+    }
+  },
+  "layout": {
+    "order": [
+      "header",
+      "footer"
+    ],
+    "hiddenSections": [
+      "hero",
+      "features",
+      "testimonials",
+      "faq",
+      "blog",
+      "cta"
+    ],
+    "sections": [
+      {
+        "id": "photo-header",
+        "type": "header",
+        "source": "header",
+        "enabled": true
+      },
+      {
+        "id": "photo-intro",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-neutral-200 pt-28 pb-24 border-b border-neutral-900"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 space-y-10"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "LA-BASED PHOTOGRAPHY BY SARA KARAZI",
+              "size": "sm",
+              "align": "left",
+              "className": "font-serif text-xs tracking-[0.28em] uppercase text-neutral-900"
+            },
+            {
+              "type": "image",
+              "enabled": true,
+              "src": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=2200&q=80",
+              "alt": "Editorial portrait in studio light",
+              "size": "lg",
+              "className": "aspect-[16/7] rounded-none border-neutral-900"
+            },
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "Editorial portraiture with a restrained palette, precise composition, and seasonal release drops.",
+              "size": "sm",
+              "align": "left",
+              "className": "font-serif text-sm leading-7 text-neutral-800"
+            },
+            {
+              "type": "buttonRow",
+              "enabled": true,
+              "size": "sm",
+              "align": "left",
+              "buttons": [
+                {
+                  "text": "View Collections",
+                  "href": "#winter",
+                  "variant": "secondary"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "photo-winter",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-neutral-200 py-24 border-b border-neutral-900"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 space-y-10",
+            "id": "winter"
+          },
+          "blocks": [
+            {
+              "type": "heading",
+              "enabled": true,
+              "text": "WINTER COLLECTION",
+              "level": 2,
+              "size": "sm",
+              "align": "left",
+              "className": "font-serif text-2xl tracking-[0.14em]"
+            },
+            {
+              "type": "imageGrid",
+              "enabled": true,
+              "size": "lg",
+              "items": [
+                {
+                  "src": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
+                  "alt": "Black and white portrait",
+                  "caption": "Quiet frame"
+                },
+                {
+                  "src": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80",
+                  "alt": "Studio fashion portrait",
+                  "caption": "Winter line"
+                },
+                {
+                  "src": "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80",
+                  "alt": "Editorial lookbook shot",
+                  "caption": "Soft contrast"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "Portrait studies shot on muted backdrops with soft directional light and textured fabric styling.",
+              "size": "sm",
+              "align": "left",
+              "className": "font-serif text-sm leading-7 text-neutral-800"
+            }
+          ]
+        }
+      },
+      {
+        "id": "photo-fall",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-neutral-200 py-24 border-b border-neutral-900"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 space-y-10"
+          },
+          "blocks": [
+            {
+              "type": "heading",
+              "enabled": true,
+              "text": "FALL COLLECTION",
+              "level": 2,
+              "size": "sm",
+              "align": "left",
+              "className": "font-serif text-2xl tracking-[0.14em]"
+            },
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "A warmer palette built around street textures, earth tones, and movement-led direction.",
+              "size": "sm",
+              "align": "left",
+              "className": "font-serif text-sm leading-7 text-neutral-800"
+            },
+            {
+              "type": "image",
+              "enabled": true,
+              "src": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=2200&q=80",
+              "alt": "Street fashion portrait in autumn tones",
+              "size": "lg",
+              "className": "aspect-[21/9] rounded-none border-neutral-900"
+            }
+          ]
+        }
+      },
+      {
+        "id": "photo-still",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-neutral-200 py-24"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10 space-y-10"
+          },
+          "blocks": [
+            {
+              "type": "heading",
+              "enabled": true,
+              "text": "STILL LIFE COLLECTION",
+              "level": 2,
+              "size": "sm",
+              "align": "left",
+              "className": "font-serif text-2xl tracking-[0.14em]"
+            },
+            {
+              "type": "imageGrid",
+              "enabled": true,
+              "size": "lg",
+              "items": [
+                {
+                  "src": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80",
+                  "alt": "Coffee and still life composition",
+                  "caption": "Morning still"
+                },
+                {
+                  "src": "https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=1200&q=80",
+                  "alt": "Perfume bottle studio setup",
+                  "caption": "Product study"
+                },
+                {
+                  "src": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1200&q=80",
+                  "alt": "Table composition",
+                  "caption": "Editorial object frame"
+                }
+              ]
+            },
+            {
+              "type": "buttonRow",
+              "enabled": true,
+              "size": "sm",
+              "align": "left",
+              "buttons": [
+                {
+                  "text": "Request Rate Card",
+                  "href": "#contact",
+                  "variant": "secondary"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "photo-footer",
+        "type": "footer",
+        "source": "footer",
+        "enabled": true
+      }
+    ]
+  },
+  "sections": {
+    "header": {
+      "container": {
+        "enabled": true,
+        "className": "fixed inset-x-0 top-0 z-50 border-b border-neutral-900 bg-neutral-200/90 backdrop-blur"
+      },
+      "innerWrapper": {
+        "enabled": true,
+        "className": "container mx-auto px-6 lg:px-10"
+      },
+      "wrapper": {
+        "enabled": true,
+        "className": "flex h-16 items-center justify-between"
+      },
+      "logoWrapper": {
+        "enabled": true,
+        "className": "shrink-0"
+      },
+      "logo": {
+        "enabled": true,
+        "href": "/",
+        "alt": "Lens Atelier"
+      },
+      "logoImage": {
+        "enabled": true,
+        "src": "/logos/lensatelier.svg",
+        "alt": "Lens Atelier",
+        "className": "inline-flex h-4 text-neutral-900 [&>svg]:h-full [&>svg]:w-auto"
+      },
+      "nav": {
+        "enabled": true,
+        "className": "hidden lg:flex lg:items-center lg:gap-8",
+        "links": [
+          {
+            "enabled": true,
+            "text": "Work",
+            "href": "#winter",
+            "className": "text-[11px] font-medium tracking-[0.2em] uppercase text-neutral-800 hover:text-black"
+          },
+          {
+            "enabled": true,
+            "text": "About",
+            "href": "#",
+            "className": "text-[11px] font-medium tracking-[0.2em] uppercase text-neutral-800 hover:text-black"
+          },
+          {
+            "enabled": true,
+            "text": "Contact",
+            "href": "#contact",
+            "className": "text-[11px] font-medium tracking-[0.2em] uppercase text-neutral-800 hover:text-black"
+          }
+        ]
+      },
+      "actions": {
+        "enabled": true,
+        "className": "flex items-center gap-3"
+      },
+      "ctaButton": {
+        "enabled": true,
+        "text": "Inquire",
+        "href": "#contact",
+        "className": "hidden sm:inline-flex border border-neutral-900 px-3 py-1.5 text-[11px] font-medium tracking-[0.16em] uppercase text-neutral-900 hover:bg-neutral-900 hover:text-neutral-100"
+      },
+      "mobileMenuButton": {
+        "enabled": true,
+        "className": "lg:hidden inline-flex items-center justify-center rounded-sm p-2 text-neutral-900 hover:bg-neutral-300"
+      },
+      "srText": {
+        "enabled": true,
+        "className": "sr-only",
+        "text": "Open main menu"
+      },
+      "mobileMenu": {
+        "enabled": true,
+        "className": "lg:hidden border-t border-neutral-900 bg-neutral-200"
+      },
+      "mobileMenuInner": {
+        "enabled": true,
+        "className": "container mx-auto space-y-1 px-6 py-4"
+      },
+      "mobileCTA": {
+        "enabled": true,
+        "href": "#contact",
+        "className": "mt-3 block w-full border border-neutral-900 px-4 py-2 text-center text-xs font-medium tracking-[0.16em] uppercase text-neutral-900"
+      }
+    },
+    "footer": {
+      "container": {
+        "enabled": true,
+        "id": "contact",
+        "className": "border-t border-neutral-700 bg-[#111318] py-12 text-neutral-100"
+      },
+      "innerWrapper": {
+        "enabled": true,
+        "className": "container mx-auto px-6 lg:px-10"
+      },
+      "mainContent": {
+        "enabled": true,
+        "className": "grid grid-cols-1 gap-8 md:grid-cols-12 mb-8"
+      },
+      "brandColumn": {
+        "enabled": true,
+        "className": "md:col-span-5"
+      },
+      "logo": {
+        "enabled": true,
+        "src": "/logos/lensatelier.svg",
+        "alt": "Lens Atelier",
+        "href": "/"
+      },
+      "tagline": {
+        "enabled": true,
+        "text": "Bookings and commissions: hello@lensatelier.com | +1 (323) 555-0148",
+        "className": "mt-3 max-w-md text-sm text-neutral-300"
+      },
+      "socialWrapper": {
+        "enabled": true,
+        "className": "mt-5 flex items-center gap-4"
+      },
+      "socialLinks": [
+        {
+          "enabled": true,
+          "label": "Instagram",
+          "href": "https://instagram.com",
+          "icon": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.31.975.975 1.248 2.242 1.31 3.608.058 1.266.069 1.646.069 4.85 0 3.204-.011 3.584-.069 4.85-.062 1.366-.335 2.633-1.31 3.608-.975.975-2.242 1.248-3.608 1.31-1.266.058-1.646.069-4.85.069-3.204 0-3.584-.011-4.85-.069-1.366-.062-2.633-.335-3.608-1.31-.975-.975-1.248-2.242-1.31-3.608C2.175 15.584 2.163 15.204 2.163 12c0-3.204.012-3.584.07-4.85.062-1.366.336-2.633 1.31-3.608.975-.975 2.242-1.248 3.608-1.31 1.266-.058 1.646-.07 4.85-.07zm0 1.838c-3.157 0-3.523.012-4.77.068-1.152.052-1.777.245-2.192.407-.55.214-.943.47-1.355.882-.412.412-.668.805-.882 1.355-.162.415-.355 1.04-.407 2.192-.056 1.247-.068 1.613-.068 4.77 0 3.157.012 3.523.068 4.77.052 1.152.245 1.777.407 2.192.214.55.47.943.882 1.355.412.412.805.668 1.355.882.415.162 1.04.355 2.192.407 1.247.056 1.613.068 4.77.068 3.157 0 3.523-.012 4.77-.068 1.152-.052 1.777-.245 2.192-.407.55-.214.943-.47 1.355-.882.412-.412.668-.805.882-1.355.162-.415.355-1.04.407-2.192.056-1.247.068-1.613.068-4.77 0-3.157-.012-3.523-.068-4.77-.052-1.152-.245-1.777-.407-2.192-.214-.55-.47-.943-.882-1.355-.412-.412-.805-.668-1.355-.882-.415-.162-1.04-.355-2.192-.407-1.247-.056-1.613-.068-4.77-.068zm0 3.149a4.85 4.85 0 110 9.7 4.85 4.85 0 010-9.7zm0 1.838a3.012 3.012 0 100 6.024 3.012 3.012 0 000-6.024zm6.17-2.143a1.132 1.132 0 110 2.264 1.132 1.132 0 010-2.264z'/></svg>"
+        }
+      ],
+      "linkColumns": [
+        {
+          "enabled": true,
+          "title": {
+            "enabled": true,
+            "text": "Navigation",
+            "className": "text-xs tracking-[0.18em] uppercase text-neutral-400 mb-3"
+          },
+          "links": [
+            {
+              "enabled": true,
+              "text": "Winter Collection",
+              "href": "#winter"
+            },
+            {
+              "enabled": true,
+              "text": "Still Life",
+              "href": "#"
+            },
+            {
+              "enabled": true,
+              "text": "Contact",
+              "href": "#contact"
+            }
+          ]
+        }
+      ],
+      "bottomBar": {
+        "enabled": true,
+        "className": "pt-6 border-t border-neutral-700 flex items-center justify-between"
+      },
+      "copyright": {
+        "enabled": true,
+        "text": "© 2026 Lens Atelier",
+        "className": "text-xs tracking-[0.12em] uppercase text-neutral-500"
+      },
+      "bottomLinksWrapper": {
+        "enabled": true,
+        "className": "flex items-center gap-5"
+      },
+      "bottomLinks": [
+        {
+          "enabled": true,
+          "text": "Terms",
+          "href": "#"
+        },
+        {
+          "enabled": true,
+          "text": "Privacy",
+          "href": "#"
+        }
+      ]
+    }
+  }
+}

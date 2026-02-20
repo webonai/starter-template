@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "siteName": "LaunchStack SaaS",
+    "description": "Platform for product teams to ship, monitor, and scale."
+  },
+  "layout": {
+    "order": [
+      "header",
+      "hero",
+      "features",
+      "blog",
+      "cta",
+      "footer"
+    ],
+    "hiddenSections": [
+      "testimonials",
+      "faq"
+    ],
+    "sections": [
+      {
+        "id": "saas-header",
+        "type": "header",
+        "source": "header",
+        "enabled": true
+      },
+      {
+        "id": "saas-hero",
+        "type": "hero",
+        "source": "hero",
+        "enabled": true
+      },
+      {
+        "id": "saas-features",
+        "type": "features",
+        "source": "features",
+        "enabled": true
+      },
+      {
+        "id": "saas-blog",
+        "type": "blog",
+        "source": "blog",
+        "enabled": true
+      },
+      {
+        "id": "saas-cta",
+        "type": "cta",
+        "source": "cta",
+        "enabled": true
+      },
+      {
+        "id": "saas-footer",
+        "type": "footer",
+        "source": "footer",
+        "enabled": true
+      }
+    ]
+  },
+  "sections": {
+    "hero": {
+      "headline": {
+        "text": "Launch Faster. Scale Smarter."
+      },
+      "subtext": {
+        "text": "Unified tooling for release workflows, product analytics, and team collaboration."
+      },
+      "primaryButton": {
+        "text": "Start Free Trial",
+        "href": "/signup"
+      },
+      "secondaryButton": {
+        "text": "Talk to Sales",
+        "href": "/demo"
+      },
+      "stats": [
+        {
+          "enabled": true,
+          "value": "99.95%",
+          "label": "Uptime"
+        },
+        {
+          "enabled": true,
+          "value": "<120ms",
+          "label": "Global Response"
+        },
+        {
+          "enabled": true,
+          "value": "2,300+",
+          "label": "Teams"
+        }
+      ]
+    },
+    "features": {
+      "eyebrow": {
+        "text": "Platform"
+      },
+      "headline": {
+        "text": "Everything Needed to Ship"
+      },
+      "subtext": {
+        "text": "From developer workflows to executive-level reporting."
+      }
+    },
+    "blog": {
+      "eyebrow": {
+        "text": "Resources"
+      },
+      "headline": {
+        "text": "Playbooks and Product Notes"
+      },
+      "subtext": {
+        "text": "Guides from our product and engineering teams."
+      }
+    },
+    "cta": {
+      "headline": {
+        "text": "Ready to simplify your stack?"
+      },
+      "subtext": {
+        "text": "Start a free trial or schedule a tailored walkthrough."
+      }
+    }
+  }
+}
