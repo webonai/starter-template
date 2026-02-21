@@ -90,7 +90,7 @@ export default function BlogIndexClient({ posts, categories, blogIndex, header, 
           <div {...editable(blogIndex.grid, "sections.blogIndex.grid", "container", "")}>
             {pagePosts.map((post) => (
               <article key={post.slug} className="group relative flex flex-col rounded-xl border border-border bg-card shadow-sm transition-all hover:shadow-md hover:border-primary/30 overflow-hidden">
-                {post.image && (
+                {typeof post.image === 'string' && post.image ? (
                   <Link href={`/blog/${post.slug}`} className="relative aspect-16/10 w-full overflow-hidden bg-muted">
                     <Image
                       src={post.image}
@@ -99,7 +99,7 @@ export default function BlogIndexClient({ posts, categories, blogIndex, header, 
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </Link>
-                )}
+                ) : null}
                 <div className="flex flex-1 flex-col p-6">
                   <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
                     <time dateTime={post.date} className="inline-flex items-center gap-1">

@@ -28,6 +28,7 @@ function getSectionConfig<T>(sectionName: string): T | null {
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
+  const imageSrc = typeof post?.image === 'string' ? post.image : '';
   const blogPost = (getSectionConfig<Record<string, unknown>>('blogPost') || {}) as any;
   const header = getSectionConfig<HeaderProps>('header');
   const footer = getSectionConfig<FooterProps['data']>('footer');
@@ -54,6 +55,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             {/* Back navigation */}
             <Link 
               {...editable(blogPost.backLink, "sections.blogPost.backLink", "link", "")}
+              href={blogPost.backLink?.href || '/blog'}
             >
               <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
               {blogPost.backLink?.text || 'Back to Blog'}
@@ -98,11 +100,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </div>
 
           {/* Hero image */}
-          {post.image && (
+          {imageSrc && (
             <div {...editable(blogPost.imageWrapper, "sections.blogPost.imageWrapper", "container", "")}>
               <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-border shadow-lg ring-1 ring-border/50">
                 <Image
-                  src={post.image}
+                  src={imageSrc}
                   alt={post.title}
                   fill
                   className="object-cover"
@@ -122,6 +124,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <div {...editable(blogPost.bottomNav, "sections.blogPost.bottomNav", "container", "")}>
               <Link 
                 {...editable(blogPost.backToAllLink, "sections.blogPost.backToAllLink", "link", "")}
+                href={blogPost.backToAllLink?.href || '/blog'}
               >
                 <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
                 {blogPost.backToAllLink?.text || 'Back to all posts'}
