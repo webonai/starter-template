@@ -1,0 +1,1066 @@
+{
+  "meta": {
+    "siteName": "My Awesome Brand",
+    "description": "The best brand in the world.",
+    "favicon": "/uploads/favicon.ico"
+  },
+  "theme": {
+    "name": "modern",
+    "mode": "light",
+    "colors": {
+      "light": {
+        "primary": "#4f46e5",
+        "primaryForeground": "#ffffff",
+        "secondary": "#1e293b",
+        "secondaryForeground": "#f8fafc",
+        "accent": "#10b981",
+        "accentForeground": "#1e293b",
+        "destructive": "#ef4444",
+        "destructiveForeground": "#f8fafc",
+        "muted": "#f1f5f9",
+        "mutedForeground": "#64748b",
+        "card": "#ffffff",
+        "cardForeground": "#020817",
+        "popover": "#ffffff",
+        "popoverForeground": "#020817",
+        "background": "#ffffff",
+        "foreground": "#020817",
+        "border": "#e2e8f0",
+        "input": "#e2e8f0",
+        "ring": "#4f46e5",
+        "neutral": "#f3f4f6"
+      },
+      "dark": {
+        "primary": "#6366f1",
+        "primaryForeground": "#f8fafc",
+        "secondary": "#1e293b",
+        "secondaryForeground": "#cbd5e1",
+        "accent": "#10b981",
+        "accentForeground": "#f0fdf4",
+        "destructive": "#f87171",
+        "destructiveForeground": "#fef2f2",
+        "muted": "#1e293b",
+        "mutedForeground": "#94a3b8",
+        "card": "#0f172a",
+        "cardForeground": "#f8fafc",
+        "popover": "#0f172a",
+        "popoverForeground": "#f8fafc",
+        "background": "#020817",
+        "foreground": "#f8fafc",
+        "border": "#1e293b",
+        "input": "#1e293b",
+        "ring": "#6366f1",
+        "neutral": "#1e293b"
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "heading": "Inter",
+        "body": "Inter",
+        "mono": "monospace"
+      },
+      "fontSize": {
+        "xs": "0.75rem",
+        "sm": "0.875rem",
+        "base": "1rem",
+        "lg": "1.125rem",
+        "xl": "1.25rem",
+        "2xl": "1.5rem",
+        "3xl": "1.875rem",
+        "4xl": "2.25rem",
+        "5xl": "3rem",
+        "6xl": "3.75rem"
+      },
+      "fontWeight": {
+        "thin": "100",
+        "extralight": "200",
+        "light": "300",
+        "normal": "400",
+        "medium": "500",
+        "semibold": "600",
+        "bold": "700",
+        "extrabold": "800",
+        "black": "900"
+      },
+      "lineHeight": {
+        "none": "1",
+        "tight": "1.25",
+        "snug": "1.375",
+        "normal": "1.5",
+        "relaxed": "1.625",
+        "loose": "2"
+      },
+      "letterSpacing": {
+        "tighter": "-0.05em",
+        "tight": "-0.025em",
+        "normal": "0em",
+        "wide": "0.025em",
+        "wider": "0.05em",
+        "widest": "0.1em"
+      }
+    },
+    "spacing": {
+      "0": "0px",
+      "1": "0.25rem",
+      "2": "0.5rem",
+      "3": "0.75rem",
+      "4": "1rem",
+      "5": "1.25rem",
+      "6": "1.5rem",
+      "8": "2rem",
+      "10": "2.5rem",
+      "12": "3rem",
+      "16": "4rem",
+      "20": "5rem",
+      "24": "6rem",
+      "32": "8rem",
+      "40": "10rem",
+      "48": "12rem",
+      "56": "14rem",
+      "64": "16rem"
+    },
+    "borderRadius": {
+      "none": "0px",
+      "sm": "0.125rem",
+      "base": "0.25rem",
+      "md": "0.375rem",
+      "lg": "0.5rem",
+      "xl": "0.75rem",
+      "2xl": "1rem",
+      "3xl": "1.5rem",
+      "full": "9999px"
+    },
+    "shadows": {
+      "light": {
+        "sm": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        "base": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+        "md": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+        "lg": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+        "xl": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+        "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
+        "none": "none"
+      },
+      "dark": {
+        "sm": "0 1px 2px 0 rgb(0 0 0 / 0.3)",
+        "base": "0 1px 3px 0 rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.4)",
+        "md": "0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4)",
+        "lg": "0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4)",
+        "xl": "0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.4)",
+        "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.5)",
+        "none": "none"
+      }
+    },
+    "borderWidth": {
+      "0": "0px",
+      "1": "1px",
+      "2": "2px",
+      "4": "4px",
+      "8": "8px"
+    },
+    "opacity": {
+      "0": "0",
+      "5": "0.05",
+      "10": "0.1",
+      "20": "0.2",
+      "25": "0.25",
+      "30": "0.3",
+      "40": "0.4",
+      "50": "0.5",
+      "60": "0.6",
+      "70": "0.7",
+      "75": "0.75",
+      "80": "0.8",
+      "90": "0.9",
+      "95": "0.95",
+      "100": "1"
+    },
+    "transitions": {
+      "none": "none",
+      "all": "all 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "colors": "color, background-color, border-color, text-decoration-color, fill, stroke 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "opacity": "opacity 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "shadow": "box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "transform": "transform 150ms cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    "animation": {
+      "duration": {
+        "fast": "150ms",
+        "normal": "300ms",
+        "slow": "500ms",
+        "slower": "1000ms"
+      },
+      "easing": {
+        "linear": "linear",
+        "in": "cubic-bezier(0.4, 0, 1, 1)",
+        "out": "cubic-bezier(0, 0, 0.2, 1)",
+        "inOut": "cubic-bezier(0.4, 0, 0.2, 1)"
+      }
+    },
+    "breakpoints": {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1536px"
+    },
+    "container": {
+      "padding": "1rem",
+      "maxWidth": "1280px"
+    },
+    "zIndex": {
+      "0": "0",
+      "10": "10",
+      "20": "20",
+      "30": "30",
+      "40": "40",
+      "50": "50",
+      "auto": "auto"
+    }
+  },
+  "layout": {
+    "order": [],
+    "hiddenSections": [
+      "header",
+      "hero",
+      "features",
+      "testimonials",
+      "faq",
+      "blog",
+      "cta",
+      "footer"
+    ],
+    "pages": [
+      {
+        "slug": "",
+        "title": "Home",
+        "href": "/"
+      },
+      {
+        "slug": "about",
+        "title": "About Us",
+        "href": "/about",
+        "headline": {
+          "text": "About Our Company",
+          "className": "text-4xl font-bold mb-4 text-foreground"
+        },
+        "subtext": {
+          "text": "We are dedicated to providing the best service to our customers."
+        },
+        "body": {
+          "text": "Founded in 2010, our company has consistently delivered high-quality products and services to clients worldwide. Our team of experts is passionate about innovation and excellence."
+        },
+        "grid": {
+          "className": "grid grid-cols-1 sm:grid-cols-2 gap-8"
+        },
+        "items": [
+          {
+            "title": {
+              "text": "Our Mission"
+            },
+            "description": {
+              "text": "To deliver high-quality products that bring value to our customers."
+            }
+          },
+          {
+            "title": {
+              "text": "Our Vision"
+            },
+            "description": {
+              "text": "To be the leading brand in our industry, known for innovation and excellence."
+            }
+          },
+          {
+            "title": {
+              "text": "Our Values"
+            },
+            "description": {
+              "text": "Integrity, Customer Focus, Innovation, and Teamwork."
+            }
+          },
+          {
+            "title": {
+              "text": "Our History"
+            },
+            "description": {
+              "text": "Founded in 2010, we have consistently grown and adapted to meet market needs."
+            }
+          }
+        ]
+      },
+      {
+        "slug": "contact",
+        "title": "Contact",
+        "href": "/contact",
+        "heading": {
+          "text": "Get in Touch",
+          "className": "text-4xl font-bold mb-4 text-foreground"
+        },
+        "subtext": {
+          "text": "We'd love to hear from you. Reach out with any questions."
+        },
+        "socials": [
+          {
+            "platform": "Twitter",
+            "href": "https://twitter.com",
+            "icon": "twitter"
+          },
+          {
+            "platform": "GitHub",
+            "href": "https://github.com",
+            "icon": "github"
+          },
+          {
+            "platform": "LinkedIn",
+            "href": "https://linkedin.com",
+            "icon": "linkedin"
+          }
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "id": "default-nav",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "sticky top-0 z-50 py-0 sm:py-0 lg:py-0 border-b border-border/40 bg-background/95 backdrop-blur"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-4 sm:px-6 lg:px-8 py-0"
+          },
+          "blocks": [
+            {
+              "type": "headerBar",
+              "enabled": true,
+              "className": "h-16 text-foreground",
+              "brandText": "My Awesome Brand",
+              "brandHref": "/",
+              "links": [
+                {
+                  "text": "Features",
+                  "href": "/#features"
+                },
+                {
+                  "text": "Blog",
+                  "href": "/blog"
+                },
+                {
+                  "text": "About",
+                  "href": "/about"
+                },
+                {
+                  "text": "Contact",
+                  "href": "/contact"
+                }
+              ],
+              "ctaText": "Get Started",
+              "ctaHref": "#signup",
+              "brandImageAlt": "Company Logo",
+              "ctaClassName": "hidden sm:inline-flex rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
+              "brandTextClassName": "text-sm font-semibold tracking-[0.12em] uppercase text-primary",
+              "brandImageSvg": "<svg width=\"56\" height=\"40\" viewBox=\"0 0 56 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M43 0C50.1797 6.44277e-07 56 5.8203 56 13C56 20.1797 50.1797 26 43 26H34.4844L48.4844 40H31.5156L15.7578 24.2422C14.672 23.1564 14 21.6569 14 20C14 16.6863 16.6863 14 20 14H43C43.5523 14 44 13.5523 44 13C44 12.4477 43.5523 12 43 12H20C15.5817 12 12 15.5817 12 20C12 22.3901 13.0482 24.5347 14.71 26H14.6875L28.6875 40H20C8.95431 40 0 31.0457 0 20C0 8.95431 8.9543 0 20 0H43Z\" fill=\"currentColor\"></path>\n<path d=\"M56 28V40H51.3125L39.3125 28H56Z\" fill=\"currentColor\"></path>\n</svg>",
+              "brandImageClassName": "inline-flex h-8 w-auto text-primary [&>svg]:h-full [&>svg]:w-auto"
+            }
+          ]
+        }
+      },
+      {
+        "id": "default-hero",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-background py-20 sm:py-24 lg:py-28"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-8 space-y-10"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "New Feature Launch",
+              "align": "center",
+              "size": "sm",
+              "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
+            },
+            {
+              "type": "heading",
+              "enabled": true,
+              "text": "Build Your Next Big Thing",
+              "level": 1,
+              "align": "center",
+              "size": "lg",
+              "className": "text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground"
+            },
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "The ultimate platform for creators, developers, and entrepreneurs to bring their ideas to life.",
+              "align": "center",
+              "size": "md",
+              "className": "max-w-3xl text-base sm:text-lg text-muted-foreground"
+            },
+            {
+              "type": "buttonRow",
+              "enabled": true,
+              "align": "center",
+              "size": "md",
+              "buttons": [
+                {
+                  "text": "Get Started Free",
+                  "href": "#signup",
+                  "variant": "primary"
+                },
+                {
+                  "text": "Learn More",
+                  "href": "/about",
+                  "variant": "secondary"
+                }
+              ]
+            },
+            {
+              "type": "statsRow",
+              "enabled": true,
+              "align": "center",
+              "size": "lg",
+              "statItems": [
+                {
+                  "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='8.5' cy='7' r='4'></circle><path d='M20 8v6'></path><path d='M23 11h-6'></path></svg>",
+                  "value": "10k+",
+                  "label": "Active Users"
+                },
+                {
+                  "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M13 2 3 14h7l-1 8 10-12h-7z'></path></svg>",
+                  "value": "99.9%",
+                  "label": "Uptime"
+                },
+                {
+                  "icon": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z'></path></svg>",
+                  "value": "4.9/5",
+                  "label": "User Rating"
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "enabled": true,
+              "src": "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&auto=format&fit=crop&w=3603&q=80",
+              "alt": "Product Dashboard",
+              "size": "lg",
+              "className": "aspect-[16/8] rounded-xl border border-border shadow-2xl"
+            }
+          ]
+        }
+      },
+      {
+        "id": "default-features",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "id": "features",
+            "className": "bg-muted/30 py-20 sm:py-24 lg:py-28"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-8 space-y-8"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "Features",
+              "align": "center",
+              "size": "sm",
+              "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
+            },
+            {
+              "type": "heading",
+              "enabled": true,
+              "text": "Everything you need to succeed",
+              "level": 2,
+              "align": "center",
+              "size": "md",
+              "className": "text-4xl sm:text-5xl font-bold tracking-tight text-foreground"
+            },
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "Powerful features designed to help you build, grow, and scale your business with confidence.",
+              "align": "center",
+              "size": "md",
+              "className": "max-w-3xl text-muted-foreground"
+            },
+            {
+              "type": "cards",
+              "enabled": true,
+              "size": "lg",
+              "items": [
+                {
+                  "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M13 2 3 14h7l-1 8 10-12h-7z'></path></svg>",
+                  "iconClassName": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary [&>svg]:h-6 [&>svg]:w-6",
+                  "title": "Lightning Fast",
+                  "text": "Optimized for speed with cutting-edge technology that delivers instant results.",
+                  "href": "#",
+                  "linkText": "Learn more"
+                },
+                {
+                  "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='3' y='11' width='18' height='11' rx='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg>",
+                  "iconClassName": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary [&>svg]:h-6 [&>svg]:w-6",
+                  "title": "Secure by Default",
+                  "text": "Enterprise-grade security with end-to-end encryption and compliance certifications.",
+                  "href": "#",
+                  "linkText": "Learn more"
+                },
+                {
+                  "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M3 3v18h18'></path><rect x='7' y='13' width='3' height='5'></rect><rect x='12' y='9' width='3' height='9'></rect><rect x='17' y='5' width='3' height='13'></rect></svg>",
+                  "iconClassName": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary [&>svg]:h-6 [&>svg]:w-6",
+                  "title": "Powerful Analytics",
+                  "text": "Real-time insights and detailed reports to help you make data-driven decisions.",
+                  "href": "#",
+                  "linkText": "Learn more"
+                },
+                {
+                  "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><circle cx='13.5' cy='6.5' r='2.5'></circle><circle cx='6.5' cy='17.5' r='2.5'></circle><circle cx='17.5' cy='17.5' r='2.5'></circle><path d='m8.7 15.9 2.3-2.1'></path><path d='m15.8 8.3 1 6.7'></path><path d='m11.4 8.2-3.2 6.1'></path></svg>",
+                  "iconClassName": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary [&>svg]:h-6 [&>svg]:w-6",
+                  "title": "Fully Customizable",
+                  "text": "Tailor every aspect to match your brand with our flexible design system.",
+                  "href": "#",
+                  "linkText": "Learn more"
+                },
+                {
+                  "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><circle cx='12' cy='12' r='10'></circle><path d='M2 12h20'></path><path d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'></path></svg>",
+                  "iconClassName": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary [&>svg]:h-6 [&>svg]:w-6",
+                  "title": "Global Scale",
+                  "text": "Deploy worldwide with our distributed infrastructure and CDN network.",
+                  "href": "#",
+                  "linkText": "Learn more"
+                },
+                {
+                  "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M22 12a10 10 0 1 1-10-10'></path><path d='M8 16h1a3 3 0 0 0 0-6H8v6z'></path><path d='M15 10h2'></path><path d='M15 13h2'></path></svg>",
+                  "iconClassName": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary [&>svg]:h-6 [&>svg]:w-6",
+                  "title": "24/7 Support",
+                  "text": "Our dedicated team is always here to help you succeed, day or night.",
+                  "href": "#",
+                  "linkText": "Learn more"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "default-testimonials",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-background py-20 sm:py-24 lg:py-28"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-8 space-y-8"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "Testimonials",
+              "align": "center",
+              "size": "sm",
+              "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
+            },
+            {
+              "type": "heading",
+              "enabled": true,
+              "text": "Loved by thousands worldwide",
+              "level": 2,
+              "align": "center",
+              "size": "md",
+              "className": "text-4xl sm:text-5xl font-bold tracking-tight text-foreground"
+            },
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "See what our customers have to say about their experience with our platform.",
+              "align": "center",
+              "size": "md",
+              "className": "max-w-3xl text-muted-foreground"
+            },
+            {
+              "type": "cards",
+              "enabled": true,
+              "size": "lg",
+              "items": [
+                {
+                  "icon": "<svg class='h-4 w-4 text-yellow-400 fill-current' viewBox='0 0 24 24' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z'></path></svg><svg class='h-4 w-4 text-yellow-400 fill-current' viewBox='0 0 24 24' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z'></path></svg><svg class='h-4 w-4 text-yellow-400 fill-current' viewBox='0 0 24 24' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z'></path></svg><svg class='h-4 w-4 text-yellow-400 fill-current' viewBox='0 0 24 24' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z'></path></svg><svg class='h-4 w-4 text-yellow-400 fill-current' viewBox='0 0 24 24' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z'></path></svg>",
+                  "title": "Sarah Chen",
+                  "text": "This platform has completely transformed how we work. The intuitive interface and powerful features make it a joy to use every day.",
+                  "meta": "Sarah Chen | CEO | TechCorp",
+                  "avatarSrc": "/avatars/avatar-1.jpg",
+                  "avatarAlt": "Sarah Chen",
+                  "href": "#",
+                  "linkText": "Learn more"
+                },
+                {
+                  "icon": "<svg class='h-4 w-4 text-yellow-400 fill-current' viewBox='0 0 24 24' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z'></path></svg><svg class='h-4 w-4 text-yellow-400 fill-current' viewBox='0 0 24 24' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z'></path></svg><svg class='h-4 w-4 text-yellow-400 fill-current' viewBox='0 0 24 24' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z'></path></svg><svg class='h-4 w-4 text-yellow-400 fill-current' viewBox='0 0 24 24' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z'></path></svg><svg class='h-4 w-4 text-yellow-400 fill-current' viewBox='0 0 24 24' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z'></path></svg>",
+                  "title": "Michael Rodriguez",
+                  "text": "The best decision we made this year. Our team's productivity has increased dramatically, and our customers are happier than ever.",
+                  "meta": "Michael Rodriguez | Product Manager | StartupXYZ",
+                  "avatarSrc": "/avatars/avatar-2.jpg",
+                  "avatarAlt": "Michael Rodriguez",
+                  "href": "#",
+                  "linkText": "Learn more"
+                },
+                {
+                  "icon": "<svg class='h-4 w-4 text-yellow-400 fill-current' viewBox='0 0 24 24' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z'></path></svg><svg class='h-4 w-4 text-yellow-400 fill-current' viewBox='0 0 24 24' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z'></path></svg><svg class='h-4 w-4 text-yellow-400 fill-current' viewBox='0 0 24 24' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z'></path></svg><svg class='h-4 w-4 text-yellow-400 fill-current' viewBox='0 0 24 24' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z'></path></svg><svg class='h-4 w-4 text-yellow-400 fill-current' viewBox='0 0 24 24' stroke-width='1.5' aria-hidden='true'><path stroke-linecap='round' stroke-linejoin='round' d='M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z'></path></svg>",
+                  "title": "Emily Taylor",
+                  "text": "Outstanding support and documentation. The team went above and beyond to help us get set up and running smoothly.",
+                  "meta": "Emily Taylor | Head of Operations | Enterprise Co",
+                  "avatarSrc": "/avatars/avatar-3.jpg",
+                  "avatarAlt": "Emily Taylor",
+                  "href": "#",
+                  "linkText": "Learn more"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "default-faq",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-muted/30 py-20 sm:py-24 lg:py-28"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-8 space-y-8"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "FAQ",
+              "align": "center",
+              "size": "sm",
+              "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
+            },
+            {
+              "type": "heading",
+              "enabled": true,
+              "text": "Frequently asked questions",
+              "level": 2,
+              "align": "center",
+              "size": "md",
+              "className": "text-4xl sm:text-5xl font-bold tracking-tight text-foreground"
+            },
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "Everything you need to know about our platform. Can't find what you're looking for? Reach out to our support team.",
+              "align": "center",
+              "size": "md",
+              "className": "max-w-3xl text-muted-foreground"
+            },
+            {
+              "type": "faqList",
+              "enabled": true,
+              "size": "lg",
+              "faqItems": [
+                {
+                  "q": "How do I get started?",
+                  "a": "Getting started is easy. Simply create a free account, choose your plan, and start building. Our onboarding wizard will guide you through the setup process step by step."
+                },
+                {
+                  "q": "Is there a free trial available?",
+                  "a": "Yes! We offer a 14-day free trial with full access to all features. No credit card required. You can upgrade, downgrade, or cancel at any time."
+                },
+                {
+                  "q": "Can I change my plan later?",
+                  "a": "Absolutely. You can upgrade or downgrade your plan at any time from your account settings. Changes take effect immediately, and we'll prorate any differences."
+                },
+                {
+                  "q": "What kind of support do you offer?",
+                  "a": "We provide 24/7 support through live chat, email, and our comprehensive documentation. Enterprise customers also get a dedicated account manager and priority support."
+                },
+                {
+                  "q": "Is my data secure?",
+                  "a": "Security is our top priority. We use enterprise-grade encryption, regular security audits, and comply with SOC 2, GDPR, and HIPAA standards to keep your data safe."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "default-blog",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "id": "blog",
+            "className": "bg-background py-20 sm:py-24 lg:py-28"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-8 space-y-8"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "Blog",
+              "align": "left",
+              "size": "sm",
+              "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
+            },
+            {
+              "type": "split",
+              "enabled": true,
+              "ratio": "2:1",
+              "leftBlocks": [
+                {
+                  "type": "heading",
+                  "enabled": true,
+                  "text": "Latest insights and updates",
+                  "level": 2,
+                  "align": "left",
+                  "size": "md",
+                  "className": "text-4xl sm:text-5xl font-bold tracking-tight text-foreground"
+                },
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Stay up to date with the latest news, tips, and best practices from our team.",
+                  "align": "left",
+                  "size": "md",
+                  "className": "text-muted-foreground"
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "buttonRow",
+                  "enabled": true,
+                  "align": "right",
+                  "buttons": [
+                    {
+                      "text": "View All Posts",
+                      "href": "/blog",
+                      "variant": "secondary"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "postGrid",
+              "enabled": true,
+              "size": "lg",
+              "postItems": [
+                {
+                  "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80",
+                  "alt": "Blog post cover",
+                  "category": "Guides",
+                  "date": "Jan 12, 2026",
+                  "title": "Getting Started with Our Platform",
+                  "excerpt": "Learn the fundamentals and get up and running in minutes with our guided onboarding flow.",
+                  "author": "John Smith",
+                  "href": "/blog/getting-started",
+                  "readMore": "Read article"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1600&q=80",
+                  "alt": "Design trends cover",
+                  "category": "Design",
+                  "date": "Jan 08, 2026",
+                  "title": "Web Design Trends in 2026",
+                  "excerpt": "A practical look at modern layouts, component systems, and conversion-focused interfaces.",
+                  "author": "Jane Doe",
+                  "href": "/blog/design-trends-2026",
+                  "readMore": "Read article"
+                },
+                {
+                  "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=80",
+                  "alt": "AI workflow cover",
+                  "category": "AI",
+                  "date": "Jan 02, 2026",
+                  "title": "How AI Is Transforming Product Teams",
+                  "excerpt": "How teams are using AI for ideation, validation, and shipping faster without losing quality.",
+                  "author": "Alex Lee",
+                  "href": "/blog/ai-product-teams",
+                  "readMore": "Read article"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "default-cta",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-gradient-to-br from-primary/90 via-primary to-primary/80 py-20 sm:py-24 lg:py-28 text-primary-foreground"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-8 space-y-8"
+          },
+          "blocks": [
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "Ready to get started?",
+              "align": "center",
+              "size": "sm",
+              "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary-foreground/90 mb-4"
+            },
+            {
+              "type": "heading",
+              "enabled": true,
+              "text": "Start building something amazing today",
+              "level": 2,
+              "align": "center",
+              "size": "md",
+              "className": "text-4xl sm:text-5xl font-bold tracking-tight text-primary-foreground"
+            },
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "Join thousands of teams already using our platform to build, ship, and scale their products.",
+              "align": "center",
+              "size": "md",
+              "className": "max-w-3xl text-primary-foreground/90"
+            },
+            {
+              "type": "buttonRow",
+              "enabled": true,
+              "align": "center",
+              "buttons": [
+                {
+                  "text": "Get Started Free",
+                  "href": "/signup",
+                  "variant": "secondary",
+                  "className": "rounded-lg bg-white px-6 py-3 text-base font-semibold text-primary shadow-lg hover:bg-white/90"
+                },
+                {
+                  "text": "Schedule a Demo",
+                  "href": "/demo",
+                  "variant": "secondary",
+                  "className": "rounded-lg border-2 border-white/60 px-6 py-3 text-base font-semibold text-white hover:bg-white/10"
+                }
+              ]
+            },
+            {
+              "type": "linkList",
+              "enabled": true,
+              "className": "justify-center gap-x-8 text-sm text-primary-foreground/90",
+              "links": [
+                {
+                  "text": "Free 14-day trial",
+                  "href": "#",
+                  "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M20 6 9 17l-5-5'></path></svg>",
+                  "iconClassName": "inline-flex h-4 w-4 text-primary-foreground/90"
+                },
+                {
+                  "text": "No credit card required",
+                  "href": "#",
+                  "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M20 6 9 17l-5-5'></path></svg>",
+                  "iconClassName": "inline-flex h-4 w-4 text-primary-foreground/90"
+                },
+                {
+                  "text": "Cancel anytime",
+                  "href": "#",
+                  "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M20 6 9 17l-5-5'></path></svg>",
+                  "iconClassName": "inline-flex h-4 w-4 text-primary-foreground/90"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "default-footer",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-background border-t border-border py-16"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-8 space-y-10"
+          },
+          "blocks": [
+            {
+              "type": "split",
+              "enabled": true,
+              "ratio": "2:1",
+              "leftBlocks": [
+                {
+                  "type": "headerBar",
+                  "enabled": true,
+                  "className": "grid grid-cols-[auto] items-center gap-3",
+                  "brandHref": "/",
+                  "brandImageSvg": "<svg width=\"56\" height=\"40\" viewBox=\"0 0 56 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M43 0C50.1797 6.44277e-07 56 5.8203 56 13C56 20.1797 50.1797 26 43 26H34.4844L48.4844 40H31.5156L15.7578 24.2422C14.672 23.1564 14 21.6569 14 20C14 16.6863 16.6863 14 20 14H43C43.5523 14 44 13.5523 44 13C44 12.4477 43.5523 12 43 12H20C15.5817 12 12 15.5817 12 20C12 22.3901 13.0482 24.5347 14.71 26H14.6875L28.6875 40H20C8.95431 40 0 31.0457 0 20C0 8.95431 8.9543 0 20 0H43Z\" fill=\"currentColor\"></path>\n<path d=\"M56 28V40H51.3125L39.3125 28H56Z\" fill=\"currentColor\"></path>\n</svg>",
+                  "brandImageClassName": "inline-flex h-8 w-auto text-primary [&>svg]:h-full [&>svg]:w-auto",
+                  "brandText": "My Awesome Brand",
+                  "brandTextClassName": "text-3xl font-semibold text-primary tracking-tight"
+                },
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Building the future of web development, one project at a time.",
+                  "align": "left",
+                  "size": "md"
+                },
+                {
+                  "type": "socialIcons",
+                  "enabled": true,
+                  "items": [
+                    {
+                      "title": "Twitter",
+                      "href": "https://twitter.com/company",
+                      "icon": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z'/></svg>"
+                    },
+                    {
+                      "title": "GitHub",
+                      "href": "https://github.com/company",
+                      "icon": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z'/></svg>"
+                    },
+                    {
+                      "title": "LinkedIn",
+                      "href": "https://linkedin.com/company/company",
+                      "icon": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'/></svg>"
+                    }
+                  ]
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Quick Links",
+                  "align": "left",
+                  "size": "sm",
+                  "className": "text-xs uppercase tracking-[0.18em] text-muted-foreground"
+                },
+                {
+                  "type": "linkList",
+                  "enabled": true,
+                  "className": "grid grid-cols-2 gap-x-8 gap-y-2 text-sm",
+                  "links": [
+                    {
+                      "text": "Features",
+                      "href": "/features"
+                    },
+                    {
+                      "text": "Pricing",
+                      "href": "/pricing"
+                    },
+                    {
+                      "text": "Security",
+                      "href": "/security"
+                    },
+                    {
+                      "text": "Roadmap",
+                      "href": "/roadmap"
+                    },
+                    {
+                      "text": "About",
+                      "href": "/about"
+                    },
+                    {
+                      "text": "Blog",
+                      "href": "/blog"
+                    },
+                    {
+                      "text": "Careers",
+                      "href": "/careers"
+                    },
+                    {
+                      "text": "Contact",
+                      "href": "/contact"
+                    },
+                    {
+                      "text": "Documentation",
+                      "href": "/docs"
+                    },
+                    {
+                      "text": "Help Center",
+                      "href": "/help"
+                    },
+                    {
+                      "text": "API Reference",
+                      "href": "/api"
+                    },
+                    {
+                      "text": "Status",
+                      "href": "/status"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "divider",
+              "enabled": true
+            },
+            {
+              "type": "split",
+              "enabled": true,
+              "ratio": "2:1",
+              "leftBlocks": [
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "? 2025 Your Company. All rights reserved.",
+                  "align": "left",
+                  "size": "sm",
+                  "className": "text-xs uppercase tracking-[0.12em] text-muted-foreground"
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "linkList",
+                  "enabled": true,
+                  "className": "justify-start lg:justify-end gap-x-5 text-sm",
+                  "links": [
+                    {
+                      "text": "Privacy Policy",
+                      "href": "/privacy"
+                    },
+                    {
+                      "text": "Terms of Service",
+                      "href": "/terms"
+                    },
+                    {
+                      "text": "Cookie Settings",
+                      "href": "/cookies"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
