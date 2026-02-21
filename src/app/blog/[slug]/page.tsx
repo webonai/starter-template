@@ -19,7 +19,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const post = getPostBySlug(slug);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const safeConfig = config as any;
-  const blogPost = safeConfig.sections.blogPost || {};
+  const sections = safeConfig?.sections || {};
+  const blogPost = sections.blogPost || {};
 
   if (!post) {
     notFound();
@@ -31,7 +32,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
   return (
     <main>
-      <Header data={safeConfig.sections.header} />
+      <Header data={sections.header || {}} />
       
       <article {...editable(blogPost.container, "sections.blogPost.container", "section", "")}>
         {/* Background gradient */}
@@ -120,7 +121,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         </div>
       </article>
 
-      <Footer data={safeConfig.sections.footer} />
+      <Footer data={sections.footer || {}} />
     </main>
   );
 }

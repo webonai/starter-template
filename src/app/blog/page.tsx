@@ -7,15 +7,16 @@ export default function BlogIndex() {
   const categories = getCategories();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const safeConfig = config as any;
-  const blogIndex = safeConfig.sections.blogIndex || {};
+  const sections = safeConfig?.sections || {};
+  const blogIndex = sections.blogIndex || {};
 
   return (
     <BlogIndexClient
       posts={posts}
       categories={categories}
       blogIndex={blogIndex}
-      header={safeConfig.sections.header}
-      footer={safeConfig.sections.footer}
+      header={sections.header || {}}
+      footer={sections.footer || {}}
     />
   );
 }
