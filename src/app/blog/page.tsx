@@ -2,21 +2,30 @@ import { getPosts, getCategories } from '@/lib/blog';
 import BlogIndexClient from './BlogIndexClient';
 import config from '../../data/config.json';
 
+function getSectionConfig(sectionName: string) {
+  const maybeSections = (config as any)?.sections;
+  if (!maybeSections || typeof maybeSections !== 'object') {
+    return {};
+  }
+
+  const section = (maybeSections as Record<string, unknown>)[sectionName];
+  return section && typeof section === 'object' ? section : {};
+}
+
 export default function BlogIndex() {
   const posts = getPosts();
   const categories = getCategories();
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const safeConfig = config as any;
-  const sections = safeConfig?.sections || {};
-  const blogIndex = sections.blogIndex || {};
+  const blogIndex = getSectionConfig('blogIndex');
+  const header = getSectionConfig('header');
+  const footer = getSectionConfig('footer');
 
   return (
     <BlogIndexClient
       posts={posts}
       categories={categories}
       blogIndex={blogIndex}
-      header={sections.header || {}}
-      footer={sections.footer || {}}
+      header={header}
+      footer={footer}
     />
   );
 }

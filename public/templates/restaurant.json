@@ -13,11 +13,11 @@
         "secondaryForeground": "#f4f4ed",
         "accent": "#d6ab3e",
         "accentForeground": "#1f1a0e",
-        "background": "#3b4a2f",
-        "foreground": "#f4f4ed",
-        "muted": "#45563a",
-        "mutedForeground": "#e7e5dd",
-        "border": "#566749",
+        "background": "#ece9d8",
+        "foreground": "#1f241d",
+        "muted": "#e0ddc8",
+        "mutedForeground": "#5a5a4a",
+        "border": "#ccc9b4",
         "ring": "#d6ab3e"
       },
       "dark": {
@@ -56,39 +56,29 @@
         "data": {
           "container": {
             "enabled": true,
-            "className": "fixed inset-x-0 top-0 z-50 py-0 sm:py-0 lg:py-0 border-b border-white/15 bg-[#334128]/85 backdrop-blur text-[#f4f4ed]"
+            "className": "fixed inset-x-0 top-0 z-50 py-0 sm:py-0 lg:py-0 border-b border-white/10 bg-[#1a2410]/80 backdrop-blur-md text-[#f4f4ed]"
           },
           "innerWrapper": {
             "enabled": true,
-            "className": "container mx-auto px-6 lg:px-10 py-0 sm:py-0 lg:py-0"
+            "className": "container mx-auto px-6 lg:px-10 py-0"
           },
           "blocks": [
             {
-              "type": "navBar",
+              "type": "headerBar",
               "enabled": true,
-              "className": "h-12",
+              "className": "h-14",
               "brandText": "Moss & Olive",
               "brandHref": "#",
+              "brandTextClassName": "text-sm font-light tracking-[0.22em] uppercase text-[#f4f4ed]",
               "links": [
-                {
-                  "text": "Home",
-                  "href": "#"
-                },
-                {
-                  "text": "Services",
-                  "href": "#rest-services"
-                },
-                {
-                  "text": "Menu",
-                  "href": "#rest-menu"
-                },
-                {
-                  "text": "Contact",
-                  "href": "#rest-contact"
-                }
+                { "text": "Menu",       "href": "#rest-menu",     "className": "text-xs uppercase tracking-[0.14em] text-[#f4f4ed]/70 hover:text-[#f4f4ed] transition-colors duration-200" },
+                { "text": "Philosophy", "href": "#rest-intro",    "className": "text-xs uppercase tracking-[0.14em] text-[#f4f4ed]/70 hover:text-[#f4f4ed] transition-colors duration-200" },
+                { "text": "Services",   "href": "#rest-services", "className": "text-xs uppercase tracking-[0.14em] text-[#f4f4ed]/70 hover:text-[#f4f4ed] transition-colors duration-200" },
+                { "text": "Contact",    "href": "#rest-contact",  "className": "text-xs uppercase tracking-[0.14em] text-[#f4f4ed]/70 hover:text-[#f4f4ed] transition-colors duration-200" }
               ],
               "ctaText": "Reserve",
-              "ctaHref": "#rest-contact"
+              "ctaHref": "#rest-contact",
+              "ctaClassName": "rounded border border-[#d6ab3e] px-4 py-1.5 text-xs uppercase tracking-[0.12em] text-[#d6ab3e] hover:bg-[#d6ab3e] hover:text-[#1f1a0e] transition-all duration-300"
             }
           ]
         }
@@ -100,70 +90,156 @@
         "data": {
           "container": {
             "enabled": true,
-            "className": "relative min-h-screen overflow-hidden bg-[#3b4a2f] text-[#f4f4ed] pt-12 sm:pt-12 lg:pt-12"
+            "className": "p-0 py-0 sm:py-0 lg:py-0"
           },
           "innerWrapper": {
             "enabled": true,
-            "className": "relative z-10 container mx-auto space-y-8 px-6 pt-4 pb-16 lg:px-10 lg:pt-4"
+            "className": "w-full max-w-none !px-0 space-y-0"
           },
           "blocks": [
             {
-              "type": "heading",
+              "type": "heroOverlay",
               "enabled": true,
-              "text": "MINDFUL NUTRITION AS A WAY OF LIFE",
-              "level": 1,
-              "size": "lg",
-              "align": "center"
-            },
-            {
-              "type": "paragraph",
-              "enabled": true,
-              "text": "Seasonal dishes, balanced flavor, and wellness coaching in one place.",
-              "size": "md",
-              "align": "center"
-            },
-            {
-              "type": "buttonRow",
-              "enabled": true,
-              "size": "md",
-              "align": "center",
-              "buttons": [
+              "src": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80",
+              "alt": "Moss & Olive beautifully set dining room",
+              "minHeightClassName": "min-h-screen",
+              "className": "animate-fade-in",
+              "overlayClassName": "absolute inset-0 z-10 bg-gradient-to-br from-[#0f1a0a]/80 via-[#1a2812]/45 to-transparent",
+              "noteText": "Open Tue – Sun · 6 PM – 10 PM",
+              "noteClassName": "pointer-events-none absolute right-6 top-20 z-20 border-t border-white/50 pt-2 text-right text-[10px] uppercase tracking-[0.2em] text-white/80 sm:right-10",
+              "leftNoteText": "Moss & Olive · Est. 2018",
+              "leftNoteClassName": "pointer-events-none absolute left-6 top-20 z-20 text-[10px] uppercase tracking-[0.2em] text-white/70 sm:left-10",
+              "contentClassName": "relative z-20 container mx-auto min-h-screen px-6 lg:px-10 flex items-end pb-24 sm:pb-28",
+              "blocks": [
                 {
-                  "text": "View Menu",
-                  "href": "#rest-menu",
-                  "variant": "primary"
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Seasonal · Mindful · Nourishing",
+                  "align": "left",
+                  "size": "sm",
+                  "className": "text-xs uppercase tracking-[0.3em] text-[#d6ab3e] animate-fade-up delay-300"
                 },
                 {
-                  "text": "Book a Table",
-                  "href": "#rest-contact",
-                  "variant": "secondary"
+                  "type": "heading",
+                  "enabled": true,
+                  "text": "Nourishment crafted from the season's best.",
+                  "level": 1,
+                  "align": "left",
+                  "size": "lg",
+                  "className": "font-serif text-5xl sm:text-6xl lg:text-7xl leading-[0.96] tracking-tight text-white animate-fade-up delay-500"
+                },
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "A dining experience rooted in whole-food cooking, local farmers, and the quiet pleasure of eating well.",
+                  "align": "left",
+                  "size": "sm",
+                  "className": "text-base leading-7 text-white/75 max-w-md animate-fade-up delay-700"
+                },
+                {
+                  "type": "buttonRow",
+                  "enabled": true,
+                  "align": "left",
+                  "size": "md",
+                  "buttons": [
+                    {
+                      "text": "Explore the Menu",
+                      "href": "#rest-menu",
+                      "variant": "primary",
+                      "className": "rounded bg-[#d6ab3e] px-6 py-3 text-sm font-semibold text-[#1f1a0e] hover:bg-[#c49b31] hover:-translate-y-px hover:shadow-md transition-all duration-300"
+                    },
+                    {
+                      "text": "Book a Table",
+                      "href": "#rest-contact",
+                      "variant": "secondary",
+                      "className": "rounded border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 hover:-translate-y-px transition-all duration-300"
+                    }
+                  ]
                 }
               ]
-            },
+            }
+          ]
+        }
+      },
+      {
+        "id": "rest-intro",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-[#ece9d8] py-24"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10"
+          },
+          "blocks": [
             {
-              "type": "spacer",
+              "type": "split",
               "enabled": true,
-              "size": "md"
-            },
-            {
-              "type": "imageGrid",
-              "enabled": true,
-              "size": "lg",
-              "items": [
+              "ratio": "1:1",
+              "className": "items-center gap-12 lg:gap-20",
+              "leftBlocks": [
                 {
-                  "src": "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=80",
-                  "alt": "Fine dining plate",
-                  "caption": "Seasonal plate"
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Our Philosophy",
+                  "align": "left",
+                  "size": "sm",
+                  "className": "text-xs uppercase tracking-[0.24em] text-[#334128]"
                 },
                 {
-                  "src": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80",
-                  "alt": "Healthy brunch bowl",
-                  "caption": "Whole-food brunch"
+                  "type": "heading",
+                  "enabled": true,
+                  "text": "Food as a form of quiet wellness.",
+                  "level": 2,
+                  "align": "left",
+                  "size": "md",
+                  "className": "font-serif text-4xl sm:text-5xl leading-tight text-[#1f241d]"
                 },
                 {
-                  "src": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=1200&q=80",
-                  "alt": "Breakfast and coffee",
-                  "caption": "Daily specials"
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "We source from local farms within 60 miles, design menus around what is truly in season, and cook with techniques that let each ingredient speak for itself. Moss & Olive is not just a restaurant — it is a practice.",
+                  "align": "left",
+                  "size": "md",
+                  "className": "text-base sm:text-lg leading-8 text-[#5a5a4a]"
+                },
+                {
+                  "type": "statsRow",
+                  "enabled": true,
+                  "align": "left",
+                  "size": "lg",
+                  "statItems": [
+                    { "value": "8 yrs",  "label": "in business"          },
+                    { "value": "60 mi",  "label": "sourcing radius"       },
+                    { "value": "4",      "label": "seasonal menus / year" }
+                  ]
+                },
+                {
+                  "type": "buttonRow",
+                  "enabled": true,
+                  "align": "left",
+                  "size": "md",
+                  "buttons": [
+                    {
+                      "text": "Our Services",
+                      "href": "#rest-services",
+                      "variant": "primary",
+                      "className": "rounded bg-[#334128] px-6 py-3 text-sm font-semibold text-[#f4f4ed] hover:bg-[#2a3622] hover:-translate-y-px hover:shadow-md transition-all duration-300"
+                    }
+                  ]
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "image",
+                  "enabled": true,
+                  "src": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1400&q=80",
+                  "alt": "Chef plating a seasonal dish with care",
+                  "size": "md",
+                  "className": "relative w-full aspect-[3/4] overflow-hidden rounded-2xl shadow-2xl [&>img]:transition-transform [&>img]:duration-700 [&>img]:ease-out hover:[&>img]:scale-110"
                 }
               ]
             }
@@ -181,36 +257,63 @@
           },
           "innerWrapper": {
             "enabled": true,
-            "className": "container mx-auto space-y-8 px-6 lg:px-10"
+            "className": "container mx-auto space-y-10 px-6 lg:px-10"
           },
           "blocks": [
             {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "Work With Us",
+              "align": "left",
+              "size": "sm",
+              "className": "text-xs uppercase tracking-[0.24em] text-[#d6ab3e]"
+            },
+            {
               "type": "heading",
               "enabled": true,
-              "text": "WORK WITH MOSS & OLIVE",
+              "text": "Beyond the table.",
               "level": 2,
+              "align": "left",
               "size": "md",
-              "align": "left"
+              "className": "font-serif text-4xl sm:text-5xl leading-tight text-[#f4f4ed]"
+            },
+            {
+              "type": "paragraph",
+              "enabled": true,
+              "text": "We extend the Moss & Olive philosophy into coaching, education, and immersive community gatherings.",
+              "align": "left",
+              "size": "md",
+              "className": "text-base leading-7 text-[#c8c5b5]"
             },
             {
               "type": "cards",
               "enabled": true,
+              "variant": "parallelogram",
               "size": "lg",
               "items": [
                 {
-                  "title": "1:1 Coaching",
-                  "text": "Personalized nutrition plans tailored to your habits, routines, and wellness goals.",
-                  "href": "#rest-contact"
+                  "icon": "🌿",
+                  "iconClassName": "text-2xl mb-4",
+                  "title": "1:1 Nutrition Coaching",
+                  "text": "Personalized plans built around your lifestyle, routines, and long-term wellness goals.",
+                  "href": "#rest-contact",
+                  "linkText": "Get started"
                 },
                 {
+                  "icon": "📖",
+                  "iconClassName": "text-2xl mb-4",
                   "title": "Online Lessons",
-                  "text": "Learn food principles and meal-building systems with flexible self-paced classes.",
-                  "href": "#rest-contact"
+                  "text": "Self-paced classes covering seasonal eating, whole-food technique, and meal-building systems.",
+                  "href": "#rest-contact",
+                  "linkText": "Browse courses"
                 },
                 {
-                  "title": "Live Events",
-                  "text": "Join beginner-friendly tastings and workshops designed around seasonal ingredients.",
-                  "href": "#rest-contact"
+                  "icon": "🎋",
+                  "iconClassName": "text-2xl mb-4",
+                  "title": "Seasonal Events",
+                  "text": "Intimate tastings, foraging walks, and hands-on workshops centered on the current season.",
+                  "href": "#rest-contact",
+                  "linkText": "See upcoming"
                 }
               ]
             }
@@ -224,20 +327,47 @@
         "data": {
           "container": {
             "enabled": true,
-            "className": "bg-[#3b4a2f] py-24 text-[#f4f4ed]"
+            "className": "bg-[#ece9d8] py-24"
           },
           "innerWrapper": {
             "enabled": true,
-            "className": "container mx-auto space-y-8 px-6 lg:px-10"
+            "className": "container mx-auto space-y-10 px-6 lg:px-10"
           },
           "blocks": [
             {
-              "type": "heading",
+              "type": "split",
               "enabled": true,
-              "text": "RECIPES & SIGNATURE PLATES",
-              "level": 2,
-              "size": "md",
-              "align": "left"
+              "ratio": "1:2",
+              "className": "items-end gap-8",
+              "leftBlocks": [
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "The Menu",
+                  "align": "left",
+                  "size": "sm",
+                  "className": "text-xs uppercase tracking-[0.24em] text-[#334128]"
+                },
+                {
+                  "type": "heading",
+                  "enabled": true,
+                  "text": "Recipes & Signature Plates",
+                  "level": 2,
+                  "align": "left",
+                  "size": "md",
+                  "className": "font-serif text-4xl sm:text-5xl leading-tight text-[#1f241d]"
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Our menu rotates every season. The plates below reflect what is available now — grown nearby, prepared daily.",
+                  "align": "left",
+                  "size": "md",
+                  "className": "text-base leading-7 text-[#5a5a4a]"
+                }
+              ]
             },
             {
               "type": "imageGrid",
@@ -246,33 +376,119 @@
               "items": [
                 {
                   "src": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1100&q=80",
-                  "alt": "Healthy bowl",
-                  "caption": "Harvest Bowl"
+                  "alt": "Harvest bowl with grains and roasted vegetables",
+                  "caption": "Harvest Bowl",
+                  "captionOverlay": true,
+                  "className": "[&>img]:transition-transform [&>img]:duration-700 [&>img]:ease-out hover:[&>img]:scale-110"
                 },
                 {
                   "src": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1100&q=80",
-                  "alt": "Avocado toast",
-                  "caption": "Avocado Crisp"
+                  "alt": "Avocado toast with fresh microgreens",
+                  "caption": "Avocado Crisp",
+                  "captionOverlay": true,
+                  "className": "[&>img]:transition-transform [&>img]:duration-700 [&>img]:ease-out hover:[&>img]:scale-110"
                 },
                 {
                   "src": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1100&q=80",
-                  "alt": "Elegant dessert",
-                  "caption": "Citrus Tart"
+                  "alt": "Elegant citrus tart dessert",
+                  "caption": "Citrus Tart",
+                  "captionOverlay": true,
+                  "className": "[&>img]:transition-transform [&>img]:duration-700 [&>img]:ease-out hover:[&>img]:scale-110"
                 },
                 {
                   "src": "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1100&q=80",
-                  "alt": "Soup bowl",
-                  "caption": "Garden Broth"
+                  "alt": "Artisan garden broth with fresh herbs",
+                  "caption": "Garden Broth",
+                  "captionOverlay": true,
+                  "className": "[&>img]:transition-transform [&>img]:duration-700 [&>img]:ease-out hover:[&>img]:scale-110"
                 },
                 {
                   "src": "https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=1100&q=80",
-                  "alt": "Breakfast setup",
-                  "caption": "Morning Plate"
+                  "alt": "Morning plate with eggs and seasonal herbs",
+                  "caption": "Morning Plate",
+                  "captionOverlay": true,
+                  "className": "[&>img]:transition-transform [&>img]:duration-700 [&>img]:ease-out hover:[&>img]:scale-110"
                 },
                 {
                   "src": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1100&q=80",
-                  "alt": "Fruit yogurt bowl",
-                  "caption": "Fruit & Yogurt"
+                  "alt": "Seasonal yogurt bowl with fresh fruit",
+                  "caption": "Fruit & Yogurt",
+                  "captionOverlay": true,
+                  "className": "[&>img]:transition-transform [&>img]:duration-700 [&>img]:ease-out hover:[&>img]:scale-110"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "rest-seasonal",
+        "type": "blocks",
+        "enabled": true,
+        "data": {
+          "container": {
+            "enabled": true,
+            "className": "bg-[#2a3622] py-24 text-[#f4f4ed]"
+          },
+          "innerWrapper": {
+            "enabled": true,
+            "className": "container mx-auto px-6 lg:px-10"
+          },
+          "blocks": [
+            {
+              "type": "split",
+              "enabled": true,
+              "ratio": "1:1",
+              "className": "items-center gap-12 lg:gap-20",
+              "leftBlocks": [
+                {
+                  "type": "image",
+                  "enabled": true,
+                  "src": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1400&q=80",
+                  "alt": "Slow-roasted root vegetable dish with tahini and preserved lemon",
+                  "size": "md",
+                  "className": "relative w-full aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl [&>img]:transition-transform [&>img]:duration-700 [&>img]:ease-out hover:[&>img]:scale-110"
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Seasonal Spotlight",
+                  "align": "left",
+                  "size": "sm",
+                  "className": "text-xs uppercase tracking-[0.28em] text-[#d6ab3e]"
+                },
+                {
+                  "type": "heading",
+                  "enabled": true,
+                  "text": "Slow-roasted roots with tahini & preserved lemon.",
+                  "level": 2,
+                  "align": "left",
+                  "size": "md",
+                  "className": "font-serif text-4xl sm:text-5xl leading-tight text-[#f4f4ed]"
+                },
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Heritage carrots, parsnips, and beets roasted low and slow, finished with house-made tahini and bright preserved lemon. On the menu through February.",
+                  "align": "left",
+                  "size": "md",
+                  "className": "text-base leading-8 text-[#c8c5b5]"
+                },
+                {
+                  "type": "buttonRow",
+                  "enabled": true,
+                  "align": "left",
+                  "size": "md",
+                  "buttons": [
+                    {
+                      "text": "Reserve a Table",
+                      "href": "#rest-contact",
+                      "variant": "primary",
+                      "className": "rounded border border-[#d6ab3e] px-6 py-3 text-sm font-semibold text-[#d6ab3e] hover:bg-[#d6ab3e] hover:text-[#1f1a0e] hover:-translate-y-px hover:shadow-md transition-all duration-300"
+                    }
+                  ]
                 }
               ]
             }
@@ -286,41 +502,73 @@
         "data": {
           "container": {
             "enabled": true,
-            "className": "bg-[#d8dde1] py-20 text-[#1f1f1f]"
+            "className": "bg-[#e5e2d0] py-24 text-[#1f241d]"
           },
           "innerWrapper": {
             "enabled": true,
-            "className": "container mx-auto space-y-6 px-6 lg:px-10"
+            "className": "container mx-auto px-6 lg:px-10"
           },
           "blocks": [
             {
-              "type": "heading",
+              "type": "split",
               "enabled": true,
-              "text": "Book A Table",
-              "level": 2,
-              "size": "md",
-              "align": "center",
-              "className": "text-4xl font-medium text-[#1f1f1f]"
-            },
-            {
-              "type": "paragraph",
-              "enabled": true,
-              "text": "Reserve your seat for seasonal tasting menus and private dining nights.",
-              "size": "md",
-              "align": "center",
-              "className": "text-base leading-8 text-[#2f2f2f]"
-            },
-            {
-              "type": "buttonRow",
-              "enabled": true,
-              "size": "md",
-              "align": "center",
-              "buttons": [
+              "ratio": "1:1",
+              "className": "items-center gap-12 lg:gap-20",
+              "leftBlocks": [
                 {
-                  "text": "Reserve Now",
-                  "href": "#",
-                  "variant": "primary",
-                  "className": "rounded-md bg-[#1f1f1f] px-5 py-2.5 text-sm font-semibold text-white hover:bg-black"
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Make a Reservation",
+                  "align": "left",
+                  "size": "sm",
+                  "className": "text-xs uppercase tracking-[0.24em] text-[#334128]"
+                },
+                {
+                  "type": "heading",
+                  "enabled": true,
+                  "text": "Book A Table",
+                  "level": 2,
+                  "align": "left",
+                  "size": "md",
+                  "className": "font-serif text-4xl sm:text-5xl leading-tight text-[#1f241d]"
+                },
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "Reserve your seat for seasonal tasting menus and private dining nights. We seat up to 32 guests and offer full private hire on Sundays.",
+                  "align": "left",
+                  "size": "md",
+                  "className": "text-base leading-8 text-[#5a5a4a]"
+                },
+                {
+                  "type": "buttonRow",
+                  "enabled": true,
+                  "align": "left",
+                  "size": "md",
+                  "buttons": [
+                    {
+                      "text": "Reserve Now",
+                      "href": "#",
+                      "variant": "primary",
+                      "className": "rounded bg-[#334128] px-6 py-3 text-sm font-semibold text-[#f4f4ed] hover:bg-[#2a3622] hover:-translate-y-px hover:shadow-md transition-all duration-300"
+                    },
+                    {
+                      "text": "Get in Touch",
+                      "href": "#",
+                      "variant": "secondary",
+                      "className": "rounded border border-[#334128]/50 px-6 py-3 text-sm font-semibold text-[#334128] hover:bg-[#334128]/10 hover:-translate-y-px transition-all duration-300"
+                    }
+                  ]
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "image",
+                  "enabled": true,
+                  "src": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1400&q=80",
+                  "alt": "Intimate Moss & Olive restaurant seating",
+                  "size": "md",
+                  "className": "relative w-full aspect-[4/3] overflow-hidden rounded-2xl shadow-xl [&>img]:transition-transform [&>img]:duration-700 [&>img]:ease-out hover:[&>img]:scale-110"
                 }
               ]
             }
@@ -334,7 +582,7 @@
         "data": {
           "container": {
             "enabled": true,
-            "className": "bg-[#25301d] py-16 text-[#e9e7dd]"
+            "className": "bg-[#1a2410] py-16 text-[#e9e7dd]"
           },
           "innerWrapper": {
             "enabled": true,
@@ -349,27 +597,27 @@
                 {
                   "type": "heading",
                   "enabled": true,
-                  "text": "Never Miss A Recipe",
+                  "text": "Never Miss a Recipe",
                   "level": 3,
                   "align": "left",
                   "size": "md",
-                  "className": "text-3xl font-medium text-[#f4f4ed]"
+                  "className": "font-serif text-3xl text-[#f4f4ed]"
                 },
                 {
                   "type": "paragraph",
                   "enabled": true,
-                  "text": "Get seasonal menu drops and workshop dates.",
+                  "text": "Seasonal menu drops, workshop invites, and foraging notes straight to your inbox.",
                   "align": "left",
                   "size": "md",
-                  "className": "text-[#d8d3c3]"
+                  "className": "text-sm leading-7 text-[#c8c5b5]"
                 },
                 {
                   "type": "formRow",
                   "enabled": true,
                   "inputType": "email",
                   "inputName": "email",
-                  "inputPlaceholder": "Email address",
-                  "buttonText": "Sign Up"
+                  "inputPlaceholder": "Your email address",
+                  "buttonText": "Subscribe"
                 }
               ],
               "rightBlocks": [
@@ -386,18 +634,10 @@
                   "enabled": true,
                   "className": "flex-col items-start gap-y-3",
                   "links": [
-                    {
-                      "text": "Services",
-                      "href": "#rest-services"
-                    },
-                    {
-                      "text": "Menu",
-                      "href": "#rest-menu"
-                    },
-                    {
-                      "text": "Contact",
-                      "href": "#rest-contact"
-                    }
+                    { "text": "Menu",       "href": "#rest-menu",     "className": "text-sm text-[#e9e7dd]/80 hover:text-[#e9e7dd] transition-colors duration-200" },
+                    { "text": "Philosophy", "href": "#rest-intro",    "className": "text-sm text-[#e9e7dd]/80 hover:text-[#e9e7dd] transition-colors duration-200" },
+                    { "text": "Services",   "href": "#rest-services", "className": "text-sm text-[#e9e7dd]/80 hover:text-[#e9e7dd] transition-colors duration-200" },
+                    { "text": "Contact",    "href": "#rest-contact",  "className": "text-sm text-[#e9e7dd]/80 hover:text-[#e9e7dd] transition-colors duration-200" }
                   ]
                 }
               ]
@@ -407,12 +647,29 @@
               "enabled": true
             },
             {
-              "type": "paragraph",
+              "type": "split",
               "enabled": true,
-              "text": "(c) 2026 Moss & Olive",
-              "align": "left",
-              "size": "sm",
-              "className": "text-xs uppercase tracking-[0.12em] text-[#c8c2af]"
+              "ratio": "1:1",
+              "leftBlocks": [
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "© 2026 Moss & Olive · All rights reserved",
+                  "align": "left",
+                  "size": "sm",
+                  "className": "text-xs tracking-[0.08em] text-[#c8c2af]"
+                }
+              ],
+              "rightBlocks": [
+                {
+                  "type": "paragraph",
+                  "enabled": true,
+                  "text": "128 Garden Lane, Old Town · hello@mossandolive.com",
+                  "align": "left",
+                  "size": "sm",
+                  "className": "text-xs tracking-[0.05em] text-[#c8c2af]"
+                }
+              ]
             }
           ]
         }

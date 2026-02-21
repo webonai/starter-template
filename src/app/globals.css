@@ -238,3 +238,26 @@ body {
   color: var(--foreground);
   font-family: var(--font-body-family);
 }
+
+/* ─── Custom animation keyframes ─────────────────────────────────────── */
+@keyframes fade-up-gentle {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-gentle {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Register with Tailwind so animate-fade-up / animate-fade-in work */
+@theme {
+  --animate-fade-up: fade-up-gentle 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in: fade-in-gentle 0.7s ease-out both;
+}

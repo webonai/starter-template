@@ -46,6 +46,8 @@ type BlockItem = {
     src?: string;
     alt?: string;
     caption?: string;
+    captionOverlay?: boolean;
+    captionClassName?: string;
     href?: string;
     title?: string;
     text?: string;
@@ -89,6 +91,7 @@ type BlockItem = {
   buttonText?: string;
   buttonHref?: string;
   ratio?: '1:1' | '2:1' | '1:2';
+  variant?: string;
   statItems?: Array<{
     icon?: string;
     value?: string;
@@ -210,9 +213,17 @@ function renderBlock(block: BlockItem, blockPath: string, key: number | string) 
                   )}
                 >
                   <Image src={item.src} alt={item.alt || 'Gallery image'} fill className="object-cover" />
+                  {item.caption && item.captionOverlay ? (
+                    <>
+                      <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-20 bg-gradient-to-b from-black/50 to-transparent" />
+                      <p className={item.captionClassName || 'absolute top-3 right-3 z-20 border-t border-white/50 pt-1.5 text-right text-[10px] uppercase tracking-[0.2em] text-white/90'}>
+                        {item.caption}
+                      </p>
+                    </>
+                  ) : null}
                 </div>
               ) : null}
-              {item.caption ? (
+              {item.caption && !item.captionOverlay ? (
                 <p
                   {...editable(
                     item,
@@ -261,10 +272,34 @@ function renderBlock(block: BlockItem, blockPath: string, key: number | string) 
   }
 
   if (block.type === 'cards' && block.items && block.items.length > 0) {
+    const isParallelogram = block.variant === 'parallelogram';
     return (
       <div key={key} className={`mx-auto ${maxWidthClass(block.size || 'lg')}`}>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {block.items.map((item, itemIndex) => (
+        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ${isParallelogram ? 'gap-8' : 'gap-6'}`}>
+          {block.items.map((item, itemIndex) => isParallelogram ? (
+            <article
+              key={itemIndex}
+              className="group relative border border-white/20 bg-transparent [transform:skewX(-10deg)] transition-all duration-300 hover:border-white/50 hover:bg-white/5"
+            >
+              <div className="[transform:skewX(10deg)] p-6 sm:p-8 space-y-3">
+                {item.icon ? (
+                  isSvgMarkup(item.icon) ? (
+                    <div className={item.iconClassName || "mb-3 inline-flex"} dangerouslySetInnerHTML={{ __html: item.icon }} />
+                  ) : (
+                    <div className={item.iconClassName || "mb-3 text-2xl"}>{item.icon}</div>
+                  )
+                ) : null}
+                {item.title ? <h3 className="text-lg font-semibold">{item.title}</h3> : null}
+                {item.text ? <p className="mt-2 text-sm leading-relaxed opacity-70">{item.text}</p> : null}
+                {item.href ? (
+                  <Link href={item.href} className="mt-4 inline-flex items-center gap-1 text-sm font-medium opacity-75 hover:opacity-100 transition-opacity">
+                    {item.linkText || 'Learn more'}
+                    <svg className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                  </Link>
+                ) : null}
+              </div>
+            </article>
+          ) : (
             <article
               key={itemIndex}
               className="group relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all duration-200 hover:shadow-md hover:border-primary/50"

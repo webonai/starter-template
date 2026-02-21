@@ -14,13 +14,22 @@ import config from '../../../data/config.json';
 import ReactMarkdown from 'react-markdown';
 import { ArrowLeft, Calendar, User, Tag, Clock } from 'lucide-react';
 
+function getSectionConfig(sectionName: string) {
+  const maybeSections = (config as any)?.sections;
+  if (!maybeSections || typeof maybeSections !== 'object') {
+    return {};
+  }
+
+  const section = (maybeSections as Record<string, unknown>)[sectionName];
+  return section && typeof section === 'object' ? section : {};
+}
+
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const safeConfig = config as any;
-  const sections = safeConfig?.sections || {};
-  const blogPost = sections.blogPost || {};
+  const blogPost = getSectionConfig('blogPost');
+  const header = getSectionConfig('header');
+  const footer = getSectionConfig('footer');
 
   if (!post) {
     notFound();
@@ -32,7 +41,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
   return (
     <main>
-      <Header data={sections.header || {}} />
+      <Header data={header} />
       
       <article {...editable(blogPost.container, "sections.blogPost.container", "section", "")}>
         {/* Background gradient */}
@@ -121,7 +130,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         </div>
       </article>
 
-      <Footer data={sections.footer || {}} />
+      <Footer data={footer} />
     </main>
   );
 }
