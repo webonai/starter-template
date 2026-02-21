@@ -771,7 +771,7 @@
               "size": "lg",
               "postItems": [
                 {
-                  "image": "/blog/post-1.jpg",
+                  "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80",
                   "alt": "Blog post cover",
                   "category": "Guides",
                   "date": "Jan 12, 2026",
@@ -782,7 +782,7 @@
                   "readMore": "Read article"
                 },
                 {
-                  "image": "/blog/post-2.jpg",
+                  "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1600&q=80",
                   "alt": "Design trends cover",
                   "category": "Design",
                   "date": "Jan 08, 2026",
@@ -793,7 +793,7 @@
                   "readMore": "Read article"
                 },
                 {
-                  "image": "/blog/post-3.jpg",
+                  "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=80",
                   "alt": "AI workflow cover",
                   "category": "AI",
                   "date": "Jan 02, 2026",
