@@ -125,7 +125,7 @@ export default function Footer({ data }: FooterProps) {
                         (link: any, linkIndex: number) =>
                           link.enabled && (
                             <li key={linkIndex}>
-                              <Link href={link.href} className="text-current/90 hover:text-lime-100 transition-colors text-sm">
+                              <Link href={link.href || '#'} className="text-current/90 hover:text-lime-100 transition-colors text-sm">
                                 {link.text}
                               </Link>
                             </li>
@@ -165,7 +165,7 @@ export default function Footer({ data }: FooterProps) {
                 {data.bottomLinks?.map(
                   (link: any, index: number) =>
                     link.enabled && (
-                      <Link key={index} href={link.href} className="text-sm text-current/90 hover:text-lime-100 transition-colors">
+                      <Link key={index} href={link.href || '#'} className="text-sm text-current/90 hover:text-lime-100 transition-colors">
                         {link.text}
                       </Link>
                     )

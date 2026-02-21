@@ -29,7 +29,11 @@ export default function Header({ data }: { data: HeaderProps }) {
                     
                     {/* Logo */}
                     <div {...editable(data.logoWrapper, "sections.header.logoWrapper", "container", "")}>
-                        <Link {...editable(data.logo, "sections.header.logo", "link", "")} aria-label={data.logoImage?.alt || data.logo?.alt || 'Home'}>
+                        <Link
+                            {...editable(data.logo, "sections.header.logo", "link", "")}
+                            href={data.logo?.href || '/'}
+                            aria-label={data.logoImage?.alt || data.logo?.alt || 'Home'}
+                        >
                             {data.logoImage?.src?.endsWith('.svg') && svgContent ? (
                                 <span
                                     dangerouslySetInnerHTML={{ __html: svgContent }}
@@ -43,8 +47,12 @@ export default function Header({ data }: { data: HeaderProps }) {
 
                     {/* Desktop Navigation */}
                     <nav {...editable(data.nav, "sections.header.nav", "container", "")} aria-label="Main navigation">
-                        {data.nav?.links.map((link, index) => (
-                            <Link key={index} {...editable(link, `sections.header.nav.links.${index}`, "link", "")}>
+                        {data.nav?.links?.map((link, index) => (
+                            <Link
+                                key={index}
+                                {...editable(link, `sections.header.nav.links.${index}`, "link", "")}
+                                href={link?.href || '#'}
+                            >
                                 {link.text}
                             </Link>
                         ))}
@@ -52,7 +60,10 @@ export default function Header({ data }: { data: HeaderProps }) {
 
                     {/* Desktop CTA + Mobile Menu Button */}
                     <div {...editable(data.actions, "sections.header.actions", "container", "")}>
-                        <Link {...editable(data.ctaButton, "sections.header.ctaButton", "button", "")}>
+                        <Link
+                            {...editable(data.ctaButton, "sections.header.ctaButton", "button", "")}
+                            href={data.ctaButton?.href || '#'}
+                        >
                             {data.ctaButton?.text}
                         </Link>
 
@@ -77,12 +88,21 @@ export default function Header({ data }: { data: HeaderProps }) {
             {mobileMenuOpen && (
                 <div {...editable(data.mobileMenu, "sections.header.mobileMenu", "container", "")}>
                     <div {...editable(data.mobileMenuInner, "sections.header.mobileMenuInner", "container", "")}>
-                        {data.nav?.links.map((link, index) => (
-                            <Link key={index} {...editable(link, `sections.header.mobileMenu.links.${index}`, "link", "")} onClick={() => setMobileMenuOpen(false)}>
+                        {data.nav?.links?.map((link, index) => (
+                            <Link
+                                key={index}
+                                {...editable(link, `sections.header.mobileMenu.links.${index}`, "link", "")}
+                                href={link?.href || '#'}
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
                                 {link.text}
                             </Link>
                         ))}
-                        <Link {...editable(data.mobileCTA, "sections.header.mobileCTA", "button", "")} onClick={() => setMobileMenuOpen(false)}>
+                        <Link
+                            {...editable(data.mobileCTA, "sections.header.mobileCTA", "button", "")}
+                            href={data.ctaButton?.href || '#'}
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
                             {data.ctaButton?.text}
                         </Link>
                     </div>
