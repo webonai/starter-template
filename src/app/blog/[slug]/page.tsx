@@ -9,27 +9,28 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Header from '../../components/sections/Header';
 import Footer from '../../components/sections/Footer';
+import { FooterProps, HeaderProps } from '../../components/sections/types';
 import { editable } from '@/lib/editable';
 import config from '../../../data/config.json';
 import ReactMarkdown from 'react-markdown';
 import { ArrowLeft, Calendar, User, Tag, Clock } from 'lucide-react';
 
-function getSectionConfig(sectionName: string) {
+function getSectionConfig<T>(sectionName: string): T | null {
   const maybeSections = (config as any)?.sections;
   if (!maybeSections || typeof maybeSections !== 'object') {
-    return {};
+    return null;
   }
 
   const section = (maybeSections as Record<string, unknown>)[sectionName];
-  return section && typeof section === 'object' ? section : {};
+  return section && typeof section === 'object' ? (section as T) : null;
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
-  const blogPost = getSectionConfig('blogPost');
-  const header = getSectionConfig('header');
-  const footer = getSectionConfig('footer');
+  const blogPost = (getSectionConfig<Record<string, unknown>>('blogPost') || {}) as any;
+  const header = getSectionConfig<HeaderProps>('header');
+  const footer = getSectionConfig<FooterProps['data']>('footer');
 
   if (!post) {
     notFound();
@@ -41,7 +42,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
   return (
     <main>
-      <Header data={header} />
+      {header ? <Header data={header} /> : null}
       
       <article {...editable(blogPost.container, "sections.blogPost.container", "section", "")}>
         {/* Background gradient */}
@@ -130,7 +131,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         </div>
       </article>
 
-      <Footer data={footer} />
+      {footer ? <Footer data={footer} /> : null}
     </main>
   );
 }
