@@ -1,0 +1,921 @@
+{
+  "meta": {
+    "siteName": "My Awesome Brand",
+    "description": "The best brand in the world.",
+    "favicon": "/uploads/favicon.ico"
+  },
+  "theme": {
+    "name": "modern",
+    "mode": "light",
+    "colors": {
+      "light": {
+        "primary": "#4f46e5",
+        "primaryForeground": "#ffffff",
+        "secondary": "#1e293b",
+        "secondaryForeground": "#f8fafc",
+        "accent": "#10b981",
+        "accentForeground": "#1e293b",
+        "destructive": "#ef4444",
+        "destructiveForeground": "#f8fafc",
+        "muted": "#f1f5f9",
+        "mutedForeground": "#64748b",
+        "card": "#ffffff",
+        "cardForeground": "#020817",
+        "popover": "#ffffff",
+        "popoverForeground": "#020817",
+        "background": "#ffffff",
+        "foreground": "#020817",
+        "border": "#e2e8f0",
+        "input": "#e2e8f0",
+        "ring": "#4f46e5",
+        "neutral": "#f3f4f6"
+      },
+      "dark": {
+        "primary": "#6366f1",
+        "primaryForeground": "#f8fafc",
+        "secondary": "#1e293b",
+        "secondaryForeground": "#cbd5e1",
+        "accent": "#10b981",
+        "accentForeground": "#f0fdf4",
+        "destructive": "#f87171",
+        "destructiveForeground": "#fef2f2",
+        "muted": "#1e293b",
+        "mutedForeground": "#94a3b8",
+        "card": "#0f172a",
+        "cardForeground": "#f8fafc",
+        "popover": "#0f172a",
+        "popoverForeground": "#f8fafc",
+        "background": "#020817",
+        "foreground": "#f8fafc",
+        "border": "#1e293b",
+        "input": "#1e293b",
+        "ring": "#6366f1",
+        "neutral": "#1e293b"
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "heading": "Inter",
+        "body": "Inter",
+        "mono": "monospace"
+      },
+      "fontSize": {
+        "xs": "0.75rem",
+        "sm": "0.875rem",
+        "base": "1rem",
+        "lg": "1.125rem",
+        "xl": "1.25rem",
+        "2xl": "1.5rem",
+        "3xl": "1.875rem",
+        "4xl": "2.25rem",
+        "5xl": "3rem",
+        "6xl": "3.75rem"
+      },
+      "fontWeight": {
+        "thin": "100",
+        "extralight": "200",
+        "light": "300",
+        "normal": "400",
+        "medium": "500",
+        "semibold": "600",
+        "bold": "700",
+        "extrabold": "800",
+        "black": "900"
+      },
+      "lineHeight": {
+        "none": "1",
+        "tight": "1.25",
+        "snug": "1.375",
+        "normal": "1.5",
+        "relaxed": "1.625",
+        "loose": "2"
+      },
+      "letterSpacing": {
+        "tighter": "-0.05em",
+        "tight": "-0.025em",
+        "normal": "0em",
+        "wide": "0.025em",
+        "wider": "0.05em",
+        "widest": "0.1em"
+      }
+    },
+    "spacing": {
+      "0": "0px",
+      "1": "0.25rem",
+      "2": "0.5rem",
+      "3": "0.75rem",
+      "4": "1rem",
+      "5": "1.25rem",
+      "6": "1.5rem",
+      "8": "2rem",
+      "10": "2.5rem",
+      "12": "3rem",
+      "16": "4rem",
+      "20": "5rem",
+      "24": "6rem",
+      "32": "8rem",
+      "40": "10rem",
+      "48": "12rem",
+      "56": "14rem",
+      "64": "16rem"
+    },
+    "borderRadius": {
+      "none": "0px",
+      "sm": "0.125rem",
+      "base": "0.25rem",
+      "md": "0.375rem",
+      "lg": "0.5rem",
+      "xl": "0.75rem",
+      "2xl": "1rem",
+      "3xl": "1.5rem",
+      "full": "9999px"
+    },
+    "shadows": {
+      "light": {
+        "sm": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        "base": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+        "md": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+        "lg": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+        "xl": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+        "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
+        "none": "none"
+      },
+      "dark": {
+        "sm": "0 1px 2px 0 rgb(0 0 0 / 0.3)",
+        "base": "0 1px 3px 0 rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.4)",
+        "md": "0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4)",
+        "lg": "0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4)",
+        "xl": "0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.4)",
+        "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.5)",
+        "none": "none"
+      }
+    },
+    
+    "borderWidth": {
+      "0": "0px",
+      "1": "1px",
+      "2": "2px",
+      "4": "4px",
+      "8": "8px"
+    },
+    "opacity": { "0": "0", "5": "0.05", "10": "0.1", "20": "0.2", "25": "0.25", "30": "0.3", "40": "0.4", "50": "0.5", "60": "0.6", "70": "0.7", "75": "0.75", "80": "0.8", "90": "0.9", "95": "0.95", "100": "1" },
+    "transitions": {
+      "none": "none",
+      "all": "all 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "colors": "color, background-color, border-color, text-decoration-color, fill, stroke 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "opacity": "opacity 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "shadow": "box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "transform": "transform 150ms cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    "animation": {
+      "duration": {
+        "fast": "150ms",
+        "normal": "300ms",
+        "slow": "500ms",
+        "slower": "1000ms"
+      },
+      "easing": {
+        "linear": "linear",
+        "in": "cubic-bezier(0.4, 0, 1, 1)",
+        "out": "cubic-bezier(0, 0, 0.2, 1)",
+        "inOut": "cubic-bezier(0.4, 0, 0.2, 1)"
+      }
+    },
+    "breakpoints": { "sm": "640px", "md": "768px", "lg": "1024px", "xl": "1280px", "2xl": "1536px" }, 
+    "container": {
+      "padding": "1rem",
+      "maxWidth": "1280px"
+    },
+    "zIndex": { "0": "0", "10": "10", "20": "20", "30": "30", "40": "40", "50": "50", "auto": "auto" }
+  },
+  "layout": {
+    "order": ["header","hero","features","testimonials", "faq", "blog", "cta","footer"],
+    "hiddenSections": [],
+    "pages": [
+      { "slug": "", "title": "Home", "href": "/" },
+      { "slug": "about", "title": "About Us", "href": "/about",
+        "headline": { "text": "About Our Company", "className": "text-4xl font-bold mb-4 text-foreground" }, 
+        "subtext": { "text": "We are dedicated to providing the best service to our customers." }, "body": { "text": "Founded in 2010, our company has consistently delivered high-quality products and services to clients worldwide. Our team of experts is passionate about innovation and excellence." },
+        "grid": { "className": "grid grid-cols-1 sm:grid-cols-2 gap-8" },
+        "items": [ { "title": { "text": "Our Mission" }, "description": { "text": "To deliver high-quality products that bring value to our customers." } }, { "title": { "text": "Our Vision" }, "description": { "text": "To be the leading brand in our industry, known for innovation and excellence." } }, { "title": { "text": "Our Values" }, "description": { "text": "Integrity, Customer Focus, Innovation, and Teamwork." } }, { "title": { "text": "Our History" }, "description": { "text": "Founded in 2010, we have consistently grown and adapted to meet market needs." } } ]
+      },
+      { 
+        "slug": "contact", 
+        "title": "Contact", 
+        "href": "/contact",
+        "heading": {
+          "text": "Get in Touch",
+          "className": "text-4xl font-bold mb-4 text-foreground"
+        },
+        "subtext": {
+          "text": "We'd love to hear from you. Reach out with any questions."
+        },
+        "socials": [
+          { "platform": "Twitter", "href": "https://twitter.com", "icon": "twitter" },
+          { "platform": "GitHub", "href": "https://github.com", "icon": "github" },
+          { "platform": "LinkedIn", "href": "https://linkedin.com", "icon": "linkedin" }
+        ]
+      }
+    ]
+  },
+  "sections": {
+    "header": {
+      "container": { "enabled": true, "className": "sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-4 sm:px-6 lg:px-8" },
+      "wrapper": { "enabled": true, "className": "flex h-16 items-center justify-between" },
+      "logoWrapper": { "enabled": true, "className": "flex items-center" },
+      "logo": { "enabled": true, "href": "/", "alt": "Company Logo", "className": "flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" },
+      "logoImage": { "enabled": true, "src": "/logo.svg", "alt": "Company Logo", "className": "inline-flex h-8 text-primary [&>svg]:h-full [&>svg]:w-auto" },
+      "nav": {
+        "enabled": true,
+        "className": "hidden lg:flex lg:items-center lg:gap-x-8",
+        "links": [
+          { "enabled": true, "text": "Features", "href": "/#features", "className": "text-sm font-medium text-foreground/70 hover:text-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-1 py-0.5" },
+          { "enabled": true, "text": "Blog", "href": "/blog", "className": "text-sm font-medium text-foreground/70 hover:text-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-1 py-0.5" },
+          { "enabled": true, "text": "About", "href": "/about", "className": "text-sm font-medium text-foreground/70 hover:text-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-1 py-0.5" },
+          { "enabled": true, "text": "Contact", "href": "/contact", "className": "text-sm font-medium text-foreground/70 hover:text-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-1 py-0.5" }
+        ]
+      },
+      "actions": { "enabled": true, "className": "flex items-center gap-x-4" },
+      "ctaButton": { "enabled": true, "text": "Get Started", "href": "#signup", "className": "hidden sm:inline-flex rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" },
+      "mobileMenuButton": { "enabled": true, "className": "lg:hidden inline-flex items-center justify-center rounded-md p-2 text-foreground hover:bg-accent hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" },
+      "srText": { "enabled": true, "className": "sr-only" },
+      "hamburgerIcon": { "enabled": true, "className": "" },
+      "closeIcon": { "enabled": true, "className": "" },
+      "mobileMenu": { "enabled": true, "className": "lg:hidden border-t border-border bg-background" },
+      "mobileMenuInner": { "enabled": true, "className": "container mx-auto px-4 py-4 space-y-1" },
+      "mobileCTA": { "enabled": true, "className": "mt-4 block w-full rounded-lg bg-primary px-4 py-2.5 text-center text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" }
+    },
+    "hero": { 
+      "container": { "enabled": true, "className": "relative overflow-hidden py-20 sm:py-32 lg:py-40" },
+      "backgroundGradient": { "enabled": true, "className": "absolute inset-0 -z-10 bg-gradient-to-b from-primary/5 via-background to-background" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-6" },
+      "contentWrapper": { "enabled": true, "className": "mx-auto max-w-4xl text-center" },
+      "eyebrow": { "enabled": true, "text": "✨ New Feature Launch", "className": "mb-8 inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary" },
+      "headline": { "enabled": true, "text": "Build Your Next Big Thing", "className": "text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl mb-6" },
+      "subtext": { "enabled": true, "text": "The ultimate platform for creators, developers, and entrepreneurs to bring their ideas to life.", "className": "mt-6 text-lg sm:text-xl leading-8 text-muted-foreground max-w-2xl mx-auto" },
+      "buttonWrapper": { "enabled": true, "className": "mt-10 flex flex-col sm:flex-row items-center justify-center gap-4" },
+      "primaryButton": { "enabled": true, "text": "Get Started Free", "href": "#signup", "className": "rounded-lg bg-primary px-6 py-3 text-base font-semibold text-primary-foreground shadow-lg hover:opacity-90 transition-all hover:scale-105" },
+      "secondaryButton": { "enabled": true, "text": "Learn More", "href": "/about", "className": "rounded-lg border-2 border-border px-6 py-3 text-base font-semibold text-foreground hover:bg-accent transition-colors" },
+      "stats": [
+        {
+          "enabled": true,
+          "value": "10k+",
+          "label": "Active Users",
+          "icon": "👥",
+          "className": ""
+        },
+        {
+          "enabled": true,
+          "value": "99.9%",
+          "label": "Uptime",
+          "icon": "⚡",
+          "className": ""
+        },
+        {
+          "enabled": true,
+          "value": "4.9/5",
+          "label": "User Rating",
+          "icon": "⭐",
+          "className": ""
+        }
+      ],
+      "statsContainer": {
+        "enabled": true,
+        "className": "mt-12 flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm"
+      },
+      "imageWrapper": { "enabled": true, "className": "mt-16 sm:mt-20 lg:mt-24" },
+      "imageInner": { "enabled": true, "className": "relative mx-auto max-w-6xl" },
+      "imageGlow": { "enabled": true, "className": "absolute inset-0 -z-10 bg-gradient-to-tr from-primary/20 via-primary/5 to-transparent blur-3xl" },
+      "heroImage": {
+        "enabled": true,
+        "src": "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&auto=format&fit=crop&w=3603&q=80",
+        "alt": "Product Dashboard",
+        "className": "rounded-xl shadow-2xl border border-border ring-1 ring-border/50 w-full h-auto"
+      }
+    },
+    "features": {
+      "container": { "enabled": true, "className": "relative py-20 sm:py-24 lg:py-32" },
+      "background": { "enabled": true, "className": "absolute inset-0 -z-10 bg-gradient-to-b from-background via-muted/30 to-background" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-4 sm:px-6 lg:px-8" },
+      "header": { "enabled": true, "className": "mx-auto max-w-3xl text-center mb-16 sm:mb-20" },
+      "eyebrow": {
+        "enabled": true,
+        "text": "✨ Features",
+        "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
+      },
+      "headline": {
+        "enabled": true,
+        "text": "Everything you need to succeed",
+        "className": "text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-4"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "Powerful features designed to help you build, grow, and scale your business with confidence.",
+        "className": "text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto"
+      },
+      "grid": { "enabled": true, "className": "grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3" },
+      "items": [
+        {
+          "enabled": true,
+          "className": "group relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md hover:border-primary/50",
+          "icon": {
+            "enabled": true,
+            "emoji": "⚡",
+            "alt": "Lightning fast",
+            "className": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
+          },
+          "title": {
+            "enabled": true,
+            "text": "Lightning Fast",
+            "className": "text-xl font-semibold text-foreground mb-2"
+          },
+          "description": {
+            "enabled": true,
+            "text": "Optimized for speed with cutting-edge technology that delivers instant results.",
+            "className": "text-sm text-muted-foreground leading-relaxed"
+          },
+          "link": {
+            "enabled": false,
+            "text": "Learn more",
+            "href": "#"
+          }
+        },
+        {
+          "enabled": true,
+          "className": "group relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md hover:border-primary/50",
+          "icon": {
+            "enabled": true,
+            "emoji": "🔒",
+            "alt": "Secure",
+            "className": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
+          },
+          "title": {
+            "enabled": true,
+            "text": "Secure by Default",
+            "className": "text-xl font-semibold text-foreground mb-2"
+          },
+          "description": {
+            "enabled": true,
+            "text": "Enterprise-grade security with end-to-end encryption and compliance certifications.",
+            "className": "text-sm text-muted-foreground leading-relaxed"
+          },
+          "link": {
+            "enabled": false,
+            "text": "Learn more",
+            "href": "#"
+          }
+        },
+        {
+          "enabled": true,
+          "className": "group relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md hover:border-primary/50",
+          "icon": {
+            "enabled": true,
+            "emoji": "📊",
+            "alt": "Analytics",
+            "className": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
+          },
+          "title": {
+            "enabled": true,
+            "text": "Powerful Analytics",
+            "className": "text-xl font-semibold text-foreground mb-2"
+          },
+          "description": {
+            "enabled": true,
+            "text": "Real-time insights and detailed reports to help you make data-driven decisions.",
+            "className": "text-sm text-muted-foreground leading-relaxed"
+          },
+          "link": {
+            "enabled": false,
+            "text": "Learn more",
+            "href": "#"
+          }
+        },
+        {
+          "enabled": true,
+          "className": "group relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md hover:border-primary/50",
+          "icon": {
+            "enabled": true,
+            "emoji": "🎨",
+            "alt": "Customizable",
+            "className": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
+          },
+          "title": {
+            "enabled": true,
+            "text": "Fully Customizable",
+            "className": "text-xl font-semibold text-foreground mb-2"
+          },
+          "description": {
+            "enabled": true,
+            "text": "Tailor every aspect to match your brand with our flexible design system.",
+            "className": "text-sm text-muted-foreground leading-relaxed"
+          },
+          "link": {
+            "enabled": false,
+            "text": "Learn more",
+            "href": "#"
+          }
+        },
+        {
+          "enabled": true,
+          "className": "group relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md hover:border-primary/50",
+          "icon": {
+            "enabled": true,
+            "emoji": "🌐",
+            "alt": "Global",
+            "className": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
+          },
+          "title": {
+            "enabled": true,
+            "text": "Global Scale",
+            "className": "text-xl font-semibold text-foreground mb-2"
+          },
+          "description": {
+            "enabled": true,
+            "text": "Deploy worldwide with our distributed infrastructure and CDN network.",
+            "className": "text-sm text-muted-foreground leading-relaxed"
+          },
+          "link": {
+            "enabled": false,
+            "text": "Learn more",
+            "href": "#"
+          }
+        },
+        {
+          "enabled": true,
+          "className": "group relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md hover:border-primary/50",
+          "icon": {
+            "enabled": true,
+            "emoji": "🤝",
+            "alt": "Support",
+            "className": "mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
+          },
+          "title": {
+            "enabled": true,
+            "text": "24/7 Support",
+            "className": "text-xl font-semibold text-foreground mb-2"
+          },
+          "description": {
+            "enabled": true,
+            "text": "Our dedicated team is always here to help you succeed, day or night.",
+            "className": "text-sm text-muted-foreground leading-relaxed"
+          },
+          "link": {
+            "enabled": false,
+            "text": "Learn more",
+            "href": "#"
+          }
+        }
+      ],
+      "ctaWrapper": { "enabled": true, "className": "mt-16 text-center" },
+      "cta": {
+        "enabled": false,
+        "text": "Explore All Features",
+        "href": "/features",
+        "className": "inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-base font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+      }
+    },
+    "testimonials": {
+      "container": { "enabled": true, "className": "relative py-20 sm:py-24 lg:py-32 bg-muted/30" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-4 sm:px-6 lg:px-8" },
+      "header": { "enabled": true, "className": "mx-auto max-w-3xl text-center mb-16 sm:mb-20" },
+      "eyebrow": {
+        "enabled": true,
+        "text": "💬 Testimonials",
+        "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
+      },
+      "headline": {
+        "enabled": true,
+        "text": "Loved by thousands worldwide",
+        "className": "text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-4"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "See what our customers have to say about their experience with our platform.",
+        "className": "text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto"
+      },
+      "grid": { "enabled": true, "className": "grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3" },
+      "showQuoteIcon": true,
+      "items": [
+        {
+          "enabled": true,
+          "className": "relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md",
+          "quote": {
+            "enabled": true,
+            "text": "This platform has completely transformed how we work. The intuitive interface and powerful features make it a joy to use every day.",
+            "className": "text-base text-foreground leading-relaxed mb-6"
+          },
+          "avatar": {
+            "enabled": true,
+            "src": "/avatars/avatar-1.jpg",
+            "alt": "Sarah Chen"
+          },
+          "author": {
+            "enabled": true,
+            "text": "Sarah Chen",
+            "className": "font-semibold text-foreground truncate"
+          },
+          "role": {
+            "enabled": true,
+            "text": "CEO"
+          },
+          "company": {
+            "enabled": true,
+            "text": "TechCorp"
+          },
+          "rating": {
+            "enabled": true,
+            "value": 5
+          }
+        },
+        {
+          "enabled": true,
+          "className": "relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md",
+          "quote": {
+            "enabled": true,
+            "text": "The best decision we made this year. Our team's productivity has increased dramatically, and our customers are happier than ever.",
+            "className": "text-base text-foreground leading-relaxed mb-6"
+          },
+          "avatar": {
+            "enabled": true,
+            "src": "/avatars/avatar-2.jpg",
+            "alt": "Michael Rodriguez"
+          },
+          "author": {
+            "enabled": true,
+            "text": "Michael Rodriguez",
+            "className": "font-semibold text-foreground truncate"
+          },
+          "role": {
+            "enabled": true,
+            "text": "Product Manager"
+          },
+          "company": {
+            "enabled": true,
+            "text": "StartupXYZ"
+          },
+          "rating": {
+            "enabled": true,
+            "value": 5
+          }
+        },
+        {
+          "enabled": true,
+          "className": "relative rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm transition-all hover:shadow-md",
+          "quote": {
+            "enabled": true,
+            "text": "Outstanding support and documentation. The team went above and beyond to help us get set up and running smoothly.",
+            "className": "text-base text-foreground leading-relaxed mb-6"
+          },
+          "avatar": {
+            "enabled": true,
+            "src": "/avatars/avatar-3.jpg",
+            "alt": "Emily Taylor"
+          },
+          "author": {
+            "enabled": true,
+            "text": "Emily Taylor",
+            "className": "font-semibold text-foreground truncate"
+          },
+          "role": {
+            "enabled": true,
+            "text": "Head of Operations"
+          },
+          "company": {
+            "enabled": true,
+            "text": "Enterprise Co"
+          },
+          "rating": {
+            "enabled": true,
+            "value": 5
+          }
+        }
+      ]
+    },
+    "blog": {
+      "container": { "enabled": true, "className": "relative py-20 sm:py-24 lg:py-32 bg-background" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-4 sm:px-6 lg:px-8" },
+      "header": { "enabled": true, "className": "flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12 sm:mb-16" },
+      "headerContent": { "enabled": true, "className": "flex-1" },
+      "eyebrow": {
+        "enabled": true,
+        "text": "📝 Blog",
+        "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
+      },
+      "headline": {
+        "enabled": true,
+        "text": "Latest insights and updates",
+        "className": "text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-4"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "Stay up to date with the latest news, tips, and best practices from our team.",
+        "className": "text-base sm:text-lg text-muted-foreground max-w-2xl"
+      },
+      "viewAllButton": {
+        "enabled": true,
+        "text": "View All Posts",
+        "href": "/blog",
+        "className": "inline-flex items-center justify-center rounded-lg border-2 border-border px-5 py-2.5 text-sm font-semibold text-foreground hover:bg-accent transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary whitespace-nowrap"
+      },
+      "grid": { "enabled": true, "className": "mx-auto max-w-6xl grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3" },
+      "maxPosts": 3,
+      "posts": [
+        {
+          "enabled": true,
+          "image": {
+            "enabled": true,
+            "src": "/blog/post-1.jpg",
+            "alt": "Blog post cover"
+          },
+          "imageLink": { "href": "/blog/getting-started" },
+          "category": {
+            "enabled": true,
+            "text": "Tutorial"
+          },
+          "date": {
+            "enabled": true,
+            "text": "Jan 15, 2025",
+            "datetime": "2025-01-15"
+          },
+          "readTime": {
+            "enabled": true,
+            "text": "5 min read"
+          },
+          "title": {
+            "enabled": true,
+            "text": "Getting Started with Our Platform"
+          },
+          "titleLink": { "href": "/blog/getting-started" },
+          "excerpt": {
+            "enabled": true,
+            "text": "Learn the fundamentals and get up and running in just a few minutes with our comprehensive getting started guide."
+          },
+          "author": {
+            "enabled": true,
+            "name": "Sarah Johnson",
+            "avatar": {
+              "enabled": true,
+              "src": "/avatars/sarah.jpg",
+              "alt": "Sarah Johnson"
+            }
+          },
+          "readMore": {
+            "enabled": true,
+            "text": "Read article",
+            "href": "/blog/getting-started"
+          }
+        }
+      ]
+    },
+    "cta": {
+      "container": { "enabled": true, "className": "relative isolate py-20 sm:py-24 lg:py-32" },
+      "background": { "enabled": true, "className": "absolute inset-0 -z-10 bg-gradient-to-br from-primary/90 via-primary to-primary/80" },
+      "pattern": { "enabled": true, "className": "absolute inset-0 -z-10 bg-[url('/grid-pattern.svg')] opacity-10" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-4 sm:px-6 lg:px-8" },
+      "content": { "enabled": true, "className": "mx-auto max-w-4xl text-center" },
+      "eyebrow": {
+        "enabled": true,
+        "text": "🚀 Ready to get started?",
+        "className": "inline-flex items-center rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3 py-1 text-xs font-medium text-primary-foreground mb-6"
+      },
+      "headline": {
+        "enabled": true,
+        "text": "Start building something amazing today",
+        "className": "text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl lg:text-5xl mb-6"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "Join thousands of teams already using our platform to build, ship, and scale their products.",
+        "className": "text-lg sm:text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-10"
+      },
+      "buttonWrapper": { "enabled": true, "className": "flex flex-col sm:flex-row items-center justify-center gap-4" },
+      "primaryButton": {
+        "enabled": true,
+        "text": "Get Started Free",
+        "href": "/signup",
+        "className": "inline-flex items-center justify-center rounded-lg bg-primary-foreground px-6 py-3 text-base font-semibold text-primary shadow-lg hover:bg-primary-foreground/90 transition-all hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
+      },
+      "secondaryButton": {
+        "enabled": true,
+        "text": "Schedule a Demo",
+        "href": "/demo",
+        "className": "inline-flex items-center justify-center rounded-lg border-2 border-primary-foreground/30 px-6 py-3 text-base font-semibold text-primary-foreground hover:bg-primary-foreground/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground"
+      },
+      "featuresWrapper": { "enabled": true, "className": "mt-10 flex flex-wrap justify-center gap-x-8 gap-y-4" },
+      "features": [
+        {
+          "enabled": true,
+          "icon": "✓",
+          "text": "Free 14-day trial"
+        },
+        {
+          "enabled": true,
+          "icon": "✓",
+          "text": "No credit card required"
+        },
+        {
+          "enabled": true,
+          "icon": "✓",
+          "text": "Cancel anytime"
+        }
+      ]
+    },
+    "faq": {
+      "container": { "enabled": true, "className": "relative py-20 sm:py-24 lg:py-32" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-4 sm:px-6 lg:px-8" },
+      "headerWrapper": { "enabled": true, "className": "mx-auto max-w-3xl text-center mb-16 sm:mb-20" },
+      "eyebrow": {
+        "enabled": true,
+        "text": "FAQ",
+        "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
+      },
+      "header": {
+        "enabled": true,
+        "text": "Frequently asked questions",
+        "className": "text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-4"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "Everything you need to know about our platform. Can't find what you're looking for? Reach out to our support team.",
+        "className": "text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto"
+      },
+      "list": { "enabled": true, "className": "mx-auto max-w-3xl space-y-4" },
+      "questions": [
+        {
+          "q": { "text": "How do I get started?" },
+          "a": { "text": "Getting started is easy. Simply create a free account, choose your plan, and start building. Our onboarding wizard will guide you through the setup process step by step." }
+        },
+        {
+          "q": { "text": "Is there a free trial available?" },
+          "a": { "text": "Yes! We offer a 14-day free trial with full access to all features. No credit card required. You can upgrade, downgrade, or cancel at any time." }
+        },
+        {
+          "q": { "text": "Can I change my plan later?" },
+          "a": { "text": "Absolutely. You can upgrade or downgrade your plan at any time from your account settings. Changes take effect immediately, and we'll prorate any differences." }
+        },
+        {
+          "q": { "text": "What kind of support do you offer?" },
+          "a": { "text": "We provide 24/7 support through live chat, email, and our comprehensive documentation. Enterprise customers also get a dedicated account manager and priority support." }
+        },
+        {
+          "q": { "text": "Is my data secure?" },
+          "a": { "text": "Security is our top priority. We use enterprise-grade encryption, regular security audits, and comply with SOC 2, GDPR, and HIPAA standards to keep your data safe." }
+        }
+      ]
+    },
+    "blogIndex": {
+      "container": { "enabled": true, "className": "relative py-20 sm:py-24 lg:py-32" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-4 sm:px-6 lg:px-8" },
+      "header": { "enabled": true, "className": "mx-auto max-w-3xl text-center mb-16 sm:mb-20" },
+      "eyebrow": {
+        "enabled": true,
+        "text": "Blog",
+        "className": "inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-4"
+      },
+      "headline": {
+        "enabled": true,
+        "text": "Latest insights and updates",
+        "className": "text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-4"
+      },
+      "subtext": {
+        "enabled": true,
+        "text": "Stay up to date with the latest news, tips, and best practices from our team.",
+        "className": "text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto"
+      },
+      "categoryFilter": { "enabled": true, "className": "flex flex-wrap justify-center gap-3 mb-12 sm:mb-16" },
+      "categoryAllLabel": { "enabled": true, "text": "All" },
+      "grid": { "enabled": true, "className": "mx-auto max-w-6xl grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3" },
+      "emptyState": { "enabled": true, "text": "No posts found.", "className": "text-lg text-muted-foreground" },
+      "emptyStateLink": { "enabled": true, "text": "View all posts", "href": "/blog", "className": "mt-4 inline-flex items-center text-sm font-medium text-primary hover:underline" },
+      "pagination": { "enabled": true, "className": "flex items-center justify-center gap-3 mt-16" },
+      "prevButton": { "enabled": true, "text": "Previous", "className": "inline-flex items-center rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-all hover:border-primary/30 hover:shadow-md" },
+      "nextButton": { "enabled": true, "text": "Next", "className": "inline-flex items-center rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-all hover:border-primary/30 hover:shadow-md" }
+    },
+    "blogPost": {
+      "container": { "enabled": true, "className": "relative py-20 sm:py-24 lg:py-32" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-4 sm:px-6 lg:px-8" },
+      "contentWrapper": { "enabled": true, "className": "mx-auto max-w-3xl" },
+      "backLink": { "enabled": true, "text": "Back to Blog", "href": "/blog", "className": "group mb-10 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-muted-foreground shadow-sm transition-all hover:border-primary/30 hover:text-primary hover:shadow-md" },
+      "category": { "enabled": true, "className": "mb-4" },
+      "title": { "enabled": true, "className": "text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-6" },
+      "meta": { "enabled": true, "className": "flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-10" },
+      "imageWrapper": { "enabled": true, "className": "mx-auto max-w-4xl mb-12 sm:mb-16" },
+      "content": { "enabled": true, "className": "prose prose-lg max-w-none text-muted-foreground prose-headings:text-foreground prose-headings:font-bold prose-headings:tracking-tight prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-blockquote:border-primary/30 prose-blockquote:text-muted-foreground prose-code:text-primary prose-code:bg-muted prose-code:rounded prose-code:px-1.5 prose-code:py-0.5 prose-code:text-sm prose-code:before:content-none prose-code:after:content-none prose-img:rounded-xl prose-img:border prose-img:border-border prose-img:shadow-md" },
+      "bottomNav": { "enabled": true, "className": "mt-16 border-t border-border pt-8" },
+      "backToAllLink": { "enabled": true, "text": "Back to all posts", "href": "/blog", "className": "group inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary" }
+    },
+    "dynamicPage": {
+      "container": { "enabled": true, "className": "py-24 sm:py-32 bg-background" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-6 lg:px-8" },
+      "contentWrapper": { "enabled": true, "className": "mx-auto max-w-2xl text-center" }
+    },
+    "footer": {
+      "container": { "enabled": true, "className": "bg-background border-t border-border" },
+      "innerWrapper": { "enabled": true, "className": "container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16" },
+      "mainContent": { "enabled": true, "className": "grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-12 lg:mb-16" },
+      "brandColumn": { "enabled": true, "className": "lg:col-span-4" },
+      "logo": {
+        "enabled": true,
+        "src": "/logo.svg",
+        "alt": "Company Logo",
+        "href": "/"
+      },
+      "tagline": {
+        "enabled": true,
+        "text": "Building the future of web development, one project at a time.",
+        "className": "text-muted-foreground mb-6 max-w-sm"
+      },
+      "socialWrapper": { "enabled": true, "className": "flex items-center gap-4" },
+      "socialLinks": [
+        {
+          "enabled": true,
+          "platform": "twitter",
+          "label": "Twitter",
+          "href": "https://twitter.com/company",
+          "icon": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z'/></svg>"
+        },
+        {
+          "enabled": true,
+          "platform": "github",
+          "label": "GitHub",
+          "href": "https://github.com/company",
+          "icon": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z'/></svg>"
+        },
+        {
+          "enabled": true,
+          "platform": "linkedin",
+          "label": "LinkedIn",
+          "href": "https://linkedin.com/company/company",
+          "icon": "<svg viewBox='0 0 24 24' fill='currentColor'><path d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'/></svg>"
+        }
+      ],
+      "linkColumns": [
+        {
+          "enabled": true,
+          "title": {
+            "enabled": true,
+            "text": "Product"
+          },
+          "links": [
+            { "enabled": true, "text": "Features", "href": "/features" },
+            { "enabled": true, "text": "Pricing", "href": "/pricing" },
+            { "enabled": true, "text": "Security", "href": "/security" },
+            { "enabled": true, "text": "Roadmap", "href": "/roadmap" }
+          ]
+        },
+        {
+          "enabled": true,
+          "title": {
+            "enabled": true,
+            "text": "Company"
+          },
+          "links": [
+            { "enabled": true, "text": "About", "href": "/about" },
+            { "enabled": true, "text": "Blog", "href": "/blog" },
+            { "enabled": true, "text": "Careers", "href": "/careers" },
+            { "enabled": true, "text": "Contact", "href": "/contact" }
+          ]
+        },
+        {
+          "enabled": true,
+          "title": {
+            "enabled": true,
+            "text": "Resources"
+          },
+          "links": [
+            { "enabled": true, "text": "Documentation", "href": "/docs" },
+            { "enabled": true, "text": "Help Center", "href": "/help" },
+            { "enabled": true, "text": "API Reference", "href": "/api" },
+            { "enabled": true, "text": "Status", "href": "/status" }
+          ]
+        },
+        {
+          "enabled": true,
+          "title": {
+            "enabled": true,
+            "text": "Legal"
+          },
+          "links": [
+            { "enabled": true, "text": "Privacy", "href": "/privacy" },
+            { "enabled": true, "text": "Terms", "href": "/terms" },
+            { "enabled": true, "text": "License", "href": "/license" }
+          ]
+        }
+      ],
+      "bottomBar": { "enabled": true, "className": "pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4" },
+      "copyright": {
+        "enabled": true,
+        "text": "© 2025 Your Company. All rights reserved.",
+        "className": "text-sm text-muted-foreground"
+      },
+      "bottomLinksWrapper": { "enabled": true, "className": "flex flex-wrap justify-center gap-x-6 gap-y-2" },
+      "bottomLinks": [
+        { "enabled": true, "text": "Privacy Policy", "href": "/privacy" },
+        { "enabled": true, "text": "Terms of Service", "href": "/terms" },
+        { "enabled": true, "text": "Cookie Settings", "href": "/cookies" }
+      ]
+    }
+
+  }
+}
